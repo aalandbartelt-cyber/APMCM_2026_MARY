@@ -53,17 +53,7 @@ Keep at least one record per stage. Summarize the key prompt and response; do no
 
 "Adopted" requires a named source or result checked by the team. Do not write "verified" without saying what was compared.
 
-## 5. Team Confirmation
-
-- [ ] Core model construction, algorithm design and solving, and result analysis were completed independently by the team; AI was auxiliary only.
-- [ ] All AI-generated content was understood, checked, and modified; errors or inconsistencies were corrected.
-- [ ] No references, data, results, or interaction records were fabricated; unverifiable sources are marked.
-- [ ] Tool names, versions, and dates are consistent across the paper, References, and this form.
-- [ ] This form is accurate and complete; no AI tool or stage is omitted.
-
-Team representative: ____________________        Date: ____________________
-
-## 6. Reference Entries
+## 5. Reference Entries
 
 Required format:
 
@@ -78,3 +68,13 @@ Example:
 ```
 
 Use the actual tools in citation order. Section 1 must match these entries exactly.
+
+## 6. Team Confirmation
+
+- [ ] Core model construction, algorithm design and solving, and result analysis were completed independently by the team; AI was auxiliary only.
+- [ ] All AI-generated content was understood, checked, and modified; errors or inconsistencies were corrected.
+- [ ] No references, data, results, or interaction records were fabricated; unverifiable sources are marked.
+- [ ] Tool names, versions, and dates are consistent across the paper, References, and this form.
+- [ ] This form is accurate and complete; no AI tool or stage is omitted.
+
+Team representative: ____________________        Date: ____________________
