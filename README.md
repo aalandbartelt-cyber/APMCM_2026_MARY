@@ -11,7 +11,8 @@
 - 时间：2026-11-26 06:00 — 2026-11-30 09:00（北京时间；以官方为准）
 - 语言：English only；正文/图题/表题/图例/坐标轴不得出现中文
 - 版式：p1 Summary；p2 Contents；正文 ≤25 页；附录不限；页眉 `Team #<team number> Page <x> of <y>`
-- 提交：论文 PDF + control sheet 单独签名 + 支撑材料（可选，`.zip/.rar`）
+- 提交：论文 PDF + control sheet 单独签名 + 支撑材料（可选，`.zip/.rar`）；如使用 AI，另提交 `AI工具使用详情.pdf`；未使用 AI 须在 References 后写官方中文声明
+- AI：允许辅助，但核心模型构建、算法设计与求解、结果分析必须由队员独立完成；使用 AI 须正文标注 + References 工具条目 + `AI工具使用详情.pdf`；见 `02_口径与约定/AI工具使用规范.md`
 - 技能：`mary-modeling-contest-pipeline-apmcm`
   - WSL：`~/.codex/skills/mary-modeling-contest-pipeline-apmcm/SKILL.md`
   - Windows：`C:\Users\mary3\.agents\skills\mary-modeling-contest-pipeline-apmcm\SKILL.md`
