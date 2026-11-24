@@ -78,14 +78,3 @@ Example:
 ```
 
 Use the actual tools in citation order. Section 1 must match these entries exactly.
-
-## 7. Pre-submission Checklist
-
-- [ ] All AI tools and stages actually used are listed; nothing is omitted.
-- [ ] Section 1 matches the References entries in names, versions, developers, and dates.
-- [ ] Each stage has a purpose, use/output, and human verification.
-- [ ] Key prompts/responses are recorded and support the adoption/modification statements.
-- [ ] Section 4 records adopted, partially adopted, and rejected outputs.
-- [ ] No accounts, API keys, personal data, or unauthorized material are included.
-- [ ] The paper marks AI-assisted content; if no AI was used, the official APMCM declaration is included.
-- [ ] The form is exported as the required APMCM AI usage details PDF.
