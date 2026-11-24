@@ -36,6 +36,12 @@ references/13  评分与专家评阅
 references/14  协作与 Git 规范
 references/15  附录、支撑材料与复现
 references/16  数据与业务题实战
+references/17  在线信息约束与盲测纪律
+references/18  C 题优秀论文逐页解剖
+references/19  优秀论文追踪分析规程
+references/20  建模叙事公式与可读性规范
+references/21  自有论文蒸馏（本队三篇跨赛终稿）
+references/22  数维杯与亚太杯摘要深度解剖
 ```
 
 Cursor 不自动加载 Codex skill；必须显式读上述路径。项目规则见 `.cursor/rules/apmcm.mdc`。

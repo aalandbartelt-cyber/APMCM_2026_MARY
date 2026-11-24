@@ -14,7 +14,7 @@
 ## 已完成
 
 - 目录骨架、README、AGENTS、Git 规范、写作/图表规范、提交清单。
-- APMCM skill 已更新到 `~/.codex/skills/mary-modeling-contest-pipeline-apmcm`（含 09—16 深度参考）。
+- APMCM skill 已由 Devin 优化并同步到 `~/.codex/skills/mary-modeling-contest-pipeline-apmcm`（commit `7a4a375`，含 09—22 深度参考；新增 17 在线信息约束/盲测、18 C 题逐页、19 获奖论文追踪、20 建模叙事、21 自有论文蒸馏、22 摘要解剖；指标脚本 v2）。
 
 ## 下一步
 

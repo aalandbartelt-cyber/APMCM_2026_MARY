@@ -8,7 +8,7 @@
 ```text
 02_口径与约定/写作与审稿规范.md
 02_口径与约定/图表规范.md
-~/.codex/skills/mary-modeling-contest-pipeline-apmcm/references/09—16
+~/.codex/skills/mary-modeling-contest-pipeline-apmcm/references/09—22
 ```
 
 ## 命名建议

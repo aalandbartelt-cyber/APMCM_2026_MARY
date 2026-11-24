@@ -1,7 +1,7 @@
 # APMCM 2026 project rules
 
 - Read `AGENTS.md` and `~/.codex/skills/mary-modeling-contest-pipeline-apmcm/SKILL.md` before acting.
-- Also read skill `references/09` (writing), `10` (figures/layout), `11` (validation/results), `12` (AI), `13` (scoring), `14` (Git), `15` (appendix), `16` (data/business).
+- Also read skill `references/09` (writing), `10` (figures/layout), `11` (validation/results), `12` (AI), `13` (scoring), `14` (Git), `15` (appendix), `16` (data/business), `17` (online-info discipline), `18` (data-problem paper anatomy), `19` (award-paper tracking), `20` (modeling narrative), `21` (own-paper distillation), `22` (summary anatomy).
 - Work in `cursor/<problem>-<topic>` branches. Do not edit `main` directly.
 - Write candidates only under `05_论文/待审/`, `03_求解/`, `docs/`; do not modify `05_论文/正式/` or `06_交付/` unless the user explicitly authorizes.
 - Do not commit raw data, reference PDFs, videos, control sheet scans, keys, tokens, or personal information.

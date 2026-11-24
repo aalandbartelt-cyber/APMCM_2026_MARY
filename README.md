@@ -18,7 +18,7 @@
   - WSL：`~/.codex/skills/mary-modeling-contest-pipeline-apmcm/SKILL.md`
   - Windows：`C:\Users\mary3\.agents\skills\mary-modeling-contest-pipeline-apmcm\SKILL.md`
 
-**不要把另一赛事的页数口径、页眉格式、AIGC 阈值或 AI 报告模板直接套到 APMCM。** 先读 APMCM skill 的 `references/01`、`09`—`16`。
+**不要把另一赛事的页数口径、页眉格式、AIGC 阈值或 AI 报告模板直接套到 APMCM。** 先读 APMCM skill 的 `references/01`、`09`—`22`。
 
 ## 环境与职责
 
@@ -57,7 +57,7 @@ artifacts/          本地中间产物（gitignore）
 4. `02_口径与约定/图表规范.md`
 5. `02_口径与约定/Git规范.md`
 6. `docs/collab/README.md` 与 `docs/collab/CURSOR_HANDOFF.md`
-7. Skill 的 `SKILL.md`、`references/09`—`16`
+7. Skill 的 `SKILL.md`、`references/09`—`22`（数据题优先 17、18、22；论文结构与摘要优先 20、21、22）
 
 ## 快速命令
 

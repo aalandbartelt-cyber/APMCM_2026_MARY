@@ -16,7 +16,7 @@
 深度参考在 skill：
 
 ```text
-~/.codex/skills/mary-modeling-contest-pipeline-apmcm/references/09—16
+~/.codex/skills/mary-modeling-contest-pipeline-apmcm/references/09—22
 ```
 
-写作/审稿/图表/验证/评分/AI/协作的具体规则读 skill 的 09、10、11、12、13、14、15、16。
+写作/审稿/图表/验证/评分/AI/协作的具体规则读 skill 的 09、10、11、12、13、14、15、16；数据题与论文表达读 17—22。
