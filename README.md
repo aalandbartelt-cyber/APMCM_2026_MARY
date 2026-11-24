@@ -13,6 +13,7 @@
 - 版式：p1 Summary；p2 Contents；正文 ≤25 页；附录不限；页眉 `Team #<team number> Page <x> of <y>`
 - 提交：论文 PDF + control sheet 单独签名 + 支撑材料（可选，`.zip/.rar`）；如使用 AI，另提交 `AI工具使用详情.pdf`；未使用 AI 须在 References 后写官方中文声明
 - AI：允许辅助，但核心模型构建、算法设计与求解、结果分析必须由队员独立完成；使用 AI 须正文标注 + References 工具条目 + `AI工具使用详情.pdf`；见 `02_口径与约定/AI工具使用规范.md`
+- AI 模板：`02_口径与约定/AI工具使用详情_模板.docx`（填写后导出 `AI工具使用详情.pdf` 放 `06_交付/`）
 - 技能：`mary-modeling-contest-pipeline-apmcm`
   - WSL：`~/.codex/skills/mary-modeling-contest-pipeline-apmcm/SKILL.md`
   - Windows：`C:\Users\mary3\.agents\skills\mary-modeling-contest-pipeline-apmcm\SKILL.md`
