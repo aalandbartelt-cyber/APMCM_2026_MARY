@@ -51,10 +51,10 @@ APMCM 这份通知没有给 30%/50% AIGC/相似比阈值；不要把另一赛事
 
 ## 5. 模板
 
-- 可编辑模板：`02_口径与约定/AI工具使用详情_模板.docx`
-- Markdown 源：`02_口径与约定/AI工具使用详情_模板.md`
-- 预览：`02_口径与约定/AI工具使用详情_模板_预览.pdf`
-- 填写完成后导出 PDF，最终文件名 `AI工具使用详情.pdf`，放入 `06_交付/`。
+- 可编辑模板（English, 2 pages）：`02_口径与约定/AI_Tool_Usage_Details_Template.docx`
+- Markdown 源（English）：`02_口径与约定/AI_Tool_Usage_Details_Template.md`
+- 预览（English）：`02_口径与约定/AI_Tool_Usage_Details_Template_preview.pdf`
+- 填写完成后导出 PDF，最终文件名按官方要求 `AI工具使用详情.pdf`，放入 `06_交付/`。
 
 ## 6. 提交前检查
 
