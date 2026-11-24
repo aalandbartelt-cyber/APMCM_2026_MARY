@@ -1,0 +1,54 @@
+# official problem/data/reference (local only)
+00_赛题与规则/官方发布/
+00_赛题与规则/正式发布/
+01_参考学习/**
+!01_参考学习/README.md
+data/
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.gz
+*.npz
+*.npy
+*.pt
+*.pth
+*.onnx
+
+# envs / caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.Rlibrary/
+.Rhistory
+.DS_Store
+*.tmp
+_archive/
+.worktrees/
+
+# delivery: keep paper PDF, exclude signed/control and large packages
+06_交付/*.zip
+06_交付/*.rar
+06_交付/*cns.*
+06_交付/04_支撑材料/**
+05_论文/**/图片/*.zip
+
+# office temp
+~$*
+
+# agent runtime
+docs/collab/*.lock
+docs/collab/AGENT_MESSAGES.jsonl.lock
+
+# local intermediate outputs
+artifacts/
+output/
+
+# secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem

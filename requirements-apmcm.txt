@@ -1,0 +1,23 @@
+# APMCM Python baseline (edit after problem selection)
+# Install only what you need; keep versions explicit when results depend on them.
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+statsmodels
+pymupdf
+python-docx
+openpyxl
+
+# Optional for data/business problems
+# lightgbm
+# xgboost
+# networkx
+# ortools
+# pulp
+
+# Optional for figures/PDF QA
+# pillow
+# rpy2  # only if you call R from Python

@@ -1,0 +1,34 @@
+# 06 交付
+
+最终提交件目录。APMCM 是三件分别上传：
+
+```text
+<题号><队号>.pdf            论文（只收 PDF；p1 Summary、p2 Contents）
+<题号><队号>cns.pdf/jpg/png Control Sheet（单独签名；不进论文）
+<题号><队号>fj.zip/rar      支撑材料（可选；≤20 MB 建议）
+```
+
+示例（队号报名后替换）：
+
+```text
+Aapmcm2600001.pdf
+Aapmcm2600001cns.pdf
+Aapmcm2600001fj.zip
+```
+
+## 规则
+
+- 文件名前缀三件一致；不加空格/下划线。
+- 论文 PDF 不含 control sheet；control sheet 不含在支撑包。
+- 支撑包不含赛题原始数据；附录仍须有软件名 + 全部源代码。
+- 公开仓库不提交 `*cns.*` 和 `*fj.zip/rar`（已 gitignore）。
+- 提交前逐件 SHA256/大小/页数记录；重传先删旧版对应项再传新版。
+
+## 检查
+
+见 `提交清单.md`；审计命令：
+
+```bash
+python ~/.codex/skills/mary-modeling-contest-pipeline-apmcm/scripts/audit_apmcm_submission.py \
+  --paper Aapmcm2600001.pdf --control Aapmcm2600001cns.pdf --zip Aapmcm2600001fj.zip
+```
