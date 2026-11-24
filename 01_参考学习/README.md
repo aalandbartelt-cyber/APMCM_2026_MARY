@@ -18,8 +18,11 @@
 往届赛题/2024 APMCM Problems  A—D + 附件
 往届赛题/2025 APMCM Problems  A—D + C 题 Tariff Data
 2025题分析/                  四道题逐题分析 + C 题关税分析
+论文终稿参考/                MathorCup 2026 A、国赛 2026 0043、ShuWei 2026 C 终稿（结构/验证参考）
 _archives/                   优秀论文/往届赛题原始 ZIP
 ```
+
+`论文终稿参考/` 里的论文来自其他赛事/题目，只借结构/验证/附录组织，不借模型、数据、数字、图或段落；其来源与 SHA256 见该目录 `README_来源与边界.md`。
 
 这些目录默认整目录 gitignore，只保留本 README；不要把参考 PDF/数据/图片提交到公开仓库。
 
