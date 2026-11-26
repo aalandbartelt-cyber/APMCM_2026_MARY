@@ -61,14 +61,20 @@ def category(path):
 def inventory():
     previous = {row['path']: row for row in rows()} if LEDGER.exists() else {}
     seen, result = {}, []
-    for number, path in enumerate(sorted(p for p in CORPUS.rglob('*') if p.is_file()), 1):
+    next_number = max((int(row['id'][1:]) for row in previous.values()), default=0) + 1
+    for path in sorted(p for p in CORPUS.rglob('*') if p.is_file()):
         rel = path.relative_to(CORPUS).as_posix()
+        old = previous.get(rel)
+        if old:
+            stable_id = old['id']
+        else:
+            stable_id = f'R{next_number:04d}'
+            next_number += 1
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         row = {key: '' for key in FIELDS}
-        row.update(id=f'R{number:04d}', path=rel, bytes=path.stat().st_size,
+        row.update(id=stable_id, path=rel, bytes=path.stat().st_size,
                    sha256=digest, duplicate_of=seen.get(digest, ''),
                    category=category(path), read_state='inventoried')
-        old = previous.get(rel)
         if old and old['sha256'] == digest:
             row.update({k: old[k] for k in ['text_lines', 'read_state', 'coverage', 'notes']})
         seen.setdefault(digest, row['id'])
