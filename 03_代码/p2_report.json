@@ -1,0 +1,36 @@
+{
+  "seed": 20261127,
+  "steps": {},
+  "brute_force": {
+    "A": "Y",
+    "B": "Zr",
+    "vhat": 4.056291434853407
+  },
+  "lambda": 65.14856027627229,
+  "qubo": {
+    "n_bits": 104,
+    "nnz": 5460,
+    "coef_min": -65.14856027627229,
+    "coef_max": 130.29712055254458
+  },
+  "ising": {
+    "offset": 97711.08885298499,
+    "absmax": 1053.3106583431638
+  },
+  "sa": {
+    "n_pool": 128,
+    "n_feasible": 128,
+    "solve_time_s": 0.54,
+    "init_temperature": 2106.6213166863276,
+    "iterations_per_t": 200,
+    "size_limit": 128
+  },
+  "qubo_best": {
+    "A": "Y",
+    "B": "Zr",
+    "vhat": 4.056291434853407,
+    "energy": -126.24082911769118
+  },
+  "solver_matches_bruteforce": true,
+  "total_time_s": 26.6
+}

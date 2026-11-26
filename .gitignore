@@ -47,6 +47,7 @@ artifacts/
 output/
 
 # secrets
+configs/kaiwu_license.py
 .env
 .env.*
 !.env.example

@@ -1,0 +1,101 @@
+{
+  "seed": 20261127,
+  "tracks": {
+    "A_decomposed": {
+      "results": {
+        "O3": {
+          "A": "Ge",
+          "B": "Ti",
+          "X": "O3",
+          "vhat": 2.3622083336206794,
+          "n_feasible": 128,
+          "solve_time_s": 0.58,
+          "init_temperature": 2147.45856961524,
+          "ising_absmax": 1073.72928480762,
+          "offset": 100420.62754565051
+        },
+        "NO2": {
+          "A": "Y",
+          "B": "Zr",
+          "X": "NO2",
+          "vhat": 4.056291434853407,
+          "n_feasible": 128,
+          "solve_time_s": 0.56,
+          "init_temperature": 2183.5229183564866,
+          "ising_absmax": 1091.7614591782433,
+          "offset": 101629.99447409631
+        },
+        "FO2": {
+          "A": "Na",
+          "B": "Ti",
+          "X": "FO2",
+          "vhat": 3.5004108314167883,
+          "n_feasible": 128,
+          "solve_time_s": 0.56,
+          "init_temperature": 2202.970133605675,
+          "ising_absmax": 1101.4850668028375,
+          "offset": 103595.9881851318
+        }
+      },
+      "best": {
+        "A": "Ge",
+        "B": "Ti",
+        "X": "O3",
+        "vhat": 2.3622083336206794
+      }
+    },
+    "B_composite": {
+      "n_bits": 208,
+      "meta": {
+        "solve_time_s": 0.66,
+        "init_temperature": 5750.650599445766,
+        "ising_absmax": 2875.325299722883,
+        "offset": 495447.5151273235
+      },
+      "n_feasible": 96,
+      "best": {
+        "A": "Cs",
+        "B": "Ta",
+        "X": "O3",
+        "vhat": 4.4295115094803075
+      }
+    }
+  },
+  "brute_force": {
+    "A": "Ge",
+    "B": "Ti",
+    "X": "O3",
+    "vhat": 2.3622083336206794
+  },
+  "per_x_best": {
+    "FO2": 3.5004108314167883,
+    "NO2": 4.056291434853407,
+    "O3": 2.3622083336206794
+  },
+  "lambda": 68.22462434307867,
+  "crosscheck": {
+    "A_matches_bruteforce": true,
+    "B_matches_bruteforce": false,
+    "AB_agree": false
+  },
+  "cost_analysis": {
+    "trackA": {
+      "bits_per_sub": 104,
+      "n_subproblems": 3,
+      "total_bit_solves": 312,
+      "note": "精确分解；三次独立求解"
+    },
+    "trackB": {
+      "bits": 208,
+      "nnz": 21736,
+      "coef_range": [
+        -68.22462434307867,
+        136.44924868615735
+      ],
+      "note": "联合精确编码；单次求解"
+    },
+    "spqc_capacity": 550,
+    "bit_usage_ratio_B": 0.378
+  },
+  "total_time_s": 30.2
+}
