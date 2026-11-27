@@ -1,0 +1,328 @@
+{
+  "cim_submitted": false,
+  "code_hashes": {
+    "03_求解/D/p2_v2/audit.py": "72e1dccd081a3c4788423f459063458796212bceaa40b1e45088ba4c31009469",
+    "03_求解/D/p2_v2/checker.py": "7447868cf05b02e691c2df715545a5c4616b370755e4ff3fea8be1424deb76a6",
+    "03_求解/D/p2_v2/freeze.py": "80191d9140885cdc04d61ada1579cb6c21933de3e6450e450c65f10c91e3ccb2",
+    "03_求解/D/p2_v2/p2_common.py": "f28a51de636ee3238ece9dc188e7d71cf700db8adffb77ac1a35c284c8dd1008",
+    "03_求解/D/p2_v2/representation.py": "c167ffd457463cae52f4b2dc1631b02d2689d147b565ab7f3736554b5a860d89",
+    "03_求解/D/p2_v2/sa.py": "e0d40619888ed235b425393943fc981cca7bbb31e5037289a92481463d81c666",
+    "03_求解/D/p2_v2/task_stats.py": "4bd376266cae86d30aeb0ecba6b029d42c5ed8d23502fdfbde26e759dd921416",
+    "03_求解/D/p2_v2/tests.py": "5baf394470d78904bf122eadc00c41ff4065cedafbae2942f19ba47ddf325e17",
+    "03_求解/D/p2_v2/train.py": "b573e950987bb906b9321bb2fbd47d9711c58366cb5a9aa822a5d467834989fe",
+    "03_求解/D/p2_v2/validate_training.py": "d4078a7652f6dbc0db50a87a5a5c63edbe3a4b84911d4a30cf8569de0c5c0241"
+  },
+  "configurations": [
+    {
+      "R": 48.079779929884985,
+      "best_ground_regret": 21.650848209475953,
+      "best_integer_energy": -10822,
+      "certificate": "COUNTEREXAMPLE",
+      "certificate_reason": "forbidden_onehot_not_above_allowed_min",
+      "encoding": "raw",
+      "epsilon_over_R": 0.00207987640845758,
+      "ground_count": 1,
+      "ground_indices": [
+        195
+      ],
+      "id": "11-raw-N8",
+      "integer_boundary_keys": [
+        "Au|Ge|NO2",
+        "Au|Hf|NO2",
+        "B|Fe|NO2",
+        "B|Mg|NO2",
+        "Co|Pd|NO2",
+        "Cu|Cd|NO2",
+        "Hf|Cr|NO2",
+        "Hf|Cs|NO2",
+        "Hf|Ti|NO2",
+        "In|Cr|NO2",
+        "Ir|Mo|NO2",
+        "K|B|NO2",
+        "La|Ti|NO2",
+        "Mn|Cr|NO2",
+        "Mo|Pd|NO2",
+        "Ni|Cs|NO2",
+        "Os|Cd|NO2",
+        "Os|Co|NO2",
+        "Pt|B|NO2",
+        "Pt|Cs|NO2",
+        "Re|Pb|NO2",
+        "Re|Sb|NO2",
+        "Sb|Pd|NO2",
+        "Si|As|NO2",
+        "Si|Ga|NO2",
+        "Si|Nb|NO2",
+        "Si|Si|NO2",
+        "Tl|Mo|NO2",
+        "Tl|Sb|NO2",
+        "Zr|Na|NO2"
+      ],
+      "integer_boundary_take": 1,
+      "integer_strict_before": 19,
+      "kind": "N8",
+      "matrix_file": "artifacts/p2_v2/representations/11-raw-N8.npz",
+      "matrix_sha256": "18edef4be759dbaa768a0c75ca8b85b34731b39c8bd9aceb3323c04846701f78",
+      "meta": {
+        "R": 48.079779929884985,
+        "encoding_scale": 48.079779929884985,
+        "lam": 52.88775792287349,
+        "m": 1.839047051618571,
+        "offset": 96246.05267586715,
+        "quant_scale": 0.13166657522881856,
+        "theta_raw": 28.1927416120993,
+        "theta_rc": 28.1927416120993
+      },
+      "original_best_keys": [
+        "La|Ti|NO2"
+      ],
+      "original_boundary_keys": [
+        "Ba|W|NO2"
+      ],
+      "original_min": 1.839047051618571,
+      "pool": "11",
+      "top20_integer": [
+        "Au|Sc|NO2",
+        "Si|Cd|NO2",
+        "Zr|K|NO2",
+        "B|Pd|NO2",
+        "Ta|Zr|NO2",
+        "In|Sc|NO2",
+        "Au|Ni|NO2",
+        "Au|Pd|NO2",
+        "Re|B|NO2",
+        "Tl|K|NO2",
+        "B|La|NO2",
+        "As|Rh|NO2",
+        "Hf|Rh|NO2",
+        "Mg|Cs|NO2",
+        "B|Hf|NO2",
+        "Os|La|NO2",
+        "Hf|Sc|NO2",
+        "Os|Cs|NO2",
+        "La|Pd|NO2",
+        "In|Cr|NO2"
+      ],
+      "top20_max": 0.1,
+      "top20_min": 0.05,
+      "top20_original": [
+        "La|Ti|NO2",
+        "Sr|Ta|NO2",
+        "Sr|Nb|NO2",
+        "Ba|Ta|NO2",
+        "Y|Ti|NO2",
+        "Ca|Ta|NO2",
+        "Ca|Nb|NO2",
+        "Sc|Hf|NO2",
+        "Mg|Ta|NO2",
+        "Cd|Ta|NO2",
+        "Zn|Nb|NO2",
+        "Hf|Sc|NO2",
+        "Ca|V|NO2",
+        "In|Hf|NO2",
+        "Sb|Hf|NO2",
+        "K|W|NO2",
+        "Sb|Si|NO2",
+        "Ca|Sb|NO2",
+        "Bi|Ge|NO2",
+        "Ba|W|NO2"
+      ],
+      "top20_retention": 0.05,
+      "worst_ground_regret": 21.650848209475953
+    },
+    {
+      "certificate": "UNKNOWN",
+      "certificate_reason": "Installed 1.4.4 compiled API has no seed argument; complete internal RNG/tie contract cannot be verified from available source. No production mutate invocation.",
+      "encoding": "raw",
+      "generation_status": "UNVERIFIED_GENERATION_CONTROL",
+      "id": "11-raw-M8",
+      "kind": "M8",
+      "matrix_file": null,
+      "matrix_sha256": null,
+      "pool": "11"
+    },
+    {
+      "R": 48.079779929884985,
+      "best_ground_regret": 5.039525277763628,
+      "best_integer_energy": -10994,
+      "certificate": "COUNTEREXAMPLE",
+      "certificate_reason": "branch_witness",
+      "encoding": "rc",
+      "epsilon_over_R": 0.00207987640845758,
+      "ground_count": 4,
+      "ground_indices": [
+        923,
+        1027,
+        1482,
+        1647
+      ],
+      "id": "11-rc-N8",
+      "integer_boundary_keys": [
+        "Bi|Ge|NO2",
+        "Cs|La|NO2",
+        "Cs|Rh|NO2",
+        "Ga|Mo|NO2",
+        "Ga|Sc|NO2",
+        "Hf|Rh|NO2",
+        "K|Re|NO2",
+        "K|Ta|NO2",
+        "K|Zr|NO2",
+        "Mn|Cr|NO2",
+        "Na|Cr|NO2",
+        "Na|Ta|NO2",
+        "Na|Zr|NO2",
+        "Nb|Co|NO2",
+        "Nb|Ga|NO2",
+        "Rb|Sb|NO2",
+        "Rb|Ti|NO2",
+        "Sb|Hf|NO2"
+      ],
+      "integer_boundary_take": 4,
+      "integer_strict_before": 16,
+      "kind": "N8",
+      "matrix_file": "artifacts/p2_v2/representations/11-rc-N8.npz",
+      "matrix_sha256": "50a070ad048edf5f1cd16d90677d12825730f898b2772a0cee626065d1a46438",
+      "meta": {
+        "R": 48.079779929884985,
+        "encoding_scale": 48.079779929884985,
+        "lam": 52.88775792287349,
+        "m": 1.839047051618571,
+        "offset": 86025.53994039843,
+        "quant_scale": 0.14074108379910724,
+        "theta_raw": 28.1927416120993,
+        "theta_rc": 14.576366296166675
+      },
+      "original_best_keys": [
+        "La|Ti|NO2"
+      ],
+      "original_boundary_keys": [
+        "Ba|W|NO2"
+      ],
+      "original_min": 1.839047051618571,
+      "pool": "11",
+      "top20_integer": [
+        "In|Sc|NO2",
+        "Pb|Re|NO2",
+        "Nb|Mo|NO2",
+        "Hf|Sc|NO2",
+        "In|Re|NO2",
+        "In|Cr|NO2",
+        "Sb|Mo|NO2",
+        "In|Hf|NO2",
+        "Hf|Ti|NO2",
+        "Cd|Hf|NO2",
+        "Rb|Mo|NO2",
+        "Pb|Ga|NO2",
+        "Hf|Cr|NO2",
+        "Hf|Zr|NO2",
+        "Nb|Hf|NO2",
+        "Cd|Ta|NO2",
+        "Na|Ta|NO2",
+        "Cs|La|NO2",
+        "K|Re|NO2",
+        "Nb|Ga|NO2"
+      ],
+      "top20_max": 0.25,
+      "top20_min": 0.15,
+      "top20_original": [
+        "La|Ti|NO2",
+        "Sr|Ta|NO2",
+        "Sr|Nb|NO2",
+        "Ba|Ta|NO2",
+        "Y|Ti|NO2",
+        "Ca|Ta|NO2",
+        "Ca|Nb|NO2",
+        "Sc|Hf|NO2",
+        "Mg|Ta|NO2",
+        "Cd|Ta|NO2",
+        "Zn|Nb|NO2",
+        "Hf|Sc|NO2",
+        "Ca|V|NO2",
+        "In|Hf|NO2",
+        "Sb|Hf|NO2",
+        "K|W|NO2",
+        "Sb|Si|NO2",
+        "Ca|Sb|NO2",
+        "Bi|Ge|NO2",
+        "Ba|W|NO2"
+      ],
+      "top20_retention": 0.15,
+      "worst_ground_regret": 13.556854620253302
+    },
+    {
+      "certificate": "UNKNOWN",
+      "certificate_reason": "Installed 1.4.4 compiled API has no seed argument; complete internal RNG/tie contract cannot be verified from available source. No production mutate invocation.",
+      "encoding": "rc",
+      "generation_status": "UNVERIFIED_GENERATION_CONTROL",
+      "id": "11-rc-M8",
+      "kind": "M8",
+      "matrix_file": null,
+      "matrix_sha256": null,
+      "pool": "11"
+    }
+  ],
+  "immutable_source": "Must be committed; runtime requires exact published git commit.",
+  "input_hashes": {
+    "artifacts/p23_v2/manifest.json": "325a3aa526fd435aaf29fc132dba266aa1e50219fc98d4f86a66d54576308553",
+    "artifacts/p23_v2/pool_07.npz": "88ff99112f778472069c3740cd0f8800784211a1db373c231f0557d394093f80",
+    "artifacts/p23_v2/pool_11.npz": "ff53eac15f1f2aa8471ad7d0bb6da7c24188a8f772a0c8966b93f2390c20393f",
+    "artifacts/p2_v2/representation_audits.json": "bc3bfe8346bb1de312f5afbc57c51b96dc4f337a6898c244b732154401e4d622",
+    "codex/P2_PLAN.md": "fa6a99348e4d6fbb38c8c13a0ebfb4c85827c4835d88d87bdac78f371a2e06fa",
+    "codex/p2_v2/input_freeze.json": "fc8bf52e3e3156040c227662c0bd8978006f806a97afee305ac8133ac144af5e"
+  },
+  "sa_matrices": [
+    {
+      "id": "07-raw-float",
+      "matrix_file": "artifacts/p2_v2/representations/07-raw-float.npz",
+      "matrix_sha256": "f9f9bcadcc540ad4b950959afd59632b98020ec9833b3be6e95b320473d51cbf"
+    },
+    {
+      "id": "07-raw-N8",
+      "matrix_file": "artifacts/p2_v2/representations/07-raw-N8.npz",
+      "matrix_sha256": "0e1062970c465a862deb12963debf42ef7f5722cb165ac60baa07b2d733f71e7"
+    },
+    {
+      "id": "07-rc-float",
+      "matrix_file": "artifacts/p2_v2/representations/07-rc-float.npz",
+      "matrix_sha256": "2a104d964d2592de05b7eb92ee1543ed5dc1089b0e11fdb0dee4f1c2dcc8b534"
+    },
+    {
+      "id": "07-rc-N8",
+      "matrix_file": "artifacts/p2_v2/representations/07-rc-N8.npz",
+      "matrix_sha256": "c036715223e8ff9895031b66ed5351c9619b6e91060e42aec32208b8bcb9c70e"
+    },
+    {
+      "id": "11-raw-float",
+      "matrix_file": "artifacts/p2_v2/representations/11-raw-float.npz",
+      "matrix_sha256": "39cb43b9b6f455bbab401c0e9bd526c941f4e72eb827cb4b0bf2badb7be8917c"
+    },
+    {
+      "id": "11-raw-N8",
+      "matrix_file": "artifacts/p2_v2/representations/11-raw-N8.npz",
+      "matrix_sha256": "18edef4be759dbaa768a0c75ca8b85b34731b39c8bd9aceb3323c04846701f78"
+    },
+    {
+      "id": "11-rc-float",
+      "matrix_file": "artifacts/p2_v2/representations/11-rc-float.npz",
+      "matrix_sha256": "a3d3be44ecf6a578f1a620b138c3e2fb8c9da529afa577e19ab422d44751b5d1"
+    },
+    {
+      "id": "11-rc-N8",
+      "matrix_file": "artifacts/p2_v2/representations/11-rc-N8.npz",
+      "matrix_sha256": "50a070ad048edf5f1cd16d90677d12825730f898b2772a0cee626065d1a46438"
+    }
+  ],
+  "sa_started": false,
+  "selected": null,
+  "selected_matrix_sha256": null,
+  "selection_order": [
+    "CERTIFIED",
+    "worst_ground_regret<=0.1",
+    "min_worst_regret",
+    "max_tie_lower_retention",
+    "N8_before_M8",
+    "id"
+  ],
+  "status": "NO_ELIGIBLE_CONFIGURATION",
+  "time": "2026-11-27T17:36:54.709669+00:00"
+}
