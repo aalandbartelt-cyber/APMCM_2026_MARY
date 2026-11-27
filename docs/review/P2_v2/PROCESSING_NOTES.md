@@ -1,0 +1,9 @@
+# Processing and preservation notes
+
+- The frozen training implementation completed all 65 fits without retry. Its final stdout completion line was written after the model manifest hashed the live log. `training_log_closeout.json` verifies the original prefix hash and exactly that completion suffix. The original manifest and log remain unchanged; all model files passed their original hashes.
+- The first report pass could not parse nanosecond filesystem timestamps with Python 3.10 `datetime.fromisoformat`. Its partial derived outputs are preserved under `results_partial_before_timestamp_fix`; the report parser now uses `pandas.Timestamp`. No fitting, solver runs, selection, matrices, or raw samples were repeated or modified.
+- The final report is in `artifacts/p2_v2/results`. Its timing table identifies process intervals reconstructed from log creation/final-write timestamps and separately identifies measured tree-fit timers, which must not be added to their enclosing interval again.
+- The SDK penalty diagnostic is the preregistered comparison of the general squared-constraint interface and the linear-residual equality interface. It does not change lambda, selection, or solver settings.
+- Task bootstrap is descriptive only. Its reproducible seed is derived from the approved plan hash; it does not select matrices, algorithms, candidates, or reporting endpoints.
+- Local integer witnesses and all 32,000 SA returns were independently checked. No eligible hardware matrix was selected; all 20 formal CIM slots remain NOT_STARTED. The current status is not presented as the future T_snap snapshot.
+- The available agent bus points to the previous ShuWei project. No message was posted there. The APMCM status file was mirrored to the current contest's D-drive shared folder; receipt by the scout is not asserted.

@@ -1,0 +1,16 @@
+[INFO] 平台: linux / Python 3.10.12 / /usr/bin/python3.10
+[PASS] Python: /home/mary/miniconda3/bin/python
+[PASS] Rscript: /home/mary/.local/bin/Rscript
+[PASS] LibreOffice: /mnt/c/Program Files/LibreOffice/program/soffice.exe
+[PASS] docx: 已安装
+[PASS] pptx: 已安装
+[PASS] openpyxl: 已安装
+[PASS] lxml: 已安装
+[WARN] pypdf: 未安装（可选）
+[PASS] PyMuPDF: fitz
+[INFO] Windows COM: 非 Windows；用 LibreOffice/PyMuPDF
+[PASS] git: /usr/bin/git
+[INFO] gh: /home/mary/.local/bin/gh
+[INFO] 字体: 未检查（Windows Fonts 目录）
+
+SUMMARY: 14 checks, 0 FAIL
