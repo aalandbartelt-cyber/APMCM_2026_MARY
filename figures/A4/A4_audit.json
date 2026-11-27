@@ -1,0 +1,142 @@
+{
+  "figure": "A4",
+  "revision": 2,
+  "date": "2026-11-27",
+  "status": "revision_2_visually_checked_awaiting_user_review",
+  "title": "Split-half averaging and decision stability",
+  "width_mm": 170.0,
+  "height_mm": 93.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1098
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "0.121",
+    "0.054",
+    "0.164",
+    "0.062",
+    "0.538",
+    "0.504",
+    "0.192",
+    "0.174",
+    "Single",
+    "Mean of 10",
+    "Agreement fraction",
+    "0.0",
+    "0.2",
+    "0.4",
+    "0.6",
+    "(a) Argmin agreement",
+    "1.295",
+    "2.616",
+    "1.072",
+    "2.677",
+    "0.251",
+    "0.317",
+    "0.184",
+    "0.241",
+    "Single",
+    "Mean of 10",
+    "Mean regret (Vhat; log scale)",
+    "0.2",
+    "0.5",
+    "1",
+    "2",
+    "3",
+    "(b) Cross-table regret",
+    "Pool 07",
+    "Pool 08",
+    "Pool 11",
+    "Pool 12"
+  ],
+  "text_word_count": 54,
+  "rejected_v1_text_word_count": 100,
+  "text_reduction_fraction": 0.45999999999999996,
+  "no_lollipop": true,
+  "design": "Two slope graphs with four pool-specific colours and shapes; no zero baseline stems or lollipop form.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/hardening/split_half_summary.csv",
+      "sha256": "fd08b4a87cddaaabd8537f62e0812b19d6e513fff2cdc44e7b8decb1dc9ddbc7",
+      "bytes": 3412
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/protocol.json",
+      "sha256": "bec7f0a78e84e9503f92c5e3b3b4e12846220e82b582046b6b2ddd25351c67f0",
+      "bytes": 110648
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/P23_construction_decision.json",
+      "sha256": "b06161322866d3a5fc5cc4037d6fab66e421cbfc6c6392233dcc433b3c1df974",
+      "bytes": 2716
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_sha256": "222763d5581aab7e82bdd6055db797161ea74a3f5b3873bbeb9774bd1415259a",
+  "common_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_redesign_v2.json",
+  "palette_sha256": "81e184d079a99aa6969885be2eea0993f361c63a4727cc0776cfbd809739745a",
+  "prior_frozen_palette_unchanged": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "Split-half effects of averaging on decision stability.",
+  "reading_guide": "Each pool connects the single-member reference on the left to the mean of ten members on the right; endpoints show stored means. The agreement axis is linear and the regret axis logarithmic. Values label the actual endpoints; short leader lines separate nearby labels without moving data. The 1,000 complementary 10/10 splits reuse the same 20 members, and each single-member reference averages all 100 cross-half pairs. Averaging lowers surrogate regret in all four pools; agreement in pools 11/12 remains 0.192/0.174. These are dependent split-half stability diagnostics, not independent replicates or an accuracy test of a future mean-of-twenty table.",
+  "diagnostics": {
+    "partitions": 1000,
+    "underlying_members": 20,
+    "logarithmic_regret_axis": true,
+    "endpoint_values_unchanged": true
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "A4_split_half.pdf": "f977b187e818b64f03dd4a4b5a946c2a6b5961764377e1a8721cc84a7fcada4d",
+    "A4_split_half.png": "ece2afd64582dccc758e7c241e83b906094ba07229d9932fa2bad7b73e86fd4e",
+    "A4_split_half_grayscale.png": "9356203c6ffd23855b5cf64e57a04afded85329a54c3fef926848eaa620b7b60",
+    "A4_split_half_v2.pdf": "f977b187e818b64f03dd4a4b5a946c2a6b5961764377e1a8721cc84a7fcada4d",
+    "A4_split_half_v2.png": "ece2afd64582dccc758e7c241e83b906094ba07229d9932fa2bad7b73e86fd4e",
+    "A4_split_half_v2_grayscale.png": "9356203c6ffd23855b5cf64e57a04afded85329a54c3fef926848eaa620b7b60",
+    "A4_split_half_values.csv": "bcb441ee19257fcf3aece4026e6c03ba16dd5583d2a70dc6d60a2cd67d3a0c33"
+  },
+  "legend_matches_actual_marks": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "nine_self_checks_passed": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 92.99999737209743,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  }
+}

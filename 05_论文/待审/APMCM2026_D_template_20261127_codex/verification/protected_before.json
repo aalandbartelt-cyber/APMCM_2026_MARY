@@ -1,0 +1,33 @@
+{
+  "official_template": {
+    "path": "00_赛题与规则/官方发布/2026论文规范与模板/APMCM LaTeX 模板",
+    "files": 6,
+    "bytes": 248685,
+    "sha256": "f5b76524af94be589c8b1dab8ed3a677b27017a6471b99125e4682211b2bfeb2"
+  },
+  "figures": {
+    "path": "figures",
+    "files": 305,
+    "bytes": 20240925,
+    "sha256": "9775968f09537bf23f41e2001125b73db139f67ca3afc58b204d070f1225f2b2"
+  },
+  "models_and_artifacts": {
+    "path": "artifacts/p1_v21",
+    "files": 3621,
+    "bytes": 923508268,
+    "sha256": "f2e52bd99d97ba55063f3cb46fa8de394bcfb2e25a319b2538e542f6a5ffb686"
+  },
+  "model_code": {
+    "path": "03_求解/D/p1_v2",
+    "files": 34,
+    "bytes": 278761,
+    "sha256": "27532bcb776d4d645302bbceec9bbf6ac2ae036425b4aeff8e5c87874c1d3130"
+  },
+  "official_D_data": {
+    "path": "00_赛题与规则/官方发布/2026赛题/2026 APMCM Problem D/date",
+    "files": 10,
+    "bytes": 3335016,
+    "sha256": "0135210bf55b9c8d07513bed6f3bcb95d814a4b4265f821ed0a2db202ea61856"
+  },
+  "F1_sha256": "0036bb1a4a1bba3b88c2f7db781b1ed077258e4219b85dc9c825bef493906002"
+}

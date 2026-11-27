@@ -1,0 +1,116 @@
+{
+  "figure": "F3",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Error contributions and the regression-screening trade-off",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/P1_final_experiment_table.csv",
+      "sha256": "73799b434e2281e9b7b4c60a884306f6087ec3bcdd14bad051b1a328854b83e4",
+      "bytes": 7265
+    },
+    {
+      "path": "artifacts/p1_v21/results/regression_pareto.csv",
+      "sha256": "d2904f9b0a4b1dec22400b50def87b9f2b89c5231016b2f9f10d953cf4fdfb0d",
+      "bytes": 2730
+    },
+    {
+      "path": "artifacts/p1_v21/results/paired_AB_bootstrap_5000.csv",
+      "sha256": "796e44140c1981f3e186f853dd77d1c368a5cf7c5a0385ed0d7755dc3afe68e8",
+      "bytes": 3914
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_pareto_bubble_ledger: cost-quality scatter and direct point labels; no invented frontier segment",
+    "plot_dashboard_2x2: aligned diagnostic panels; explicit additive error accounting"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 132.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1559
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "contributions_sum_to_RMSE_squared": true,
+    "registered_routes": [
+      "H-soft",
+      "R-log",
+      "R-raw",
+      "W-log"
+    ],
+    "nondominated": [
+      "H-soft"
+    ],
+    "EF_difference": {
+      "model": "H-soft",
+      "reference": "R-log",
+      "metric": "EF_macro@20",
+      "endpoint": "EF_{V<=2}@20_macro_outer_folds",
+      "n_outer_folds": "5",
+      "n_resamples": "5000",
+      "n_valid": "5000",
+      "n_undefined": "0",
+      "delta_point": "1.6160315680524349",
+      "delta_p025": "-5.995051185344833",
+      "delta_median": "2.2916137843825304",
+      "delta_p975": "11.202233626165494",
+      "sampling": "paired AB clusters; independently resample inside each fixed outer fold",
+      "inference": "conditional on fixed OOF and prior selection; percentile interval; no multiplicity correction"
+    }
+  },
+  "caption": "H-soft is nondominated within the registered regression menu, while its screening advantage over R-log remains uncertain. Its pooled RMSE is 4.6011 and its metal/nonmetal contributions to total MSE are 18.2920 and 2.8781. Each contribution is class-specific SSE divided by the total sample count; stacked sums equal pooled RMSE squared. Six numeric routes are shown for error decomposition, while the Pareto comparison uses only the four registered regressors. H-soft minus R-log has an EF difference of +1.6160 with the existing 95% paired AB percentile interval [-5.9951, 11.2022], conditional on frozen OOF predictions and prior selection without multiplicity correction. Pure screening routes have no assigned RMSE.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "F3_MSE_contributions.csv": "78851a7f7f8f7a0ab71c4af32716697d1a8b46c738932f087f6d50fdc50804a5",
+    "F3_error_tradeoff.pdf": "16d06287b2a941e555d65f4f384b546a6110f549070d18b599de7c9772527472",
+    "F3_error_tradeoff.png": "4811697b25c24409d437b54d92db6edfe9b1dab48fd9719da53f92f422047f92",
+    "F3_error_tradeoff_grayscale.png": "a8666d453cf011e29d04721aa0477c76979f4b12e401c0ed372573df9b606e6b",
+    "F3_registered_pareto.csv": "10cae295317482004f21342406fb3d9a3f78452be2039f4a964530730e310d2b"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 131.99999627007378,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

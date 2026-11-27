@@ -1,0 +1,211 @@
+{
+  "figure": "F2",
+  "revision": 3,
+  "date": "2026-11-27",
+  "status": "revision_3_visually_checked_awaiting_user_review",
+  "title": "Near-positive enrichment under fixed AB blocking",
+  "width_mm": 170.0,
+  "height_mm": 118.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1393
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "112",
+    "48",
+    "3",
+    "8",
+    "68/100",
+    "k per fold (log scale)",
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "Total hits (five folds)",
+    "0",
+    "40",
+    "80",
+    "120",
+    "(a) Hits",
+    "19.76",
+    "8.50",
+    "62.10",
+    "Mean EF@k (V<=2)",
+    "0",
+    "20",
+    "40",
+    "60",
+    "80",
+    "(b) Enrichment",
+    "Low-EF zoom",
+    "0.51",
+    "1.21",
+    "k per fold (log scale)",
+    "1",
+    "5",
+    "10",
+    "20",
+    "50",
+    "100",
+    "0.0",
+    "0.5",
+    "1.0",
+    "1.5",
+    "H-soft",
+    "Additive Ridge",
+    "Mean",
+    "Random (fixed)",
+    "Budget: k=20",
+    "Random expectation: EF=1"
+  ],
+  "text_word_count": 69,
+  "previous_v2_text_word_count": 72,
+  "no_lollipop": true,
+  "design": "Four-colour curves with a compact shared-x low-EF enlargement, short vertical connectors and matched reference keys.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/all_domain_metrics.csv",
+      "sha256": "7ef13b729045b31bcae41eb3a30b3946e8aaaffb506f2a775890fcca064dd258",
+      "bytes": 1750054
+    },
+    {
+      "path": "artifacts/p1_v21/results/P1_main_per_fold.csv",
+      "sha256": "06b6f27e9c48453878d96da30f6b18bbd3a6125dcc37ce263d4c86cc31e55bb3",
+      "bytes": 71661
+    },
+    {
+      "path": "artifacts/p1_v21/experiment_freeze.json",
+      "sha256": "fc7102a17bbc1ad485713cdcbd0cefad3049519d06e65b80c52b51cb2efafdcf",
+      "bytes": 2363
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_file": "figures/render_p1_revision_v3.py",
+  "renderer_sha256": "0f24972ba95737b629ebdc11f87b38ce05e8fda7f249d4b16a9eadb528379d72",
+  "common_helper_file": "figures/p1_revision_v3_common.py",
+  "common_helper_sha256": "86c11ec1aa8bad192210baffaab3f5d7af53da945005e68c617c5a025916b28e",
+  "foundation_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_redesign_v2.json",
+  "palette_sha256": "81e184d079a99aa6969885be2eea0993f361c63a4727cc0776cfbd809739745a",
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "Near-positive enrichment under AB-blocked validation.",
+  "reading_guide": "Read the curves at the same per-fold budget k; hits sum the five folds and EF gives each fold equal weight. The dotted vertical line is k=20, corresponding to 100 selections overall. H-soft gives 68 hits and EF=62.1024, compared with 10, 1 and 0 hits for additive Ridge, mean and the fixed random realization. The event is V<=2. Endpoint labels refer to k=100. The compact lower strip enlarges EF=0-1.5 from the marked parent band; both panels share the same log-budget viewport, and short vertical connectors mark the correspondence. The data occupy k=1-100; the identical 0.85-165 viewport adds endpoint-label padding only. The dashed horizontal line is EF=1, the uniform-random expectation, not the realized random curve. Per-fold N/M/h and existing unadjusted hypergeometric p values remain in F2_fold_uniform_null.csv; they are descriptive references after development selection, not a pooled test.",
+  "diagnostics": {
+    "folds": 5,
+    "event": "V<=2",
+    "k_values": [
+      1,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "at_k20": [
+      {
+        "route": "H-soft",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 68,
+        "EF_macro": 62.10238083907848
+      },
+      {
+        "route": "additive_ridge",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 10,
+        "EF_macro": 8.704892423548447
+      },
+      {
+        "route": "mean",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 1,
+        "EF_macro": 0.7270967741935485
+      },
+      {
+        "route": "random_hash",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 0,
+        "EF_macro": 0.0
+      }
+    ],
+    "zoom_source_bounds": [
+      0.85,
+      165,
+      0,
+      1.5
+    ],
+    "same_log_x_viewport": true,
+    "zoom_layout": "compact shared-x lower strip"
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "F2_curve_data.csv": "c245efda68d4ce80cd75a4e0b1601e0735cd9071e28b6c0988ca3450a77ad475",
+    "F2_enrichment.pdf": "f184c3a9f2716631b57979242170447a766eaaa847153b312abe80f6a785ed25",
+    "F2_enrichment.png": "9a427c5248e9136ef37a415796845ac17d787612ba9e9e4b969ba2b056c46aa2",
+    "F2_enrichment_grayscale.png": "4d2bd0b99688c411d49b5dc8a8b6e59c589b4b61eddbc3e7f21ccf9d253dfd1d",
+    "F2_enrichment_v2.pdf": "b80dbece3c6e9f4cfb66bde0457a1af5a6f444c317021e1f5ff7e3de4deab1b3",
+    "F2_enrichment_v2.png": "d29bb070e6166e49b0bbd1be3a2efe28a30f3450ebbfee4d4e5419371743337e",
+    "F2_enrichment_v2_grayscale.png": "22c545f51c7b034af9547575ce96ed2ef5b4cfa7657b8c759269413d5f666b27",
+    "F2_enrichment_v3.pdf": "f184c3a9f2716631b57979242170447a766eaaa847153b312abe80f6a785ed25",
+    "F2_enrichment_v3.png": "9a427c5248e9136ef37a415796845ac17d787612ba9e9e4b969ba2b056c46aa2",
+    "F2_enrichment_v3_grayscale.png": "4d2bd0b99688c411d49b5dc8a8b6e59c589b4b61eddbc3e7f21ccf9d253dfd1d",
+    "F2_fold_uniform_null.csv": "bb1b3aaeaf883d5aa515a1d6b40605a8a82ffcd2f3c1e3fc100be47cdddd969c"
+  },
+  "legend_matches_actual_marks": true,
+  "nine_self_checks_passed": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "existing_display_data_unchanged": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 118.00000025431314,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  },
+  "normative_zoom_checked": {
+    "source_frame": true,
+    "short_connectors": true,
+    "same_log_x_viewport": true,
+    "zoom_coordinates_explicit": true,
+    "series_styles_identical": true,
+    "no_main_curve_obscured": true
+  }
+}

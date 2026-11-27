@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-27",
+  "reviewed_color_and_grayscale_pixels": {
+    "F2": {
+      "F2_enrichment_v2_grayscale.png": "98dd4af645a58b6e6bb4c781912fbf70d31b090994563f4ef52db3d82b416947",
+      "F2_enrichment_v2.png": "e73a1a7230ba7835fb458ac119b59e5c7f6e7db92185babb6d899588f9435530"
+    },
+    "F3": {
+      "F3_error_tradeoff_v2_grayscale.png": "7de1255ea288c7557e601dc9052c92df76d5181fe7a407679a3818e92d04fa04",
+      "F3_error_tradeoff_v2.png": "60358812fee8625c88db9c831493776b8429e8792b5be5dd37e1001f1b42156e"
+    },
+    "A1": {
+      "A1_residual_structure_v2.png": "5ab35f6c4c40a21497caf79d21d871a1fee563b605ef096a4aedf5168d63cfcd",
+      "A1_residual_structure_v2_grayscale.png": "11e381bfca279e7ef6e3b11bddda6ffc746cf0e13b0bf086a4562e8347bc4725"
+    },
+    "A2": {
+      "A2_calibration_v2.png": "f1a51d412026888a237d924cc738883779c08f9fee5bf74c2f7ee6de2b420c5e",
+      "A2_calibration_v2_grayscale.png": "97dcb3cef1f4d52a1cd1dd0e42becac0b4db3f7b86efd6f7608ed582577f6928"
+    },
+    "A3": {
+      "A3_decision_stability_v2.png": "eb3036ccf0e100823a5172ae7ba163f9e0757c03e6152013221899c7a8984f32",
+      "A3_decision_stability_v2_grayscale.png": "b285093145f3867ad94df53370e6a56c852a0a8711f2030892af8a365dc906b9"
+    },
+    "A4": {
+      "A4_split_half_v2_grayscale.png": "4bae90b85af76c8de3579b91d271efc5a4007f0988e454ad5fc023d2061987bc",
+      "A4_split_half_v2.png": "ebc792480854063eb211a0fe98d78f595a80c363bc43e5a22e5aac21f4f9b60b"
+    },
+    "A5": {
+      "A5_stress_protocols_v2.png": "bb056b5155ab12a0110af5058d511496e3cf6396bd4480d36ffee8d6687ffb43",
+      "A5_stress_protocols_v2_grayscale.png": "c2bd50289c142a8be1824cdbdc2ce2e113eb8d085198fccfc80b691b3d157f01"
+    },
+    "A6": {
+      "A6_ablation_v2.png": "8983a5115d3b8081f390ad04e9331c19b03af23fe4bda27a5bc4bc9478c281d4",
+      "A6_ablation_v2_grayscale.png": "9513d727ffb2a5efe1365b4fc4e01951a5702fa3c97b1c054e8c50863b65f52e"
+    }
+  },
+  "actual_paper_print_test": false,
+  "legend_matching_checked": true,
+  "F2_zoom_source_frame_and_connectors_checked": true
+}

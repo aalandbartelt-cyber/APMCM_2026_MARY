@@ -1,0 +1,470 @@
+{
+  "status": "awaiting_user_palette_approval",
+  "date": "2026-11-27",
+  "template_sha256": "e407054ccfbfd18fb1119c1030fd744af034cfae078c427a30fcc9357c4facd5",
+  "template_function": "apply_apmcm_style",
+  "candidate_sha256": "4b11fb52aff6e72353d6518ab5da3bcc731b50a154a6a3d1712be241d044e1c0",
+  "source_hashes": {
+    "SKILL.md": "fc607a834f577677d0ec4fbcfba69bf55ce43013adc54b11f7751d770f7bb93f",
+    "assets/apmcm_figure_playbook.md": "a861641b4ed0ef1a87746795dfa5310a64984fb859139077d2ed24511e1fa730",
+    "assets/apmcm_d_plot_templates.py": "e407054ccfbfd18fb1119c1030fd744af034cfae078c427a30fcc9357c4facd5",
+    "references/25_D题量子优化优秀论文解剖.md": "a03518e019cdab0ed6d49a35036632608b95ad7657e8296c1e0a973e5a84bcac"
+  },
+  "reading_order": [
+    "SKILL.md sections 2.5 and 7",
+    "complete figure playbook",
+    "complete D plotting template",
+    "reference 25 sections 25.9-25.12; 25.13 read for the actual 2025B material"
+  ],
+  "roles": [
+    {
+      "id": "S",
+      "key": "surrogate",
+      "name": "Surrogate model",
+      "label": "Surrogate\nmodel",
+      "hex": "#2C4256",
+      "marker": "o",
+      "linestyle": "-",
+      "hatch": "",
+      "rgb": [
+        44,
+        66,
+        86
+      ],
+      "Y": 0.051037877185942694,
+      "L_star": 27.02843231330518,
+      "gray8": 64,
+      "gray_hex": "#404040",
+      "gray8_legacy601": 62,
+      "C_ab": 14.841785946207127,
+      "HSL_saturation": 0.32307692307692315,
+      "HSL_lightness": 0.2549019607843137,
+      "white_contrast": 10.392142325671164,
+      "black_contrast": 2.020757543718854
+    },
+    {
+      "id": "B",
+      "key": "baseline",
+      "name": "Baseline reference",
+      "label": "Baseline\nreference",
+      "hex": "#949699",
+      "marker": "s",
+      "linestyle": "--",
+      "hatch": "//",
+      "rgb": [
+        148,
+        150,
+        153
+      ],
+      "Y": 0.30408500077513734,
+      "L_star": 62.00509836113014,
+      "gray8": 150,
+      "gray_hex": "#969696",
+      "gray8_legacy601": 150,
+      "C_ab": 1.8345910852580951,
+      "HSL_saturation": 0.02392344497607647,
+      "HSL_lightness": 0.5901960784313726,
+      "white_contrast": 2.965389659831441,
+      "black_contrast": 7.081700015502746
+    },
+    {
+      "id": "Q",
+      "key": "quantum",
+      "name": "Quantum methods",
+      "label": "Quantum\nmethods",
+      "hex": "#8B6C52",
+      "marker": "D",
+      "linestyle": "--",
+      "hatch": "\\\\",
+      "rgb": [
+        139,
+        108,
+        82
+      ],
+      "Y": 0.16823287867716605,
+      "L_star": 48.03660238587101,
+      "gray8": 114,
+      "gray_hex": "#727272",
+      "gray8_legacy601": 114,
+      "C_ab": 21.101114974865915,
+      "HSL_saturation": 0.257918552036199,
+      "HSL_lightness": 0.43333333333333335,
+      "white_contrast": 4.8113740072744715,
+      "black_contrast": 4.364657573543321
+    },
+    {
+      "id": "C",
+      "key": "classical",
+      "name": "Classical methods",
+      "label": "Classical\nmethods",
+      "hex": "#3C554B",
+      "marker": "^",
+      "linestyle": "-",
+      "hatch": "..",
+      "rgb": [
+        60,
+        85,
+        75
+      ],
+      "Y": 0.07965657780006201,
+      "L_star": 33.91126042048781,
+      "gray8": 80,
+      "gray_hex": "#505050",
+      "gray8_legacy601": 76,
+      "C_ab": 12.234501964790212,
+      "HSL_saturation": 0.17241379310344826,
+      "HSL_lightness": 0.28431372549019607,
+      "white_contrast": 8.098316474303072,
+      "black_contrast": 2.5931315560012402
+    },
+    {
+      "id": "W",
+      "key": "warning",
+      "name": "Constraints and warnings",
+      "label": "Constraints\nand warnings",
+      "hex": "#492725",
+      "marker": "X",
+      "linestyle": ":",
+      "hatch": "xx",
+      "rgb": [
+        73,
+        39,
+        37
+      ],
+      "Y": 0.03001077074705293,
+      "L_star": 20.04821010514496,
+      "gray8": 48,
+      "gray_hex": "#303030",
+      "gray8_legacy601": 49,
+      "C_ab": 17.741382206905158,
+      "HSL_saturation": 0.32727272727272716,
+      "HSL_lightness": 0.21568627450980393,
+      "white_contrast": 13.123233162188669,
+      "black_contrast": 1.6002154149410586
+    },
+    {
+      "id": "M",
+      "key": "metal",
+      "name": "Metal samples",
+      "label": "Metal\nsamples",
+      "hex": "#AAA8A5",
+      "marker": "v",
+      "linestyle": ":",
+      "hatch": "///",
+      "rgb": [
+        170,
+        168,
+        165
+      ],
+      "Y": 0.39267923735887034,
+      "L_star": 68.94489858461289,
+      "gray8": 168,
+      "gray_hex": "#A8A8A8",
+      "gray8_legacy601": 168,
+      "C_ab": 1.8047349241364288,
+      "HSL_saturation": 0.02857142857142847,
+      "HSL_lightness": 0.6568627450980392,
+      "white_contrast": 2.371920594840973,
+      "black_contrast": 8.853584747177406
+    },
+    {
+      "id": "N",
+      "key": "nonmetal",
+      "name": "Nonmetal samples",
+      "label": "Nonmetal\nsamples",
+      "hex": "#728A74",
+      "marker": "P",
+      "linestyle": "-.",
+      "hatch": "..",
+      "rgb": [
+        114,
+        138,
+        116
+      ],
+      "Y": 0.23015319488966876,
+      "L_star": 55.088113923220504,
+      "gray8": 132,
+      "gray_hex": "#848484",
+      "gray8_legacy601": 128,
+      "C_ab": 15.909126338956597,
+      "HSL_saturation": 0.09523809523809518,
+      "HSL_lightness": 0.49411764705882355,
+      "white_contrast": 3.7479494046588187,
+      "black_contrast": 5.603063897793375
+    },
+    {
+      "id": "P",
+      "key": "near_positive",
+      "name": "Near-positive highlight",
+      "label": "Near-positive\nhighlight",
+      "hex": "#715E3D",
+      "marker": "*",
+      "linestyle": "-",
+      "hatch": "++",
+      "rgb": [
+        113,
+        94,
+        61
+      ],
+      "Y": 0.11853039617353217,
+      "L_star": 40.981590573389326,
+      "gray8": 97,
+      "gray_hex": "#616161",
+      "gray8_legacy601": 96,
+      "C_ab": 21.946532444236936,
+      "HSL_saturation": 0.29885057471264365,
+      "HSL_lightness": 0.3411764705882353,
+      "white_contrast": 6.230330099733685,
+      "black_contrast": 3.370607923470643
+    }
+  ],
+  "all_28_pairs": [
+    {
+      "first": "S",
+      "second": "B",
+      "delta_L_star": 34.976666047824956,
+      "delta_gray8": 86,
+      "delta_gray8_legacy601": 88
+    },
+    {
+      "first": "S",
+      "second": "Q",
+      "delta_L_star": 21.008170072565825,
+      "delta_gray8": 50,
+      "delta_gray8_legacy601": 52
+    },
+    {
+      "first": "S",
+      "second": "C",
+      "delta_L_star": 6.882828107182625,
+      "delta_gray8": 16,
+      "delta_gray8_legacy601": 14
+    },
+    {
+      "first": "S",
+      "second": "W",
+      "delta_L_star": 6.980222208160221,
+      "delta_gray8": 16,
+      "delta_gray8_legacy601": 13
+    },
+    {
+      "first": "S",
+      "second": "M",
+      "delta_L_star": 41.916466271307705,
+      "delta_gray8": 104,
+      "delta_gray8_legacy601": 106
+    },
+    {
+      "first": "S",
+      "second": "N",
+      "delta_L_star": 28.059681609915323,
+      "delta_gray8": 68,
+      "delta_gray8_legacy601": 66
+    },
+    {
+      "first": "S",
+      "second": "P",
+      "delta_L_star": 13.953158260084145,
+      "delta_gray8": 33,
+      "delta_gray8_legacy601": 34
+    },
+    {
+      "first": "B",
+      "second": "Q",
+      "delta_L_star": 13.968495975259131,
+      "delta_gray8": 36,
+      "delta_gray8_legacy601": 36
+    },
+    {
+      "first": "B",
+      "second": "C",
+      "delta_L_star": 28.09383794064233,
+      "delta_gray8": 70,
+      "delta_gray8_legacy601": 74
+    },
+    {
+      "first": "B",
+      "second": "W",
+      "delta_L_star": 41.95688825598518,
+      "delta_gray8": 102,
+      "delta_gray8_legacy601": 101
+    },
+    {
+      "first": "B",
+      "second": "M",
+      "delta_L_star": 6.939800223482749,
+      "delta_gray8": 18,
+      "delta_gray8_legacy601": 18
+    },
+    {
+      "first": "B",
+      "second": "N",
+      "delta_L_star": 6.916984437909633,
+      "delta_gray8": 18,
+      "delta_gray8_legacy601": 22
+    },
+    {
+      "first": "B",
+      "second": "P",
+      "delta_L_star": 21.02350778774081,
+      "delta_gray8": 53,
+      "delta_gray8_legacy601": 54
+    },
+    {
+      "first": "Q",
+      "second": "C",
+      "delta_L_star": 14.1253419653832,
+      "delta_gray8": 34,
+      "delta_gray8_legacy601": 38
+    },
+    {
+      "first": "Q",
+      "second": "W",
+      "delta_L_star": 27.988392280726046,
+      "delta_gray8": 66,
+      "delta_gray8_legacy601": 65
+    },
+    {
+      "first": "Q",
+      "second": "M",
+      "delta_L_star": 20.90829619874188,
+      "delta_gray8": 54,
+      "delta_gray8_legacy601": 54
+    },
+    {
+      "first": "Q",
+      "second": "N",
+      "delta_L_star": 7.051511537349498,
+      "delta_gray8": 18,
+      "delta_gray8_legacy601": 14
+    },
+    {
+      "first": "Q",
+      "second": "P",
+      "delta_L_star": 7.0550118124816805,
+      "delta_gray8": 17,
+      "delta_gray8_legacy601": 18
+    },
+    {
+      "first": "C",
+      "second": "W",
+      "delta_L_star": 13.863050315342846,
+      "delta_gray8": 32,
+      "delta_gray8_legacy601": 27
+    },
+    {
+      "first": "C",
+      "second": "M",
+      "delta_L_star": 35.03363816412508,
+      "delta_gray8": 88,
+      "delta_gray8_legacy601": 92
+    },
+    {
+      "first": "C",
+      "second": "N",
+      "delta_L_star": 21.176853502732698,
+      "delta_gray8": 52,
+      "delta_gray8_legacy601": 52
+    },
+    {
+      "first": "C",
+      "second": "P",
+      "delta_L_star": 7.070330152901519,
+      "delta_gray8": 17,
+      "delta_gray8_legacy601": 20
+    },
+    {
+      "first": "W",
+      "second": "M",
+      "delta_L_star": 48.896688479467926,
+      "delta_gray8": 120,
+      "delta_gray8_legacy601": 119
+    },
+    {
+      "first": "W",
+      "second": "N",
+      "delta_L_star": 35.039903818075544,
+      "delta_gray8": 84,
+      "delta_gray8_legacy601": 79
+    },
+    {
+      "first": "W",
+      "second": "P",
+      "delta_L_star": 20.933380468244366,
+      "delta_gray8": 49,
+      "delta_gray8_legacy601": 47
+    },
+    {
+      "first": "M",
+      "second": "N",
+      "delta_L_star": 13.856784661392382,
+      "delta_gray8": 36,
+      "delta_gray8_legacy601": 40
+    },
+    {
+      "first": "M",
+      "second": "P",
+      "delta_L_star": 27.96330801122356,
+      "delta_gray8": 71,
+      "delta_gray8_legacy601": 72
+    },
+    {
+      "first": "N",
+      "second": "P",
+      "delta_L_star": 14.106523349831178,
+      "delta_gray8": 35,
+      "delta_gray8_legacy601": 32
+    }
+  ],
+  "minimum_delta_L_star": 6.882828107182625,
+  "minimum_delta_gray8": 16,
+  "minimum_delta_gray8_legacy601": 13,
+  "continuous_maps": [
+    {
+      "name": "viridis",
+      "start": 0.15,
+      "end": 0.8,
+      "use": "Default continuous magnitude",
+      "L_star_min": 27.61235803223451,
+      "L_star_max": 76.40412025929334,
+      "nondecreasing_lightness": true
+    },
+    {
+      "name": "plasma",
+      "start": 0.1,
+      "end": 0.7,
+      "use": "Reserved landscape/heatmap alternative, declared per approved figure",
+      "L_star_min": 22.409391061928275,
+      "L_star_max": 66.4511863477071,
+      "nondecreasing_lightness": true
+    }
+  ],
+  "dpi": 300,
+  "width_inches": 7.0,
+  "height_inches": 9.8,
+  "pixels": [
+    2100,
+    2940
+  ],
+  "font_family": "Times New Roman",
+  "minimum_text_pt": 9.0,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5",
+    "timesbd.ttf": "54fbe2c70af7c85a97bed0573227e3ccc4b2486012e3ca2a40c6bc77065846f5"
+  },
+  "all_text_actual_times_new_roman": true,
+  "mathtext_family": "Times New Roman",
+  "font_fallback_allowed": false,
+  "all_figure_text_ascii": true,
+  "all_text_within_canvas": true,
+  "min_swatch_text_contrast": 4.8113740072744715,
+  "no_experimental_data_used": true,
+  "models_loaded": false,
+  "fits": 0,
+  "formal_figures_generated": false,
+  "figure_inventory_generated": false,
+  "outputs": {
+    "palette_strip.png": "33c4c54eb178748391c90700f70967eff5c2b51c19a5fad94e994411a1bc8972",
+    "palette_strip_grayscale.png": "1b4e9496b34bdf294f38da977dcd10f6b766e55b8aa01eff17e512052f7fdb16"
+  }
+}

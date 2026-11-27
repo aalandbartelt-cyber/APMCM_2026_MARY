@@ -1,0 +1,56 @@
+{
+  "version": "P1-palette-v2-proposal",
+  "status": "awaiting_user_selection_and_approval",
+  "scope_after_approval": "All P1/P2/P3 figures and tables",
+  "date": "2026-11-27",
+  "font_family": "Times New Roman",
+  "minimum_font_pt": 8.5,
+  "dpi": 300,
+  "figure_inches": [7.2, 12.0],
+  "ink": "#303841",
+  "outline": "#4C5662",
+  "background": "#FFFFFF",
+  "colour_metric": "CIE76 Delta E*ab, CIELAB D65, sRGB",
+  "minimum_pairwise_delta_E76": 30,
+  "grayscale_metric": "Absolute difference in CIE L* (0-100); 15 points",
+  "grayscale_pairs": [["S", "B"], ["Q", "C"], ["M", "N"]],
+  "minimum_grayscale_pair_delta_L_star": 15,
+  "grayscale_scope_authorization": "User explicitly confirmed S/B, Q/C and M/N actual comparison pairs; all 28 pairs still require Delta E >= 30.",
+  "thin_line_core_pt": 1.5,
+  "low_contrast_outline_total_pt": 2.1,
+  "outline_trigger_white_contrast": 3.0,
+  "outline_note": "3:1 is a conservative rendering trigger chosen for this proposal, not a claimed universal print threshold. Raw pastel colours below it are never claimed to pass a bare-line contrast test.",
+  "roles": [
+    {"id": "S", "key": "surrogate", "name": "Surrogate model", "short": "S  Model", "zh": "代理模型主色", "marker": "o", "linestyle": "-", "hatch": ""},
+    {"id": "B", "key": "baseline", "name": "Baseline reference", "short": "B  Baseline", "zh": "基线对照色", "marker": "s", "linestyle": "--", "hatch": "//"},
+    {"id": "Q", "key": "quantum", "name": "Quantum methods", "short": "Q  Quantum", "zh": "量子方法色", "marker": "D", "linestyle": "--", "hatch": "\\\\"},
+    {"id": "C", "key": "classical", "name": "Classical methods", "short": "C  Classical", "zh": "经典方法色", "marker": "^", "linestyle": "-", "hatch": ".."},
+    {"id": "W", "key": "warning", "name": "Constraints and warnings", "short": "W  Warning", "zh": "约束与警示线色", "marker": "X", "linestyle": ":", "hatch": "xx"},
+    {"id": "M", "key": "metal", "name": "Metal samples", "short": "M  Metal", "zh": "金属样本色", "marker": "v", "linestyle": ":", "hatch": "///"},
+    {"id": "N", "key": "nonmetal", "name": "Nonmetal samples", "short": "N  Nonmetal", "zh": "非金属样本色", "marker": "P", "linestyle": "-.", "hatch": ".."},
+    {"id": "P", "key": "near_positive", "name": "Near-positive highlight", "short": "P  Near-pos.", "zh": "近正例高亮色", "marker": "*", "linestyle": "-", "hatch": "++"}
+  ],
+  "candidates": [
+    {"id": "A", "name": "Light and fresh", "zh": "清浅明快型", "colours": ["#82D0EF", "#737579", "#F3AE6B", "#4A80B5", "#E98581", "#B37AB8", "#A0DDB0", "#EEE680"]},
+    {"id": "B", "name": "Balanced and bright", "zh": "中度明快型", "colours": ["#69C2EA", "#65686C", "#ED9D54", "#346EAA", "#DD7374", "#A964AC", "#7ECA9C", "#E9D565"]},
+    {"id": "C", "name": "Classic journal", "zh": "经典期刊型", "colours": ["#5DBCE6", "#5B5B5B", "#E39640", "#00689F", "#D56D59", "#B16B9C", "#80C5A2", "#E6D66B"]}
+  ],
+  "baseline_substyles": {
+    "additive_ridge": {"marker": "s", "linestyle": "--"},
+    "mean": {"marker": "v", "linestyle": ":"},
+    "random_hash": {"marker": "x", "linestyle": "-."}
+  },
+  "continuous_maps": [
+    {"name": "viridis", "start": 0.15, "end": 0.80},
+    {"name": "plasma", "start": 0.10, "end": 0.70}
+  ],
+  "semantic_rules": [
+    "The selected candidate, its role mapping and non-colour cues are frozen across P1/P2/P3 only after user approval.",
+    "Statistical baselines share B; C is reserved for classical optimisation methods.",
+    "M denotes gap=0, N denotes gap>0; near-positive P denotes observed development V<=2, not hidden V=0 or a prediction.",
+    "Colour is always accompanied by marker, dash, hatch or a direct label.",
+    "Thin lines below 3:1 raw contrast require the neutral outline; markers and bars require visible edges; translucent bands require boundaries.",
+    "Only S/B, Q/C and M/N are approved grayscale-series pairs. Other combinations need separate figure review and redundant cues; no claim that all 28 gray pairs pass.",
+    "No inventory or formal figure is produced before the corresponding user approval."
+  ]
+}

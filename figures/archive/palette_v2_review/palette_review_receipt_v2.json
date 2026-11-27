@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-27",
+  "status": "awaiting_user_palette_selection_and_approval",
+  "user_approved_gray_scope": "Actual comparison pairs S/B, Q/C, M/N; all 28 colour pairs require Delta E76 >= 30.",
+  "candidate_min_delta_E76": {
+    "A": 31.06383970460147,
+    "B": 33.51634146968233,
+    "C": 32.62918693562289
+  },
+  "all_candidates_28_of_28_colour_pairs_pass": true,
+  "all_candidates_3_of_3_approved_gray_pairs_pass": true,
+  "all_28_gray_pairs_claimed_to_pass": false,
+  "raw_pastel_thin_line_contrast_limit_explicit": true,
+  "neutral_outline_rule_included_for_user_approval": true,
+  "manual_visual_review": {
+    "colour": "Inspected the rendered 2160x3600 PNG: all three palettes have matching line, scatter, bar and band panels; no observed clipping or text overlap. Light-yellow raw/outlined line samples are exposed side by side.",
+    "grayscale": "Inspected the whole-page grayscale PNG: S/B, Q/C and M/N remain distinguishable with tone and marker/dash/direct-label cues. Raw light-yellow lines are faint; neutral outlines retain their boundary.",
+    "physical_print_test_performed": false
+  },
+  "checks": {
+    "dpi_300": true,
+    "actual_Times_New_Roman": true,
+    "minimum_font_8_5pt": true,
+    "English_only": true,
+    "approved_gray_pairs": true,
+    "candidate_colour_consistency": true
+  },
+  "protected_input_hashes_unchanged": true,
+  "protected_groups": {
+    "p1_artifacts": {
+      "files": 3621,
+      "bytes": 923508268,
+      "sha256": "f2e52bd99d97ba55063f3cb46fa8de394bcfb2e25a319b2538e542f6a5ffb686"
+    },
+    "p1_code": {
+      "files": 34,
+      "bytes": 278761,
+      "sha256": "27532bcb776d4d645302bbceec9bbf6ac2ae036425b4aeff8e5c87874c1d3130"
+    },
+    "official_D_data": {
+      "files": 10,
+      "bytes": 3335016,
+      "sha256": "0135210bf55b9c8d07513bed6f3bcb95d814a4b4265f821ed0a2db202ea61856"
+    },
+    "fit_ledger_sha256": "3b34143f454e8e46977efc60f3a9d35ba604065e24a088de132053db53d44bbd"
+  },
+  "new_model_fits": 0,
+  "models_loaded": false,
+  "formal_figures_generated": false,
+  "figure_inventory_generated": false,
+  "writes_limited_to": "figures/",
+  "v1_state": "rejected, preserved under archive/palette_v1/",
+  "repository_checks": {
+    "git_hygiene": {
+      "exit_code": 0,
+      "summary": [
+        "SUMMARY: 10 checks, 0 FAIL"
+      ],
+      "warning_categories": [
+        "[WARN] tracked 修改",
+        "[WARN] 未跟踪条目"
+      ]
+    },
+    "env_doctor": {
+      "exit_code": 0,
+      "summary": [
+        "SUMMARY: 14 checks, 0 FAIL"
+      ],
+      "warning_categories": [
+        "[WARN] pypdf"
+      ]
+    }
+  },
+  "files": {
+    ".gitignore": "2f54cb871ec9bc6cdb1a5ae2c0bf4fe324d627de1b1bdfccfb058bfb60907cce",
+    "palette_audit_v2.json": "28e54b5f0e4f9a8de48316d9ef296ed83e25ea0102c0db77a4632cb35833c610",
+    "palette_candidates_v2.json": "b124b9486ed6446b4e952bd942890e0c5c23f85e0f098d4407d2b987dd9c1355",
+    "palette_delta_E76_v2.csv": "461804e54ad03339842844f91a17f0bde7a6e68b26ffc1f67d69d726d1b747da",
+    "palette_proposal.md": "063b8e8131a7e05b8529bdf06020aa77b105917c539b4b15a7127f4b06e2e54f",
+    "palette_strip_v2.png": "97b5ca7aa3458af6058fdd8ff0d64df323163dd87f8c41c55cb380b81063fa43",
+    "palette_strip_v2_grayscale.png": "82cae8021d2ee39dd790217fe1d0206bd793cdbf57c9bed9667fbc703337ec9e",
+    "palette_v2_input_guard_after.json": "ae555787406e7e571eafc2ac3b767f2d8446161a628c7a0b1b19a71b428c9ead",
+    "palette_v2_input_guard_before.json": "ae555787406e7e571eafc2ac3b767f2d8446161a628c7a0b1b19a71b428c9ead",
+    "render_palette_v2.py": "abc253d9301f890b6767ca35cddadc177c30c6f72a8f0ddb22e345d6445e781b"
+  }
+}

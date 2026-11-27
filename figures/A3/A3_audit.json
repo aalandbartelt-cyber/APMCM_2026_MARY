@@ -1,0 +1,153 @@
+{
+  "figure": "A3",
+  "revision": 2,
+  "date": "2026-11-27",
+  "status": "revision_2_visually_checked_awaiting_user_review",
+  "title": "Nominal-candidate rank and surrogate decision regret",
+  "width_mm": 170.0,
+  "height_mm": 103.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1216
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "24",
+    "72",
+    "8",
+    "15",
+    "Rank (log scale)",
+    "1",
+    "2",
+    "5",
+    "10",
+    "20",
+    "50",
+    "Pool",
+    "07",
+    "08",
+    "11",
+    "12",
+    "(a) Rank distribution",
+    "2.56",
+    "2.87",
+    "5.67",
+    "3.69",
+    "3.57",
+    "2.70",
+    "6.63",
+    "3.69",
+    "Surrogate regret (Vhat)",
+    "6",
+    "4",
+    "2",
+    "0",
+    "2",
+    "4",
+    "07",
+    "08",
+    "11",
+    "12",
+    "(b) Decision regret",
+    "Reverse cost",
+    "Forward cost",
+    "p50",
+    "p90",
+    "p95",
+    "Max",
+    "Member rank"
+  ],
+  "text_word_count": 55,
+  "rejected_v1_text_word_count": 129,
+  "text_reduction_fraction": 0.5736434108527132,
+  "no_lollipop": true,
+  "design": "Four coloured violins with raw ranks; diverging two-ended quantile whiskers. No lollipop or zero-anchored stem.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/hardening/decision_stability_members.csv",
+      "sha256": "29161628cf32104ba564232541c7d4d476d3f4fde02c178e3a2b5cf86e481879",
+      "bytes": 8012
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/decision_stability_summary.csv",
+      "sha256": "0c2d8bf7ee9acfe394d68fa53ce9db8bfb72df0919a9454347458a396918504d",
+      "bytes": 2225
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/protocol.json",
+      "sha256": "bec7f0a78e84e9503f92c5e3b3b4e12846220e82b582046b6b2ddd25351c67f0",
+      "bytes": 110648
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_sha256": "222763d5581aab7e82bdd6055db797161ea74a3f5b3873bbeb9774bd1415259a",
+  "common_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_redesign_v2.json",
+  "palette_sha256": "81e184d079a99aa6969885be2eea0993f361c63a4727cc0776cfbd809739745a",
+  "prior_frozen_palette_unchanged": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "Nominal-candidate rank distributions and bidirectional regret.",
+  "reading_guide": "Each violin displays the 20 existing ranks of La|Ti|NO2, with all observations overlaid. Width is a graphics-only Gaussian-kernel density in log10 rank using fixed bandwidth 0.12; the display is cut at rank 1 and closes 0.30 log10 units above the largest observed rank. Width is normalized separately within each pool, not fitted or used for inference. Maximum ranks are annotated. In the right panel, reverse regret is placed left and forward regret right, using the blue and amber ends of the common diverging palette, with white at zero. Colour encodes direction only; position encodes cost. Both costs are nonnegative: the leftward sign encodes direction only. Forward means the nominal choice evaluated in each member table; reverse means each member choice evaluated in the nominal table. Quantile symbols identify p50/p90/p95 and maxima; no line is anchored at zero. All quantiles match stored summaries. None of the pools satisfies the registered 0.1 tolerance in both directions for all members. These are surrogate-table costs, not true-V regret.",
+  "diagnostics": {
+    "members": 80,
+    "n_per_pool": 20,
+    "quantiles_independently_checked": true,
+    "fixed_graphics_kernel_bandwidth_log10": 0.12,
+    "bandwidth_estimated": false,
+    "negative_side_is_direction_only": true,
+    "new_density_model_fits": 0
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "A3_decision_stability.pdf": "79f9f0fa978305e44fa14893eac2b607e46454956e9b756777023f82785d5d46",
+    "A3_decision_stability.png": "8765600ca6dd4dfebd354c149ce2f7a348de83f2653cd94ebc96bd87f01964cb",
+    "A3_decision_stability_grayscale.png": "e7f2346d4d8cab712255b24646291f1cfcc29380468ccb2622e822af0b6ade38",
+    "A3_decision_stability_v2.pdf": "79f9f0fa978305e44fa14893eac2b607e46454956e9b756777023f82785d5d46",
+    "A3_decision_stability_v2.png": "8765600ca6dd4dfebd354c149ce2f7a348de83f2653cd94ebc96bd87f01964cb",
+    "A3_decision_stability_v2_grayscale.png": "e7f2346d4d8cab712255b24646291f1cfcc29380468ccb2622e822af0b6ade38",
+    "A3_member_ranks.csv": "6c2342f8c1c59abbd876ea123c85879430928c6ee5a990e67303f101d388fe45",
+    "A3_regret_quantiles.csv": "61e04871902c1b140e73308d80ac605862958ae5c1399116f380f7b690facb1b"
+  },
+  "legend_matches_actual_marks": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "nine_self_checks_passed": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 103.0000006781684,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  }
+}

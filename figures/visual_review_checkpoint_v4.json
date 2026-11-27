@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-27",
+  "figure": "A5",
+  "reviewed_color_and_grayscale_pixels": {
+    "A5_stress_protocols_v4.png": "b6774e6e8a854e6de836e548fc9d13a703a8ef10ebd12364fdbe9885a89bfda8",
+    "A5_stress_protocols_v4_grayscale.png": "969d10f078bf560d7acc75ad07dcf06de17f3b6e8b7213ef86e214aac2431944"
+  },
+  "actual_paper_print_test": false,
+  "manual_colour_review": true,
+  "manual_grayscale_review": true,
+  "reference": "User supplied A1(a) signed-bias image; identical blue-white-amber endpoints.",
+  "observations": "Square layout preserved; dark text readable on every cell; signed percentages survive grayscale; labels, colourbar and all numeric values unchanged."
+}

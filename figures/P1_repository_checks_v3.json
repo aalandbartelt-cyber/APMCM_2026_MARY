@@ -1,0 +1,29 @@
+{
+  "diff_check": {
+    "name": "diff_check",
+    "cmd": "git diff --check",
+    "chunk_id": "b2694a",
+    "wall_time_seconds": 0.000011667,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "git_hygiene": {
+    "name": "git_hygiene",
+    "cmd": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3.10 -B /home/mary/.codex/skills/mary-modeling-contest-pipeline-apmcm/scripts/audit_git_hygiene.py --root .",
+    "chunk_id": "c00b19",
+    "wall_time_seconds": 0.071809125,
+    "exit_code": 0,
+    "original_token_count": 129,
+    "output": "[PASS] 当前分支: codex/d-independent-review\n[PASS] remote: origin\thttps://github.com/aalandbartelt-cyber/APMCM_2026_MARY.git (fetch)\n[WARN] tracked 修改: 9 项\n[WARN] 未跟踪条目: 8 项\n[PASS] 未跟踪体积: 18.1 MB（阈值 100 MB）\n[PASS] 未跟踪大文件: 无 >50 MB\n[PASS] 环境/缓存文件: 无\n[PASS] 未跟踪文本密钥扫描: 0 命中\n[INFO] ignored 本地体积: 2.5 GB（不进 git，建议 Release/网盘）\n[SKIP] git push --dry-run: 未启用 --check-push\n\nSUMMARY: 10 checks, 0 FAIL\n"
+  },
+  "env_doctor": {
+    "name": "env_doctor",
+    "cmd": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3.10 -B /home/mary/.codex/skills/mary-modeling-contest-pipeline-apmcm/scripts/env_doctor.py --project .",
+    "chunk_id": "c43bec",
+    "wall_time_seconds": 0.000017283,
+    "exit_code": 0,
+    "original_token_count": 145,
+    "output": "[INFO] 平台: linux / Python 3.10.12 / /usr/bin/python3.10\n[PASS] Python: /home/mary/miniconda3/bin/python\n[PASS] Rscript: /home/mary/.local/bin/Rscript\n[PASS] LibreOffice: /mnt/c/Program Files/LibreOffice/program/soffice.exe\n[PASS] docx: 已安装\n[PASS] pptx: 已安装\n[PASS] openpyxl: 已安装\n[PASS] lxml: 已安装\n[WARN] pypdf: 未安装（可选）\n[PASS] PyMuPDF: fitz\n[INFO] Windows COM: 非 Windows；用 LibreOffice/PyMuPDF\n[PASS] git: /usr/bin/git\n[INFO] gh: /home/mary/.local/bin/gh\n[INFO] 字体: 未检查（Windows Fonts 目录）\n\nSUMMARY: 14 checks, 0 FAIL\n"
+  }
+}

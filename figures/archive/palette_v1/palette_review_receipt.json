@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-27",
+  "palette_checks_passed": true,
+  "experimental_inputs_identical": true,
+  "protected_groups": {
+    "p1_artifacts": {
+      "files": 3621,
+      "bytes": 923508268,
+      "sha256": "f2e52bd99d97ba55063f3cb46fa8de394bcfb2e25a319b2538e542f6a5ffb686"
+    },
+    "p1_code": {
+      "files": 34,
+      "bytes": 278761,
+      "sha256": "27532bcb776d4d645302bbceec9bbf6ac2ae036425b4aeff8e5c87874c1d3130"
+    },
+    "official_D_data": {
+      "files": 10,
+      "bytes": 3335016,
+      "sha256": "0135210bf55b9c8d07513bed6f3bcb95d814a4b4265f821ed0a2db202ea61856"
+    },
+    "plans_reports_handoff": {
+      "files": 7,
+      "bytes": 97832,
+      "sha256": "e7c7bc58baba51eea9c0ed37b849237c69c1a4c1a375d2c2344bad00710b64b6"
+    },
+    "fit_ledger_sha256": "3b34143f454e8e46977efc60f3a9d35ba604065e24a088de132053db53d44bbd"
+  },
+  "observed_nonexperimental_change": {
+    "path": "HANDOFF_CODEX交接文档.md",
+    "action": "preserved; not written by this plotting task",
+    "other_six_files_match_previous_delivery": true
+  },
+  "fits_before": 914,
+  "fits_after": 914,
+  "new_fits": 0,
+  "font_family": "Times New Roman",
+  "minimum_font_pt": 9,
+  "palette_state": "awaiting_user_approval",
+  "manual_visual_review": "colour and whole-image grayscale inspected after Times New Roman rendering; no observed clipping or text overlap",
+  "checks": {
+    "dpi": true,
+    "font": true,
+    "English_only": true,
+    "grayscale_discrimination": true,
+    "palette_consistency": true
+  },
+  "files": {
+    "palette_candidate.json": "4b11fb52aff6e72353d6518ab5da3bcc731b50a154a6a3d1712be241d044e1c0",
+    "palette_input_guard_before.json": "3799a28cac633778e8f9cb6c0ff7c9e1f7c0c6670d5db86ec44bfcdc0d2dde69",
+    "palette_input_guard_after.json": "a9a8a25b0d3b4740dbac09fca9bfa42ae9c392b5e1a33fc2ff35aa76ed66c029",
+    "palette_audit.json": "905ed4e6e3ea55f6580ff681acc23249702926b0b7b06b675dcea68f6e151210",
+    "render_palette.py": "71e50855d635ffd88c5bc3e33bca1733f0489be64c939ee42d71311dd5bdd9ca",
+    "palette_strip_grayscale.png": "1b4e9496b34bdf294f38da977dcd10f6b766e55b8aa01eff17e512052f7fdb16",
+    "palette_strip.png": "33c4c54eb178748391c90700f70967eff5c2b51c19a5fad94e994411a1bc8972",
+    "palette_proposal.md": "dc52cd211b1400bd6dc043b1311b2125af10fbe598791e92c75eb0e6b9ef9181",
+    ".gitignore": "2f54cb871ec9bc6cdb1a5ae2c0bf4fe324d627de1b1bdfccfb058bfb60907cce"
+  }
+}

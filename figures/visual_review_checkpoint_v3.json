@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-27",
+  "reviewed_color_and_grayscale_pixels": {
+    "F2": {
+      "F2_enrichment_v3.png": "9b06b222170b9587c2caa0f3f5688b5c9191ede350d1fa50000e896871a31aa8",
+      "F2_enrichment_v3_grayscale.png": "1f9037ec14b3f7459aef0522f6af8ab6255287675a4fbe7801a6a4e3ff5f12af"
+    },
+    "A1": {
+      "A1_residual_structure_v3.png": "ceb10e084c5e26862c414ae46738fb7c2c424e40d9bf66564629b5730b9b7496",
+      "A1_residual_structure_v3_grayscale.png": "627f59be3848cf8ea082529177aca35e723bba2be67390b9c7205f074251c2eb"
+    },
+    "A5": {
+      "A5_stress_protocols_v3.png": "7e0ba3a0ce3ff70fe9a2e2ab59cd2bab1e131699d40359fc28cb9bffccc8c503",
+      "A5_stress_protocols_v3_grayscale.png": "fc26b740c6070f4f3c29ab9188922335b62913aca1c02eac2bd19a569b63e458"
+    }
+  },
+  "actual_paper_print_test": false,
+  "legend_matching_checked": true,
+  "observations": {
+    "F2": "The enlarged band is adjacent to its source, shares identical log-x limits, and uses short vertical connectors. Markers/dashes distinguish all routes in grayscale; legends and endpoint labels remain readable.",
+    "A1": "Every pair of bars has an explicit X-family row. Solid RMSE and hatched q95 marks match the legend and remain distinct in grayscale; all 14 endpoints are legible.",
+    "A5": "Square canvas and square cells with a lighter blue-white-amber colour map. Signed percentages identify direction in grayscale; original values and percentage labels do not collide."
+  },
+  "no_clipping_or_overlap_observed": true,
+  "no_suptitle": true,
+  "no_embedded_tables": true,
+  "no_explanatory_sentences_inside_figures": true
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-27",
+  "scope": "A5 v4 only",
+  "authorization": "第八个图 改一下 降低饱和度 现在颜色有点太亮太浅；补充：辨识度不高，对比不强，难以辨认。",
+  "diverging": [
+    "#3D6078",
+    "#FFFFFF",
+    "#967651"
+  ],
+  "normalization": [
+    -80,
+    0,
+    80
+  ],
+  "semantic_direction": "negative blue; zero white; positive amber",
+  "change": "Increase the lightness range at lower chroma; use contrast-adaptive cell text. White midpoint and linear signed scale unchanged.",
+  "colour_measurement": {
+    "negative": {
+      "before_hex": "#93BED7",
+      "after_hex": "#3D6078",
+      "before": {
+        "L_star": 74.783,
+        "C_star_ab": 19.058
+      },
+      "after": {
+        "L_star": 39.093,
+        "C_star_ab": 18.259
+      },
+      "chroma_decrease_pct": 4.2
+    },
+    "zero": {
+      "before_hex": "#FFFFFF",
+      "after_hex": "#FFFFFF",
+      "before": {
+        "L_star": 100.0,
+        "C_star_ab": 0.0
+      },
+      "after": {
+        "L_star": 100.0,
+        "C_star_ab": 0.0
+      }
+    },
+    "positive": {
+      "before_hex": "#E7BF8E",
+      "after_hex": "#967651",
+      "before": {
+        "L_star": 79.731,
+        "C_star_ab": 31.059
+      },
+      "after": {
+        "L_star": 51.878,
+        "C_star_ab": 26.208
+      },
+      "chroma_decrease_pct": 15.6
+    }
+  },
+  "style_basis": "Deep steel-blue and muted bronze in the same signed blue-white-amber family; lower chroma and lightness than v3.",
+  "layout_unchanged": true,
+  "all_other_figure_colours_unchanged": true,
+  "text_rule": "Choose ink #303841 or white #FFFFFF by the larger sRGB luminance contrast ratio for each cell.",
+  "status": "superseded_draft_not_used_in_final_v4",
+  "superseded_by": "palette_A5_contrast_v4.json"
+}

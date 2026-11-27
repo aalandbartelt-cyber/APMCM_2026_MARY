@@ -16,7 +16,13 @@ def main():
     freeze=json.loads((OUT/'experiment_freeze.json').read_text())
     assert freeze['public_hashes']==verify_public_hashes()
     for name,digest in freeze['core_code_hashes'].items():assert sha(CODE/name)==digest,name
-    assert sha(ROOT/'codex/P1_PLANv2.md')==freeze['plan_sha256']
+    if sha(ROOT/'codex/P1_PLANv2.md') != freeze['plan_sha256']:
+        amendment=json.loads((OUT/'hardening/plan_amendment_freeze.json').read_text())
+        assert sha(ROOT/amendment['original_plan'])==freeze['plan_sha256']==amendment['original_plan_sha256']
+        assert sha(ROOT/'codex/P1_PLANv2.md')==amendment['amended_plan_sha256']
+        assert sha(OUT/'hardening/protocol.json')==amendment['protocol_sha256']
+        assert sha(OUT/'hardening/P23_construction_decision.json')==amendment['decision_sha256']
+        assert amendment['status']=='frozen_before_any_P23_retraining' and not amendment['P23_executed']
     preflight=json.loads((OUT/'preflight.json').read_text())
     for name,digest in preflight['feature_hashes'].items():assert sha(OUT/'features'/name)==digest
     splits=json.loads((OUT/'splits.json').read_text());checked=0

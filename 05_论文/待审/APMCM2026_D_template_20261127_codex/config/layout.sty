@@ -1,0 +1,43 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{config/layout}[2026/11/27 Official-layout skeleton support]
+% Keep the official class geometry, abstract, typography, headings and TOC.
+\RequirePackage{url}
+\RequirePackage[nosort,nocompress]{cite}
+\RequirePackage{hyperref}
+\RequirePackage{bookmark}
+\RequirePackage{subcaption}
+\RequirePackage{threeparttable}
+\hypersetup{hidelinks,pdfauthor={},pdftitle={APMCM 2026 Problem D -- Template skeleton},
+  pdfsubject={Official template skeleton},pdfcreator={XeLaTeX},
+  pdfkeywords={},pageanchor=false}
+\renewcommand{\citepunct}{][}
+\makeatletter
+\renewcommand{\team}{Team \tzmcm@tokens@tihao\tzmcm@tokens@baominghao}
+% Only the explicitly requested team/header text differs from the original.
+\fancypagestyle{frontmatterstyle}{\fancyhf{}
+  \lhead{\small\team}\rhead{\small Page \thepage\ of \HeaderPageTotal}}
+\fancypagestyle{mainmatterstyle}{\fancyhf{}
+  \lhead{\small\team}\rhead{\small Page \thepage\ of \HeaderPageTotal}}
+\makeatother
+\newcommand{\Placeholder}[1]{\par [Placeholder: #1]\par}
+\newcommand{\ProblemSlot}[1]{\par\noindent\textbf{Problem #1:}
+  [Action; input; output.]\newline [Validation action; comparison.]\par}
+\newcommand{\FrameworkSlot}{%
+  \begin{figure}[!b]\centering
+  [Three-stage framework placeholder.]\end{figure}}
+% Keep the official paper text width. The 170 mm figure test is a separate PDF.
+\newlength{\PaperFigureWidth}
+\setlength{\PaperFigureWidth}{\textwidth}
+\newcommand{\PaperFigure}[4][htbp]{%
+  \begin{figure}[#1]\centering
+  \makebox[\linewidth][c]{\includegraphics[width=\PaperFigureWidth]{#2}}%
+  \caption{#3}\label{#4}\end{figure}}
+\newcommand{\PaperSubfigure}[3][.48\linewidth]{%
+  \begin{subfigure}[t]{#1}\centering
+  \includegraphics[width=\linewidth]{#2}\caption{#3}\end{subfigure}}
+\newcommand{\InputSource}[3][Python]{%
+  \lstinputlisting[language=#1,caption={#3},basicstyle=\small\ttfamily]{#2}}
+\newcommand{\AIUseNote}[1]{\footnote{AI assistance: #1.}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\endinput

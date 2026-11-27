@@ -1,0 +1,173 @@
+{
+  "figure": "A6",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Feature additions and reverse ablations within model routes",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/diagnostic_summary.csv",
+      "sha256": "84eee44460a84641144bb3910720483a85548905cb84364980138793ef34c090",
+      "bytes": 2389
+    },
+    {
+      "path": "artifacts/p1_v21/results/P1_final_experiment_table.csv",
+      "sha256": "73799b434e2281e9b7b4c60a884306f6087ec3bcdd14bad051b1a328854b83e4",
+      "bytes": 7265
+    },
+    {
+      "path": "artifacts/p1_v21/results/paired_AB_bootstrap_5000.csv",
+      "sha256": "796e44140c1981f3e186f853dd77d1c368a5cf7c5a0385ed0d7755dc3afe68e8",
+      "bytes": 3914
+    },
+    {
+      "path": "artifacts/p1_v21/feature_schema.json",
+      "sha256": "cf92734e415833442f62bbaf0db6859d7a4eaa6f5df8632a9413390d4d1311ae",
+      "bytes": 17351
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_dashboard_2x2: four panels separating model routes",
+    "plot_tri_panel_precision: labeled feature ladder and zero-reference comparison",
+    "plot_pareto_bubble_ledger: direct numerical annotations with no added color semantics"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 158.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1866
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "additions": [
+      {
+        "route": "R-log",
+        "feature": "F0",
+        "RMSE": 5.195443133079333,
+        "EF_macro": 27.04715590109034
+      },
+      {
+        "route": "R-log",
+        "feature": "F3",
+        "RMSE": 4.954692176134322,
+        "EF_macro": 57.36597954946971
+      },
+      {
+        "route": "R-log",
+        "feature": "F3+E1",
+        "RMSE": 4.904836392096442,
+        "EF_macro": 60.48634927102604
+      }
+    ],
+    "removals": [
+      {
+        "block": "Electronic",
+        "metric": "RMSE",
+        "delta": 0.04153728771233389,
+        "low": -0.013183807022839944,
+        "high": 0.09726358901453039,
+        "n_resamples": 5000
+      },
+      {
+        "block": "Electronic",
+        "metric": "EF_macro@20",
+        "delta": -5.513642668919125,
+        "low": -12.343527151784407,
+        "high": 3.5918187269050166,
+        "n_resamples": 5000
+      },
+      {
+        "block": "Geometry",
+        "metric": "RMSE",
+        "delta": 0.1395691421449916,
+        "low": 0.06850083209361921,
+        "high": 0.2113184178445835,
+        "n_resamples": 5000
+      },
+      {
+        "block": "Geometry",
+        "metric": "EF_macro@20",
+        "delta": -8.70489242354845,
+        "low": -22.77341820655847,
+        "high": -0.813616740909336,
+        "n_resamples": 5000
+      },
+      {
+        "block": "X statistics",
+        "metric": "RMSE",
+        "delta": 0.04128823305349716,
+        "low": -0.016668732269414697,
+        "high": 0.10072358173253176,
+        "n_resamples": 5000
+      },
+      {
+        "block": "X statistics",
+        "metric": "EF_macro@20",
+        "delta": -2.3932729473627887,
+        "low": -12.835882627581599,
+        "high": 4.815882155735846,
+        "n_resamples": 5000
+      }
+    ],
+    "separate_model_routes": true,
+    "stored_draws": 5000,
+    "new_draws": 0,
+    "EF_endpoint": "EF_macro@20",
+    "feature_alias": {
+      "F4": "F3+E1"
+    }
+  },
+  "caption": "Feature additions and reverse ablations support distinct within-route comparisons. F0 contains the baseline descriptors; F3 adds composition chemistry, missingness and charge/ionic-geometry descriptors including tau; E1 adds the neutral-atom electronic block. For R-log, pooled RMSE falls from 5.1954 at F0 to 4.9547 at F3 and 4.9048 at F3+E1; mean EF rises from 27.05 to 57.37 and 60.49. The lower panels compare H-soft after removing electronic, geometry or X-statistics blocks with full H-soft, using removal minus full as the sign convention. Removing geometry increases RMSE by 0.1396 and decreases EF by 8.7049. Horizontal bars reuse the corrected 95% paired AB percentile intervals from 5,000 stored resamples; EF uses the equal-fold macro endpoint. The intervals condition on frozen OOF and prior selection, are exploratory, and have no multiplicity correction. Removals include tagged dependencies; X-statistics removal also removes dependent geometry terms, so these are not orthogonal causal effects. No additional fits, bootstrap draws or selection are performed.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "A6_ablation.pdf": "0552224c4d319ded60b7819e56a4eda4ad9332b0f642160b9a53cd1675bd7870",
+    "A6_ablation.png": "25ec0dcba97419e547d84d447e80b5c11b2e24bcb736616c7221d6dcbc6dab6a",
+    "A6_ablation_grayscale.png": "6fa5a587a13bfa73c88c34dc583d10e59962ccc2688d7b9a2ffaeeb3eeb228d8",
+    "A6_feature_additions.csv": "9a758fdb7a4c1609be964561287c24694a3aca73157e0be691f39ea25443932d",
+    "A6_reverse_ablation_intervals.csv": "38aea455c32f967997e81dec591c89fee68ba1013c27fed4708b72597073cbb1"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 158.0000027126736,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

@@ -1,0 +1,26 @@
+{
+  "git_diff_check": {
+    "exit_code": 0,
+    "summary": [],
+    "warnings": []
+  },
+  "git_hygiene": {
+    "exit_code": 0,
+    "summary": [
+      "SUMMARY: 10 checks, 0 FAIL"
+    ],
+    "warnings": [
+      "[WARN] tracked 修改: 9 项",
+      "[WARN] 未跟踪条目: 8 项"
+    ]
+  },
+  "env_doctor": {
+    "exit_code": 0,
+    "summary": [
+      "SUMMARY: 14 checks, 0 FAIL"
+    ],
+    "warnings": [
+      "[WARN] pypdf: 未安装（可选）"
+    ]
+  }
+}

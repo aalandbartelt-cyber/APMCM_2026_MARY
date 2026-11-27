@@ -1,0 +1,188 @@
+{
+  "figure": "A2",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "External OOF probability calibration diagnostics",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_0.csv.gz",
+      "sha256": "15b1ea3fbe3eddd4a992a2005128f2bba43834d5f84f5ce3b7984d91ef8a6440",
+      "bytes": 923254
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_1.csv.gz",
+      "sha256": "a8f73c52b371cac6b24cd84f54a2a6f3dc20b895f9784886a46f63b827f8f8e5",
+      "bytes": 923304
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_2.csv.gz",
+      "sha256": "da55ca768002b4974583a3d5f487cedd14bfa496f63226fba12be6f5011b5702",
+      "bytes": 922579
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_3.csv.gz",
+      "sha256": "e413fedda7acf494b0402e4bbc16b79a3f55a74545a452f681435c9f657417c9",
+      "bytes": 918724
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_4.csv.gz",
+      "sha256": "d85c12711fe3ade9f80f121f40aeff87209adace6a7a6aa56ffb798c7bde4e03",
+      "bytes": 919047
+    },
+    {
+      "path": "artifacts/p1_v21/results/oof_calibration_consistency.csv",
+      "sha256": "7b8db005df396fe84c87d2abc01b73d34fda3f5dc3ccb2ed3f2dac616e881c4a",
+      "bytes": 4590
+    },
+    {
+      "path": "artifacts/p1_v21/results/oof_calibration_ranking_checks.csv",
+      "sha256": "0d7f1744413cb8226a4ab83b0919fd6f42d25db218996f2341863373e22020ad",
+      "bytes": 2202
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_dashboard_2x2: four aligned diagnosis panels and reference lines",
+    "plot_tri_panel_precision: consistent scale and directly printed diagnostic values"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 181.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    2137
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "N_per_route": 11256,
+    "positives_per_route": 128,
+    "bin_edges": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "bin_counts": {
+      "B-eps": [
+        10998,
+        80,
+        43,
+        34,
+        17,
+        22,
+        15,
+        22,
+        24,
+        1
+      ],
+      "S-eps": [
+        10907,
+        135,
+        79,
+        53,
+        36,
+        31,
+        13,
+        1,
+        1,
+        0
+      ],
+      "L-single": [
+        11056,
+        80,
+        31,
+        17,
+        16,
+        13,
+        7,
+        15,
+        11,
+        10
+      ],
+      "L-hash4": [
+        10997,
+        82,
+        42,
+        26,
+        23,
+        18,
+        21,
+        14,
+        19,
+        14
+      ]
+    },
+    "coefficients_reused": true,
+    "brier_independently_checked": true,
+    "calibrators_fitted": 0,
+    "ranking_overlap_route_order": [
+      "B-eps",
+      "L-single",
+      "L-hash4"
+    ],
+    "pooled_overlap": [
+      15,
+      16,
+      16
+    ]
+  },
+  "caption": "The chained S-eps probability retains a scale discrepancy despite component calibration. Its stored pooled diagnostic slope is 1.7617 and intercept is 0.9794. The four panels use the same 11,256 external OOF observations (128 V<=2 cases) and ten pre-specified equal-width probability bins. Points show the mean stored probability and empirical event frequency in each nonempty bin; counts are listed in bin order, with the final bin including 1. Intercepts, slopes and Brier scores are read from existing results; no calibration is refitted. Raw-versus-calibrated Top-20 overlap is 20/20 within every fold for B-eps, L-single and L-hash4, but 15/20, 16/20 and 16/20 after pooling, respectively. This comparison is not recorded for S-eps. Pooled diagnostics assess probability scale and do not replace the fold-specific screening endpoint; sparse high-probability bins remain descriptive.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "A2_calibration.pdf": "7dacc16bcc172f82fb4e37eaeb6e6228a32a1a7cfe80b59e54c7920f0278f14f",
+    "A2_calibration.png": "e8c549550bf455f7f5a6913e9dd8eccdb587d70803d834a901ac30514177fa9a",
+    "A2_calibration_grayscale.png": "f25bdcea5fd53ef65570f59a1eff7809ef7ff1e8546794e42a0da7757f7effd6",
+    "A2_existing_pooled_diagnostics.csv": "f86a0be90e5e6d57efcdfb06a34214cd3d07025f8b43357a48abf0ad42174f65",
+    "A2_reliability_bins.csv": "2fd309923de07d719f7805db5d81957abc4b99395b16149943ba4e4d64ec629d"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 180.99999847412107,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

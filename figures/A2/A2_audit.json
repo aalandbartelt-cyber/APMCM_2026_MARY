@@ -1,0 +1,170 @@
+{
+  "figure": "A2",
+  "revision": 2,
+  "date": "2026-11-27",
+  "status": "revision_2_visually_checked_awaiting_user_review",
+  "title": "External OOF probability calibration diagnostics",
+  "width_mm": 170.0,
+  "height_mm": 136.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1606
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "slope 1.24",
+    "0.0",
+    "0.5",
+    "1.0",
+    "Observed frequency",
+    "0.0",
+    "0.5",
+    "1.0",
+    "(a) B-eps",
+    "slope 1.76",
+    "0.0",
+    "0.5",
+    "1.0",
+    "0.0",
+    "0.5",
+    "1.0",
+    "(b) S-eps",
+    "slope 0.84",
+    "Mean probability",
+    "0.0",
+    "0.5",
+    "1.0",
+    "Observed frequency",
+    "0.0",
+    "0.5",
+    "1.0",
+    "(c) L-single",
+    "slope 0.98",
+    "Mean probability",
+    "0.0",
+    "0.5",
+    "1.0",
+    "0.0",
+    "0.5",
+    "1.0",
+    "(d) L-hash4",
+    "B-eps observed",
+    "S-eps observed",
+    "L-single observed",
+    "L-hash4 observed",
+    "Ideal: y=x"
+  ],
+  "text_word_count": 58,
+  "rejected_v1_text_word_count": 211,
+  "text_reduction_fraction": 0.7251184834123223,
+  "no_lollipop": true,
+  "design": "Four compact colour-specific reliability panels; diagonal plus one slope value per curve, no numeric text blocks.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_0.csv.gz",
+      "sha256": "15b1ea3fbe3eddd4a992a2005128f2bba43834d5f84f5ce3b7984d91ef8a6440",
+      "bytes": 923254
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_1.csv.gz",
+      "sha256": "a8f73c52b371cac6b24cd84f54a2a6f3dc20b895f9784886a46f63b827f8f8e5",
+      "bytes": 923304
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_2.csv.gz",
+      "sha256": "da55ca768002b4974583a3d5f487cedd14bfa496f63226fba12be6f5011b5702",
+      "bytes": 922579
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_3.csv.gz",
+      "sha256": "e413fedda7acf494b0402e4bbc16b79a3f55a74545a452f681435c9f657417c9",
+      "bytes": 918724
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_4.csv.gz",
+      "sha256": "d85c12711fe3ade9f80f121f40aeff87209adace6a7a6aa56ffb798c7bde4e03",
+      "bytes": 919047
+    },
+    {
+      "path": "artifacts/p1_v21/results/oof_calibration_consistency.csv",
+      "sha256": "7b8db005df396fe84c87d2abc01b73d34fda3f5dc3ccb2ed3f2dac616e881c4a",
+      "bytes": 4590
+    },
+    {
+      "path": "artifacts/p1_v21/results/oof_calibration_ranking_checks.csv",
+      "sha256": "0d7f1744413cb8226a4ab83b0919fd6f42d25db218996f2341863373e22020ad",
+      "bytes": 2202
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_sha256": "222763d5581aab7e82bdd6055db797161ea74a3f5b3873bbeb9774bd1415259a",
+  "common_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_redesign_v2.json",
+  "palette_sha256": "81e184d079a99aa6969885be2eea0993f361c63a4727cc0776cfbd809739745a",
+  "prior_frozen_palette_unchanged": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "External OOF probability reliability.",
+  "reading_guide": "Curves pair mean stored probability with empirical V<=2 frequency in ten fixed equal-width bins; empty bins are omitted. Each panel contains 11,256 external OOF observations with 128 near-positives. The diagonal is ideal calibration. Each curve has one existing pooled slope annotation; full slopes, intercepts, Brier scores and bin counts are supplied in the companion data/body-table material, not embedded in the image. S-eps slope=1.7617 and intercept=0.9794 indicate a remaining scale discrepancy. No calibrator was fitted. Sparse high-probability bins, including singleton bins, remain descriptive; pooled diagnostic curves do not replace the fold-specific EF endpoint.",
+  "diagnostics": {
+    "N_per_route": 11256,
+    "positives_per_route": 128,
+    "bin_width": 0.1,
+    "coefficients_reused": true,
+    "calibrators_fitted": 0,
+    "slope_annotation_only": true,
+    "intercepts_in_companion_table": true
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "A2_calibration.pdf": "25a7c24c1ec4446123bdb38d9a80e04f49cab0cf9f03765123f7bb9991851884",
+    "A2_calibration.png": "e3429158564b4c8196d0e8d4821bc248fefde74ef445235c2c41ad6730836c17",
+    "A2_calibration_grayscale.png": "9409cbd4951fc6fb973aa457109ae0eefc28d7258c857592d5d6025027a19210",
+    "A2_calibration_v2.pdf": "25a7c24c1ec4446123bdb38d9a80e04f49cab0cf9f03765123f7bb9991851884",
+    "A2_calibration_v2.png": "e3429158564b4c8196d0e8d4821bc248fefde74ef445235c2c41ad6730836c17",
+    "A2_calibration_v2_grayscale.png": "9409cbd4951fc6fb973aa457109ae0eefc28d7258c857592d5d6025027a19210",
+    "A2_existing_pooled_diagnostics.csv": "f86a0be90e5e6d57efcdfb06a34214cd3d07025f8b43357a48abf0ad42174f65",
+    "A2_reliability_bins.csv": "2fd309923de07d719f7805db5d81957abc4b99395b16149943ba4e4d64ec629d"
+  },
+  "legend_matches_actual_marks": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "nine_self_checks_passed": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 135.99999974568684,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  }
+}

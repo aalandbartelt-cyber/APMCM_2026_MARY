@@ -1,0 +1,184 @@
+{
+  "figure": "A6",
+  "revision": 2,
+  "date": "2026-11-27",
+  "status": "revision_2_visually_checked_awaiting_user_review",
+  "title": "Feature additions and reverse ablations within model routes",
+  "width_mm": 170.0,
+  "height_mm": 78.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    921
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "+0.0415",
+    "+0.1396",
+    "+0.0413",
+    "Removal - full (V)",
+    "0.0",
+    "0.1",
+    "0.2",
+    "Electronic",
+    "Geometry",
+    "X statistics",
+    "(a) Delta RMSE",
+    "-5.51",
+    "-8.70",
+    "-2.39",
+    "Removal - full (EF)",
+    "-20",
+    "-10",
+    "0",
+    "(b) Delta EF@20",
+    "CI crosses 0",
+    "CI above 0",
+    "CI below 0"
+  ],
+  "text_word_count": 39,
+  "rejected_v1_text_word_count": 119,
+  "text_reduction_fraction": 0.6722689075630253,
+  "no_lollipop": true,
+  "design": "Two-panel forest plot: point estimates, bilateral interval whiskers, vertical zero line; grey crossing-zero effects.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/diagnostic_summary.csv",
+      "sha256": "84eee44460a84641144bb3910720483a85548905cb84364980138793ef34c090",
+      "bytes": 2389
+    },
+    {
+      "path": "artifacts/p1_v21/results/P1_final_experiment_table.csv",
+      "sha256": "73799b434e2281e9b7b4c60a884306f6087ec3bcdd14bad051b1a328854b83e4",
+      "bytes": 7265
+    },
+    {
+      "path": "artifacts/p1_v21/results/paired_AB_bootstrap_5000.csv",
+      "sha256": "796e44140c1981f3e186f853dd77d1c368a5cf7c5a0385ed0d7755dc3afe68e8",
+      "bytes": 3914
+    },
+    {
+      "path": "artifacts/p1_v21/feature_schema.json",
+      "sha256": "cf92734e415833442f62bbaf0db6859d7a4eaa6f5df8632a9413390d4d1311ae",
+      "bytes": 17351
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_sha256": "222763d5581aab7e82bdd6055db797161ea74a3f5b3873bbeb9774bd1415259a",
+  "common_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_redesign_v2.json",
+  "palette_sha256": "81e184d079a99aa6969885be2eea0993f361c63a4727cc0776cfbd809739745a",
+  "prior_frozen_palette_unchanged": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "Reverse-ablation effects with paired bootstrap intervals.",
+  "reading_guide": "Each point is removal minus full H-soft, with horizontal two-ended 95% paired AB percentile intervals from 5,000 existing draws. Grey circles mark intervals crossing zero; coloured squares mark intervals excluding zero, with positive effects amber and negative effects blue. Geometry removal changes RMSE by +0.1396 and EF by -8.7049. The RMSE and equal-fold EF endpoints are separate panels. Intervals condition on frozen OOF and prior selection, are exploratory and are not multiplicity-adjusted. Removal uses dependency tags: removing X statistics also removes dependent geometry, so effects are not orthogonal causal attributions. The earlier R-log F0/F3/F3+E1 ladder is retained in companion data and moved out of this image as requested. No fit or bootstrap draw is added.",
+  "diagnostics": {
+    "removals": [
+      {
+        "block": "Electronic",
+        "metric": "RMSE",
+        "delta": 0.04153728771233389,
+        "low": -0.013183807022839944,
+        "high": 0.09726358901453039,
+        "n_resamples": 5000
+      },
+      {
+        "block": "Electronic",
+        "metric": "EF_macro@20",
+        "delta": -5.513642668919125,
+        "low": -12.343527151784407,
+        "high": 3.5918187269050166,
+        "n_resamples": 5000
+      },
+      {
+        "block": "Geometry",
+        "metric": "RMSE",
+        "delta": 0.1395691421449916,
+        "low": 0.06850083209361921,
+        "high": 0.2113184178445835,
+        "n_resamples": 5000
+      },
+      {
+        "block": "Geometry",
+        "metric": "EF_macro@20",
+        "delta": -8.70489242354845,
+        "low": -22.77341820655847,
+        "high": -0.813616740909336,
+        "n_resamples": 5000
+      },
+      {
+        "block": "X statistics",
+        "metric": "RMSE",
+        "delta": 0.04128823305349716,
+        "low": -0.016668732269414697,
+        "high": 0.10072358173253176,
+        "n_resamples": 5000
+      },
+      {
+        "block": "X statistics",
+        "metric": "EF_macro@20",
+        "delta": -2.3932729473627887,
+        "low": -12.835882627581599,
+        "high": 4.815882155735846,
+        "n_resamples": 5000
+      }
+    ],
+    "stored_draws": 5000,
+    "new_draws": 0,
+    "EF_endpoint": "EF_macro@20",
+    "intervals_reused": true,
+    "forward_ladder_moved_to_companion_data": true
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "A6_ablation.pdf": "e8fd29e4c7cbb87ccf31d937553d4228e59d270e3dc4cf547535d1e89de6f143",
+    "A6_ablation.png": "3728d89dbd198734692c85bcf89faa2085fbd2b11bba7cbb8f021be5dd8843e4",
+    "A6_ablation_grayscale.png": "ee7321f5bd16705694b6396688f3d55b49a00147c92b4ed312c96e3996690549",
+    "A6_ablation_v2.pdf": "e8fd29e4c7cbb87ccf31d937553d4228e59d270e3dc4cf547535d1e89de6f143",
+    "A6_ablation_v2.png": "3728d89dbd198734692c85bcf89faa2085fbd2b11bba7cbb8f021be5dd8843e4",
+    "A6_ablation_v2_grayscale.png": "ee7321f5bd16705694b6396688f3d55b49a00147c92b4ed312c96e3996690549",
+    "A6_feature_additions.csv": "9a758fdb7a4c1609be964561287c24694a3aca73157e0be691f39ea25443932d",
+    "A6_reverse_ablation_intervals.csv": "38aea455c32f967997e81dec591c89fee68ba1013c27fed4708b72597073cbb1"
+  },
+  "legend_matches_actual_marks": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "nine_self_checks_passed": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 77.99999779595268,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  }
+}

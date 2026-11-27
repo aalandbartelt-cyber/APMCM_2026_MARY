@@ -1,0 +1,88 @@
+{
+  "figure": "A1",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Residual structure by X family",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/OOF_residual_scales_by_X.csv",
+      "sha256": "b267ac6778874f2b3d80a82f41079a2fdee7df9b669125e6c3f71386c4dacc1d",
+      "bytes": 621
+    },
+    {
+      "path": "artifacts/p1_v21/final_selection.json",
+      "sha256": "87e5bb87840fd7ea246a073b36007bf4a9c99acc4721d119d2e544c0468171f1",
+      "bytes": 1717
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_tri_panel_precision: three aligned diagnostic panels",
+    "plot_dashboard_2x2: zero/reference line and directly labeled bars"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 103.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1216
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "families": 7,
+    "n_each": 1608,
+    "signed_bias_definition": "Vhat - V",
+    "q95_definition": "empirical quantile of abs(Vhat - V)"
+  },
+  "caption": "Small signed biases coexist with substantial differences in error scale across X families. Each family contains 1,608 external OOF predictions from the frozen H-soft route. Bias is the mean of Vhat-V, RMSE is the root mean squared residual, and q95 is the empirical 95th percentile of absolute residuals, all read from the stored summaries. N3 has the largest RMSE (6.6515) and absolute-error q95 (13.8694); these empirical quantiles are not calibrated coverage guarantees.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "A1_residual_structure.pdf": "71e24cecb879e425be1c13a9b6ded015cc4072bde513e2583f3be5f3584f8df1",
+    "A1_residual_structure.png": "39da63a6f7e6d44757070ea3e2b27d7c8703ac636920cdf17db08c50738a3b47",
+    "A1_residual_structure_grayscale.png": "9f4dc5284f565854fcc8fc7f7cee760a2b2837ac088d7d66a63c49cf1ec142e4",
+    "A1_residual_values.csv": "3042edd8c73a9c07e46112b34193b0d12e3858c3400200c1920b51a1fe1065ef"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 103.0000006781684,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

@@ -1,0 +1,131 @@
+{
+  "figure": "F2",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Near-positive enrichment under fixed AB blocking",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/all_domain_metrics.csv",
+      "sha256": "7ef13b729045b31bcae41eb3a30b3946e8aaaffb506f2a775890fcca064dd258",
+      "bytes": 1750054
+    },
+    {
+      "path": "artifacts/p1_v21/results/P1_main_per_fold.csv",
+      "sha256": "06b6f27e9c48453878d96da30f6b18bbd3a6125dcc37ce263d4c86cc31e55bb3",
+      "bytes": 71661
+    },
+    {
+      "path": "artifacts/p1_v21/experiment_freeze.json",
+      "sha256": "fc7102a17bbc1ad485713cdcbd0cefad3049519d06e65b80c52b51cb2efafdcf",
+      "bytes": 2363
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_enrichment_bar: EF=1 reference and direct uniform-null statistics",
+    "plot_tri_panel_precision: aligned budget curves; explicit baseline detail inset"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 171.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    2019
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "folds": 5,
+    "event": "V<=2",
+    "k_values": [
+      1,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "at_k20": {
+      "H-soft": {
+        "route": "H-soft",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 68,
+        "EF_macro": 62.10238083907848
+      },
+      "additive_ridge": {
+        "route": "additive_ridge",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 10,
+        "EF_macro": 8.704892423548447
+      },
+      "mean": {
+        "route": "mean",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 1,
+        "EF_macro": 0.7270967741935485
+      },
+      "random_hash": {
+        "route": "random_hash",
+        "k_per_fold": 20,
+        "total_budget": 100,
+        "hits_total": 0,
+        "EF_macro": 0.0
+      }
+    },
+    "p_values_reused_not_combined": true
+  },
+  "caption": "H-soft concentrates near-positive samples across the fixed AB-blocked folds. With 20 selections per fold (100 total), it yields 68 hits and mean EF=62.1024, versus 10, 1 and 0 hits for additive Ridge, mean and the fixed random realization. The event is V<=2; hits are summed and EF is averaged equally over the five folds. Budget axes are logarithmic. The inset enlarges mean/random EF on the same k scale. The EF=1 line is the uniform-random expectation, not the observed random curve. The table reports every fold-specific N, M, h and existing unadjusted hypergeometric p value at k=20. These p values are descriptive uniform-null references after development selection, not a pooled or selection-adjusted significance test.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "F2_curve_data.csv": "c245efda68d4ce80cd75a4e0b1601e0735cd9071e28b6c0988ca3450a77ad475",
+    "F2_enrichment.pdf": "42c7aa2794555d7591547739398c49bb11444f65269d0a438f901d3e0fe76817",
+    "F2_enrichment.png": "6e2d819bcf2d54b9879893a26d160448d760a2457659b856d7a21c4077fc980a",
+    "F2_enrichment_grayscale.png": "ffdad586ba8bf7e749ec5a3bfba304f37ee43b765074f9e0631b28b6931f550a",
+    "F2_fold_uniform_null.csv": "bc27a2f3353fa7d3120b5bbc54e029b9cb729ffe61aa541d8d181c95ba4b76e5"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 170.9999951680501,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

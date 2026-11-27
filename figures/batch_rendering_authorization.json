@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-27",
+  "user_message": "后面几个图直接一口气全出",
+  "status": "approved_for_remaining_batch_rendering",
+  "figures": ["F2", "F3", "A1", "A2", "A3", "A4", "A5", "A6"],
+  "supersedes": "The earlier requirement to wait for individual approval before rendering the next figure.",
+  "scope": "Render the remaining approved P1 inventory; inspect every color and grayscale export; deliver individual captions and checks together.",
+  "writes_limited_to": "figures/",
+  "models_or_fits_authorized": false,
+  "P2_or_P3_authorized": false,
+  "manuscript_embedding_authorized": false,
+  "palette": "Frozen A",
+  "font": "Times New Roman"
+}

@@ -1,5 +1,43 @@
 # P1 v2.1 reproducible experiment
 
+**P1 training is closed (2026-11-27).** The ledger remains at 914 tree-fit
+attempts. All 86 remaining attempts are reserved for the frozen P23 refit;
+no new model routes, losses, searches, Ridge fits or scalar calibration fits
+are authorized by the hardening task. The historical training commands below
+document the completed run; do not execute them again.
+
+The original pre-training plan is archived byte-for-byte as
+`codex/P1_PLANv2.1_FROZEN.md`. Section 6 of `codex/P1_PLANv2.md` freezes the
+postprocessing definitions and the future P23 construction. Original training
+code, freeze records, fitted models and P1 prediction tables remain unchanged.
+
+## Postprocessing-only hardening
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /usr/bin/python3.10 03_求解/D/p1_v2/test_hardening.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /usr/bin/python3.10 03_求解/D/p1_v2/report.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /usr/bin/python3.10 03_求解/D/p1_v2/decision_stability.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /usr/bin/python3.10 03_求解/D/p1_v2/hardening_report.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /usr/bin/python3.10 03_求解/D/p1_v2/hardening_audit.py
+```
+
+These commands require the original frozen artifacts and the pre-analysis
+`hardening/protocol.json` / `protected_before.json`. They must not recreate or
+relax missing freeze records. `report.py` now reuses the already-fitted
+calibration diagnostic CSV without refitting. The paired bootstrap resamples
+AB clusters separately inside each outer fold and averages the five fold
+Top-20 EFs. An undefined fold invalidates the entire replicate. Original
+pooled intervals are retained in a separate diagnostic file and columns.
+
+The main table includes eight candidates, three existing baselines and two
+nested selection procedures. `results/P1_main_per_fold.csv` records N/M/h
+and selected identities for all 65 row/fold combinations. Decision diagnostics
+for pools 07/08/11/12 and the fixed split-half comparison are in `hardening/`.
+They use only twenty existing prediction tables and contain no truth-based
+accuracy comparison. The frozen P23 choice is `bagged_mean_20`; P23 training
+has **not** been executed. See `codex/P1_HARDENING_REPORT.md` for the costs,
+limitations, old/new endpoint distinction and audit receipt.
+
 This implementation follows `codex/P1_PLANv2.md`. It trains on official 02 only,
 selects from at most three frozen candidates on the historically used 03
 development set, and predicts the composition-only 04 holdout. The screening
@@ -31,7 +69,7 @@ construction, zero/missing handling, invalid geometry and batch/order
 invariance. Two synthetic library parity fits are counted. Existing preflight
 records are verified without changing their freeze timestamp.
 
-## Registered execution and recovery
+## Historical registered execution and recovery (closed)
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=4 /usr/bin/python3.10 03_求解/D/p1_v2/run_registered.py
@@ -67,7 +105,11 @@ delete manifests or ledgers to bypass that check or to reset the budget.
   mean `EF_{V<=2}@20`. Five fold Top-20 lists use a total budget of 100.
 - `results/pooled_oof_diagnostic.csv`: a different, single pooled Top-20 budget.
 - `results/paired_AB_bootstrap_5000.csv`: conditional percentile intervals on
-  fixed OOF predictions. These do not include all model-selection uncertainty.
+  fixed OOF predictions, with per-fold Top-20 followed by macro averaging.
+  These do not include all model-selection uncertainty.
+- `results/paired_AB_bootstrap_pooled_diagnostic_legacy.csv`: unchanged original
+  pooled intervals. `paired_AB_bootstrap_endpoint_comparison.csv` keeps their
+  values in diagnostic columns beside the corrected primary intervals.
 - `bootstrap/`: twenty genuinely resampled AB datasets, with all seven X rows
   and multiplicities retained. The final numeric gate calibrator is fixed.
 - `predictions/04_P1_train02_predictions.csv`: final P1 numerical and screening

@@ -1,0 +1,39 @@
+{
+  "version": "P1-palette-v1-proposal",
+  "status": "awaiting_user_approval",
+  "scope_after_approval": "All P1/P2/P3 figures and tables",
+  "font_family": "Times New Roman",
+  "minimum_font_pt": 9.0,
+  "dpi": 300,
+  "ink": "#20252B",
+  "background": "#FFFFFF",
+  "roles": [
+    {"id": "S", "key": "surrogate", "name": "Surrogate model", "label": "Surrogate\nmodel", "hex": "#2C4256", "marker": "o", "linestyle": "-", "hatch": ""},
+    {"id": "B", "key": "baseline", "name": "Baseline reference", "label": "Baseline\nreference", "hex": "#949699", "marker": "s", "linestyle": "--", "hatch": "//"},
+    {"id": "Q", "key": "quantum", "name": "Quantum methods", "label": "Quantum\nmethods", "hex": "#8B6C52", "marker": "D", "linestyle": "--", "hatch": "\\\\"},
+    {"id": "C", "key": "classical", "name": "Classical methods", "label": "Classical\nmethods", "hex": "#3C554B", "marker": "^", "linestyle": "-", "hatch": ".."},
+    {"id": "W", "key": "warning", "name": "Constraints and warnings", "label": "Constraints\nand warnings", "hex": "#492725", "marker": "X", "linestyle": ":", "hatch": "xx"},
+    {"id": "M", "key": "metal", "name": "Metal samples", "label": "Metal\nsamples", "hex": "#AAA8A5", "marker": "v", "linestyle": ":", "hatch": "///"},
+    {"id": "N", "key": "nonmetal", "name": "Nonmetal samples", "label": "Nonmetal\nsamples", "hex": "#728A74", "marker": "P", "linestyle": "-.", "hatch": ".."},
+    {"id": "P", "key": "near_positive", "name": "Near-positive highlight", "label": "Near-positive\nhighlight", "hex": "#715E3D", "marker": "*", "linestyle": "-", "hatch": "++"}
+  ],
+  "continuous_maps": [
+    {"name": "viridis", "start": 0.15, "end": 0.80, "use": "Default continuous magnitude"},
+    {"name": "plasma", "start": 0.10, "end": 0.70, "use": "Reserved landscape/heatmap alternative, declared per approved figure"}
+  ],
+  "baseline_substyles": {
+    "additive_ridge": {"marker": "s", "linestyle": "--"},
+    "mean": {"marker": "v", "linestyle": ":"},
+    "random_hash": {"marker": "x", "linestyle": "-."}
+  },
+  "semantic_rules": [
+    "All statistical baselines share B; distinguish them using fixed markers, dashes and direct labels.",
+    "C is reserved for classical optimisation solvers, not statistical regression baselines.",
+    "P denotes observed development near-positives V<=2, never confirmed hidden V=0 or merely predicted positives.",
+    "Pass/fail uses text or symbols, not a reuse of the nonmetal colour.",
+    "Methods keep method colour; sample-class decompositions keep metal/nonmetal colour.",
+    "Light baseline/metal glyphs require dark outlines; semantic text uses neutral dark ink.",
+    "At most five semantic hues per formal panel; the palette proof is an eight-role diagnostic exception.",
+    "No formal figure or inventory is generated before the relevant user approval."
+  ]
+}

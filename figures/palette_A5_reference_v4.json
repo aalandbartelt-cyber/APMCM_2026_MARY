@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-27",
+  "scope": "A5 v4 only",
+  "authorization": "User supplied the A1 signed-bias panel as the visual reference: 类似这个。",
+  "reference": "A1 v3 panel (a), using palette_redesign_v2.json",
+  "diverging": [
+    "#587AA4",
+    "#FFFFFF",
+    "#DC9848"
+  ],
+  "normalization": [
+    -80,
+    0,
+    80
+  ],
+  "semantic_direction": "negative steel-blue; zero white; positive amber",
+  "cell_text": "#080808",
+  "text_rule": "Use dark cell text matching the supplied reference; verify luminance contrast per cell.",
+  "change": "Match the existing A1 blue-white-amber colour map exactly; preserve the square layout, data, signed scale and labels.",
+  "layout_unchanged": true,
+  "all_other_figure_colours_unchanged": true
+}

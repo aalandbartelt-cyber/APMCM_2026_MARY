@@ -1,0 +1,23 @@
+{
+  "p1_artifacts": {
+    "files": 3621,
+    "bytes": 923508268,
+    "sha256": "f2e52bd99d97ba55063f3cb46fa8de394bcfb2e25a319b2538e542f6a5ffb686"
+  },
+  "p1_code": {
+    "files": 34,
+    "bytes": 278761,
+    "sha256": "27532bcb776d4d645302bbceec9bbf6ac2ae036425b4aeff8e5c87874c1d3130"
+  },
+  "official_D_data": {
+    "files": 10,
+    "bytes": 3335016,
+    "sha256": "0135210bf55b9c8d07513bed6f3bcb95d814a4b4265f821ed0a2db202ea61856"
+  },
+  "plans_reports_handoff": {
+    "files": 7,
+    "bytes": 97550,
+    "sha256": "c45f967e53deea134c7665864288028531e44386452c92caae1a3da658b98a04"
+  },
+  "fit_ledger_sha256": "3b34143f454e8e46977efc60f3a9d35ba604065e24a088de132053db53d44bbd"
+}

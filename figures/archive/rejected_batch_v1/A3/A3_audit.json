@@ -1,0 +1,99 @@
+{
+  "figure": "A3",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Nominal-candidate rank and surrogate decision regret",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/hardening/decision_stability_members.csv",
+      "sha256": "29161628cf32104ba564232541c7d4d476d3f4fde02c178e3a2b5cf86e481879",
+      "bytes": 8012
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/decision_stability_summary.csv",
+      "sha256": "0c2d8bf7ee9acfe394d68fa53ce9db8bfb72df0919a9454347458a396918504d",
+      "bytes": 2225
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/protocol.json",
+      "sha256": "bec7f0a78e84e9503f92c5e3b3b4e12846220e82b582046b6b2ddd25351c67f0",
+      "bytes": 110648
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_dashboard_2x2: separate identity and cost diagnostics",
+    "plot_tri_panel_precision: explicit tolerance line and multi-marker comparison"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 142.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1677
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "members": 80,
+    "n_per_pool": 20,
+    "pool08_range": [
+      1,
+      72
+    ],
+    "quantiles_independently_checked": true,
+    "plateau_passes": 0,
+    "jitter": "Only deterministic vertical spreading of nearby ranks; logarithmic rank axis; values unchanged"
+  },
+  "caption": "Nominal-candidate identity changes have nonzero costs in the existing surrogate tables. All 20 member ranks are shown for each pool; the pool-08 rank spans 1-72. Nearby ranks are spread vertically for visibility; ranks use a logarithmic horizontal axis without changing their values. In the right panel, F measures the nominal choice against the optimum in each member table, and R measures the member's choice against the optimum in the nominal table. Markers show p50, p90, p95 and maximum regret; solid/filled versus dashed/open marks distinguish the directions. No pool satisfies the registered rule requiring both directions to stay within 0.1 for every observed member. The tolerance is descriptive and all costs are on the surrogate Vhat scale, not physical truth.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "A3_decision_stability.pdf": "4d0c69800c632ac9caac92dcc8b81ab620fa6250377a6da46af21fc5d5cf1484",
+    "A3_decision_stability.png": "d1460f8dc4a877608fb8d9ac88f07b43554eb085a68598e804a1ac165d8a638c",
+    "A3_decision_stability_grayscale.png": "636e5016042844cee89dce71adcd891f4e036e155d4d9ec404a11730f823499a",
+    "A3_member_ranks.csv": "6c2342f8c1c59abbd876ea123c85879430928c6ee5a990e67303f101d388fe45",
+    "A3_regret_quantiles.csv": "61e04871902c1b140e73308d80ac605862958ae5c1399116f380f7b690facb1b"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 141.99999957614475,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-27",
+  "figure": "F1",
+  "revision": 3,
+  "status": "awaiting_user_figure_review",
+  "inventory_approval_message": "批准 制图",
+  "revision_request": "图例指代要更清晰明了",
+  "palette_frozen_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "models_loaded": false,
+  "new_fits": 0,
+  "protected_inputs_unchanged": true,
+  "protected_groups": {
+    "p1_artifacts": {
+      "files": 3621,
+      "bytes": 923508268,
+      "sha256": "f2e52bd99d97ba55063f3cb46fa8de394bcfb2e25a319b2538e542f6a5ffb686"
+    },
+    "p1_code": {
+      "files": 34,
+      "bytes": 278761,
+      "sha256": "27532bcb776d4d645302bbceec9bbf6ac2ae036425b4aeff8e5c87874c1d3130"
+    },
+    "official_D_data": {
+      "files": 10,
+      "bytes": 3335016,
+      "sha256": "0135210bf55b9c8d07513bed6f3bcb95d814a4b4265f821ed0a2db202ea61856"
+    },
+    "fit_ledger_sha256": "3b34143f454e8e46977efc60f3a9d35ba604065e24a088de132053db53d44bbd"
+  },
+  "writes_limited_to": "figures/",
+  "other_formal_figures_generated": false,
+  "next_gate": "User approval of F1; then create F2 only.",
+  "checks": {
+    "git_diff_check": {
+      "exit_code": 0,
+      "summary": []
+    },
+    "git_hygiene": {
+      "exit_code": 0,
+      "summary": [
+        "SUMMARY: 10 checks, 0 FAIL"
+      ],
+      "warnings": [
+        "Preexisting tracked modifications and untracked entries"
+      ]
+    },
+    "env_doctor": {
+      "exit_code": 0,
+      "summary": [
+        "SUMMARY: 14 checks, 0 FAIL"
+      ],
+      "warnings": [
+        "Optional pypdf not installed"
+      ]
+    }
+  },
+  "pdf_inspection": {
+    "pages": 1,
+    "all_fonts_embedded": true,
+    "font": "TimesNewRomanPSMT",
+    "minimum_font_pt": 8.5,
+    "width_mm": 170.00000237358938,
+    "height_mm": 135.99999974568684,
+    "all_text_ascii": true,
+    "raster_images": 0,
+    "personal_metadata_absent": true,
+    "all_legend_definitions_present": true
+  },
+  "manual_visual_review": {
+    "color_png_inspected": true,
+    "full_grayscale_png_inspected": true,
+    "legend_matches_marks": true,
+    "legend_and_inset_axis_no_overlap": true,
+    "class_hatch_visible_in_legend": true,
+    "subset_and_cutoff_explicit": true,
+    "training_evaluation_keys_paired": true,
+    "no_text_clipping_observed": true,
+    "actual_paper_print_test_performed": false
+  },
+  "display_aggregate_csvs_identical_to_v2": true,
+  "prior_revision": "figures/F1/archive/v2_legend_revision/",
+  "files": {
+    "F1/F1_audit.json": "2d79132659222a7c52f293e597e35fa5d94370c50e3e39503c3bc94447cb914f",
+    "F1/F1_data_audit.pdf": "0036bb1a4a1bba3b88c2f7db781b1ed077258e4219b85dc9c825bef493906002",
+    "F1/F1_data_audit.png": "ac32c8bda846170c15dd91f330c9eb265c9bfd26e61ad782920659b562aa431b",
+    "F1/F1_data_audit_grayscale.png": "cec6af3ed65c564606dc4d8a754fbdb291d5b43f844670c32e6f303fd3c029ad",
+    "F1/F1_data_audit_v2.pdf": "07dfefbf3f907a516a757cc12e5be3970c56dc7e2e45ad01d609a5ad3daddd99",
+    "F1/F1_data_audit_v2.png": "5aae43ab8c77eaa793061368bc6e46a29c33757dbeb46610dc5cd12b49b9387b",
+    "F1/F1_data_audit_v2_grayscale.png": "b4add6e042f73f86e12fcb877938f011c2f8c11915818638bad1ade3dc6d9d06",
+    "F1/F1_data_audit_v3.pdf": "0036bb1a4a1bba3b88c2f7db781b1ed077258e4219b85dc9c825bef493906002",
+    "F1/F1_data_audit_v3.png": "ac32c8bda846170c15dd91f330c9eb265c9bfd26e61ad782920659b562aa431b",
+    "F1/F1_data_audit_v3_grayscale.png": "cec6af3ed65c564606dc4d8a754fbdb291d5b43f844670c32e6f303fd3c029ad",
+    "F1/F1_histogram_counts.csv": "147ed27518d495fe5e0567d874c10794653520a2efa75b2646da20a460e128c3",
+    "F1/F1_near_positive_histogram_counts.csv": "9aaa28a88735203842eb561a43ee71b8f3b72f6d2ff70620688bedfc417d669b",
+    "F1/F1_review.md": "ff031c7f54308cac2867f030e5e86d0ef609cf6baafd593a8ff707e8f8dfd79e",
+    "F1/F1_split_counts.csv": "f9763455e44353f01af7fa2608970c31088645e7f9025a906d29b03d4750fccd",
+    "render_F1.py": "4d9e08bbe8964f71d7ed0d12978f23324c59d6df9aea91f0cccd613f0c172f8a",
+    "figure_inventory.csv": "f9d07841afc593b731fcdc28e8a9c7c19d72439c26e437d7664c6416e4691773",
+    "figure_inventory_proposal.md": "a35ca2708e3a7dfb98e610a50a910bc91477241b10c48462c46b7e40fbf1b668",
+    "figure_inventory_approval.json": "f30fdfda696ea6032eb9dc534a3ae5604693d6c7ad6466b8de873891909becf2"
+  }
+}

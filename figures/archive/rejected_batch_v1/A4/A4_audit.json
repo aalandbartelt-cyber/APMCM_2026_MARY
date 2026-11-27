@@ -1,0 +1,94 @@
+{
+  "figure": "A4",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Split-half averaging and decision stability",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/hardening/split_half_summary.csv",
+      "sha256": "fd08b4a87cddaaabd8537f62e0812b19d6e513fff2cdc44e7b8decb1dc9ddbc7",
+      "bytes": 3412
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/protocol.json",
+      "sha256": "bec7f0a78e84e9503f92c5e3b3b4e12846220e82b582046b6b2ddd25351c67f0",
+      "bytes": 110648
+    },
+    {
+      "path": "artifacts/p1_v21/hardening/P23_construction_decision.json",
+      "sha256": "b06161322866d3a5fc5cc4037d6fab66e421cbfc6c6392233dcc433b3c1df974",
+      "bytes": 2716
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_dashboard_2x2: paired stability and regret diagnostics",
+    "plot_tri_panel_precision: direct comparisons with explicit uncertainty semantics"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 118.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1393
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "partitions": 1000,
+    "underlying_members": 20,
+    "mean10_pool11_agreement": 0.192,
+    "mean10_pool12_agreement": 0.174,
+    "ranges": "Stored p50-p95 descriptive dispersion, not inferential intervals"
+  },
+  "caption": "Averaging improves observed split-half decision stability while leaving the minimizer uncertain. Mean-of-ten halves reduce mean symmetric cross-table regret in all four pools. Their argmin agreement in pools 11 and 12 is still only 0.192 and 0.174. Each of the 1,000 complementary partitions reuses the same 20 existing members; the single-member reference averages all 100 cross-half member pairs in that partition. Markers and numeric labels show stored means, and vertical regret ranges show stored p50-p95 dispersion, not confidence limits from independent experiments. These are ten-versus-ten stability results and do not verify the accuracy of a future full twenty-member mean table.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "A4_split_half.pdf": "4fa615554235c6466bb8de5fbbe557fb447ab0389cae118b45fc1bc52b7d0a0d",
+    "A4_split_half.png": "30c2376f51416afbc0f07df84b321160dc74797a54259cbe5fbd975e107ecff7",
+    "A4_split_half_grayscale.png": "3815c15a62bc29ea2f7ff35c6efc005fd388ef1cc6f5bf327d4dec07a46acc8d",
+    "A4_split_half_values.csv": "bcb441ee19257fcf3aece4026e6c03ba16dd5583d2a70dc6d60a2cd67d3a0c33"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 118.00000025431314,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}

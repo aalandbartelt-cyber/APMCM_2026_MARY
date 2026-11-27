@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-27",
+  "user_message": "批准 制图",
+  "status": "approved_for_sequential_rendering",
+  "approved_inventory_sha256": "fe9edd5fd9476cf148708218fe9648ea1d3a4ac943bd3fd8504cabee524200b5",
+  "approved_proposal_sha256": "463e3fcb03e5ea8b468827fd5e359ee2586f0aae95262f3bc45e31eb2536e9f5",
+  "palette_frozen_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "sequence": [
+    "F1",
+    "F2",
+    "F3",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6"
+  ],
+  "gate": "Remaining figures rendered in one authorized batch; all figures await user review before manuscript embedding.",
+  "current_figure": "F1, F2, F3, A1-A6",
+  "current_figure_status": "batch_delivered_for_user_review",
+  "current_review_file": "figures/P1_FIGURES_REVIEW.md",
+  "current_figure_revision": null,
+  "historical_gate": "Each figure must receive individual user approval before the next figure is produced.",
+  "rendering_mode": "batch_remaining_authorized",
+  "superseding_authorization": "figures/batch_rendering_authorization.json",
+  "status_field_scope": "Historical inventory approval; current rendering cadence is defined by rendering_mode and superseding_authorization."
+}

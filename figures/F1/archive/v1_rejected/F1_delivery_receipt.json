@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-27",
+  "figure": "F1",
+  "status": "awaiting_user_figure_review",
+  "inventory_approval_message": "批准 制图",
+  "palette_frozen_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "models_loaded": false,
+  "new_fits": 0,
+  "protected_inputs_unchanged": true,
+  "protected_groups": {
+    "p1_artifacts": {
+      "files": 3621,
+      "bytes": 923508268,
+      "sha256": "f2e52bd99d97ba55063f3cb46fa8de394bcfb2e25a319b2538e542f6a5ffb686"
+    },
+    "p1_code": {
+      "files": 34,
+      "bytes": 278761,
+      "sha256": "27532bcb776d4d645302bbceec9bbf6ac2ae036425b4aeff8e5c87874c1d3130"
+    },
+    "official_D_data": {
+      "files": 10,
+      "bytes": 3335016,
+      "sha256": "0135210bf55b9c8d07513bed6f3bcb95d814a4b4265f821ed0a2db202ea61856"
+    },
+    "fit_ledger_sha256": "3b34143f454e8e46977efc60f3a9d35ba604065e24a088de132053db53d44bbd"
+  },
+  "writes_limited_to": "figures/",
+  "other_formal_figures_generated": false,
+  "next_gate": "User approval of F1; then create F2 only.",
+  "checks": {
+    "git_diff_check": {
+      "exit_code": 0,
+      "summary": []
+    },
+    "git_hygiene": {
+      "exit_code": 0,
+      "summary": [
+        "SUMMARY: 10 checks, 0 FAIL"
+      ]
+    },
+    "env_doctor": {
+      "exit_code": 0,
+      "summary": [
+        "SUMMARY: 14 checks, 0 FAIL"
+      ]
+    }
+  },
+  "pdf_inspection": {
+    "embedded_fonts": [
+      "TimesNewRomanPSMT"
+    ],
+    "all_fonts_embedded": true,
+    "minimum_text_pt": 8.5,
+    "pages": 1,
+    "width_mm": 170,
+    "height_mm": 156,
+    "raster_images": 0,
+    "all_extracted_text_ascii": true,
+    "author_field_empty": true,
+    "personal_metadata_absent": true
+  },
+  "files": {
+    "F1/F1_audit.json": "9362977600b041482ac41a8b375ca6b29cd0ab4599364b70f4e11940a3fcba63",
+    "F1/F1_data_audit.pdf": "c17863461d7542737d107ad5d360735becf6eca0f8df0ea6361f80083976f732",
+    "F1/F1_data_audit.png": "69d41fcee4f0fc1e65428b69a56c66bb569239325cde645370a46e1cec5faf58",
+    "F1/F1_data_audit_grayscale.png": "209d33f5d90bcd87bf6fcfbaebd1bff10ec22ea6ef1ba46643c6885f697c0ead",
+    "F1/F1_histogram_counts.csv": "147ed27518d495fe5e0567d874c10794653520a2efa75b2646da20a460e128c3",
+    "F1/F1_near_positive_histogram_counts.csv": "9aaa28a88735203842eb561a43ee71b8f3b72f6d2ff70620688bedfc417d669b",
+    "F1/F1_review.md": "eb41a751622b6c0ffdc393259ab144d5edd21fc960bf74e4a539907eb09bb093",
+    "F1/F1_split_counts.csv": "f9763455e44353f01af7fa2608970c31088645e7f9025a906d29b03d4750fccd",
+    "render_F1.py": "f5ec9325ba5833ee111d2e4062e7167a454c6f111fb60ff103c2bbed813ee622",
+    "figure_inventory.csv": "77dbab85288cca6570f54070cd3cb4267cfd1110d1f5745c1b50e97ba4f9a3ac",
+    "figure_inventory_proposal.md": "b265a5d80ebde6c73191159dab59710c191f9c477cad20bac5f049890d0fd5de",
+    "figure_inventory_approval.json": "d238f1f79f728174030bf346871d8d6f301a0eddd57effbe68f0998402312fb8"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "figure": "A5",
+  "revision": 4,
+  "date": "2026-11-27",
+  "status": "revision_4_reference_matched_awaiting_user_review",
+  "title": "Protocol-level extrapolation stress diagnostics",
+  "width_mm": 150.0,
+  "height_mm": 150.0,
+  "dpi": 300,
+  "pixels": [
+    1771,
+    1771
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "5.78",
+    "+17.9%",
+    "45.46",
+    "-24.8%",
+    "51.41",
+    "-17.4%",
+    "5.18",
+    "+5.6%",
+    "16.73",
+    "-72.3%",
+    "18.36",
+    "-70.5%",
+    "6.50",
+    "+32.6%",
+    "12.90",
+    "-78.7%",
+    "14.72",
+    "-76.3%",
+    "R-log\nRMSE (V)",
+    "R-log\nEF@20",
+    "S-eps\nEF@20",
+    "Element",
+    "Target",
+    "X-leave",
+    "Change from AB-blocked OOF (%)",
+    "-80",
+    "-40",
+    "0",
+    "40",
+    "80"
+  ],
+  "text_word_count": 38,
+  "previous_v3_text_word_count": 38,
+  "no_lollipop": true,
+  "design": "Square matrix with the same blue-white-amber map as A1 and dark cell labels; unchanged scale, geometry and values.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/stress_summary.csv",
+      "sha256": "449837a7eccbe9cbde84753df3154663c4a49a1abaa48b74164977b597ace99c",
+      "bytes": 1663
+    },
+    {
+      "path": "artifacts/p1_v21/results/stress_detail.csv",
+      "sha256": "dbb9ba365b49d5bde648bf1fbdffcf6e565f6e9b29c1e2614099196bc0203a9b",
+      "bytes": 89229
+    },
+    {
+      "path": "artifacts/p1_v21/results/P1_final_experiment_table.csv",
+      "sha256": "73799b434e2281e9b7b4c60a884306f6087ec3bcdd14bad051b1a328854b83e4",
+      "bytes": 7265
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_file": "figures/render_A5_palette_v4.py",
+  "renderer_sha256": "062dec0e17dc8008496d3a2d086174f4e6e9bcd80082b39e4e9764aac94d0f1f",
+  "common_helper_file": "figures/p1_revision_v4_common.py",
+  "common_helper_sha256": "bd736a2b34ef84ba8678d422681673d888b260ff0f58a3271bedd55113d92ebb",
+  "foundation_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_A5_reference_v4.json",
+  "palette_sha256": "8ce174cc034031f91691d9c51d652a82c9c2c756343b82907f4bf619e6176dbf",
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "Stress-test outcomes and matched OOF-relative changes: protocol-level evidence, not final-model.",
+  "reading_guide": "Rows are protocols and columns are route-specific metrics. Large cell labels are the original stored values; small labels and the blue-white-amber colour encode 100*(stress/reference-1), with zero at the same route's AB-blocked OOF reference. References are R-log RMSE=4.904836, R-log EF=60.486349 and S-eps EF=62.223405. Signed colour indicates raw change, not a universal better/worse direction: lower RMSE and higher EF are desirable. No estimates are refitted. Valid EF evaluations are 5/5, 3/3 and 29/35; zero-positive cases remain undefined. Total budgets are 100,60,700 and defined-EF budgets 100,60,580. Populations, prevalences and budgets differ, so cross-protocol colours cannot rank extrapolation difficulty. These are R-log/S-eps protocol-level evidence, not final-model H-soft validation.",
+  "diagnostics": {
+    "scope": [
+      {
+        "protocol": "element",
+        "evaluations": 5,
+        "N_evaluated_sum": 20181,
+        "M_evaluated_sum": 224,
+        "total_budget": 100,
+        "EF_defined": 5,
+        "EF_undefined": 0,
+        "EF_defined_budget": 100
+      },
+      {
+        "protocol": "target",
+        "evaluations": 3,
+        "N_evaluated_sum": 6762,
+        "M_evaluated_sum": 297,
+        "total_budget": 60,
+        "EF_defined": 3,
+        "EF_undefined": 0,
+        "EF_defined_budget": 60
+      },
+      {
+        "protocol": "xleave",
+        "evaluations": 35,
+        "N_evaluated_sum": 11256,
+        "M_evaluated_sum": 128,
+        "total_budget": 700,
+        "EF_defined": 29,
+        "EF_undefined": 6,
+        "EF_defined_budget": 580
+      }
+    ],
+    "colour_transform": "100 * (stress / matched same-route OOF reference - 1)",
+    "colour_limits_pct": [
+      -80,
+      80
+    ],
+    "no_undefined_EF_zero_fill": true,
+    "added_source_is_existing_main_result": true,
+    "square_canvas": true,
+    "square_cells": true,
+    "colour_endpoints": [
+      "#587AA4",
+      "#FFFFFF",
+      "#DC9848"
+    ],
+    "cell_text_contrasts": [
+      {
+        "protocol": "element",
+        "route": "R-log",
+        "metric": "RMSE_pooled",
+        "text_colour": "#080808",
+        "contrast_ratio": 16.621342999074972
+      },
+      {
+        "protocol": "element",
+        "route": "R-log",
+        "metric": "EF@20_mean",
+        "text_colour": "#080808",
+        "contrast_ratio": 13.542520024310877
+      },
+      {
+        "protocol": "element",
+        "route": "S-eps",
+        "metric": "EF@20_mean",
+        "text_colour": "#080808",
+        "contrast_ratio": 15.320589472247296
+      },
+      {
+        "protocol": "target",
+        "route": "R-log",
+        "metric": "RMSE_pooled",
+        "text_colour": "#080808",
+        "contrast_ratio": 18.92130014848623
+      },
+      {
+        "protocol": "target",
+        "route": "R-log",
+        "metric": "EF@20_mean",
+        "text_colour": "#080808",
+        "contrast_ratio": 5.360015262796567
+      },
+      {
+        "protocol": "target",
+        "route": "S-eps",
+        "metric": "EF@20_mean",
+        "text_colour": "#080808",
+        "contrast_ratio": 5.588897804431711
+      },
+      {
+        "protocol": "xleave",
+        "route": "R-log",
+        "metric": "RMSE_pooled",
+        "text_colour": "#080808",
+        "contrast_ratio": 14.238810314609974
+      },
+      {
+        "protocol": "xleave",
+        "route": "R-log",
+        "metric": "EF@20_mean",
+        "text_colour": "#080808",
+        "contrast_ratio": 4.648496907712323
+      },
+      {
+        "protocol": "xleave",
+        "route": "S-eps",
+        "metric": "EF@20_mean",
+        "text_colour": "#080808",
+        "contrast_ratio": 4.853737264090379
+      }
+    ],
+    "minimum_cell_text_contrast": 4.648496907712323
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "A5_heatmap_values.csv": "efacc85e3b05f49027c45ef1becc1308b4e274342aa85da7958d5abb2075fdc2",
+    "A5_protocol_denominators.csv": "7b1d40440f1c78bdfc375d56aeab3f58797a99c2aac8e94dbb464b52679f214f",
+    "A5_stress_protocols.pdf": "fb871e35f9de852b07d303b6f418e8f0a21659724fa575803955c50d666ef913",
+    "A5_stress_protocols.png": "60238badac87bd2ce1949b3a9c87dd5cd7427fe25c0ba947d7d0ab1ec508ab5f",
+    "A5_stress_protocols_grayscale.png": "7d8ee06a59928b1ca0c781f63648539c0114a6588139efacc3f15e2a714cb5b2",
+    "A5_stress_protocols_v2.pdf": "6b9c28762a42e109efe094235c0115ab66f4e7deee763c2097736ebe4ea0c0fd",
+    "A5_stress_protocols_v2.png": "3a298f7bd776ebb3b17ef2355ac2ca1043a66181b2d1223829205f69b6f76fe5",
+    "A5_stress_protocols_v2_grayscale.png": "ea7267259273b808a291471b3a73cdf26fdf5b7bbdb08d720fd576befb2c2372",
+    "A5_stress_protocols_v3.pdf": "02124329e83f494c6dc81dff32721860c4a711113dc1ddc70dfcc8562d8c0da1",
+    "A5_stress_protocols_v3.png": "17c17ea6504f2f16a790a0370a4f1d14fe2382badd0ce78f2a28ad46ab64a960",
+    "A5_stress_protocols_v3_grayscale.png": "a6308b9633d9b3d410e338f4331cedc122de44e15e6a3cb8868407bac0fbd40d",
+    "A5_stress_protocols_v4.pdf": "fb871e35f9de852b07d303b6f418e8f0a21659724fa575803955c50d666ef913",
+    "A5_stress_protocols_v4.png": "60238badac87bd2ce1949b3a9c87dd5cd7427fe25c0ba947d7d0ab1ec508ab5f",
+    "A5_stress_protocols_v4_grayscale.png": "7d8ee06a59928b1ca0c781f63648539c0114a6588139efacc3f15e2a714cb5b2",
+    "A5_stress_values.csv": "4ab69f6e50b67a5ccfb1935365bb9997eb6f331d9bb7df338da0d03cbb2b0ee5"
+  },
+  "legend_matches_actual_marks": true,
+  "nine_self_checks_passed": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "reference_A1_palette_exact_match": true,
+  "existing_display_data_unchanged": true,
+  "all_text_geometry_unchanged": true,
+  "all_graphic_rectangles_unchanged": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 149.99999576144748,
+        "height_mm": 149.99999576144748,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  }
+}

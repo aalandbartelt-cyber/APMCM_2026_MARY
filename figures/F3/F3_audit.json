@@ -1,0 +1,163 @@
+{
+  "figure": "F3",
+  "revision": 2,
+  "date": "2026-11-27",
+  "status": "revision_2_visually_checked_awaiting_user_review",
+  "title": "Error contributions and the regression-screening trade-off",
+  "width_mm": 170.0,
+  "height_mm": 90.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1062
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "no_suptitle": true,
+  "no_embedded_table": true,
+  "annotation_only_text": true,
+  "text_strings": [
+    "21.17",
+    "22.64",
+    "24.06",
+    "30.89",
+    "39.95",
+    "121.31",
+    "MSE contribution (V^2)",
+    "0",
+    "40",
+    "80",
+    "120",
+    "H-soft",
+    "R-raw",
+    "R-log",
+    "W-log",
+    "Ridge",
+    "Mean",
+    "(a) MSE contributions",
+    "H-soft",
+    "R-log",
+    "R-raw",
+    "W-log",
+    "RMSE (V)",
+    "4.5",
+    "5.0",
+    "5.5",
+    "Mean EF@20 (V<=2)",
+    "50",
+    "55",
+    "60",
+    "65",
+    "(b) RMSE-EF",
+    "Metal (gap=0)",
+    "Nonmetal (gap>0)",
+    "H-soft",
+    "R-log",
+    "R-raw",
+    "W-log"
+  ],
+  "text_word_count": 48,
+  "rejected_v1_text_word_count": 108,
+  "text_reduction_fraction": 0.5555555555555556,
+  "no_lollipop": true,
+  "design": "Steel-blue/amber stacked strips plus shape-coded Pareto points; no explanatory text block.",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/P1_final_experiment_table.csv",
+      "sha256": "73799b434e2281e9b7b4c60a884306f6087ec3bcdd14bad051b1a328854b83e4",
+      "bytes": 7265
+    },
+    {
+      "path": "artifacts/p1_v21/results/regression_pareto.csv",
+      "sha256": "d2904f9b0a4b1dec22400b50def87b9f2b89c5231016b2f9f10d953cf4fdfb0d",
+      "bytes": 2730
+    },
+    {
+      "path": "artifacts/p1_v21/results/paired_AB_bootstrap_5000.csv",
+      "sha256": "796e44140c1981f3e186f853dd77d1c368a5cf7c5a0385ed0d7755dc3afe68e8",
+      "bytes": 3914
+    }
+  ],
+  "template": "/mnt/c/Users/mary3/.agents/skills/mary-modeling-contest-pipeline-apmcm/assets/apmcm_d_plot_templates.py",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_sha256": "222763d5581aab7e82bdd6055db797161ea74a3f5b3873bbeb9774bd1415259a",
+  "common_helper_sha256": "b54f0c13e887c91bdf41376edc20ca365fcbaff9a1153bb7b32305949a65cd36",
+  "palette_file": "figures/palette_redesign_v2.json",
+  "palette_sha256": "81e184d079a99aa6969885be2eea0993f361c63a4727cc0776cfbd809739745a",
+  "prior_frozen_palette_unchanged": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "caption": "Class contributions to error and the regression-screening trade-off.",
+  "reading_guide": "Each stacked segment is class-specific SSE divided by the total sample count; segment sums equal pooled RMSE squared. Metal and nonmetal are encoded by steel blue and hatched amber. The six stacked bars are decompositions, not confidence intervals. The scatter compares only four registered regressors: H-soft is nondominated at RMSE=4.6011 and EF=62.1024. Its MSE contributions are 18.2920 and 2.8781. H-soft minus R-log EF is +1.6160 with the existing 95% paired AB percentile interval [-5.9951,11.2022], conditional on frozen OOF and prior selection without multiplicity correction; the apparent screening advantage is therefore uncertain. No RMSE is assigned to probability-only routes.",
+  "diagnostics": {
+    "contributions_sum_to_RMSE_squared": true,
+    "registered_routes": [
+      "H-soft",
+      "R-log",
+      "R-raw",
+      "W-log"
+    ],
+    "EF_difference": {
+      "model": "H-soft",
+      "reference": "R-log",
+      "metric": "EF_macro@20",
+      "endpoint": "EF_{V<=2}@20_macro_outer_folds",
+      "n_outer_folds": "5",
+      "n_resamples": "5000",
+      "n_valid": "5000",
+      "n_undefined": "0",
+      "delta_point": "1.6160315680524349",
+      "delta_p025": "-5.995051185344833",
+      "delta_median": "2.2916137843825304",
+      "delta_p975": "11.202233626165494",
+      "sampling": "paired AB clusters; independently resample inside each fixed outer fold",
+      "inference": "conditional on fixed OOF and prior selection; percentile interval; no multiplicity correction"
+    }
+  },
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "files": {
+    "F3_MSE_contributions.csv": "78851a7f7f8f7a0ab71c4af32716697d1a8b46c738932f087f6d50fdc50804a5",
+    "F3_error_tradeoff.pdf": "aedffce2838ac6e2ba3ce54b25748dd5c26effd132ee08958bfff40a8c67e29b",
+    "F3_error_tradeoff.png": "9bbcef72556e1384358fd73132684a4077669722800d3d3c9426af1c9b1ae4c2",
+    "F3_error_tradeoff_grayscale.png": "b85f731e7fc09dcd9e8183551fbf8e9b9e29cfa92ea734c77dacd44f8e0a29ad",
+    "F3_error_tradeoff_v2.pdf": "aedffce2838ac6e2ba3ce54b25748dd5c26effd132ee08958bfff40a8c67e29b",
+    "F3_error_tradeoff_v2.png": "9bbcef72556e1384358fd73132684a4077669722800d3d3c9426af1c9b1ae4c2",
+    "F3_error_tradeoff_v2_grayscale.png": "b85f731e7fc09dcd9e8183551fbf8e9b9e29cfa92ea734c77dacd44f8e0a29ad",
+    "F3_registered_pareto.csv": "10cae295317482004f21342406fb3d9a3f78452be2039f4a964530730e310d2b"
+  },
+  "legend_matches_actual_marks": true,
+  "manual_no_explanatory_sentences": true,
+  "manual_no_clipping_or_label_overlap": true,
+  "nine_self_checks_passed": true,
+  "final_pdf_inspection": {
+    "page_count": 1,
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 89.99999745686848,
+        "minimum_font_pt": 8.5,
+        "all_fonts_embedded": true,
+        "Times_New_Roman_only": true,
+        "all_text_ascii": true,
+        "raster_images": 0
+      }
+    ],
+    "personal_metadata_absent": true
+  }
+}

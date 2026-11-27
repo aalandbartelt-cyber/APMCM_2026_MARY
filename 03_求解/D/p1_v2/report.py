@@ -1,12 +1,11 @@
-"""Post-freeze descriptive analysis and conditional AB bootstrap; never fits trees."""
+"""Post-freeze descriptive analysis and conditional AB bootstrap; no new fitting of any kind."""
 from pathlib import Path
 import json
 import numpy as np
 import pandas as pd
-from scipy.special import logit, expit
-from scipy.optimize import minimize
 from common import ROOT,OUT,CODE,ROUTES,REG,SEED,Budget,dump,sha,now
-from metrics import evaluate,ordered,probability_metrics
+from metrics import evaluate,ordered
+from hardening_tables import build_main_tables
 
 PRED_COLUMNS=['score','vhat','vhat_raw','p_nonmetal','p_nonmetal_raw','p_near_given_nonmetal','p_near_raw',
               'score_raw_probability','rank_score','vhat_hard','vhat_nonmetal_only']
@@ -28,7 +27,7 @@ def md(frame,columns=None,digits=4):
     def fmt(x):
         if x is None or (isinstance(x,(float,np.floating)) and not np.isfinite(x)):return 'NA'
         if isinstance(x,(float,np.floating)):return f'{x:.{digits}f}'
-        return str(x).replace('EF@','EF_{V<=2}@')
+        return str(x).replace('EF@','EF_{V<=2}@').replace('|', '\\|')
     lines=['| '+' | '.join(df.columns)+' |','| '+' | '.join(['---']*len(df.columns))+' |']
     lines.extend('| '+' | '.join(fmt(v) for v in row)+' |' for row in df.itertuples(index=False,name=None))
     return '\n'.join(lines)
@@ -53,50 +52,84 @@ def summary_metrics(rows,keys):
     return pd.DataFrame(result)
 
 
-def diagnostic_calibration(y,p):
-    """Slope/intercept fitted for diagnosis only; never changes any prediction."""
-    y=np.asarray(y,float);z=logit(np.clip(np.asarray(p),1e-8,1-1e-8))
-    if len(np.unique(y))<2 or np.std(z)<1e-8:return dict(calibration_intercept=np.nan,calibration_slope=np.nan)
-    def loss(ab):
-        a,b=ab;t=a+b*z;err=expit(t)-y
-        return np.sum(np.logaddexp(0,t)-y*t)+.0001*(a*a+b*b),np.array([err.sum()+.0002*a,np.dot(err,z)+.0002*b])
-    fit=minimize(loss,[0.,1.],jac=True,method='L-BFGS-B',bounds=[(-50,50),(-20,20)])
-    return dict(calibration_intercept=fit.x[0],calibration_slope=fit.x[1],diagnostic_only=True)
+def frequency_ef(counts, gid, y, order, k=20):
+    """Top-k on an exactly duplicated cluster sample, not unique-key Top-k."""
+    ng = counts.shape[1]
+    M = counts @ np.bincount(gid, weights=y, minlength=ng)
+    N = counts @ np.bincount(gid, minlength=ng)
+    prefix = order[:min(512, len(order))]
+    w = counts[:, gid[prefix]]
+    if np.any(w.sum(axis=1) < k):
+        prefix = order
+        w = counts[:, gid[prefix]]
+    before = np.cumsum(w, axis=1) - w
+    allocated = np.minimum(w, np.maximum(0, k - before))
+    hits = allocated @ y[prefix]
+    return np.divide(hits / np.minimum(k, N), M / N,
+                     out=np.full(len(counts), np.nan), where=M > 0), N
 
 
-def cluster_bootstrap(frames,pairs,n=5000):
-    """Frequency representation exactly duplicates AB clusters, including top-k rows."""
-    first=next(iter(frames.values())).sort_values('key')
-    keys=first.key.to_numpy();groups=sorted(first.ab.unique());lookup={g:i for i,g in enumerate(groups)}
-    gid=first.ab.map(lookup).to_numpy();ng=len(groups)
-    y=(first.V.to_numpy()<=2);v=first.V.to_numpy();rng=np.random.default_rng(SEED+50000)
-    counts=rng.multinomial(ng,np.full(ng,1/ng),size=n).astype(np.int32)
-    near_by_group=np.bincount(gid,weights=y,minlength=ng)
-    rows_by_group=np.bincount(gid,minlength=ng)
-    M=counts@near_by_group;N=counts@rows_by_group
-    stats={};records=[]
-    for name,frame in frames.items():
-        frame=frame.set_index('key').loc[keys].reset_index()
-        order=ordered(frame.score,keys)
-        # Only the leading 512 ranks are normally needed; the fallback is exact.
-        prefix=order[:min(512,len(order))];w=counts[:,gid[prefix]]
-        if np.any(w.sum(axis=1)<20):prefix=order;w=counts[:,gid[prefix]]
-        before=np.cumsum(w,axis=1)-w
-        allocated=np.minimum(w,np.maximum(0,20-before))
-        hits=allocated@y[prefix]
-        ef=np.divide(hits/20,M/N,out=np.full(n,np.nan),where=M>0)
-        result={'EF@20':ef}
-        if 'vhat' in frame and frame.vhat.notna().all():
-            sse_by_group=np.bincount(gid,weights=(frame.vhat.to_numpy()-v)**2,minlength=ng)
-            result['RMSE']=np.sqrt((counts@sse_by_group)/N)
-        stats[name]=result
-    for a,b in pairs:
-        for metric in set(stats[a])&set(stats[b]):
-            diff=stats[a][metric]-stats[b][metric];ok=np.isfinite(diff)
-            q=np.quantile(diff[ok],[.025,.5,.975]) if ok.any() else [np.nan]*3
-            records.append(dict(model=a,reference=b,metric=metric,n_resamples=n,n_valid=int(ok.sum()),
-                                delta_p025=q[0],delta_median=q[1],delta_p975=q[2],
-                                inference='conditional on fixed OOF and prior model selection; AB-cluster percentile interval'))
+def cluster_bootstrap(frames, pairs, n=5000):
+    """Paired AB resampling within fixed outer folds; macro fold Top-20 EF.
+
+    All five fold endpoints must be defined. RMSE remains a pooled row metric.
+    These are conditional intervals for fixed predictions, not refit intervals.
+    """
+    first = next(iter(frames.values())).sort_values('key').reset_index(drop=True)
+    assert first.key.is_unique
+    assert 'outer_fold' in first and first.outer_fold.notna().all()
+    assert first.groupby('ab').outer_fold.nunique().max() == 1, 'AB crosses outer folds'
+    keys = first.key.to_numpy()
+    folds = sorted(first.outer_fold.unique())
+    rng = np.random.default_rng(SEED + 50000)
+    strata = []
+    for fold in folds:
+        ix = np.flatnonzero(first.outer_fold.to_numpy() == fold)
+        g = first.iloc[ix]
+        groups = sorted(g.ab.unique())
+        gid = g.ab.map({ab: i for i, ab in enumerate(groups)}).to_numpy()
+        ng = len(groups)
+        counts = rng.multinomial(ng, np.full(ng, 1/ng), size=n).astype(np.int32)
+        strata.append((ix, gid, counts))
+    stats, points = {}, {}
+    for name, frame in frames.items():
+        assert frame.key.is_unique and set(frame.key) == set(keys), name
+        frame = frame.set_index('key').loc[keys].reset_index()
+        for col in ('ab', 'outer_fold', 'V'):
+            np.testing.assert_array_equal(frame[col], first[col], err_msg=name + ':' + col)
+        ef, point_ef, sses, ns = [], [], [], []
+        numeric = 'vhat' in frame and frame.vhat.notna().all()
+        for ix, gid, counts in strata:
+            g = frame.iloc[ix]
+            y = (g.V.to_numpy() <= 2)
+            order = ordered(g.score, g.key)
+            one, N = frequency_ef(counts, gid, y, order)
+            ef.append(one)
+            point_ef.append((y[order[:20]].mean() / y.mean()) if y.any() else np.nan)
+            ns.append(N)
+            if numeric:
+                sse = np.bincount(gid, weights=(g.vhat.to_numpy()-g.V.to_numpy())**2,
+                                  minlength=counts.shape[1])
+                sses.append(counts @ sse)
+        # np.mean intentionally propagates any undefined fold (no nanmean).
+        stats[name] = {'EF_macro@20': np.mean(ef, axis=0)}
+        points[name] = {'EF_macro@20': np.mean(point_ef)}
+        if numeric:
+            stats[name]['RMSE'] = np.sqrt(np.sum(sses, axis=0) / np.sum(ns, axis=0))
+            points[name]['RMSE'] = np.sqrt(np.mean((frame.vhat-frame.V)**2))
+    records = []
+    for a, b in pairs:
+        for metric in sorted(set(stats[a]) & set(stats[b])):
+            diff = stats[a][metric] - stats[b][metric]
+            ok = np.isfinite(diff)
+            q = np.quantile(diff[ok], [.025, .5, .975]) if ok.any() else [np.nan]*3
+            records.append(dict(model=a, reference=b, metric=metric,
+                endpoint='EF_{V<=2}@20_macro_outer_folds' if metric == 'EF_macro@20' else 'pooled_OOF_RMSE',
+                n_outer_folds=len(folds), n_resamples=n, n_valid=int(ok.sum()), n_undefined=int((~ok).sum()),
+                delta_point=points[a][metric]-points[b][metric],
+                delta_p025=q[0], delta_median=q[1], delta_p975=q[2],
+                sampling='paired AB clusters; independently resample inside each fixed outer fold',
+                inference='conditional on fixed OOF and prior selection; percentile interval; no multiplicity correction'))
     return pd.DataFrame(records)
 
 
@@ -122,14 +155,12 @@ def main():
     oof=pd.concat([pd.read_csv(OUT/'domains'/f'main_outer_{f}.csv.gz').assign(outer_fold=f) for f in range(5)],ignore_index=True)
     oof.to_csv(dest/'outer_oof_predictions.csv.gz',index=False)
     frames={r:g.sort_values('key').reset_index(drop=True) for r,g in oof.groupby('route')}
-    pooled=[];cal=[];raw_order_checks=[]
+    pooled=[];raw_order_checks=[]
+    assert (dest/'oof_calibration_consistency.csv').exists(), 'Original diagnostics required; no fitting allowed'
     for route,frame in frames.items():
         assert frame.key.is_unique and len(frame)==11256
         pooled.append(dict(route=route,**evaluate(frame,preds(frame))))
         if route not in REG:
-            for fold in ['pooled']+list(range(5)):
-                g=frame if fold=='pooled' else frame[frame.outer_fold==fold]
-                cal.append(dict(route=route,fold=fold,**probability_metrics(g.V<=2,g.score),**diagnostic_calibration(g.V<=2,g.score)))
             if route in ('B-eps','L-single','L-hash4'):
                 for fold in ['pooled']+list(range(5)):
                     g=frame if fold=='pooled' else frame[frame.outer_fold==fold]
@@ -139,11 +170,10 @@ def main():
                         cal_top20_fold_counts=json.dumps(g.iloc[ordered(g.score,g.key)[:20]].outer_fold.value_counts().to_dict()),
                         note='Within-fold monotonicity and cross-fold scale diagnostic; not an extra selection rule'))
     pool=pd.DataFrame(pooled);pool['p_uniform_holm']=holm(pool['p_uniform@20']);pool.to_csv(dest/'pooled_oof_diagnostic.csv',index=False)
-    pd.DataFrame(cal).to_csv(dest/'oof_calibration_consistency.csv',index=False)
     pd.DataFrame(raw_order_checks).to_csv(dest/'oof_calibration_ranking_checks.csv',index=False)
-    # Correct conditional MSE values for pooled rows are taken from the OOF table.
-    exact=pool[['route','metal_MSE','nonmetal_MSE','metal_MSE_contribution','nonmetal_MSE_contribution','RMSE','MAE']]
-    main_table=sums[['route','feature_set','evaluations','EF@20_mean','hits20_sum','NDCG@20_mean','regret@20_mean']].merge(exact,on='route')
+    nested=json.loads((OUT/'nested_selection_results.json').read_text())
+    main_table, fold_table = build_main_tables(allmetrics, nested, summary_metrics)
+    fold_table.rename(columns={c:c.replace('EF@','EF_{V<=2}@') for c in fold_table.columns}).to_csv(dest/'P1_main_per_fold.csv',index=False)
     public_table=main_table.rename(columns={'EF@20_mean':'EF_{V<=2}@20_mean'}).assign(screen_event='V<=2')
     public_table.to_csv(dest/'P1_final_experiment_table.csv',index=False)
     public_table.to_csv(ROOT/'codex/P1_FINAL_RESULTS_v2.1.csv',index=False)
@@ -168,14 +198,22 @@ def main():
     # Fixed comparisons; never feed these intervals back into selection.
     compare={k:v for k,v in frames.items()}
     pairs=[(final['numeric'],'R-log'),(final['screen'],'R-log'),('S-eps','B-eps'),('L-single','L-hash4')]
-    f3=pd.concat([pd.read_csv(OUT/'domains'/f'feature_F3_{f}.csv.gz') for f in range(5)])
+    f3=pd.concat([pd.read_csv(OUT/'domains'/f'feature_F3_{f}.csv.gz').assign(outer_fold=f) for f in range(5)])
     compare['R-log_F3']=f3;pairs.append(('R-log','R-log_F3'))
     for feature in ('minus_electronic','minus_geometry','minus_xstats'):
-        aa=pd.concat([pd.read_csv(OUT/'domains'/f'ablation_{feature}_{f}.csv.gz') for f in range(5)])
+        aa=pd.concat([pd.read_csv(OUT/'domains'/f'ablation_{feature}_{f}.csv.gz').assign(outer_fold=f) for f in range(5)])
         for route in set([final['numeric'],final['screen']]):
             name=route+'_'+feature;compare[name]=aa[aa.route==route];pairs.append((name,route))
+    assert (dest/'paired_AB_bootstrap_pooled_diagnostic_legacy.csv').exists(), 'Preserve original pooled results before reporting'
     boot=cluster_bootstrap(compare,list(dict.fromkeys(pairs)))
     boot.to_csv(dest/'paired_AB_bootstrap_5000.csv',index=False)
+    legacy=pd.read_csv(dest/'paired_AB_bootstrap_pooled_diagnostic_legacy.csv')
+    legacy['metric']=legacy['metric'].replace({'EF@20':'EF_macro@20'})
+    oldcols=['model','reference','metric','delta_p025','delta_median','delta_p975','n_valid']
+    legacy=legacy[oldcols].rename(columns={c:'legacy_pooled_'+c for c in oldcols if c not in ('model','reference','metric')})
+    comparison=boot.merge(legacy,on=['model','reference','metric'],how='left',validate='one_to_one')
+    comparison['legacy_endpoint']='single pooled Top-20 EF / pooled RMSE; global AB resampling; diagnostic only'
+    comparison.to_csv(dest/'paired_AB_bootstrap_endpoint_comparison.csv',index=False)
     # Bootstrap optimizer/top-k stability on each explicit candidate pool.
     stability=[]
     for prefix in ('04','07','08','11','12'):
@@ -198,26 +236,22 @@ def main():
     pd.DataFrame(residual).to_csv(dest/'OOF_residual_scales_by_X.csv',index=False)
     ledger=Budget().entries();attempts=[r for r in ledger if r['event']=='start'];failures=[r for r in ledger if r['event']=='failed']
     budget=pd.DataFrame(attempts).groupby('phase',dropna=False).size().rename('attempts').reset_index();budget.to_csv(dest/'fit_counts_by_phase.csv',index=False)
-    model_card=dict(version='P1 v2.1',training_scope='P1_train02',training_rows=11256,
-        regression_model=final['numeric'],screen_model=final['screen'],screen_event='V<=2',
-        screen_score_kind='negative_Vhat' if final['screen'] in REG else 'estimated_near_event_probability',
-        inputs=['A','B','X'],feature_set='F3+E1',feature_count=336,DFT_features_used=False,
-        calibration='AB-group cross-fitted sigmoid inside each training domain; independent diagnostics saved',
-        validation_role='03 is development selection with historical exposure; 04 has no labels',
-        uncertainty='20 AB-resampled numerical models, fixed final calibrator; no coverage guarantee',
-        limitations=['No V=0 positives in development','No claim of hidden-zero recall','Final H-soft not directly covered by R-log/S-eps domain-pressure comparisons',
-                     'Historical blind state cannot be restored','P23 02+03 refit deferred'],
-        source_manifest_sha256=sha(OUT/'sources/source_manifest.json'),
-        weights_manifest_sha256=sha(OUT/'weights_freeze_pre04.json'),
-        scalar_calibrators=len(list((OUT/'calibration').glob('*.json'))),ridge_baseline_fits=5,
-        fit_attempts=len(attempts),failed_attempts=len(failures))
-    dump(OUT/'model_card.json',model_card)
+    # The original model card and fitted calibration diagnostics remain byte-identical.
     manifest=dict(time=now(),fits=len(attempts),failed_attempts=len(failures),hard_limit=1000,
         numeric=final['numeric'],screen=final['screen'],no_new_training_for_report=True,
-        files={p.name:sha(p) for p in dest.glob('*') if p.is_file()})
+        files={p.name:sha(p) for p in dest.glob('*') if p.is_file() and p.name!='manifest.json'})
     dump(dest/'manifest.json',manifest)
     write_report(main_table,v03,selected,numeric,stress,boot,manifest,final)
     print(json.dumps(dict(report_complete=True,fits=len(attempts),numeric=final['numeric'],screen=final['screen'])),flush=True)
+
+
+def bootstrap_interpretation(boot):
+    parts=[]
+    for metric in ('RMSE','EF_macro@20'):
+        r=boot[(boot.model=='H-soft') & (boot.reference=='R-log') & (boot.metric==metric)].iloc[0]
+        status='区间跨零，不能声称稳定优势' if r.delta_p025<=0<=r.delta_p975 else '区间不跨零；只支持本条件评估中的差异'
+        parts.append(f'H-soft − R-log 的 {metric} 差为 {r.delta_point:.4f}，95% 区间 [{r.delta_p025:.4f}, {r.delta_p975:.4f}]：{status}。')
+    return ' '.join(parts)
 
 
 def write_report(table,val,nested,pareto,stress,boot,manifest,final):
@@ -232,13 +266,13 @@ def write_report(table,val,nested,pareto,stress,boot,manifest,final):
         EF_mean=('EF@20','mean'),overlap_mean=('top20_overlap','mean'),overlap_min=('top20_overlap','min'),overlap_max=('top20_overlap','max'))
     stability=pd.read_csv(results/'bootstrap_pool_stability.csv',dtype={'pool':str})
     front=', '.join(pareto.loc[pareto.pareto_nondominated,'route'])
-    cols=['route','RMSE','metal_MSE_contribution','nonmetal_MSE_contribution','EF@20_mean','hits20_sum','NDCG@20_mean','regret@20_mean']
-    vcols=['route','RMSE','MAE','metal_MSE_contribution','nonmetal_MSE_contribution','EF@20','hits@20','NDCG@20','regret@20']
+    cols=['route','row_kind','RMSE','metal_MSE_contribution','nonmetal_MSE_contribution','EF@20_mean','hits20_sum','NDCG@20_mean','regret@20_mean']
+    vcols=['route','row_kind','RMSE','MAE','metal_MSE_contribution','nonmetal_MSE_contribution','EF@20','hits@20','NDCG@20','regret@20']
     for c in vcols:
         if c not in val:val[c]=np.nan
     text=f'''# P1 v2.1 最终实验报告
 
-日期：2026-11-26。状态：P1 实施完成；本报告由冻结实验产物生成，未作新一轮选模。
+日期：2026-11-27（P0 收尾加固）。状态：P1 实施完成；本报告只重算既有表的统计，无任何新拟合或选模。
 
 最终数值模型：**{final['numeric']}**；最终近正例筛选模型：**{final['screen']}**。筛选事件固定为 **V<=2**，不是 V=0。正式数值输出与筛选打分分列。
 
@@ -248,7 +282,7 @@ def write_report(table,val,nested,pareto,stress,boot,manifest,final):
 
 {md(table,cols)}
 
-这是各登记候选的配对表现；据此挑最佳再报告同一表仍有开发选择乐观性。另存嵌套流程的独立外层评价：
+表中同时列出八条登记候选、三条固定基线及两条嵌套选择流程。基线不参与新增选模；加性 Ridge 为原先五折的 alpha=1 模型，均值为训练折均值，random_hash 为既定随机排序的一次实现（本次 0/100，理论期望 EF=1，不能把实现值换成期望）。逐折 N/M/h 和内层选定身份见 `P1_main_per_fold.csv`，汇总 CSV 也包含逐折向量。候选表仍有开发选择乐观性；嵌套流程另列如下：
 
 {md(pd.DataFrame(nested),['procedure','RMSE_pooled','EF@20_mean','hits20_sum'])}
 
@@ -278,7 +312,7 @@ R-log 的 F3+E1 RMSE 为 4.9048，相比 F3 的 4.9547 有小幅改善；其配�
 
 压力测试按计划只训练 R-log 和 S-eps，**不是最终 H-soft 的直接域外验证**。EF 均值只包含 M>0 的有效评估池，其数量单列；M=0 不填零。不同协议的评估池、M 和总预算不同，不能横向按 EF 大小比较“哪种外推更容易”。V<2 区域全部留出时，S-eps 条件事件头缺正类而退化为平滑先验，该情景的排序主要依赖门控，不能解释成恢复了未见零点监督。
 
-概率校准在训练域 OOF 拟合。独立外层的 Brier、可靠性曲线、诊断斜率/截距以及 raw/calibrated OOF 拼接名单比较分别保存。诊断回归不改变任何预测，不据结果再选校准器。纯筛选器没有原尺度 RMSE。
+概率校准在训练域 OOF 拟合。独立外层的 Brier、可靠性曲线、诊断斜率/截距以及 raw/calibrated OOF 拼接名单比较分别保存。本次复用原有诊断回归产物，不重新拟合，不据结果再选校准器。纯筛选器没有原尺度 RMSE。
 
 拼接 OOF 的独立校准诊断如下；理想诊断截距/斜率为 0/1，但这里不据此作新的硬筛选：
 
@@ -294,17 +328,19 @@ R-log 的 F3+E1 RMSE 为 4.9048，相比 F3 的 4.9547 有小幅改善；其配�
 
 种子 0 的 L-hash4 平均 EF 为 46.8397。额外种子 Top-20 平均重合约 15/20，不能称名单完全稳定；也没有把额外种子的较好结果替换主结果。单 Query 在本轮二元 relevance、固定容量配置下弱于四 Query，这不构成对全部 LambdaRank 设置的结论。
 
-配对 AB bootstrap 的固定比较（5000 次，条件于既有 OOF 和既往选择，不包含完整研究选择不确定性；区间未作多重区间校正，按探索性解释）：
+配对 AB bootstrap 的固定比较：在每个既定外折内分别重采样 AB，逐折各取 Top-20 后等权平均 EF，与主表一致。任一折 M=0 则该次完整宏平均无定义，不能只平均其余折。RMSE 仍按行汇总。5000 次均条件于既有 OOF 和既往选择，不包含完整研究选择不确定性；区间未作多重区间校正，按探索性解释：
 
-{md(boot,['model','reference','metric','delta_p025','delta_median','delta_p975'])}
+{md(boot,['model','reference','metric','delta_point','delta_p025','delta_median','delta_p975','n_valid'])}
 
-H-soft 相对 R-log 的 RMSE 差区间完全低于零，但 EF 差区间跨零。因此可报告数值误差改善证据，不能把筛选优势写成已稳定证实。
+{bootstrap_interpretation(boot)}
 
-20 次重训 bootstrap 的池内最优与 Top-20 稳定性：
+旧全局 pooled Top-20 区间完整保留为独立诊断 `paired_AB_bootstrap_pooled_diagnostic_legacy.csv`，其 EF 只用一次 Top-20，不能与五折宏平均的区间混用。并列表 `paired_AB_bootstrap_endpoint_comparison.csv` 的 legacy_pooled_* 列只作诊断。
+
+既有 20 个重训 bootstrap 成员的池内最优与 Top-20 稳定性（本轮不重训）：
 
 {md(stability,['pool','nominal_minimizer_frequency','distinct_minimizers','top20_overlap_mean'])}
 
-04 的名义最小值候选仅在 4/20 个成员中仍为最小，20 个成员出现 14 个不同最小值候选。这反映候选最优身份不稳定，不是真实材料成功概率。
+04 的名义最小值候选仅在 4/20 个成员中仍为最小，20 个成员出现 14 个不同最小值候选；这只是身份轮换。07/08/11/12 的完整 rank、入选频率、双向决策 regret、最优间隔、家族集中度及 split-half 结果见 `codex/P1_HARDENING_REPORT.md` 和 `artifacts/p1_v21/hardening/`。必须结合代价判定近优平台，不能仅据身份频率称为失控。
 
 ## 预算、复现与限制
 

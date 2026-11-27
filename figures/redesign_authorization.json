@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-27",
+  "status": "user_authorized_rework_batch",
+  "accepted_unchanged": "F1 v3",
+  "rejected_prior_figures": ["F2", "F3", "A1", "A2", "A3", "A4", "A5", "A6"],
+  "approved_action": "Redesign all eight, deliver together with the same merged review-PDF format.",
+  "rules": ["No overall title", "No embedded table", "Annotation-only text", "Use all requested hue families", "No lollipop charts", "Compact compositions"],
+  "writes_limited_to": "figures/",
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "user_approval_of_new_figures": false,
+  "references_read_in_order": [
+    "references/30_用户数维杯论文视觉风格解剖.md (full)",
+    "assets/apmcm_figure_playbook.md sections 13-16",
+    "references/25_D题量子优化优秀论文解剖.md sections 25.9-25.12"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-27",
+  "scope": "A5 v4 only",
+  "authorization": "User requested clearer contrast, then explicitly asked: 鲜艳一点。",
+  "diverging": [
+    "#2B638F",
+    "#FFFFFF",
+    "#BC873D"
+  ],
+  "normalization": [
+    -80,
+    0,
+    80
+  ],
+  "semantic_direction": "negative blue; zero white; positive amber",
+  "change": "Increase colourfulness from the muted preview while retaining stronger contrast than v3. Geometry, signed scale and data unchanged.",
+  "colour_measurement": {
+    "negative": {
+      "before_hex": "#93BED7",
+      "after_hex": "#2B638F",
+      "before": {
+        "L_star": 74.783,
+        "C_star_ab": 19.058
+      },
+      "after": {
+        "L_star": 40.278,
+        "C_star_ab": 29.785
+      },
+      "earlier_muted_preview": {
+        "hex": "#3D6078",
+        "L_star": 39.093,
+        "C_star_ab": 18.259
+      }
+    },
+    "zero": {
+      "before_hex": "#FFFFFF",
+      "after_hex": "#FFFFFF",
+      "before": {
+        "L_star": 100.0,
+        "C_star_ab": 0.0
+      },
+      "after": {
+        "L_star": 100.0,
+        "C_star_ab": 0.0
+      },
+      "earlier_muted_preview": {
+        "hex": "#FFFFFF",
+        "L_star": 100.0,
+        "C_star_ab": 0.0
+      }
+    },
+    "positive": {
+      "before_hex": "#E7BF8E",
+      "after_hex": "#BC873D",
+      "before": {
+        "L_star": 79.731,
+        "C_star_ab": 31.059
+      },
+      "after": {
+        "L_star": 60.211,
+        "C_star_ab": 48.359
+      },
+      "earlier_muted_preview": {
+        "hex": "#967651",
+        "L_star": 51.878,
+        "C_star_ab": 26.208
+      }
+    }
+  },
+  "style_basis": "More chromatic steel-blue and amber; retain a large lightness range, white midpoint, and contrast-adaptive text.",
+  "layout_unchanged": true,
+  "all_other_figure_colours_unchanged": true,
+  "text_rule": "Choose ink #303841 or white #FFFFFF by the larger sRGB luminance contrast ratio for each cell.",
+  "status": "superseded_draft_not_used_in_final_v4",
+  "superseded_by": "palette_A5_reference_v4.json"
+}

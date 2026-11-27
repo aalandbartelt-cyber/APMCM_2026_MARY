@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-27",
+  "scope": "A5 v3 continuous heatmap only",
+  "authorization": "User requested better colours and square proportions for review page 8.",
+  "basis": "Same blue-white-amber signed-change semantics; lighter endpoints from the reference 30 steel-blue and light-amber family.",
+  "diverging": ["#93BED7", "#FFFFFF", "#E7BF8E"],
+  "negative": "#93BED7",
+  "zero": "#FFFFFF",
+  "positive": "#E7BF8E",
+  "normalization": [-80, 0, 80],
+  "units": "100 * (stress / matched same-route OOF reference - 1)",
+  "grayscale_backup": "Every cell retains its signed percentage; positions identify protocol and metric.",
+  "unchanged": "All accepted figures, the historical frozen palette, and palette_redesign_v2.json remain untouched."
+}

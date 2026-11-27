@@ -1,0 +1,169 @@
+{
+  "scope_after_approval": "All P1/P2/P3 figures and tables",
+  "date": "2026-11-27",
+  "font_family": "Times New Roman",
+  "minimum_font_pt": 8.5,
+  "dpi": 300,
+  "ink": "#303841",
+  "outline": "#4C5662",
+  "background": "#FFFFFF",
+  "colour_metric": "CIE76 Delta E*ab, CIELAB D65, sRGB",
+  "minimum_pairwise_delta_E76": 30,
+  "grayscale_metric": "Absolute difference in CIE L* (0-100); 15 points",
+  "grayscale_pairs": [
+    [
+      "S",
+      "B"
+    ],
+    [
+      "Q",
+      "C"
+    ],
+    [
+      "M",
+      "N"
+    ]
+  ],
+  "minimum_grayscale_pair_delta_L_star": 15,
+  "grayscale_scope_authorization": "User explicitly confirmed S/B, Q/C and M/N actual comparison pairs; all 28 pairs still require Delta E >= 30.",
+  "thin_line_core_pt": 1.5,
+  "low_contrast_outline_total_pt": 2.1,
+  "outline_trigger_white_contrast": 3.0,
+  "outline_note": "3:1 is a conservative rendering trigger chosen for this proposal, not a claimed universal print threshold. Raw pastel colours below it are never claimed to pass a bare-line contrast test.",
+  "baseline_substyles": {
+    "additive_ridge": {
+      "marker": "s",
+      "linestyle": "--"
+    },
+    "mean": {
+      "marker": "v",
+      "linestyle": ":"
+    },
+    "random_hash": {
+      "marker": "x",
+      "linestyle": "-."
+    }
+  },
+  "continuous_maps": [
+    {
+      "name": "viridis",
+      "start": 0.15,
+      "end": 0.8
+    },
+    {
+      "name": "plasma",
+      "start": 0.1,
+      "end": 0.7
+    }
+  ],
+  "semantic_rules": [
+    "The selected candidate, its role mapping and non-colour cues are frozen across P1/P2/P3 only after user approval.",
+    "Statistical baselines share B; C is reserved for classical optimisation methods.",
+    "M denotes gap=0, N denotes gap>0; near-positive P denotes observed development V<=2, not hidden V=0 or a prediction.",
+    "Colour is always accompanied by marker, dash, hatch or a direct label.",
+    "Thin lines below 3:1 raw contrast require the neutral outline; markers and bars require visible edges; translucent bands require boundaries.",
+    "Only S/B, Q/C and M/N are approved grayscale-series pairs. Other combinations need separate figure review and redundant cues; no claim that all 28 gray pairs pass.",
+    "No inventory or formal figure is produced before the corresponding user approval."
+  ],
+  "version": "P1-P2-P3-palette-A-frozen-v1",
+  "status": "approved_and_frozen",
+  "selected_candidate": "A",
+  "name": "Light and fresh",
+  "approval_date": "2026-11-27",
+  "approval_user_message": "选A",
+  "roles": [
+    {
+      "id": "S",
+      "key": "surrogate",
+      "name": "Surrogate model",
+      "short": "S  Model",
+      "zh": "代理模型主色",
+      "marker": "o",
+      "linestyle": "-",
+      "hatch": "",
+      "hex": "#82D0EF"
+    },
+    {
+      "id": "B",
+      "key": "baseline",
+      "name": "Baseline reference",
+      "short": "B  Baseline",
+      "zh": "基线对照色",
+      "marker": "s",
+      "linestyle": "--",
+      "hatch": "//",
+      "hex": "#737579"
+    },
+    {
+      "id": "Q",
+      "key": "quantum",
+      "name": "Quantum methods",
+      "short": "Q  Quantum",
+      "zh": "量子方法色",
+      "marker": "D",
+      "linestyle": "--",
+      "hatch": "\\\\",
+      "hex": "#F3AE6B"
+    },
+    {
+      "id": "C",
+      "key": "classical",
+      "name": "Classical methods",
+      "short": "C  Classical",
+      "zh": "经典方法色",
+      "marker": "^",
+      "linestyle": "-",
+      "hatch": "..",
+      "hex": "#4A80B5"
+    },
+    {
+      "id": "W",
+      "key": "warning",
+      "name": "Constraints and warnings",
+      "short": "W  Warning",
+      "zh": "约束与警示线色",
+      "marker": "X",
+      "linestyle": ":",
+      "hatch": "xx",
+      "hex": "#E98581"
+    },
+    {
+      "id": "M",
+      "key": "metal",
+      "name": "Metal samples",
+      "short": "M  Metal",
+      "zh": "金属样本色",
+      "marker": "v",
+      "linestyle": ":",
+      "hatch": "///",
+      "hex": "#B37AB8"
+    },
+    {
+      "id": "N",
+      "key": "nonmetal",
+      "name": "Nonmetal samples",
+      "short": "N  Nonmetal",
+      "zh": "非金属样本色",
+      "marker": "P",
+      "linestyle": "-.",
+      "hatch": "..",
+      "hex": "#A0DDB0"
+    },
+    {
+      "id": "P",
+      "key": "near_positive",
+      "name": "Near-positive highlight",
+      "short": "P  Near-pos.",
+      "zh": "近正例高亮色",
+      "marker": "*",
+      "linestyle": "-",
+      "hatch": "++",
+      "hex": "#EEE680"
+    }
+  ],
+  "source_candidate_sha256": "b124b9486ed6446b4e952bd942890e0c5c23f85e0f098d4407d2b987dd9c1355",
+  "source_audit_sha256": "28e54b5f0e4f9a8de48316d9ef296ed83e25ea0102c0db77a4632cb35833c610",
+  "minimum_delta_E76": 31.06383970460147,
+  "minimum_comparison_delta_L_star": 24.14125588717812,
+  "formal_figure_width_mm": 170
+}

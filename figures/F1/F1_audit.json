@@ -1,0 +1,134 @@
+{
+  "figure": "F1",
+  "revision": 3,
+  "status": "awaiting_user_figure_review",
+  "date": "2026-11-27",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_0.csv.gz",
+      "sha256": "15b1ea3fbe3eddd4a992a2005128f2bba43834d5f84f5ce3b7984d91ef8a6440",
+      "bytes": 923254
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_1.csv.gz",
+      "sha256": "a8f73c52b371cac6b24cd84f54a2a6f3dc20b895f9784886a46f63b827f8f8e5",
+      "bytes": 923304
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_2.csv.gz",
+      "sha256": "da55ca768002b4974583a3d5f487cedd14bfa496f63226fba12be6f5011b5702",
+      "bytes": 922579
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_3.csv.gz",
+      "sha256": "e413fedda7acf494b0402e4bbc16b79a3f55a74545a452f681435c9f657417c9",
+      "bytes": 918724
+    },
+    {
+      "path": "artifacts/p1_v21/domains/main_outer_4.csv.gz",
+      "sha256": "d85c12711fe3ade9f80f121f40aeff87209adace6a7a6aa56ffb798c7bde4e03",
+      "bytes": 919047
+    },
+    {
+      "path": "artifacts/p1_v21/preflight.json",
+      "sha256": "367307dd7ec8d981384289e9b148f55388b416451ccc37822fc6b040483822a5",
+      "bytes": 2176
+    },
+    {
+      "path": "artifacts/p1_v21/splits.json",
+      "sha256": "d42fa55cc6654b5fef866a2207f2ce6ce79bb246ac22090d3d352e2638a54d60",
+      "bytes": 8390263
+    },
+    {
+      "path": "artifacts/p1_v21/experiment_freeze.json",
+      "sha256": "fc7102a17bbc1ad485713cdcbd0cefad3049519d06e65b80c52b51cb2efafdcf",
+      "bytes": 2363
+    },
+    {
+      "path": "artifacts/p1_v21/results/P1_main_per_fold.csv",
+      "sha256": "06b6f27e9c48453878d96da30f6b18bbd3a6125dcc37ce263d4c86cc31e55bb3",
+      "bytes": 71661
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "renderer_sha256": "4d9e08bbe8964f71d7ed0d12978f23324c59d6df9aea91f0cccd613f0c172f8a",
+  "N": 11256,
+  "metal_count": 10824,
+  "nonmetal_count": 432,
+  "near_positive_count": 128,
+  "observed_zero_V_count": 0,
+  "V_min": 0.0004,
+  "V_max": 108.955819,
+  "directed_AB_groups": 1608,
+  "outer_AB_disjoint_checks": 5,
+  "inner_AB_disjoint_checks": 15,
+  "unique_rows_checked": true,
+  "no_route_duplication": true,
+  "all_rows_accounted_for_in_histogram": true,
+  "split_index_semantics": "Persistent id, not local row_index; both verified unique",
+  "near_positive_bin_rule": "[left,right), final bin includes V=2; selection V<=2",
+  "outer_histogram_bin_width_V": 5,
+  "near_positive_bin_width_V": 0.25,
+  "scope": "02 training observations only; no 03/04 data displayed and no hidden labels read",
+  "visible_split_diagram": "Five outer folds; inner three-fold protocol retained in caption and audit",
+  "revisions": [
+    "Added local class, near-positive subset and threshold keys to panel a",
+    "Defined near-positive inset as 128 nonmetal samples, not an independent third class",
+    "Matched legend hatches and outlined dotted line to the actual plotted marks",
+    "Added paired training and held-out-evaluation legend to panel c",
+    "Shortened panel b labels to avoid repeating the gap definitions"
+  ],
+  "width_mm": 170,
+  "height_mm": 136,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1606
+  ],
+  "min_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_text_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "files": {
+    "F1_data_audit_v3.png": "ac32c8bda846170c15dd91f330c9eb265c9bfd26e61ad782920659b562aa431b",
+    "F1_data_audit_v3.pdf": "0036bb1a4a1bba3b88c2f7db781b1ed077258e4219b85dc9c825bef493906002",
+    "F1_data_audit_v3_grayscale.png": "cec6af3ed65c564606dc4d8a754fbdb291d5b43f844670c32e6f303fd3c029ad",
+    "F1_histogram_counts.csv": "147ed27518d495fe5e0567d874c10794653520a2efa75b2646da20a460e128c3",
+    "F1_near_positive_histogram_counts.csv": "9aaa28a88735203842eb561a43ee71b8f3b72f6d2ff70620688bedfc417d669b",
+    "F1_split_counts.csv": "f9763455e44353f01af7fa2608970c31088645e7f9025a906d29b03d4750fccd"
+  },
+  "pdf_inspection": {
+    "pages": 1,
+    "all_fonts_embedded": true,
+    "font": "TimesNewRomanPSMT",
+    "minimum_font_pt": 8.5,
+    "width_mm": 170.00000237358938,
+    "height_mm": 135.99999974568684,
+    "all_text_ascii": true,
+    "raster_images": 0,
+    "personal_metadata_absent": true,
+    "all_legend_definitions_present": true
+  },
+  "manual_visual_review": {
+    "color_png_inspected": true,
+    "full_grayscale_png_inspected": true,
+    "legend_matches_marks": true,
+    "legend_and_inset_axis_no_overlap": true,
+    "class_hatch_visible_in_legend": true,
+    "subset_and_cutoff_explicit": true,
+    "training_evaluation_keys_paired": true,
+    "no_text_clipping_observed": true,
+    "actual_paper_print_test_performed": false
+  },
+  "display_aggregate_csvs_identical_to_v2": true
+}

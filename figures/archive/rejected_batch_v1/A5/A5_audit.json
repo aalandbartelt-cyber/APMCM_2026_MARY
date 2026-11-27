@@ -1,0 +1,124 @@
+{
+  "figure": "A5",
+  "revision": 1,
+  "status": "visually_checked_awaiting_user_batch_review",
+  "date": "2026-11-27",
+  "title": "Protocol-level extrapolation stress diagnostics",
+  "source_files": [
+    {
+      "path": "artifacts/p1_v21/results/stress_summary.csv",
+      "sha256": "449837a7eccbe9cbde84753df3154663c4a49a1abaa48b74164977b597ace99c",
+      "bytes": 1663
+    },
+    {
+      "path": "artifacts/p1_v21/results/stress_detail.csv",
+      "sha256": "dbb9ba365b49d5bde648bf1fbdffcf6e565f6e9b29c1e2614099196bc0203a9b",
+      "bytes": 89229
+    }
+  ],
+  "palette_sha256": "8cd969d67c966c78ad1b41fc5f7859f98e04acfb37850039d13a98c9e66a64d1",
+  "template_sha256": "2101c8fa16aa3a46ec4a0e0921d2d2d7cdecd604933223a957cbbc4efe24f2e8",
+  "template_functions": [
+    "apply_apmcm_style",
+    "use_times_new_roman"
+  ],
+  "template_adaptations": [
+    "plot_dashboard_2x2: aligned protocol diagnostics and explicit scope table",
+    "plot_enrichment_bar: direct enrichment annotations and patterned method keys"
+  ],
+  "renderer_sha256": "82265214589b63844b6d48741f358b5881a6a65f5876f27b343fb7f9a9e927da",
+  "common_helper_sha256": "97875f0757594929da44fd61592a32200156c15e0cc2438b0e70c50721809d2a",
+  "width_mm": 170.0,
+  "height_mm": 139.0,
+  "dpi": 300,
+  "pixels": [
+    2007,
+    1641
+  ],
+  "minimum_font_pt": 8.5,
+  "all_text_ascii": true,
+  "all_actual_fonts_Times_New_Roman": true,
+  "font_files": {
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5"
+  },
+  "pdf_fonts_embedded": true,
+  "pdf_vector_only": true,
+  "personal_metadata_absent": true,
+  "all_text_within_canvas": true,
+  "models_loaded": false,
+  "new_fits": 0,
+  "new_bootstrap_draws": 0,
+  "diagnostics": {
+    "scope": [
+      {
+        "protocol": "element",
+        "evaluations": 5,
+        "N_evaluated_sum": 20181,
+        "M_evaluated_sum": 224,
+        "total_budget": 100,
+        "EF_defined": 5,
+        "EF_undefined": 0,
+        "EF_defined_budget": 100
+      },
+      {
+        "protocol": "target",
+        "evaluations": 3,
+        "N_evaluated_sum": 6762,
+        "M_evaluated_sum": 297,
+        "total_budget": 60,
+        "EF_defined": 3,
+        "EF_undefined": 0,
+        "EF_defined_budget": 60
+      },
+      {
+        "protocol": "xleave",
+        "evaluations": 35,
+        "N_evaluated_sum": 11256,
+        "M_evaluated_sum": 128,
+        "total_budget": 700,
+        "EF_defined": 29,
+        "EF_undefined": 6,
+        "EF_defined_budget": 580
+      }
+    ],
+    "methods": [
+      "R-log",
+      "S-eps"
+    ],
+    "no_undefined_EF_zero_fill": true,
+    "stored_aggregates_independently_checked": true,
+    "mandatory_label": "protocol-level evidence, not final-model"
+  },
+  "caption": "The stress results describe the registered protocols rather than validate the final H-soft model out of domain. R-log pooled RMSE is 5.7805, 5.1796 and 6.5035 under element, target and X-leave evaluation, respectively. Screening EF is shown separately for R-log and S-eps, with equal weight per evaluation where EF is defined. Valid EF counts are 5/5, 3/3 and 29/35; six zero-positive X-leave evaluations remain undefined. The table includes all-evaluation budgets of 100, 60 and 700 selections; the defined-EF budgets are 100, 60 and 580. N/M sums are evaluation exposures, including repeated compositions in element tests. Different populations, prevalences and budgets prevent an ease ranking from cross-protocol EF magnitudes. These are protocol-level evidence, not final-model results.",
+  "manual_color_review": true,
+  "manual_grayscale_review": true,
+  "files": {
+    "A5_protocol_denominators.csv": "7b1d40440f1c78bdfc375d56aeab3f58797a99c2aac8e94dbb464b52679f214f",
+    "A5_stress_protocols.pdf": "ecd5f1b4dab8294688e3ad5468d448b39ae795c14a935effb888c1b14cb457d4",
+    "A5_stress_protocols.png": "5b0e6fbe671335a552f40be1374ff08aeda3abbc865bd808798d5a0fd91ebddd",
+    "A5_stress_protocols_grayscale.png": "78fc1df40877fcbeb105b9ae3827cfab3fb2236755c849dccd1b6ccfaad88e35",
+    "A5_stress_values.csv": "4ab69f6e50b67a5ccfb1935365bb9997eb6f331d9bb7df338da0d03cbb2b0ee5"
+  },
+  "user_figure_approval": false,
+  "actual_paper_print_test_performed": false,
+  "legend_matches_marks": true,
+  "no_text_clipping_observed": true,
+  "pdf_final_inspection": {
+    "pages": [
+      {
+        "width_mm": 170.00000237358938,
+        "height_mm": 138.9999996609158,
+        "minimum_font_pt": 8.5,
+        "fonts": [
+          "FHXFSG+TimesNewRomanPSMT"
+        ],
+        "raster_images": 0,
+        "all_text_ascii": true,
+        "all_fonts_embedded": true
+      }
+    ],
+    "page_count": 1,
+    "personal_metadata_absent": true
+  },
+  "batch_authorization": "figures/batch_rendering_authorization.json"
+}
