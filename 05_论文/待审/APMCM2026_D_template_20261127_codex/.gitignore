@@ -1,6 +1,0 @@
-# Local verification products; main.pdf is intentionally kept as build evidence.
-build/
-# Official source copies are provenance only, not submission material.
-upstream/official/*.pdf
-# Local installation details do not belong in a submission package.
-verification/texlive_install.profile

@@ -1,0 +1,55 @@
+{
+  "crystal_structure": {
+    "atomic_positions": [
+      {
+        "wyckoff": "4a",
+        "element": "Ti",
+        "a": "0.270271",
+        "b": "0",
+        "c": "1/4"
+      },
+      {
+        "wyckoff": "4b",
+        "element": "La",
+        "a": "1/4",
+        "b": "0.490997",
+        "c": "1/2"
+      },
+      {
+        "wyckoff": "4b",
+        "element": "O",
+        "a": "1/4",
+        "b": "0.92001",
+        "c": "1/2"
+      },
+      {
+        "wyckoff": "4c",
+        "element": "N",
+        "a": "0",
+        "b": "1/4",
+        "c": "0.711202"
+      },
+      {
+        "wyckoff": "4c",
+        "element": "O",
+        "a": "0",
+        "b": "3/4",
+        "c": "0.202745"
+      }
+    ],
+    "symmetry": {
+      "crystal_system": "Orthorhombic",
+      "lattice_system": "Orthorhombic",
+      "hall_number": "I 2b 2c",
+      "international_number": 24,
+      "symbol": "I2₁2₁2₁",
+      "point_group": "222"
+    },
+    "structure_meta": {
+      "number_of_atoms": 20,
+      "density": "6.19 g·cm⁻³",
+      "dimensionality": "",
+      "possible_oxidation_states": "N³⁻, O²⁻, La³⁺, Ti⁴⁺"
+    }
+  }
+}

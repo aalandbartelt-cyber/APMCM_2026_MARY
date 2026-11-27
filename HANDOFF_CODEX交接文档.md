@@ -397,3 +397,36 @@ J 线：JCIS2025 数据稀缺知识蒸馏入库（B位电负性结论直接服�
 
 
 > 【队号锁定】报名编号=apmcm26301618，选题=D。合规命名终态：论文 Dapmcm26301618.pdf、控制页 Dapmcm26301618cns.pdf、支撑材料 Dapmcm26301618fj.zip；页眉格式 Team Dapmcm26301618 Page X of 25。官方红线：提交题号与内容不符=取消资格，队号错误同理，所有模板/命名以此为准。
+
+
+> 【第五轮审定入库+28号已修订】Perplexity调研/第五轮_审定版.md。三裁决：① 线性罚对本题结构数学证伪（非负双表矛盾证明），λ 二次罚主线不动，禁烧真机预算试线性罚；② 基准协议用 Tasseff 2024 九要素（枚举为首要基线/双预算/时间分项/CIM样本非独立禁算Bernoulli TTS），不用 Kim 2025 混合求解器加速比叙事；③ 精度实验必须终局指标下结论（Gerlach–Piatkowski 反例：压缩改善成功率反降）。28 号文档 §28.8 修订补丁已写入。
+
+
+> 【真机配额锁定·2026-11-27】SPQC1000 可用 2 次，SPQC550 可用 35 次。分配纪律：SPQC550（35 次充足）承担精度对照/编码对照等实验矩阵；SPQC1000（仅 2 次）是战略资源——只留给最终冻结方案的收官证据，使用前须用户亲自批准。每次提交按 29 号 B.2 账本逐次登记，失败/校验不通过也要记录是否消耗配额（首次提交时验证）。
+
+
+> 【第六轮审定入库·P2 计划模式必读】Perplexity调研/第六轮_审定版.md（A-E 五连发合订）。七条计划输入：①新颖性禁 first 绝对词（Gusev 2023 已做钙钛矿+查表二次项），合法句式=组合要素未见先例，误差分层审计是最硬支点；②LaTiO2N 是真实合成光催化材料（2002 牺牲剂/2024 整体分解水），但带边口径 4.44vs4.50、NO2≠N2O 切片、合成≠满足五条件、只能做事后核验不得改模型；③CIM 实验=先导 5×100 正式 20×100，同任务样本非独立须按任务聚类报告，换设置必须换 task_name 防缓存；④新武器行列势重参数化入编码对照，λ 可重审是否过大，验收双证明分开；⑤敏感性用 worst/CVaR-regret 注意方向（最小化问题下分位数是乐观！），bagged_mean_20 正式目标不动；⑥QBoson 原厂 CIM 论文+NTT 8bit 预印本列精读；⑦全部输入 P2 计划模式。
+
+
+---
+## 增援登记（第六轮后补）——两篇 CIM 核心原文已入库（第一级精读）
+位置：01_参考学习/量子知识补充（forD题）/03_学术论文/
+1. **Radons_8bitCIM系数范围缓解_arXiv2611.34168.pdf** —— Radons/Simon/Heese/Inaba/Honjo/Takesue/Wilke，
+   "Coefficient-Range Mitigation on an 8-Bit Coherent Ising Machine"（Bundesdruckerei+NTT）。
+   直击 P3 精度问题：8-bit CIM 系数范围映射如何扭曲能量景观+缓解方法。
+   ⚠ 风险预警：若该文已发表类似行列势/系数缓解变换，我们的编码新颖性表述必须调整——
+   Codex 计划模式必须全文精读并逐条比对。
+2. **QBoson平台论文_Wei_LightSciAppl2026.pdf** —— Wei et al., Light: Science & Applications
+   (2026) 15:74，"A versatile coherent Ising computing platform"（Kai Wen=玻色量子首席科学家）。
+   我们真机（SPQC）的平台论文，硬件描述与引用核心。
+另注意库中已有：Kitai_FMQA_metamaterials.pdf / Goto_SbM_2019 / FMQA_review_2025 /
+Glover_QUBO_tutorial / perovskite_SHAP_SISSO —— Kitai 可读原文，不再是"待下载"。
+
+
+---
+## 增援登记——P2/P3 图件手册与晶体结构源文件（msg 274+）
+- docs/P23图件登记与制作手册.md：A-G 七张图的制作方法+参考范式+状态（喂入 P2_PLAN 图件预登记）
+- figures/shared/crystal_structure/source/：LaTiNO2 CIF/POSCAR/2x2x1超胞/mp-1222738.json 四件
+- VESTA 纪律：中文路径必崩溃（Qt4 bug），工作路径一律 D:/vesta_work/；
+  La 多面体必须删（Edit→Bonds 删 La-O/La-N 键）；晶体图依赖 P2 候选身份，真机冻结后定稿
+- MP 交叉验证弹药：mp-1222738 gap 1.31eV（GGA 口径）/formE -2.972eV/atom，仅事后核验

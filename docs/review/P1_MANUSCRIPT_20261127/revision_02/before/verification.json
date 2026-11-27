@@ -1,0 +1,192 @@
+{
+  "checks": {
+    "protected_assets_unchanged": true,
+    "unique_labels": true,
+    "all_source_references_defined": true,
+    "four_references_all_cited": true,
+    "two_propositions_and_proofs": true,
+    "every_equation_followed_by_flush_left_explanation": true,
+    "all_nine_figures_referenced": true,
+    "tables_have_three_booktabs_rules": true,
+    "all_populated_tables_referenced": true,
+    "no_layout_font_redefinition": true,
+    "grouped_EF_reconstructed": true,
+    "hits_denominator_100": true,
+    "MSE_contributions_sum_correctly": true,
+    "development_EF_reconstructed": true,
+    "development_hypergeometric_reconstructed": true,
+    "development_Holm_reconstructed": true,
+    "development_NDCG_tie_break": true,
+    "screening_interval_crosses_zero": true,
+    "regression_interval_below_zero": true,
+    "paired_resamples_all_valid": true,
+    "summary_then_contents": true,
+    "english_only_pdf": true,
+    "no_unresolved_pdf_references": true,
+    "anonymous_metadata": true,
+    "no_personal_paths_or_email": true,
+    "header_text": true,
+    "A4_all_pages": true,
+    "clean_compile": true,
+    "official_header_font_and_position": true,
+    "official_section_font_size": true,
+    "official_body_font_size": true,
+    "no_sans_serif_fallback": true,
+    "rules_synced": true
+  },
+  "passed": 33,
+  "failed": [],
+  "physical_pages": 22,
+  "main_body_through_references": 9,
+  "protected_files": 3975,
+  "changed_protected_files": [],
+  "font_names": [
+    "CMEX10",
+    "CMMI10",
+    "CMMI5",
+    "CMMI7",
+    "CMMI9",
+    "CMMIB10",
+    "CMR10",
+    "CMR7",
+    "CMR9",
+    "CMSY10",
+    "CMSY7",
+    "MSAM10",
+    "TimesNewRomanPS-BoldItal",
+    "TimesNewRomanPS-BoldMT",
+    "TimesNewRomanPS-ItalicMT",
+    "TimesNewRomanPSMT"
+  ],
+  "body_font_pt": 10.5,
+  "figure_callouts": {
+    "1": {
+      "caption": [
+        {
+          "physical_page": 5,
+          "caption": true,
+          "text": "Figure 1 Training-target distribution, physical regimes and A–B blocking"
+        }
+      ],
+      "paragraphs": []
+    },
+    "2": {
+      "caption": [
+        {
+          "physical_page": 9,
+          "caption": true,
+          "text": "Figure 2 Near-positive enrichment under A–B grouped validation"
+        }
+      ],
+      "paragraphs": []
+    },
+    "3": {
+      "caption": [
+        {
+          "physical_page": 9,
+          "caption": true,
+          "text": "Figure 3 Class contributions to error and the regression–screening trade-off"
+        }
+      ],
+      "paragraphs": [
+        {
+          "physical_page": 9,
+          "caption": false,
+          "text": "Figure 3 separates class contributions and compares regres-"
+        }
+      ]
+    },
+    "B.1": {
+      "caption": [
+        {
+          "physical_page": 15,
+          "caption": true,
+          "text": "Figure B.1 Residual bias and error scale across X families"
+        }
+      ],
+      "paragraphs": [
+        {
+          "physical_page": 15,
+          "caption": false,
+          "text": "Figure B.1 separates mean signed error from error magnitude for each X family."
+        }
+      ]
+    },
+    "B.2": {
+      "caption": [
+        {
+          "physical_page": 16,
+          "caption": true,
+          "text": "Figure B.2 Probability reliability on held-out A–B groups"
+        }
+      ],
+      "paragraphs": []
+    },
+    "B.3": {
+      "caption": [
+        {
+          "physical_page": 18,
+          "caption": true,
+          "text": "Figure B.3 Nominal-candidate ranks and bidirectional surrogate regret"
+        }
+      ],
+      "paragraphs": [
+        {
+          "physical_page": 11,
+          "caption": false,
+          "text": "Figure B.3 relates such rank changes to their costs in four official pools."
+        },
+        {
+          "physical_page": 17,
+          "caption": false,
+          "text": "Figure B.3 combines rank distributions with these costs."
+        }
+      ]
+    },
+    "B.4": {
+      "caption": [
+        {
+          "physical_page": 18,
+          "caption": true,
+          "text": "Figure B.4 Split-half effects of averaging on decision stability"
+        }
+      ],
+      "paragraphs": [
+        {
+          "physical_page": 11,
+          "caption": false,
+          "text": "Figure B.4"
+        }
+      ]
+    },
+    "B.5": {
+      "caption": [
+        {
+          "physical_page": 20,
+          "caption": true,
+          "text": "Figure B.5 Exclusion-protocol outcomes:"
+        }
+      ],
+      "paragraphs": []
+    },
+    "B.6": {
+      "caption": [
+        {
+          "physical_page": 21,
+          "caption": true,
+          "text": "Figure B.6 Reverse-ablation effects with paired bootstrap intervals"
+        }
+      ],
+      "paragraphs": [
+        {
+          "physical_page": 21,
+          "caption": false,
+          "text": "Figure B.6 displays reverse-ablation differences from full H-soft."
+        }
+      ]
+    }
+  },
+  "figure_scaling_exception": "User selected intact figures within official 146.4 mm text width; some plot labels are about 7.3 pt.",
+  "header_exception": "User-confirmed literal of 25 retained; draft is not a final page-count certification.",
+  "pdf_sha256": "460d6c106615294f03e876aa11e0b83634b7d3e851b8cdff61cf136c37612281"
+}

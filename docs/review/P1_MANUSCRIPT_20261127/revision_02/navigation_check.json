@@ -1,0 +1,242 @@
+[
+  {
+    "level": 1,
+    "title": "1 Introduction",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "1.1 Problem background",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "1.2 Problem restatement",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "2 Problem Analysis",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "2.1 Analysis of Problem 1",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "2.2 Analysis of Problem 2",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "2.3 Analysis of Problem 3",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "3 Model Assumptions and Notation",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "3.1 Core assumptions",
+    "physical_page": 3,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "3.2 Principal notation",
+    "physical_page": 4,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "4 Problem 1: Composition-Based Prediction of the Violation Degree",
+    "physical_page": 4,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "4.1 Data characteristics and preprocessing",
+    "physical_page": 4,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "4.2 Composition descriptors and model formulation",
+    "physical_page": 5,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 3,
+    "title": "4.2.1 Site-specific composition descriptors",
+    "physical_page": 5,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 3,
+    "title": "4.2.2 Conditional regression with a soft mixture",
+    "physical_page": 6,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 3,
+    "title": "4.2.3 A separate screening score",
+    "physical_page": 6,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "4.3 Model solution and validation protocol",
+    "physical_page": 7,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "4.4 Results and model checks",
+    "physical_page": 8,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 3,
+    "title": "4.4.1 Numerical error and near-positive enrichment",
+    "physical_page": 8,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 3,
+    "title": "4.4.2 Development-set selection",
+    "physical_page": 10,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 3,
+    "title": "4.4.3 Residual, calibration and robustness checks",
+    "physical_page": 10,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "4.5 Prediction uncertainty and output",
+    "physical_page": 10,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "4.6 Direct answer to Problem 1",
+    "physical_page": 11,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "5 Problem 2: Single-Point Selection",
+    "physical_page": 11,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "6 Problem 3: Joint Selection of A, B and X",
+    "physical_page": 11,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "7 Model Evaluation",
+    "physical_page": 11,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "8 Conclusion",
+    "physical_page": 11,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "9 References",
+    "physical_page": 11,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "Appendix A Supporting Materials",
+    "physical_page": 12,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "Appendix B Supplementary Tables and Figures",
+    "physical_page": 12,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "B.1 Descriptor construction and comparison objectives",
+    "physical_page": 12,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "B.2 Validation counts and residual diagnostics",
+    "physical_page": 14,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "B.3 Probability calibration and query assignment",
+    "physical_page": 15,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "B.4 Prediction-table stability",
+    "physical_page": 17,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "B.5 Extrapolation protocols",
+    "physical_page": 19,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "B.6 Descriptor and ablation comparisons",
+    "physical_page": 20,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 1,
+    "title": "Appendix C Core Source Code",
+    "physical_page": 22,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "C.1 Problem 1",
+    "physical_page": 22,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "C.2 Problem 2",
+    "physical_page": 22,
+    "heading_on_target_page": true
+  },
+  {
+    "level": 2,
+    "title": "C.3 Problem 3",
+    "physical_page": 22,
+    "heading_on_target_page": true
+  }
+]

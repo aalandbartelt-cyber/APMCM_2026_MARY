@@ -1,0 +1,12 @@
+[PASS] 当前分支: codex/d-independent-review
+[PASS] remote: origin	https://github.com/aalandbartelt-cyber/APMCM_2026_MARY.git (fetch)
+[WARN] tracked 修改: 85 项
+[WARN] 未跟踪条目: 3 项
+[PASS] 未跟踪体积: 27.5 MB（阈值 100 MB）
+[PASS] 未跟踪大文件: 无 >50 MB
+[PASS] 环境/缓存文件: 无
+[PASS] 未跟踪文本密钥扫描: 0 命中
+[INFO] ignored 本地体积: 2.5 GB（不进 git，建议 Release/网盘）
+[SKIP] git push --dry-run: 未启用 --check-push
+
+SUMMARY: 10 checks, 0 FAIL

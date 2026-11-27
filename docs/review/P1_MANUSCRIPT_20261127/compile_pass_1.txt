@@ -1,0 +1,391 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+entering extended mode
+(./main.tex
+LaTeX2e <2026-11-01>
+L3 programming layer <2026-11-16>
+(./apmcmthesis.cls
+Document Class: apmcmthesis 2019/11/11 v1.0 LaTeX Template for APMCM
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2026-06-04 v1.4n Standard LaTeX document class
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/generic/iftex/ifxetex.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/geometry/geometry.st
+y
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+ (/home/mary/.local/share/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty)
+)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+ (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+ (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty)
+)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/tools/bm.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.st
+y) (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.c
+fg)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.d
+ef)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.l
+tx))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/xcolor/x11nam.def)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/xcolor/svgnam.def)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.de
+f)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.st
+y
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics/graphics.st
+y (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphic
+s.cfg)))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/lastpage/lastpage.st
+y
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/lastpage/lastpage2e.
+sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/lastpage/lastpagemod
+ern.sty) 
+))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+ (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/multirow/multirow.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/multirow/bigstrut.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/cprotect/cprotect.st
+y (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/bigfoot/suffix.sty))
+
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/listings/listings.st
+y
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/listings/listings.cf
+g)) (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/ctex.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-x
+etex.def))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/ctexpatch.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexopts
+.cfg)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/engine/ctex-eng
+ine-xetex.def
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate
+/xtemplate.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.st
+y
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xe
+tex.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cf
+g)))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK-listin
+gs.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg)))
+
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber.st
+y
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber-ut
+f8.cfg))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/scheme/ctex-sch
+eme-chinese.def
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex-nam
+e-utf8.cfg))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/fontset/ctex-fo
+ntset-fandol.def))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex.cfg
+)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.st
+y))
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.st
+y) (/home/mary/.local/share/texlive/2026/texmf-dist/tex/generic/ulem/ulem.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/appendix/appendix.st
+y)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.st
+y)) (/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/placeins/placeins.st
+y)
+No file main.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(./apmcmthesis.cfg)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/home/mary/.local/share/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+[1]
+No file main.toc.
+[2] (./sections/frontmatter.tex
+
+LaTeX Warning: Citation `castelli2012' on page 1 undefined on input line 3.
+
+[1]
+
+LaTeX Warning: Reference `tab:notation' on page 2 undefined on input line 30.
+
+) (./sections/problem1.tex [2]
+
+LaTeX Warning: Reference `fig:audit' on page 3 undefined on input line 15.
+
+
+LaTeX Warning: Reference `eq:violation' on page 3 undefined on input line 19.
+
+
+LaTeX Warning: Reference `prop:metal' on page 3 undefined on input line 25.
+
+[3]
+
+LaTeX Warning: Citation `ward2016' on page 4 undefined on input line 29.
+
+
+LaTeX Warning: Reference `tab:descriptors' on page 4 undefined on input line 29
+.
+
+
+Overfull \hbox (0.41077pt too wide) in paragraph at lines 33--34
+[]\TU/TimesNewRoman(0)/m/n/10.53937 For X, the representation includes O/N/F/S 
+atom counts, family indicators, formal group charge,
+
+LaTeX Warning: Citation `bartel2019' on page 4 undefined on input line 35.
+
+[4]
+
+LaTeX Warning: Reference `eq:mixture' on page 5 undefined on input line 62.
+
+
+LaTeX Warning: Reference `prop:metal' on page 5 undefined on input line 64.
+
+
+LaTeX Warning: Reference `tab:routes' on page 5 undefined on input line 72.
+
+
+LaTeX Warning: Citation `ke2017' on page 5 undefined on input line 75.
+
+
+LaTeX Warning: Reference `tab:routes' on page 5 undefined on input line 75.
+
+
+Overfull \hbox (1.22386pt too wide) in paragraph at lines 75--76
+\TU/TimesNewRoman(0)/m/n/10.53937 most 15 leaves, minimum leaf size 40 and $\OM
+L/cmm/m/it/10.53937 L[]$ \TU/TimesNewRoman(0)/m/n/10.53937 regularization 1. Th
+e smaller nonmetal and conditional-
+
+LaTeX Warning: Reference `tab:protocol' on page 5 undefined on input line 79.
+
+[5]
+
+LaTeX Warning: Reference `app:validation' on page 6 undefined on input line 111
+.
+
+
+LaTeX Warning: Reference `tab:mainresults' on page 6 undefined on input line 11
+5.
+
+(./tables/main_results.tex)
+
+LaTeX Warning: Reference `fig:enrichment' on page 6 undefined on input line 118
+.
+
+[6]
+
+LaTeX Warning: Reference `fig:tradeoff' on page 7 undefined on input line 121.
+
+
+LaTeX Warning: Reference `tab:paired' on page 7 undefined on input line 124.
+
+
+Overfull \hbox (28.36263pt too wide) in paragraph at lines 124--125
+[]\TU/TimesNewRoman(0)/m/n/10.53937 The paired H-soft minus R-log RMSE differen
+ce is $\OMS/cmsy/m/n/10.53937 ^^@\OT1/cmr/m/n/10.53937 0\OML/cmm/m/it/10.53937 
+:\OT1/cmr/m/n/10.53937 3037$\TU/TimesNewRoman(0)/m/n/10.53937 , with a 95% inte
+rval $\OT1/cmr/m/n/10.53937 [\OMS/cmsy/m/n/10.53937 ^^@\OT1/cmr/m/n/10.53937 0\
+OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 4133\OML/cmm/m/it/10.53937 ; \OMS/
+cmsy/m/n/10.53937 ^^@\OT1/cmr/m/n/10.53937 0\OML/cmm/m/it/10.53937 :\OT1/cmr/m/
+n/10.53937 1943]$\TU/TimesNewRoman(0)/m/n/10.53937 .
+
+LaTeX Warning: Reference `tab:development' on page 7 undefined on input line 12
+6.
+
+(./tables/development_results.tex)
+
+LaTeX Warning: Reference `fig:residuals' on page 7 undefined on input line 129.
+
+
+
+LaTeX Warning: Reference `fig:calibration' on page 7 undefined on input line 12
+9.
+
+
+LaTeX Warning: Reference `tab:calibration' on page 7 undefined on input line 12
+9.
+
+[7] [8]
+
+LaTeX Warning: Reference `fig:ablation' on page 9 undefined on input line 131.
+
+
+LaTeX Warning: Reference `tab:features' on page 9 undefined on input line 131.
+
+
+LaTeX Warning: Reference `tab:paired' on page 9 undefined on input line 131.
+
+
+LaTeX Warning: Reference `fig:stress' on page 9 undefined on input line 133.
+
+
+LaTeX Warning: Reference `tab:stress' on page 9 undefined on input line 133.
+
+
+LaTeX Warning: Reference `tab:query' on page 9 undefined on input line 133.
+
+
+LaTeX Warning: Reference `fig:stability' on page 9 undefined on input line 141.
+
+
+
+LaTeX Warning: Reference `fig:splithalf' on page 9 undefined on input line 141.
+
+
+
+LaTeX Warning: Reference `tab:stability' on page 9 undefined on input line 141.
+
+
+[9]
+Overfull \hbox (4.04213pt too wide) in paragraph at lines 148--149
+[]\TU/TimesNewRoman(0)/b/n/10.53937 Measured performance. \TU/TimesNewRoman(0)/
+m/n/10.53937 A–B grouped validation gives RMSE 4.6011 and mean $[][][]\OT1/cmr/
+m/n/10.53937 20 =
+) (./sections/references.tex
+Underfull \hbox (badness 1472) in paragraph at lines 9--10
+[]\TU/TimesNewRoman(0)/m/n/10.53937 Bartel C J, Sutton C, Goldsmith B R, et al.
+ New tolerance factor to predict the sta-
+
+Underfull \hbox (badness 1769) in paragraph at lines 9--10
+\TU/TimesNewRoman(0)/m/n/10.53937 bility of perovskite oxides and halides [J]. 
+Science Advances, 2019, 5(2): eaav0693.
+) [10] (./sections/appendix_b.tex
+
+LaTeX Warning: Reference `tab:descriptors' on page 11 undefined on input line 1
+1.
+
+[11]
+
+LaTeX Warning: Reference `tab:routes' on page 12 undefined on input line 38.
+
+
+LaTeX Warning: Reference `eq:mixture' on page 12 undefined on input line 56.
+
+
+LaTeX Warning: Reference `eq:chain' on page 12 undefined on input line 56.
+
+
+LaTeX Warning: Reference `tab:folds' on page 12 undefined on input line 61.
+
+
+LaTeX Warning: Reference `eq:ef' on page 12 undefined on input line 68.
+
+(./tables/fold_counts.tex) [12]
+
+LaTeX Warning: Reference `fig:residuals' on page 13 undefined on input line 73.
+
+
+
+LaTeX Warning: Reference `fig:calibration' on page 13 undefined on input line 7
+8.
+
+
+Overfull \hbox (0.38113pt too wide) in paragraph at lines 78--80
+[]\TU/TimesNewRoman(0)/m/n/10.53937 Figure [] compares predicted probabilities 
+with observed near-positive frequencies using outer-
+[13]
+
+LaTeX Warning: Reference `tab:calibration' on page 14 undefined on input line 8
+1.
+
+(./tables/calibration.tex)
+
+LaTeX Warning: Reference `tab:query' on page 14 undefined on input line 84.
+
+(./tables/query.tex) [14]
+
+LaTeX Warning: Reference `fig:stability' on page 15 undefined on input line 99.
+
+
+
+LaTeX Warning: Reference `tab:nominal' on page 15 undefined on input line 99.
+
+(./tables/nominal_stability.tex) [15]
+
+LaTeX Warning: Reference `fig:splithalf' on page 16 undefined on input line 104
+.
+
+
+LaTeX Warning: Reference `tab:stability' on page 16 undefined on input line 104
+.
+
+(./tables/stability.tex) [16]
+
+LaTeX Warning: Reference `tab:stress' on page 17 undefined on input line 111.
+
+(./tables/stress.tex
+Underfull \hbox (badness 10000) in alignment at lines 15--15
+[][][][][] 
+)
+
+LaTeX Warning: Reference `fig:stress' on page 17 undefined on input line 114.
+
+[17] [18]
+
+LaTeX Warning: Reference `tab:features' on page 19 undefined on input line 121.
+
+
+(./tables/features.tex)
+
+LaTeX Warning: Reference `fig:ablation' on page 19 undefined on input line 124.
+
+
+
+LaTeX Warning: Reference `tab:paired' on page 19 undefined on input line 127.
+
+(./tables/paired.tex) [19]) [20]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 75.
+
+ )
+(see the transcript file for additional information)
+Output written on main.pdf (22 pages).
+Transcript written on main.log.

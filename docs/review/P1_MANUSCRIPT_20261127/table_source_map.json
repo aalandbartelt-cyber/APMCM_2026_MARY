@@ -1,0 +1,511 @@
+{
+  "main_results": {
+    "label": "tab:mainresults",
+    "sources": [
+      "results/P1_final_experiment_table.csv"
+    ],
+    "rows": [
+      [
+        "H-soft",
+        "4.6011",
+        "62.1024",
+        "68",
+        "0.6952"
+      ],
+      [
+        "R-raw",
+        "4.7583",
+        "51.3372",
+        "57",
+        "0.6039"
+      ],
+      [
+        "R-log",
+        "4.9048",
+        "60.4863",
+        "67",
+        "0.6671"
+      ],
+      [
+        "W-log",
+        "5.5580",
+        "59.2209",
+        "66",
+        "0.6828"
+      ],
+      [
+        "B-eps",
+        "--",
+        "64.2723",
+        "72",
+        "0.7023"
+      ],
+      [
+        "S-eps",
+        "--",
+        "62.2234",
+        "70",
+        "0.6479"
+      ],
+      [
+        "L-single",
+        "--",
+        "28.6526",
+        "33",
+        "0.3554"
+      ],
+      [
+        "L-hash4",
+        "--",
+        "46.8397",
+        "54",
+        "0.5718"
+      ],
+      [
+        "Additive Ridge",
+        "6.3206",
+        "8.7049",
+        "10",
+        "0.1349"
+      ],
+      [
+        "Training mean",
+        "11.0143",
+        "0.7271",
+        "1",
+        "0.0089"
+      ],
+      [
+        "Fixed random",
+        "--",
+        "0.0000",
+        "0",
+        "0.0003"
+      ]
+    ],
+    "sha256": "e5aa7f9572313a6a3a274d71dc1ae6b2466c4e09249a4f86d137c761cc6a75c7"
+  },
+  "nested": {
+    "label": "tab:nested",
+    "sources": [
+      "results/P1_final_experiment_table.csv"
+    ],
+    "rows": [
+      [
+        "Numerical selection",
+        "4.6011",
+        "62.1024",
+        "68"
+      ],
+      [
+        "Screening selection",
+        "--",
+        "59.4536",
+        "67"
+      ]
+    ],
+    "sha256": "b9239e0ebfacbebbef08f0b70546da760ef32136252f181a8de386b450ee4b04"
+  },
+  "development_results": {
+    "label": "tab:development",
+    "sources": [
+      "results/03_development_results.csv"
+    ],
+    "rows": [
+      [
+        "H-soft",
+        "4.5783",
+        "13",
+        "62.9232",
+        "0.5974"
+      ],
+      [
+        "B-eps",
+        "--",
+        "13",
+        "62.9232",
+        "0.4573"
+      ]
+    ],
+    "sha256": "40d7ab6e1b1714402b75324a5db84a601399cff51e57e4066432bb4822854bd9"
+  },
+  "fold_counts": {
+    "label": "tab:folds",
+    "sources": [
+      "results/P1_final_experiment_table.csv"
+    ],
+    "rows": [
+      [
+        "1",
+        "2254",
+        "31",
+        "14",
+        "50.8968"
+      ],
+      [
+        "2",
+        "2254",
+        "29",
+        "14",
+        "54.4069"
+      ],
+      [
+        "3",
+        "2254",
+        "29",
+        "14",
+        "54.4069"
+      ],
+      [
+        "4",
+        "2247",
+        "22",
+        "14",
+        "71.4955"
+      ],
+      [
+        "5",
+        "2247",
+        "17",
+        "12",
+        "79.3059"
+      ]
+    ],
+    "sha256": "d4aa0694d99cf900705f6a2dec5e1ee15d0c4c0d918b2e95fafbefc204eee702"
+  },
+  "calibration": {
+    "label": "tab:calibration",
+    "sources": [
+      "results/oof_calibration_consistency.csv"
+    ],
+    "rows": [
+      [
+        "B-eps",
+        "0.005751",
+        "0.0126",
+        "0.2785",
+        "1.2436"
+      ],
+      [
+        "L-hash4",
+        "0.007422",
+        "0.0128",
+        "-0.2503",
+        "0.9817"
+      ],
+      [
+        "L-single",
+        "0.010894",
+        "0.0119",
+        "-0.5843",
+        "0.8406"
+      ],
+      [
+        "S-eps",
+        "0.006125",
+        "0.0120",
+        "0.9794",
+        "1.7617"
+      ]
+    ],
+    "sha256": "f7e80b23cc8f0d8acdcd3b1abc633ad3c0d4e6a7c95545ea644fe0e0315d57af"
+  },
+  "query": {
+    "label": "tab:query",
+    "sources": [
+      "results/query_seed_stability.csv",
+      "results/P1_final_experiment_table.csv"
+    ],
+    "rows": [
+      [
+        "Primary assignment",
+        "46.8397",
+        "20.0",
+        "20--20"
+      ],
+      [
+        "Assignment 1",
+        "49.9038",
+        "15.0",
+        "12--17"
+      ],
+      [
+        "Assignment 2",
+        "48.9387",
+        "15.2",
+        "13--18"
+      ]
+    ],
+    "sha256": "ad1bcf2cfb37be5cdc583db17e39155becd242b30614e5f64614e3a2b3b9c307"
+  },
+  "nominal_stability": {
+    "label": "tab:nominal",
+    "sources": [
+      "hardening/decision_stability_summary.csv"
+    ],
+    "rows": [
+      [
+        "07",
+        "6.0",
+        "1--24",
+        "0.90",
+        "2.8440",
+        "2.1349"
+      ],
+      [
+        "08",
+        "13.5",
+        "1--72",
+        "0.65",
+        "3.2419",
+        "4.2706"
+      ],
+      [
+        "11",
+        "2.0",
+        "1--8",
+        "1.00",
+        "1.8650",
+        "2.1851"
+      ],
+      [
+        "12",
+        "4.5",
+        "1--15",
+        "1.00",
+        "2.7572",
+        "6.6253"
+      ]
+    ],
+    "sha256": "90bd379f5cf80dd208316952948447a8fdf07fd64b3f47e437242f75cfced397"
+  },
+  "stability": {
+    "label": "tab:stability",
+    "sources": [
+      "hardening/split_half_summary.csv"
+    ],
+    "rows": [
+      [
+        "07",
+        "0.121",
+        "0.538",
+        "0.633",
+        "0.807",
+        "1.295",
+        "0.251"
+      ],
+      [
+        "08",
+        "0.054",
+        "0.504",
+        "0.345",
+        "0.682",
+        "2.616",
+        "0.317"
+      ],
+      [
+        "11",
+        "0.164",
+        "0.192",
+        "0.808",
+        "0.939",
+        "1.072",
+        "0.184"
+      ],
+      [
+        "12",
+        "0.062",
+        "0.174",
+        "0.633",
+        "0.833",
+        "2.677",
+        "0.241"
+      ]
+    ],
+    "sha256": "b12c81eb9d12d36d8c7576469391ef5f436666d39750d7445d4678cd13745e32"
+  },
+  "stress": {
+    "label": "tab:stress",
+    "sources": [
+      "results/stress_summary.csv"
+    ],
+    "rows": [
+      [
+        "Element",
+        "R-log",
+        "5/5",
+        "5.7805",
+        "45.4607"
+      ],
+      [
+        "Element",
+        "S-eps",
+        "5/5",
+        "--",
+        "51.4131"
+      ],
+      [
+        "Target region",
+        "R-log",
+        "3/3",
+        "5.1796",
+        "16.7296"
+      ],
+      [
+        "Target region",
+        "S-eps",
+        "3/3",
+        "--",
+        "18.3601"
+      ],
+      [
+        "X family",
+        "R-log",
+        "29/35",
+        "6.5035",
+        "12.9015"
+      ],
+      [
+        "X family",
+        "S-eps",
+        "29/35",
+        "--",
+        "14.7193"
+      ]
+    ],
+    "sha256": "823064890e862a8eaee234790790a341ebc701c7eb94e08e694fae1162720a6e"
+  },
+  "features": {
+    "label": "tab:features",
+    "sources": [
+      "results/diagnostic_summary.csv",
+      "results/P1_final_experiment_table.csv"
+    ],
+    "rows": [
+      [
+        "R-log",
+        "Basic (40)",
+        "5.1954",
+        "27.0472"
+      ],
+      [
+        "R-log",
+        "Chemistry/geometry (292)",
+        "4.9547",
+        "57.3660"
+      ],
+      [
+        "R-log",
+        "Full (336)",
+        "4.9048",
+        "60.4863"
+      ],
+      [
+        "H-soft",
+        "Full (336)",
+        "4.6011",
+        "62.1024"
+      ],
+      [
+        "H-soft",
+        "Without electronic",
+        "4.6426",
+        "56.5887"
+      ],
+      [
+        "H-soft",
+        "Without geometry",
+        "4.7407",
+        "53.3975"
+      ],
+      [
+        "H-soft",
+        "Without X statistics",
+        "4.6424",
+        "59.7091"
+      ]
+    ],
+    "sha256": "a38e2fc503c185c044e5343551e720d84b218baf920071dcfcc139d026f08e3b"
+  },
+  "paired": {
+    "label": "tab:paired",
+    "sources": [
+      "results/paired_AB_bootstrap_5000.csv"
+    ],
+    "rows": [
+      [
+        "H-soft minus R-log",
+        "EF@20",
+        "1.6160",
+        "$[-5.9951, 11.2022]$"
+      ],
+      [
+        "H-soft minus R-log",
+        "RMSE",
+        "-0.3037",
+        "$[-0.4133, -0.1943]$"
+      ],
+      [
+        "S-eps minus B-eps",
+        "EF@20",
+        "-2.0489",
+        "$[-8.4949, 5.1343]$"
+      ],
+      [
+        "L-single minus L-hash4",
+        "EF@20",
+        "-18.1870",
+        "$[-31.1018, -12.7409]$"
+      ],
+      [
+        "R-log: full minus 292 entries",
+        "EF@20",
+        "3.1204",
+        "$[-4.4285, 8.0342]$"
+      ],
+      [
+        "R-log: full minus 292 entries",
+        "RMSE",
+        "-0.0499",
+        "$[-0.0769, -0.0238]$"
+      ],
+      [
+        "H-soft: without electronic",
+        "EF@20",
+        "-5.5136",
+        "$[-12.3435, 3.5918]$"
+      ],
+      [
+        "H-soft: without electronic",
+        "RMSE",
+        "0.0415",
+        "$[-0.0132, 0.0973]$"
+      ],
+      [
+        "H-soft: without geometry",
+        "EF@20",
+        "-8.7049",
+        "$[-22.7734, -0.8136]$"
+      ],
+      [
+        "H-soft: without geometry",
+        "RMSE",
+        "0.1396",
+        "$[0.0685, 0.2113]$"
+      ],
+      [
+        "H-soft: without X statistics",
+        "EF@20",
+        "-2.3933",
+        "$[-12.8359, 4.8159]$"
+      ],
+      [
+        "H-soft: without X statistics",
+        "RMSE",
+        "0.0413",
+        "$[-0.0167, 0.1007]$"
+      ]
+    ],
+    "sha256": "46ec1510af951fdcb9f35e7dae277fd70a4c28e81f9ee6cb460d2acefb021cc8"
+  }
+}
