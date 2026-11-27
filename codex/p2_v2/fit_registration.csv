@@ -1,0 +1,87 @@
+logical_id,phase,seed,target,usage
+F001,full,210026,gate,planned
+F002,calibration_fold_0,210026,gate,planned
+F003,calibration_fold_1,210026,gate,planned
+F004,full,210026,metal,planned
+F005,full,210026,nonmetal,planned
+F006,bootstrap_00,211026,gate,data_seed; model_seed=210026
+F007,bootstrap_00,211026,metal,data_seed; model_seed=210026
+F008,bootstrap_00,211026,nonmetal,data_seed; model_seed=210026
+F009,bootstrap_01,211027,gate,data_seed; model_seed=210026
+F010,bootstrap_01,211027,metal,data_seed; model_seed=210026
+F011,bootstrap_01,211027,nonmetal,data_seed; model_seed=210026
+F012,bootstrap_02,211028,gate,data_seed; model_seed=210026
+F013,bootstrap_02,211028,metal,data_seed; model_seed=210026
+F014,bootstrap_02,211028,nonmetal,data_seed; model_seed=210026
+F015,bootstrap_03,211029,gate,data_seed; model_seed=210026
+F016,bootstrap_03,211029,metal,data_seed; model_seed=210026
+F017,bootstrap_03,211029,nonmetal,data_seed; model_seed=210026
+F018,bootstrap_04,211030,gate,data_seed; model_seed=210026
+F019,bootstrap_04,211030,metal,data_seed; model_seed=210026
+F020,bootstrap_04,211030,nonmetal,data_seed; model_seed=210026
+F021,bootstrap_05,211031,gate,data_seed; model_seed=210026
+F022,bootstrap_05,211031,metal,data_seed; model_seed=210026
+F023,bootstrap_05,211031,nonmetal,data_seed; model_seed=210026
+F024,bootstrap_06,211032,gate,data_seed; model_seed=210026
+F025,bootstrap_06,211032,metal,data_seed; model_seed=210026
+F026,bootstrap_06,211032,nonmetal,data_seed; model_seed=210026
+F027,bootstrap_07,211033,gate,data_seed; model_seed=210026
+F028,bootstrap_07,211033,metal,data_seed; model_seed=210026
+F029,bootstrap_07,211033,nonmetal,data_seed; model_seed=210026
+F030,bootstrap_08,211034,gate,data_seed; model_seed=210026
+F031,bootstrap_08,211034,metal,data_seed; model_seed=210026
+F032,bootstrap_08,211034,nonmetal,data_seed; model_seed=210026
+F033,bootstrap_09,211035,gate,data_seed; model_seed=210026
+F034,bootstrap_09,211035,metal,data_seed; model_seed=210026
+F035,bootstrap_09,211035,nonmetal,data_seed; model_seed=210026
+F036,bootstrap_10,211036,gate,data_seed; model_seed=210026
+F037,bootstrap_10,211036,metal,data_seed; model_seed=210026
+F038,bootstrap_10,211036,nonmetal,data_seed; model_seed=210026
+F039,bootstrap_11,211037,gate,data_seed; model_seed=210026
+F040,bootstrap_11,211037,metal,data_seed; model_seed=210026
+F041,bootstrap_11,211037,nonmetal,data_seed; model_seed=210026
+F042,bootstrap_12,211038,gate,data_seed; model_seed=210026
+F043,bootstrap_12,211038,metal,data_seed; model_seed=210026
+F044,bootstrap_12,211038,nonmetal,data_seed; model_seed=210026
+F045,bootstrap_13,211039,gate,data_seed; model_seed=210026
+F046,bootstrap_13,211039,metal,data_seed; model_seed=210026
+F047,bootstrap_13,211039,nonmetal,data_seed; model_seed=210026
+F048,bootstrap_14,211040,gate,data_seed; model_seed=210026
+F049,bootstrap_14,211040,metal,data_seed; model_seed=210026
+F050,bootstrap_14,211040,nonmetal,data_seed; model_seed=210026
+F051,bootstrap_15,211041,gate,data_seed; model_seed=210026
+F052,bootstrap_15,211041,metal,data_seed; model_seed=210026
+F053,bootstrap_15,211041,nonmetal,data_seed; model_seed=210026
+F054,bootstrap_16,211042,gate,data_seed; model_seed=210026
+F055,bootstrap_16,211042,metal,data_seed; model_seed=210026
+F056,bootstrap_16,211042,nonmetal,data_seed; model_seed=210026
+F057,bootstrap_17,211043,gate,data_seed; model_seed=210026
+F058,bootstrap_17,211043,metal,data_seed; model_seed=210026
+F059,bootstrap_17,211043,nonmetal,data_seed; model_seed=210026
+F060,bootstrap_18,211044,gate,data_seed; model_seed=210026
+F061,bootstrap_18,211044,metal,data_seed; model_seed=210026
+F062,bootstrap_18,211044,nonmetal,data_seed; model_seed=210026
+F063,bootstrap_19,211045,gate,data_seed; model_seed=210026
+F064,bootstrap_19,211045,metal,data_seed; model_seed=210026
+F065,bootstrap_19,211045,nonmetal,data_seed; model_seed=210026
+R01,same_recipe_recovery,,,failed logical fit only
+R02,same_recipe_recovery,,,failed logical fit only
+R03,same_recipe_recovery,,,failed logical fit only
+R04,same_recipe_recovery,,,failed logical fit only
+R05,same_recipe_recovery,,,failed logical fit only
+R06,same_recipe_recovery,,,failed logical fit only
+R07,same_recipe_recovery,,,failed logical fit only
+R08,same_recipe_recovery,,,failed logical fit only
+R09,same_recipe_recovery,,,failed logical fit only
+R10,same_recipe_recovery,,,failed logical fit only
+R11,same_recipe_recovery,,,failed logical fit only
+R12,same_recipe_recovery,,,failed logical fit only
+R13,same_recipe_recovery,,,failed logical fit only
+R14,same_recipe_recovery,,,failed logical fit only
+R15,same_recipe_recovery,,,failed logical fit only
+R16,same_recipe_recovery,,,failed logical fit only
+R17,same_recipe_recovery,,,failed logical fit only
+R18,same_recipe_recovery,,,failed logical fit only
+R19,same_recipe_recovery,,,failed logical fit only
+R20,same_recipe_recovery,,,failed logical fit only
+R21,same_recipe_recovery,,,failed logical fit only
