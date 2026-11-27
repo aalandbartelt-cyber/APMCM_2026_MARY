@@ -1,0 +1,209 @@
+{
+  "all_pass": false,
+  "checks": {
+    "official_class_byte_identical": true,
+    "official_cfg_byte_identical": true,
+    "no_visual_style_overrides": true,
+    "summary_first": true,
+    "contents_second_single_page": true,
+    "body_starts_third": true,
+    "a4": true,
+    "header_1": true,
+    "header_2": true,
+    "header_3": true,
+    "header_4": true,
+    "header_5": true,
+    "official_font_size_position_match": true,
+    "official_body_font": true,
+    "all_main_text_is_times_new_roman": true,
+    "no_chinese_in_pdf": true,
+    "no_identity_metadata": true,
+    "no_control_sheet": true,
+    "fonts_embedded": true,
+    "body_within_25_pages": true,
+    "adjacent_square_citations": true,
+    "journal_examples_marked": true,
+    "approved_reference_library_empty": true,
+    "lucas_article_number": false,
+    "book_publisher_page_range": true,
+    "web_access_date": true,
+    "eight_table_templates_rendered": true,
+    "subfigure_labels": true,
+    "source_listing_macro": true,
+    "f1_170mm": true,
+    "f1_minimum_8pt": true,
+    "f1_caption_same_page": true,
+    "framework_slot_on_first_body_page": true,
+    "main_no_errors_or_overflow": true,
+    "main_bibtex_clean": true,
+    "f1_smoke_no_errors_or_overflow": true,
+    "style_smoke_no_errors_or_overflow": true,
+    "style_smoke_bibtex_clean": true,
+    "protected_sources_unchanged": true,
+    "upstream_copies_unchanged": true
+  },
+  "physical_pages": 5,
+  "body_pages_including_references": 2,
+  "headers": [
+    {
+      "physical_page": 1,
+      "observed": "Team Dapmcm26301618 Page 1 of 25",
+      "expected": "Team Dapmcm26301618 Page 1 of 25"
+    },
+    {
+      "physical_page": 2,
+      "observed": "Team Dapmcm26301618 Page 2 of 25",
+      "expected": "Team Dapmcm26301618 Page 2 of 25"
+    },
+    {
+      "physical_page": 3,
+      "observed": "Team Dapmcm26301618 Page 1 of 25",
+      "expected": "Team Dapmcm26301618 Page 1 of 25"
+    },
+    {
+      "physical_page": 4,
+      "observed": "Team Dapmcm26301618 Page 2 of 25",
+      "expected": "Team Dapmcm26301618 Page 2 of 25"
+    },
+    {
+      "physical_page": 5,
+      "observed": "Team Dapmcm26301618 Page 3 of 25",
+      "expected": "Team Dapmcm26301618 Page 3 of 25"
+    }
+  ],
+  "official_comparison": [
+    {
+      "text": "Team Number:",
+      "physical_page": 1,
+      "official_font": "TimesNewRomanPSMT",
+      "current_font": "TimesNewRomanPSMT",
+      "official_size_pt": 10.5,
+      "current_size_pt": 10.5,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    },
+    {
+      "text": "Problem Chosen:",
+      "physical_page": 1,
+      "official_font": "TimesNewRomanPSMT",
+      "current_font": "TimesNewRomanPSMT",
+      "official_size_pt": 10.5,
+      "current_size_pt": 10.5,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    },
+    {
+      "text": "2026 APMCM summary sheet",
+      "physical_page": 1,
+      "official_font": "TimesNewRomanPSMT",
+      "current_font": "TimesNewRomanPSMT",
+      "official_size_pt": 10.5,
+      "current_size_pt": 10.5,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    },
+    {
+      "text": "Contents",
+      "physical_page": 2,
+      "official_font": "TimesNewRomanPS-BoldMT",
+      "current_font": "TimesNewRomanPS-BoldMT",
+      "official_size_pt": 15.0,
+      "current_size_pt": 15.0,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    },
+    {
+      "text": "I.",
+      "physical_page": 3,
+      "official_font": "TimesNewRomanPS-BoldMT",
+      "current_font": "TimesNewRomanPS-BoldMT",
+      "official_size_pt": 15.0,
+      "current_size_pt": 15.0,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    },
+    {
+      "text": "Introduction",
+      "physical_page": 3,
+      "official_font": "TimesNewRomanPS-BoldMT",
+      "current_font": "TimesNewRomanPS-BoldMT",
+      "official_size_pt": 15.0,
+      "current_size_pt": 15.0,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    },
+    {
+      "text": "1 . 1",
+      "physical_page": 3,
+      "official_font": "TimesNewRomanPS-BoldMT",
+      "current_font": "TimesNewRomanPS-BoldMT",
+      "official_size_pt": 12.0,
+      "current_size_pt": 12.0,
+      "max_position_difference_pt": 0.0,
+      "pass": true
+    }
+  ],
+  "fonts": [
+    {
+      "source": "main",
+      "name": "FZCOXY+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "source": "main",
+      "name": "KAESKB+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "source": "f1_smoke",
+      "name": "VNMQSH+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "source": "f1_smoke",
+      "name": "BXZTBR+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "source": "f1_smoke",
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "embedded": true
+    }
+  ],
+  "logs": {
+    "main": {
+      "issues": [],
+      "warnings": []
+    },
+    "f1_smoke": {
+      "issues": [],
+      "warnings": []
+    },
+    "style_smoke": {
+      "issues": [],
+      "warnings": [
+        "Package fancyhdr Warning: \\headheight is too small (12.0pt): ",
+        "Package fancyhdr Warning: \\headheight is too small (12.0pt): ",
+        "Package fancyhdr Warning: \\headheight is too small (12.0pt): ",
+        "Package fancyhdr Warning: \\headheight is too small (12.0pt): ",
+        "Package fancyhdr Warning: \\headheight is too small (12.0pt): "
+      ]
+    }
+  },
+  "f1_min_font_pt": 8.50016975402832,
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "APMCM 2026 Problem D – Template skeleton",
+    "author": "",
+    "subject": "Official template skeleton",
+    "keywords": "",
+    "creator": "XeLaTeX",
+    "producer": "xdvipdfmx (20260317)",
+    "creationDate": "D:20261127000000Z",
+    "modDate": "",
+    "trapped": "",
+    "encryption": null
+  },
+  "main_pdf_sha256": "b9b0687e19ac2f659ea3eccec952329f0371ee859971740b1c08ca04e82fe1e1",
+  "precedence_note": "Latest user instruction: reproduce official PDF. Its actual body font is Times New Roman 10.5 pt, with XeTeX provenance. Earlier 11/12 pt and pdfLaTeX-only requirements are not claimed as passed."
+}
