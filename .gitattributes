@@ -7,3 +7,5 @@
 *.jpeg binary
 *.zip binary
 *.rar binary
+# Preserve the sealed research CSV bytes across checkout (receipt SHA256).
+/codex/P2_RESEARCH_*20261128.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,13 @@
+name,composite_units,SA_call_slots,strict_units,energy_selected_index,energy_selected_regret,business_selected_index,business_selected_regret,note
+blind_real_00,100,100,99,52,0.0,0,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_real_01,100,100,99,9,0.0,0,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_real_02,100,100,100,41,0.0,0,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_real_03,100,100,94,67,0.0,5,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_real_04,100,100,100,9,0.0,0,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+full_merged_real,100,500,94,93,0.0,1,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_zero_00,100,100,100,0,0.46513924572935705,1,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_zero_01,100,100,98,0,3.770311042359902,18,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_zero_02,100,100,100,0,11.278466710516941,1,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_zero_03,100,100,100,0,10.463428380085034,5,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+blind_zero_04,100,100,100,0,1.351559218118079,10,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
+full_merged_zero,100,500,99,0,2.4438963220745706,2,0.0,"Post-hoc diagnostic: minimum physical energy then earliest index versus minimum(q,candidate,index); strict states only; no new selection or sampling"
