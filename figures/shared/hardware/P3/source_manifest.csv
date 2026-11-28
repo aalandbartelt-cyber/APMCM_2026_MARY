@@ -1,0 +1,3 @@
+slot,family,filename,task_name,task_id_from_ledger,mapping_source,width_px,height_px,bytes,sha256,source_relative_to_D_project
+F01,O3,AP26_P3_2e1dab8d3312_F01_O3.png,AP26_P3_2e1dab8d3312_F01_O3,0acfbb62-b5c6-4296-b27b-a6e8bbba0521,Source filename matches recorded SDK task name,2458,1361,76163,311c3f503235495ca27df3bac3cbe238c7cdedc4e99cecf372e38ab6643905e5,真机/AP26_P3_2e1dab8d3312_F01_O3.png
+F09,FO2,AP26_P3_2e1dab8d3312_F09_FO2.png,AP26_P3_2e1dab8d3312_F09_FO2,70b411c2-309b-48e2-bcfb-0e4490796134,Source filename matches recorded SDK task name,2458,1361,77140,158df60c7bf51b0f061554d7860e08de64376123ebf9585e4e51db75aeeabfb5,真机/AP26_P3_2e1dab8d3312_F09_FO2.png
