@@ -1,0 +1,169 @@
+{
+  "recorded_at": "2026-11-28T14:26:10.998916+08:00",
+  "scope": "formal F01-F20; pilot P04 separate",
+  "formal_plots_provided": 6,
+  "plot_absence_not_equal_task_failure": true,
+  "no_time_to_solution_interpretation": true,
+  "rows": [
+    {
+      "slot": "F01",
+      "result_id": "1b546c8f-0964-4b40-a44e-34d66e989736",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F02",
+      "result_id": "628ab798-46aa-4968-a478-6444365793c2",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F03",
+      "result_id": "4bda7cda-9a99-48fe-9975-95bbf1082691",
+      "availability": "USER_CHECKED_AVAILABLE",
+      "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/F03.png",
+      "archive": "figures/shared/hardware/F03_Hamiltonian_evolution.png",
+      "sha256": "d6e2aa4eebbb84e03ce6bed873df9a9b577d5b761943765ea43d5271cf519158",
+      "pixel_dimensions": [
+        2458,
+        1361
+      ],
+      "unmodified": true,
+      "source_retained": true,
+      "association": "User explicitly checked and named the task; graph alone is not a task-ID certificate"
+    },
+    {
+      "slot": "F04",
+      "result_id": "b940c5da-944c-4221-bc67-b190eba27e8e",
+      "availability": "USER_CHECKED_AVAILABLE",
+      "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/F04.png",
+      "archive": "figures/shared/hardware/F04_Hamiltonian_evolution.png",
+      "sha256": "8b8f281ed60736b259f0291b85761106680ddc6c79cde8a3ceb3c52f7666f1bb",
+      "pixel_dimensions": [
+        2458,
+        1361
+      ],
+      "unmodified": true,
+      "source_retained": true,
+      "association": "User explicitly checked and named the task; graph alone is not a task-ID certificate"
+    },
+    {
+      "slot": "F05",
+      "result_id": "f119c12b-cfe9-491a-8569-469383445ca3",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F06",
+      "result_id": "64906eb9-9678-4e76-b796-833d117a3d62",
+      "availability": "USER_CHECKED_AVAILABLE",
+      "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/F06.png",
+      "archive": "figures/shared/hardware/F06_Hamiltonian_evolution.png",
+      "sha256": "19cc414b24f20b102cf54e047e557d10ef326ba281c7ad62712a96aeb3ef2824",
+      "pixel_dimensions": [
+        2458,
+        1361
+      ],
+      "unmodified": true,
+      "source_retained": true,
+      "association": "User explicitly checked and named the task; graph alone is not a task-ID certificate"
+    },
+    {
+      "slot": "F07",
+      "result_id": "24c675e7-72a2-4ef2-9461-5dc088f85297",
+      "availability": "USER_CHECKED_AVAILABLE",
+      "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/F07.png",
+      "archive": "figures/shared/hardware/F07_Hamiltonian_evolution.png",
+      "sha256": "a3ff46817861620dcef3a93548264ec8e580f4bf6f3e545155ec65f811542011",
+      "pixel_dimensions": [
+        2458,
+        1361
+      ],
+      "unmodified": true,
+      "source_retained": true,
+      "association": "User explicitly checked and named the task; graph alone is not a task-ID certificate"
+    },
+    {
+      "slot": "F08",
+      "result_id": "c5eb19b2-b959-4976-88b9-b21a03ea45b4",
+      "availability": "USER_CHECKED_AVAILABLE",
+      "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/F08.png",
+      "archive": "figures/shared/hardware/F08_Hamiltonian_evolution.png",
+      "sha256": "e3add9ad585180010c27f1c9415b48b4659424a97bd723b24c22cbed15bf3660",
+      "pixel_dimensions": [
+        2458,
+        1361
+      ],
+      "unmodified": true,
+      "source_retained": true,
+      "association": "User explicitly checked and named the task; graph alone is not a task-ID certificate"
+    },
+    {
+      "slot": "F09",
+      "result_id": "4cef8500-99eb-41cd-904b-96647458cd16",
+      "availability": "USER_CHECKED_AVAILABLE",
+      "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/F09.png",
+      "archive": "figures/shared/hardware/F09_Hamiltonian_evolution.png",
+      "sha256": "746be2af283264c96ac1acb25d28550c0dbe9d5296572315388163bfb9bb11a5",
+      "pixel_dimensions": [
+        2458,
+        1361
+      ],
+      "unmodified": true,
+      "source_retained": true,
+      "association": "User explicitly checked and named the task; graph alone is not a task-ID certificate"
+    },
+    {
+      "slot": "F10",
+      "result_id": "f9b5e594-2dfd-4c68-9fda-fb4b251ddd11",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F11",
+      "result_id": "f6e59ba6-ef9b-447e-90c8-e97e1f52e597",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F12",
+      "result_id": "07dcd17b-e336-4c76-b139-cb35fa040e54",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F13",
+      "result_id": "68e36528-49d4-4179-b821-4cf6a8a96d37",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F14",
+      "result_id": "37de98a2-4786-4aa6-9105-e4c75fbee8f6",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F15",
+      "result_id": "198f3fab-d85f-47ba-a8c0-4cde6eb55565",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F16",
+      "result_id": "823aa699-a302-4cf5-bfcf-a61e135e3724",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F17",
+      "result_id": "976c717e-eec7-4fb3-a549-9594747c6703",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F18",
+      "result_id": "f73da025-00aa-4b5a-8105-903516e387b9",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F19",
+      "result_id": "5cba2293-4140-4e9d-9e64-255a03fc81e0",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    },
+    {
+      "slot": "F20",
+      "result_id": "cc2c6554-75b4-4828-91c7-63eb49261e5d",
+      "availability": "USER_CHECKED_NO_PLOT_PROVIDED"
+    }
+  ]
+}

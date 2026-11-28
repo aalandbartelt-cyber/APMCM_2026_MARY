@@ -1,0 +1,12 @@
+{
+  "task": "P04",
+  "user_source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/P04.png",
+  "archive": "figures/shared/hardware/P04_Hamiltonian_evolution.png",
+  "sha256": "2b7758884ad353ec3de8656bee07be5649b4098584457bf063df7c5844731b5a",
+  "source_retained": true,
+  "image_unmodified": true,
+  "attribution": "User explicitly identified P04; image itself contains no task ID",
+  "other_pilots_in_latest_batch": "P02/P03/P05: no platform plot provided",
+  "earlier_image": "P01_Hamiltonian_evolution.png retained separately; name reflects earlier reception context, image itself has no task ID; not reassigned or duplicated",
+  "time_axis": "T (a.u.); no physical-time or TTS interpretation"
+}

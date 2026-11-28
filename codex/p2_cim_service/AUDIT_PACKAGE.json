@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-11-28T14:30:32.278729+08:00",
+  "archive": "artifacts/p2_cim_go_20261128/P2_CIM_SERVICE_AUDIT_20261128.zip",
+  "sha256": "b6f5c2d4f2c70ca199eb9a4570762239c947dab92d1e8abc356d21c5737bcf2b",
+  "bytes": 796590,
+  "files": 154,
+  "credential_literal_scan_hits": 0,
+  "excluded": "licenses, credential source, SDK binaries, raw signed-URL query envelopes",
+  "source_file_seal_sha256": "890435ea73de3ca56491a0a5b3f4e98530c32fec824a3759a69ba5d567cac422"
+}
