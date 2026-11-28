@@ -10,7 +10,7 @@ from render import P2,ROOT,specs,SPEC,basename,src
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def write_csv(path,rows):
     with open(path,'w',newline='',encoding='utf-8-sig') as f:
-        w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+        w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");w.writeheader();w.writerows(rows)
 def check(ok,label):
     if not ok: raise ValueError(label)
 def spans(p):
