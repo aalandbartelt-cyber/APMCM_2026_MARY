@@ -1,0 +1,18 @@
+# Figure captions
+
+- [P2-F1 · From candidate pools to an integer model](F1.md)
+- [P2-A1 · Three orientations of the same oxynitride structure](A1.md)
+- [P2-F2 · Lookup and submitted short-chain couplings](F2.md)
+- [P2-F3 · Returned energies and the decision boundary](F3.md)
+- [P2-F4 · Strict hits across restart budgets](F4.md)
+- [P2-A2 · Grouping the lookup couplings](A2.md)
+- [P2-A3 · Energy distribution of returned vectors](A3.md)
+- [P2-A4 · Attainment by task and selection rule](A4.md)
+- [P2-A5 · Service observation windows](A5.md)
+- [P2-A6 · Classical costs and three audit quantities](A6.md)
+- [P2-A7 · Precision, constraints and negative controls](A7.md)
+- [P2-A8 · Member ranks and upper-tail proxy regret](A8.md)
+- [P2-A9 · Local optima across forty candidate groups](A9.md)
+- [P2-A10 · SPQC-550 platform illustration](A10.md)
+- [P2-A11 · Six archived evolution displays](A11.md)
+- [P2-A12 · Chain length, strict feasibility and aggregation](A12.md)

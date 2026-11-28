@@ -1,0 +1,43 @@
+{
+  "source_sha256": "e55a04326b9ffa154e679b54d365eda81fe2d6495786aa963b2301cb7b0c4b63",
+  "shell": "4 O and 2 N at each of 16 Ti sites",
+  "cutoff_A": 2.36,
+  "images": [
+    {
+      "scene": "poly_c",
+      "png_sha256": "f70c1ef808630bafa7044601252b66312c5ac6a8a921fbb56564a19f19bf88da",
+      "scene_sha256": "e41539bdaeb305fc9638cb97afa8cb90914135289060ef8e3cc677527e11485d",
+      "width_A": 28
+    },
+    {
+      "scene": "poly_a",
+      "png_sha256": "ab3dc4c8aea28be3c7e77560ff557ed3030e5746c23c4c2def3ec9e3b97e9413",
+      "scene_sha256": "60914df260d9a88d521498a742ccb504097dcc5126a39c9b04238d494ad98e2b",
+      "width_A": 28
+    },
+    {
+      "scene": "poly_oblique",
+      "png_sha256": "3b8d438569fd35146d65f05e38ad0dda477fbb23c36559e7fbc98be0f37dcddc",
+      "scene_sha256": "d84fcb803725e7020ffea787a1a87502bfe8365a09922007da1166711c85979c",
+      "width_A": 28
+    },
+    {
+      "scene": "stick_c",
+      "png_sha256": "1986e0954717622a4b2dee35df3e2c3775d830bd2a962ca47aa807bae4612c62",
+      "scene_sha256": "e618895867869438f679579d7f926f0491e24416358f4af3f87ec90493b61298",
+      "width_A": 28
+    },
+    {
+      "scene": "stick_a",
+      "png_sha256": "dba197394757d9c2cfc14ad07aa922a804c6ed8dfff6267c25b3dbaa4db10db5",
+      "scene_sha256": "f7c0efce8b25457346f65244913b1a6644772941eeae84d05f60154a55a8b67a",
+      "width_A": 28
+    },
+    {
+      "scene": "stick_oblique",
+      "png_sha256": "6bcac15df1490ac8fcb0b636d31b87f0d551e8cff17820d94f032b7eb42a1e75",
+      "scene_sha256": "4d2e9ffe38c24ed80e0fb6efda3aff902b54553cbcad4b5a5f3f05d35ca26596",
+      "width_A": 28
+    }
+  ]
+}

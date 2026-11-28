@@ -1,0 +1,7 @@
+# VESTA scene provenance
+
+The six native scenes and six intact native raster exports accompany the publication plate. VESTA 3.5.8 GTK3 ran under WSLg with software OpenGL. The base scene came from the archived 80-site CIF. The exporter checks the minimum-image coordination of all 16 Ti sites against a 2.36 Å cutoff (4 O and 2 N each). La is rendered as an isolated sphere. Each export used an orthographic view, a width of 28 Å and raster scale ×3. The composition uses the same centred crop for all six views. Exterior pure white becomes transparent before composition on the white page. The source’s orientation widget lies outside this crop. The contrasting row changes only the representation to ball-and-stick.
+
+The local Windows build produced no usable graphics on this host. The completed exports used the same 3.5.8 release of the native Linux program. VESTA can be obtained from its [official distribution](https://www.jp-minerals.org/vesta/en/download.html). The command semantics follow its [command-line manual](https://www.jp-minerals.org/vesta/en/doc/VESTAch17.html).
+
+With a working X11 display, set `VESTA_BIN` to the extracted VESTA executable and run `/usr/bin/python3 -B figures/P2/production/crystal/export.py` in a separate working copy. Ordinary rerendering of the publication plate reads the archived native exports directly. The definitive source accession and access record are in [the dataset receipt](../../../../codex/p2_zero/structure_source.json). The native scenes have three different orientation matrices and two display modes.
