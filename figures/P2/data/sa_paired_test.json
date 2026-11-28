@@ -1,0 +1,21 @@
+{
+  "endpoint": "at least one strict original optimum in first five attempts",
+  "unit": "paired 100-attempt block; one five-attempt prefix per block",
+  "n": 20,
+  "arms": [
+    "40_real",
+    "40_zero"
+  ],
+  "classification": "prospectively registered local test conditional on selected matrix and seed protocol",
+  "alpha": 0.05,
+  "table": {
+    "11": 6,
+    "10": 14,
+    "01": 0,
+    "00": 0
+  },
+  "delta": 0.7,
+  "complete": true,
+  "p_two_sided": 0.0001220703125,
+  "assumptions": "Independent seed-block pairs; under equal marginal hit probabilities each discordance sign is equiprobable. Inference conditional on seed design."
+}

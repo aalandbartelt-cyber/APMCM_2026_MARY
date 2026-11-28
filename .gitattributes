@@ -13,3 +13,4 @@
 /codex/p2_zero/slots.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 /evidence/p2/returns/*.pkl binary
 /evidence/p2/*.npz binary
+/codex/p2_zero/sa_replay_inputs/*.npz binary

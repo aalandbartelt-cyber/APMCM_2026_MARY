@@ -1,5 +1,9 @@
 # APMCM 2026 · D 题全线交接文档 v2（for Codex · 主力复核版）
 
+## P2 零配额优化交付（2026-11-28T17:28:51+08:00）
+
+封存服务终态继续以 [FINAL](codex/P2_CIM_FINAL_RESULTS_20261128.md) 为准。新完成本地 4200 槽、双克隆证据包、196 边界逐任务裕度、五项绘图数据及成品总清单。完整数值、版本变化与交接步骤见[离线结果](codex/P2_ZERO_QUOTA_RESULTS.md)、[协作交接](docs/collab/CURSOR_HANDOFF.md)、[图件总清单](codex/P2图件总清单.md)。本轮新增拟合与真机提交为 0，论文未改。
+
 审计包补充：`artifacts/p2_cim_go_20261128/P2_CIM_SERVICE_AUDIT_20261128.zip`，154文件、796590字节，SHA256 `b6f5c2d4f2c70ca199eb9a4570762239c947dab92d1e8abc356d21c5737bcf2b`。包内不含凭据/SDK二进制/带签名URL的原始查询；实际凭据字面值扫描0命中，zip完整性检查通过。`codex/p2_cim_service/AUDIT_PACKAGE.json`记录来源与校验值，已同步D共享。包内交接是打包时快照，本补充只记录打包完成，不改变任何实验数据。
 
 

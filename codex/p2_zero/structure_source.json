@@ -1,0 +1,16 @@
+{
+  "accessed": "2026-11-28T16:50:01.663142+08:00",
+  "source": "https://www.osti.gov/api/v1/records/1745405",
+  "http_status": 200,
+  "response_sha256": "a1a3d61fdc7d70d70d13f1ac1f61ca00d1ca16667824d1a54bade94faf266340",
+  "title": "Materials Data on LaTiNO2 by Materials Project",
+  "osti_id": "1745405",
+  "doi": "10.17188/1745405",
+  "id_field": [
+    [
+      "report_number",
+      "mp-1222738"
+    ]
+  ],
+  "scope": "Materials Project published dataset bibliographic record; original download date unknown"
+}

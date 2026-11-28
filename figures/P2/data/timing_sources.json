@@ -1,0 +1,502 @@
+[
+  {
+    "slot": "P01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P01/events.jsonl",
+    "sha256": "263d2d8a0451d5558baf3ce2290e0bf286088c924c763c9147a76108f6503e15"
+  },
+  {
+    "slot": "P01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P01/submit_20261128T134937059799/006_response.bin",
+    "sha256": "d1100d762db8da741703e3fc835697388966d5369daef0ee7cfdec734dd4a6fb"
+  },
+  {
+    "slot": "P01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P01/poll_20261128T135411895503/safe_summary.json",
+    "sha256": "4079ca5b29a99971df5f37bdfa048876e6035dd6263c8985635db34b27c8863c"
+  },
+  {
+    "slot": "P01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P01/poll_20261128T135411895503/sdk_return.json",
+    "sha256": "d7de118f1b975465e5709eaa5491997d73e7f3253db53b4600050a76f266fa9a"
+  },
+  {
+    "slot": "P02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P02/events.jsonl",
+    "sha256": "dd352b968b7177f7125ab41a66f8e52c9afadb9579be476934b28bca16dea22a"
+  },
+  {
+    "slot": "P02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P02/submit_20261128T140700375386/006_response.bin",
+    "sha256": "30438316c6ae3bd51bab92d2e56d6b71c99deb6caa0b330d0ebcc9c0026e14f2"
+  },
+  {
+    "slot": "P02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P02/poll_20261128T140916151072/safe_summary.json",
+    "sha256": "bc814ff0459bbaa7061f80432f772ff8b82ace8f443df57f047d4bd97009f766"
+  },
+  {
+    "slot": "P02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P02/poll_20261128T140916151072/sdk_return.json",
+    "sha256": "9b53f824b313b555107bdc55c80809e28613f2d43389ebfd9f76a117241ee2c2"
+  },
+  {
+    "slot": "P03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P03/events.jsonl",
+    "sha256": "8d18ae385343f9a837d9f66b828bdbdc345a440034b427465dd3acd6064b081c"
+  },
+  {
+    "slot": "P03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P03/submit_20261128T140703643282/006_response.bin",
+    "sha256": "186a7e6952e3f4b54651fa72b8321507859a9903278bf8ae771999e29ad423b2"
+  },
+  {
+    "slot": "P03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P03/poll_20261128T140951977137/safe_summary.json",
+    "sha256": "17878bb0454406395ea9dafc017c4a8473ceae5caf2e393d4e5dca1f18c0e1c4"
+  },
+  {
+    "slot": "P03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P03/poll_20261128T140951977137/sdk_return.json",
+    "sha256": "28e23dccd0fc117d12288feaba7932b303014963b2c98742d8be00f0f7fb1197"
+  },
+  {
+    "slot": "P04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P04/events.jsonl",
+    "sha256": "4c9252b7a8c057662a20abb50de6c541e329e28cc503ff0853d8ba5cb692c2cd"
+  },
+  {
+    "slot": "P04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P04/submit_20261128T140706375947/006_response.bin",
+    "sha256": "a93b8e87c254d719555d193726e704e745fab6bd06386deed50ed37451d4638c"
+  },
+  {
+    "slot": "P04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P04/poll_20261128T140953401456/safe_summary.json",
+    "sha256": "146e307011971103c645601a4dc5d4c04db2b21ebc5fae6ebc546cbfb2e94795"
+  },
+  {
+    "slot": "P04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P04/poll_20261128T140953401456/sdk_return.json",
+    "sha256": "ae2f93df1d10d55017634564551fa2b894aa910a08a58b5811b18d5b6a233a51"
+  },
+  {
+    "slot": "P05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P05/events.jsonl",
+    "sha256": "c2b0e35d818ed42f4e6bd4a4ccd26c7f78b864d878b2c01006ccf9c8479a26a5"
+  },
+  {
+    "slot": "P05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P05/submit_20261128T140708951318/006_response.bin",
+    "sha256": "27947ea402769cbdf75b56ae1fec4cc47214ecc559f5567dd0e658db6444f47a"
+  },
+  {
+    "slot": "P05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P05/poll_20261128T141159750520/safe_summary.json",
+    "sha256": "42b2d205bed08908cfa680facb1f7ea7e60cf8288b81146244903d39a086d766"
+  },
+  {
+    "slot": "P05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/P05/poll_20261128T141159750520/sdk_return.json",
+    "sha256": "b0ac5a7ddff65e7b099faa1fd3b6981867edbee71fb809e241c2349dcda63e31"
+  },
+  {
+    "slot": "F01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F01/events.jsonl",
+    "sha256": "9b35a6c7887f78dd01b4dc6721ad15f214b4cbd536b9d69c724153d91a3fb72f"
+  },
+  {
+    "slot": "F01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F01/submit_20261128T141354968555/006_response.bin",
+    "sha256": "a5fc69a1cf004dfde5c28017aef9f4015ec2653fbc2a818d84cde87025532eed"
+  },
+  {
+    "slot": "F01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F01/poll_20261128T141922756176/safe_summary.json",
+    "sha256": "f2230a2d4011e1d36d4412a10c414ed5a0813e53da2df7ab3bbf80c34bfb8cbd"
+  },
+  {
+    "slot": "F01",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F01/poll_20261128T141922756176/sdk_return.json",
+    "sha256": "033beca225153e9df1bcf0efbd4510d089533af12e9de4b0391ed1114727b194"
+  },
+  {
+    "slot": "F02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F02/events.jsonl",
+    "sha256": "12a8e235f73709e125cf7306ea643c28f625b63a2b194fac85d2a97b3f892df1"
+  },
+  {
+    "slot": "F02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F02/submit_20261128T141357908896/006_response.bin",
+    "sha256": "205503c187586995f1428d0b3c9381cda4dc960a814d5823fc475f1f2d8c3021"
+  },
+  {
+    "slot": "F02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F02/poll_20261128T141642256303/safe_summary.json",
+    "sha256": "1f4f747cffcc6ded84b42f5174140541d7913a0b7dd1ec578ce220d0517705fd"
+  },
+  {
+    "slot": "F02",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F02/poll_20261128T141642256303/sdk_return.json",
+    "sha256": "5e49f7ea9549d3b83b4a5ec5d2cf54e7d567f08718285b8cb1f28b6527130f5e"
+  },
+  {
+    "slot": "F03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F03/events.jsonl",
+    "sha256": "71725cf5a4498c2270b56b2911c0f3b29e59c3704242b0a395cc0a6b49cc8138"
+  },
+  {
+    "slot": "F03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F03/submit_20261128T141400576506/006_response.bin",
+    "sha256": "d948d217a77d14354183a9020b3e4fa1876ab44ace267af2a5676642d4e9f6c4"
+  },
+  {
+    "slot": "F03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F03/poll_20261128T141832945415/safe_summary.json",
+    "sha256": "4532f0cbe38a7f500d648dcb4be1cbdc558f909b8d0afaece5ead71c3e7b4bc7"
+  },
+  {
+    "slot": "F03",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F03/poll_20261128T141832945415/sdk_return.json",
+    "sha256": "61de4c5ed895a818615fc45ea416b516b521d2e919c3e46350c79802f12465b1"
+  },
+  {
+    "slot": "F04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F04/events.jsonl",
+    "sha256": "aa465f8e25e6633f9198d3459038aa65c0ae235aad2d3da576fd00ab2b6d4a4d"
+  },
+  {
+    "slot": "F04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F04/submit_20261128T141403210149/006_response.bin",
+    "sha256": "e7e2d8cfcb52cb9bf7737a808a48da4aea5b982ba3d3a0156ee9de5532c230a7"
+  },
+  {
+    "slot": "F04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F04/poll_20261128T141645229084/safe_summary.json",
+    "sha256": "07bed08770b2bdf250704ad5d3987e3d981ecca6308e75c52f8adf76244458a0"
+  },
+  {
+    "slot": "F04",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F04/poll_20261128T141645229084/sdk_return.json",
+    "sha256": "ece3f1b561af690e34d421bffbc2a65c7f7bd0a65a5c4e35538c23abb417cc93"
+  },
+  {
+    "slot": "F05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F05/events.jsonl",
+    "sha256": "185c77158e5ef9d785dbdd6d5084538ebc65045a94b666a59b7618120ba1bdbb"
+  },
+  {
+    "slot": "F05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F05/submit_20261128T141405911616/006_response.bin",
+    "sha256": "0f42d6a900ec6f2d27924725fc177e281e5ff78cefafa0d39990598f8b5f7b44"
+  },
+  {
+    "slot": "F05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F05/poll_20261128T141739557559/safe_summary.json",
+    "sha256": "3ee48aa57c2a22e7e3620c8821e756d032302c0043e71b836fade9688e569580"
+  },
+  {
+    "slot": "F05",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F05/poll_20261128T141739557559/sdk_return.json",
+    "sha256": "15f35b9874f284781cd951d46e34b3b6aeda3755e9676797f1e6f93120f40540"
+  },
+  {
+    "slot": "F06",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F06/events.jsonl",
+    "sha256": "73e0583ff77fa74154d33a0710eda3a4633bee348eb8a7158a74a919fe4a2e18"
+  },
+  {
+    "slot": "F06",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F06/submit_20261128T141408577332/006_response.bin",
+    "sha256": "07e2bab693c8089a6ab103a876cb2661227021a302b516119c6c6881488c0e62"
+  },
+  {
+    "slot": "F06",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F06/poll_20261128T141742626113/safe_summary.json",
+    "sha256": "94bc07b76020c49d27b57ec9c74346a8f854bab3384020e260646f7d762fded0"
+  },
+  {
+    "slot": "F06",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F06/poll_20261128T141742626113/sdk_return.json",
+    "sha256": "6c80243b637b9fc496c88e74ab3619d59fed18a313a69f6d8d0bf4064d997c1d"
+  },
+  {
+    "slot": "F07",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F07/events.jsonl",
+    "sha256": "c452f283cb3188c2d8cd2afd16fa9e40ff8f7025570158513eedcb2aad694608"
+  },
+  {
+    "slot": "F07",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F07/submit_20261128T141411290018/006_response.bin",
+    "sha256": "41ef9e0d8def6cbc5c3f0ffb5d82384d833b2d1c191d0584b92a1fa6c28b3730"
+  },
+  {
+    "slot": "F07",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F07/poll_20261128T142051542739/safe_summary.json",
+    "sha256": "26568ca0a5f2af9d190a202c4f525e5eb6e5b0c72d2f1592eead92627f71e229"
+  },
+  {
+    "slot": "F07",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F07/poll_20261128T142051542739/sdk_return.json",
+    "sha256": "fc02afebe223edb315a40e4ff4516e64d441a76ea4f1c4124d62c429c22aa6aa"
+  },
+  {
+    "slot": "F08",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F08/events.jsonl",
+    "sha256": "25597ddd6088127fb30e312c23f83ca10cdabf88c1c864dcacfb6d6be3e570f5"
+  },
+  {
+    "slot": "F08",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F08/submit_20261128T141414126643/006_response.bin",
+    "sha256": "7d4f7bf8685603594c3e7e3fafd502358f63c2a855f524748b53f4294a2a5e65"
+  },
+  {
+    "slot": "F08",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F08/poll_20261128T142314024984/safe_summary.json",
+    "sha256": "358264e74f62aac65eacdd0b7afa0189691f0ef9be0ac2a3536e7505584f261e"
+  },
+  {
+    "slot": "F08",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F08/poll_20261128T142314024984/sdk_return.json",
+    "sha256": "f6c4f05f7fdb3938a7c328e065660f6b8dcfb8756e775b2296234947382770d3"
+  },
+  {
+    "slot": "F09",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F09/events.jsonl",
+    "sha256": "f1f043f9dd1c80b7113a6c2ad1de52da8de612fb0e2f258ec109e17e23d01f4e"
+  },
+  {
+    "slot": "F09",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F09/submit_20261128T141416994104/006_response.bin",
+    "sha256": "34b6e263a644652e4f001eb16b1285cdd3bce034527069240924eb49c9c2eaf1"
+  },
+  {
+    "slot": "F09",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F09/poll_20261128T141746519336/safe_summary.json",
+    "sha256": "535cbcfc971df7e96f2e20dd27fa2b7efe7cb987d21e38bb881f002b87fa87da"
+  },
+  {
+    "slot": "F09",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F09/poll_20261128T141746519336/sdk_return.json",
+    "sha256": "1f71c6f93405bdb05cd47c2ae79b48cee3e28c2332bec08eeb576458bac059d7"
+  },
+  {
+    "slot": "F10",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F10/events.jsonl",
+    "sha256": "0593f5e791058d8e98511d369cd6219acf23ed453ab4dd51e3987439b047a679"
+  },
+  {
+    "slot": "F10",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F10/submit_20261128T141420188055/006_response.bin",
+    "sha256": "64c4f67cc022034f36ba190aa9f2a5de499822ce28efeb5a2534f5204e0bac26"
+  },
+  {
+    "slot": "F10",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F10/poll_20261128T141837576414/safe_summary.json",
+    "sha256": "05642ae13040e22ff0a00df2204659a12b88ac12c201f34521e4704f94178781"
+  },
+  {
+    "slot": "F10",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F10/poll_20261128T141837576414/sdk_return.json",
+    "sha256": "ff096431c32f5670edca18b2fae79a53f85bbb98dec2b78fc8e7c95baf34c158"
+  },
+  {
+    "slot": "F11",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F11/events.jsonl",
+    "sha256": "b0e26a2dba6c21b44935d8aff545835b26ff31e34e8b410c7eae944983c1e7ae"
+  },
+  {
+    "slot": "F11",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F11/submit_20261128T141422867435/006_response.bin",
+    "sha256": "a74b033746995a5b0e3f2cd8bf593b5d835a0cb7b5adcc1e92aafbfe1b6a4383"
+  },
+  {
+    "slot": "F11",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F11/poll_20261128T142134243006/safe_summary.json",
+    "sha256": "b0c90b49125a69d534190f4f66b4a52ec9801ed769bf386d8fe5cc097c32e74c"
+  },
+  {
+    "slot": "F11",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F11/poll_20261128T142134243006/sdk_return.json",
+    "sha256": "1e0d067f40e1848188bca40a4204c054d874af6883d93e8202be20ba0eb33b40"
+  },
+  {
+    "slot": "F12",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F12/events.jsonl",
+    "sha256": "b1347506e8bb802cedc73bd41f528fb426d19680a7d262cb9da48010fe6b9e5e"
+  },
+  {
+    "slot": "F12",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F12/submit_20261128T141425552248/006_response.bin",
+    "sha256": "af7f72a6af489a17a73be4aeaf487dd8818de82038b2668073ff1c401d1c6d18"
+  },
+  {
+    "slot": "F12",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F12/poll_20261128T142012987931/safe_summary.json",
+    "sha256": "34c3d3ee6160edf27fd65beb229cc16be5161e0c18c404f0d11b2a6ee8d32e90"
+  },
+  {
+    "slot": "F12",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F12/poll_20261128T142012987931/sdk_return.json",
+    "sha256": "bf41fcd193312c24c38aa58bff360a54f89d922eb7e51d9e78efb58bdc1ed344"
+  },
+  {
+    "slot": "F13",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F13/events.jsonl",
+    "sha256": "46a7277fc4414bf9bf21713129c10ff8e9373bab31478d326ef2aaa7fdb0a358"
+  },
+  {
+    "slot": "F13",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F13/submit_20261128T141428140997/006_response.bin",
+    "sha256": "a5ff027ad6ede64499dd7f3852494bcc2aff44d973784b35a4cb2536e9f8d681"
+  },
+  {
+    "slot": "F13",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F13/poll_20261128T141929571796/safe_summary.json",
+    "sha256": "bec18bf084f0b639693e86754aeb2589b8f194681d1a6f5ece65510d225f0e4f"
+  },
+  {
+    "slot": "F13",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F13/poll_20261128T141929571796/sdk_return.json",
+    "sha256": "35ff22213fa1c1c808aa4c40543389b1531eff67466e32fb35b606000864a7e1"
+  },
+  {
+    "slot": "F14",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F14/events.jsonl",
+    "sha256": "93d8a286a226d848b364959d25a6796b4b976a1aa9674b4fe47f33f46391392a"
+  },
+  {
+    "slot": "F14",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F14/submit_20261128T141430851352/006_response.bin",
+    "sha256": "d0e025cd1346314dc70a12ee222bd8cb2a6deab75731757d6f1289864a479ac6"
+  },
+  {
+    "slot": "F14",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F14/poll_20261128T142055879884/safe_summary.json",
+    "sha256": "340469a879619e5003c59f0b21d65b036f02e597c0a56b49b4a8f47e212bf84b"
+  },
+  {
+    "slot": "F14",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F14/poll_20261128T142055879884/sdk_return.json",
+    "sha256": "ff849dcd4c70be2683d0f7eb7efddbe649d88f870deb3caf64a8fcaeb6011f6f"
+  },
+  {
+    "slot": "F15",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F15/events.jsonl",
+    "sha256": "90d3ba1d960c8ce6730587a261262bc20044fa79200cd241cc5724fe1981b1c6"
+  },
+  {
+    "slot": "F15",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F15/submit_20261128T141433607752/006_response.bin",
+    "sha256": "4074666e374f3ded11379b119d5c23cbbdc8473c560a837e3b1c0497475069b7"
+  },
+  {
+    "slot": "F15",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F15/poll_20261128T142418052900/safe_summary.json",
+    "sha256": "c374f331398564da770e40a27d8b72e55a50318642e7592cb0f2b35d2ac1c8ca"
+  },
+  {
+    "slot": "F15",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F15/poll_20261128T142418052900/sdk_return.json",
+    "sha256": "f821952c818ffce17182ab8d5ee7fb777fddb3600004475ce331731ae67dc6c2"
+  },
+  {
+    "slot": "F16",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F16/events.jsonl",
+    "sha256": "4c59a86191e75d11ccc86915f1d2f726946a34264fe35eee0490a2be5e20082a"
+  },
+  {
+    "slot": "F16",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F16/submit_20261128T141436206556/006_response.bin",
+    "sha256": "cacaec3690f464685514285b006227464f3a14e14839825881ce47f4060ed04c"
+  },
+  {
+    "slot": "F16",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F16/poll_20261128T141845035866/safe_summary.json",
+    "sha256": "9e2b512b038cc7362560cfb034bef507c73c7b22e59cf828a068fc89451cf102"
+  },
+  {
+    "slot": "F16",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F16/poll_20261128T141845035866/sdk_return.json",
+    "sha256": "b66d80a17d6ba7a882eec4a9ee57a4f1c6c1393788dd69741538cfaa196de434"
+  },
+  {
+    "slot": "F17",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F17/events.jsonl",
+    "sha256": "884e4ea5f8715464af467883b4397a54551b7c73439c919af60eebc9833ceac8"
+  },
+  {
+    "slot": "F17",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F17/submit_20261128T141438903875/006_response.bin",
+    "sha256": "a7e577c1c1294ccc6d97b812fa30e85df505826040bccf9da3b1d23975e020f3"
+  },
+  {
+    "slot": "F17",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F17/poll_20261128T142137449309/safe_summary.json",
+    "sha256": "cc944c502968a323354ce4b6fb3bf6fda56e1a932ed9d741161d7907a60b941f"
+  },
+  {
+    "slot": "F17",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F17/poll_20261128T142137449309/sdk_return.json",
+    "sha256": "aefe9fb115646325acc6ce90accc9689343731a9b60351e4c3a30ed95cdc82a8"
+  },
+  {
+    "slot": "F18",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F18/events.jsonl",
+    "sha256": "1f221fc28518cd4d37fb1eb4511fc7cafaff002a25658c7f568189e196f9e284"
+  },
+  {
+    "slot": "F18",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F18/submit_20261128T141441330129/006_response.bin",
+    "sha256": "89912da47a1b2d874902b2d3c25ba119117f5fb8d201cfb83bb85ad5fd02c774"
+  },
+  {
+    "slot": "F18",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F18/poll_20261128T142059682405/safe_summary.json",
+    "sha256": "e25fa635a90983d215ecd3d0df9586ab867689d06f1563a4a519a580b5bcb3c3"
+  },
+  {
+    "slot": "F18",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F18/poll_20261128T142059682405/sdk_return.json",
+    "sha256": "000fed426bde3540446dcd3731c71d591fd1ac0a5935f9fad875c6d9b93795d1"
+  },
+  {
+    "slot": "F19",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F19/events.jsonl",
+    "sha256": "3a56cb91e74d1e13f51df1e56e2a5bd73f739dc6441eb5d123a454993ae96252"
+  },
+  {
+    "slot": "F19",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F19/submit_20261128T141443845006/006_response.bin",
+    "sha256": "5c571dd45ecb18fdaba0ce08e08a6684d6abb0dbc8eb7f109958d169498e5e2c"
+  },
+  {
+    "slot": "F19",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F19/poll_20261128T141936443412/safe_summary.json",
+    "sha256": "054cce1edb3d2ce5ac04efd71a956d04ae2b3c5787fe83069d50b1da2bf0a993"
+  },
+  {
+    "slot": "F19",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F19/poll_20261128T141936443412/sdk_return.json",
+    "sha256": "2a2a4ab52cfee5e0a5cd06c39c714b062fea4933f058209aa5e0af52aa338de5"
+  },
+  {
+    "slot": "F20",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F20/events.jsonl",
+    "sha256": "b1599fb42ce4f4dbc593524c22a7c1b80bbf9d4907411551294f39a99096f44d"
+  },
+  {
+    "slot": "F20",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F20/submit_20261128T141446540870/006_response.bin",
+    "sha256": "fd8b4dd06b2e686d4a31d8acaa4dff226b83e91a469c555e0490a0e90792ef30"
+  },
+  {
+    "slot": "F20",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F20/poll_20261128T142101451483/safe_summary.json",
+    "sha256": "9554044aa899d9b7572acde920fd52878465eaecdc9855fa3fe4646cbeab798c"
+  },
+  {
+    "slot": "F20",
+    "source_path": "artifacts/p2_cim_go_20261128/live/F20/poll_20261128T142101451483/sdk_return.json",
+    "sha256": "ff71d35a2108a47e47cfd0dc2145018ddbff2946616fef84ed75aedafb9495e1"
+  }
+]

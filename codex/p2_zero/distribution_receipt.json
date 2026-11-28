@@ -1,0 +1,15 @@
+{
+  "source_commit": "95458e181c5223e069a24e2acd8b324504852d2c",
+  "shared_bundle": "P2_evidence_20261128.bundle",
+  "sha256": "f22751797c0144af24a65d80d541cddb439d91bc568f847ab1c14a6fa6bc768b",
+  "evidence_commit": "62903a36f10c55a2c340f52cc04ce36d2105737c",
+  "branch": "p2-evidence",
+  "shared_clone_verified": true,
+  "project_clone_verified": true,
+  "verify_output": [
+    "PASS | 529 candidates | 40 chains | 490 spins | G1/G2 CERTIFIED | E0=-58722 | illegal +340 | strict failure +196",
+    "PASS | pilots 5/5 | formal 20/20 | 25 distinct IDs | 250 terminal vectors | energy-selected & best-set strict regret 0"
+  ],
+  "tracked_files": 36,
+  "scope": "fresh local replay of D-drive distribution; third-party access or independent execution not asserted"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "fault": "missing",
+    "checker": "AssertionError",
+    "offline": "ValueError"
+  },
+  {
+    "fault": "duplicate_equal_q",
+    "checker": "AssertionError",
+    "offline": "ValueError"
+  },
+  {
+    "fault": "out_of_range",
+    "checker": "AssertionError",
+    "offline": "ValueError"
+  },
+  {
+    "fault": "wrong_reference",
+    "checker": "AssertionError",
+    "offline": "ValueError"
+  },
+  {
+    "fault": "authentic_permuted_dictionary",
+    "checker": "PASS",
+    "offline": "PASS"
+  },
+  {
+    "fault": "one_payload_byte",
+    "checker": "N/A",
+    "offline": "ValueError"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "protected_counts": {
+    "codex/p2_dual_rescue/registration.json": 4727,
+    "codex/p2_research_receipt/receipt.json": 543,
+    "codex/p2_cim_service/final_seal.json": 150
+  },
+  "certificates_match_corrected_archive": {
+    "h05": 4,
+    "final": 23
+  },
+  "crosschecks": {
+    "tasks": 25,
+    "vectors": 250,
+    "chain_choices": 10000,
+    "sa_slots": 5200,
+    "registered_fresh_slots": 4200,
+    "budget_curve_rows": 49,
+    "manifest_files": 17
+  },
+  "portable_sa_replay": "PASS | 5200 local SA slots (4200 fresh + 1000 historical) | sealed matrices, energies, strict/partial, original regrets and failures"
+}
