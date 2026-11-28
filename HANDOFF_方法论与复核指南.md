@@ -1,5 +1,22 @@
 # 方法论与复核指南（Devin 侦察兵工作的完整自白书 · 供 Codex 批判性复核）
 
+## 最新：CIM GO v3接口更正，P01单发提交前（2026-11-28）
+
+本节覆盖下方“未获真机授权/锁死SPQC1000”等历史边界。用户已明确GO，后解除SPQC1000锁定；仅盲池40-real单矩阵，07/zero不上真机。主Codex独立执行，无子智能体。仍禁止新拟合、论文和P3。
+
+1. **账户事实纠正。** Sampling Credits=0；用户在本轮13:41附近报告“now：550有36个额度、1000有2个额度，都是优化额度”。准确接收记录在 `codex/p2_cim_go/quota_before_P01.json`。尚未提交真实任务，不能宣称已经扣费或余额验证完毕；两桶不擅自相加。
+2. **接口复核已完成并先向用户报告。** SDK1.4.4共用CIMOptimizer/solve，由task_mode区分；optimization是原QUOTA模式。客户端接受并发送sample_number=100，但官方只规定sampling固定次数；optimization动态追加计算、能量排序/聚类，返回数系统决定。不能保证100原始样本。准确出处为SDK印刷页44–47、49–51（物理页+3）及入库云服务指南第92–132行。
+3. **v3事实更正。** `codex/P2_CIM_GO_PROTOCOL_20261128_v3.md` 与 `codex/P2_CIM_INTERFACE_AUDIT_v3.md`。旧协议原字节留 `codex/p2_cim_go/history/protocol_before_v3.md`。矩阵、代理、解码、阈值均未改；P01单发先核实实际接口与扣费。若不满足100原始样本合同，保留完整通道证据、原采样主指标NOT_EVALUABLE，暂停扩展，不复制/截取100或偷换分母。
+4. **真机准备。** 只读复制 `short_H05/40_real` 到 `artifacts/p2_cim_go_20261128/input/`，矩阵SHA256 68f4fd29ea22dbbba9187d9f3eec1cb1d89e33c7fc1e5b6116bfd95cf39b9952；整数内容SHA256 f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f。独立checker重新通过G1/G2、490位、max|K|73、非法间隔340、基态原regret0；不是新拟合/采样。
+5. **代码与测试。** 新目录 `03_求解/D/p2_cim_go/`。客户端三模式参数对照/四个合成本地回包测试纯离线；10项合同测试通过，含严格/部分解码、翻转不变、坏自旋/能量、重复样本保重数、计费分支、截止时间、嵌套分母、Git首回执校验、重复create拦截与poll只读。初始缓存目录与Cython dict子类测试错误全部留档，不算真机失败。`kaiwu.__version__=1.0.8`来自community，发行包kaiwu仍1.4.4。
+6. **锚定与调用。** 新回执 `codex/p2_cim_go/receipt.json`，SHA256 ac24074a5ee2b9c3ae1164cd67d94bb258cec94d5050c7ef872653044986a8c2，登记22个输入/代码文件；此次commit之后才可执行P01。入口 `pilot_entry.py check/submit/poll --anchor <首次包含该回执的完整commit>`，拒绝后起回执或任何文件篡改。启用只有P01，任务名 P2_H40_P01_O3_1128_f72fbc9e。首次intent/create_intent排他创建；超时不补提，poll无创建路径。
+7. **配额与统计。** P01后按真实变化桶Q0-Q1算D，沿用25D≤0.8B0/否则15D≤B0/不足5或未覆盖分支停止。缺失、延迟、多个桶不明变化或并发使用不能归因则暂停；不猜私有余额API。预算通过仍须回包合同通过。25/15是总运营数；先导5独立，正式20/10。所有真实结果仅称SDK默认routing的实际执行。
+8. **保护验证。** 旧研究543项封存哈希全匹配；卫生与环境审计0 FAIL。无新SA、拟合、CIM；提交后状态必须另写，不将OFFLINE测试日志“Task submit successfully”冒充实际提交。其他人的图件手册/figures/shared/hardware改动未动。
+9. **下一操作。** Git锚定后P01单发已获用户授权，不需重问；回包第一步检查任务身份与链完整性，立即同步用户和本比赛D盘共享。服务端字段/100原始样本性质/实际扣费均待实测。T_stop仍11/29 18:00，T_snap21:00。论文一字不写。
+
+---
+
+
 ## 2026-11-28 最新方法边界：A–H研究已完成，普遍不可能断言被反例排除
 
 完整事实以主交接置顶与`codex/P2_RESEARCH_REPORT_20261128.md`为准。下面旧“双路径全灭停止”仍为历史事实，但用户随后授权了独立A–H本地研究；该授权不含真机、拟合或论文。

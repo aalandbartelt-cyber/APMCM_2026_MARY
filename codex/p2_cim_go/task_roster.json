@@ -1,0 +1,252 @@
+[
+  {
+    "slot": "P01",
+    "task_name": "P2_H40_P01_O3_1128_f72fbc9e",
+    "stage": "pilot",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": true
+  },
+  {
+    "slot": "P02",
+    "task_name": "P2_H40_P02_O3_1128_f72fbc9e",
+    "stage": "pilot",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "P03",
+    "task_name": "P2_H40_P03_O3_1128_f72fbc9e",
+    "stage": "pilot",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "P04",
+    "task_name": "P2_H40_P04_O3_1128_f72fbc9e",
+    "stage": "pilot",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "P05",
+    "task_name": "P2_H40_P05_O3_1128_f72fbc9e",
+    "stage": "pilot",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F01",
+    "task_name": "P2_H40_F01_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F02",
+    "task_name": "P2_H40_F02_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F03",
+    "task_name": "P2_H40_F03_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F04",
+    "task_name": "P2_H40_F04_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F05",
+    "task_name": "P2_H40_F05_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F06",
+    "task_name": "P2_H40_F06_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F07",
+    "task_name": "P2_H40_F07_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F08",
+    "task_name": "P2_H40_F08_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F09",
+    "task_name": "P2_H40_F09_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F10",
+    "task_name": "P2_H40_F10_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F11",
+    "task_name": "P2_H40_F11_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F12",
+    "task_name": "P2_H40_F12_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F13",
+    "task_name": "P2_H40_F13_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F14",
+    "task_name": "P2_H40_F14_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F15",
+    "task_name": "P2_H40_F15_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F16",
+    "task_name": "P2_H40_F16_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F17",
+    "task_name": "P2_H40_F17_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F18",
+    "task_name": "P2_H40_F18_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F19",
+    "task_name": "P2_H40_F19_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  },
+  {
+    "slot": "F20",
+    "task_name": "P2_H40_F20_O3_1128_f72fbc9e",
+    "stage": "formal",
+    "planned_status": "NOT_STARTED",
+    "mode": "optimization",
+    "sample_number_requested": 100,
+    "raw100_contract": "UNVERIFIED",
+    "enabled_in_current_entry": false
+  }
+]

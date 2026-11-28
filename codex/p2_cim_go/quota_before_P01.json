@@ -1,0 +1,14 @@
+{
+  "observed_at_recorded": "2026-11-28T13:43:33.153078+08:00",
+  "user_time_description": "now",
+  "source": "User directly reported current balances in active conversation",
+  "sampling_credits": 0,
+  "optimization_quotas": {
+    "SPQC550": 36,
+    "SPQC1000": 2
+  },
+  "units": "optimization task credits; observed deduction to be checked with P01",
+  "interchangeability_verified": false,
+  "hardware_routing": "SDK default; no proactive machine-route query",
+  "account_activity_confounding": "not yet verified; do not infer net deduction if concurrent use"
+}
