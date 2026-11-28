@@ -1,0 +1,195 @@
+\section{Problem 1: Composition-Based Prediction of the Violation Degree}
+\subsection{Data characteristics and preprocessing}
+We represent a material by $c=(a,b,x)$, where $a,b$ identify the ordered A/B sites and $x$ identifies a three-atom X group. The supplied grid contains $52\times52\times7=18{,}928$ compositions. Site order and cases with $a=b$ are retained.
+
+The five physical departures define the prediction target:
+\begin{samepage}
+\begin{equation}
+ V(c)=\sum_{j=1}^{5}\left[\frac{\max\{0,d_j(c)\}}{s}\right]^2,
+ \qquad s=0.5\ \mathrm{eV}.
+ \label{eq:violation}
+\end{equation}
+\noindent Here $d_j$ is a signed departure from a target condition. In the stated eV convention, these are $E_{\mathrm{form}}-0.21$, $1.4-E_g$, $E_g-3.1$, $5.73-E_{\mathrm{VBM}}$ and $E_{\mathrm{CBM}}-4.50$: formation energy, band gap, valence-band maximum and conduction-band minimum determine the five terms. The scale $s$ makes $V$ dimensionless.
+\end{samepage}
+
+We prepare the data as follows:
+\begin{itemize}
+  \item \textbf{Separate data roles.} File 02 provides 11,256 training records, file 03 provides 3,969 model-selection records, and file 04 provides 3,703 unlabeled compositions. Their ordered A--B pairs are disjoint. Physical labels define targets but never enter predictive descriptors.
+  \item \textbf{Retain metallic records.} The 10,824 zero-gap training records (96.16\%) are valid metals. Genuine zeros in elemental properties are also retained; unavailable properties receive missing-value indicators.
+  \item \textbf{Keep related compositions together.} Each of the 1,608 training A--B pairs has all seven X variants. All seven remain in the same validation fold.
+\end{itemize}
+
+Figure~\ref{fig:audit} summarizes the target distribution, class imbalance and grouped split. No training record has $V=0$. The fixed near-positive event $V\le\varepsilon$, with $\varepsilon=2$, includes 128 records. The inset in panel (a) resolves this small group.
+\paperfigure{F1/F1_data_audit_v3.pdf}{Training-target distribution, physical regimes and A--B blocking}{fig:audit}
+\FloatBarrier
+
+\begin{proposition}[Metallic lower bound]\label{prop:metal}
+For Eq.~\eqref{eq:violation}, $E_g=0$ implies $V\ge7.84$. Hence $V\le2$ implies $E_g>0$.
+\end{proposition}
+\begin{p1proof}
+For any $E_g\le0$, the lower-band-gap penalty is at least $(1.4/0.5)^2=7.84$. Every other term is nonnegative, so $V\ge7.84>2$.
+\end{p1proof}
+
+The metallic lower bound supports fitting separate regressions for metals and nonmetals. The condition $V=0$ includes boundary values, so it is weaker than satisfying every strict physical inequality in the problem statement.
+
+\subsection{Composition descriptors and model formulation}
+\subsubsection{Site-specific composition descriptors}
+The descriptor vector $\boldsymbol\phi(c)$ contains 336 composition-based entries derived from elemental properties~\cite{ward2016}. They describe the following aspects of a material (Appendix Table~\ref{tab:descriptors}):
+\begin{itemize}
+  \item \textbf{A/B site information:} separate atomic, electronic and radius descriptors, with signed and absolute site contrasts. The electronic block includes valence/unfilled $s,p,d,f$ counts, Pettifor number, Martynov--Batsanov electronegativity and Zunger $r_s+r_p$.
+  \item \textbf{X-group information:} O/N/F/S counts, family indicators, formal charge, weighted elemental statistics and A--X/B--X contrasts. For example, $\mathrm{NO_2}$ retains one nitrogen and two oxygen atoms.
+  \item \textbf{Geometric information:} summaries over charge-balanced oxidation-state assignments, including tolerance, octahedral and $\tau$ factors~\cite{bartel2019}. Strict and approximate radii are distinguished; $\tau$ is a descriptor, not a universal mixed-anion stability filter.
+\end{itemize}
+
+Each potentially unavailable quantity has a missing-value indicator. The tree models handle missing values directly; the basic descriptor baseline uses fitting-fold medians. Strict geometry is available for only 3.97\% of the full grid, compared with 53.56\% under the approximate construction. The indicators distinguish these cases.
+
+\subsubsection{Conditional regression with a soft mixture}
+Let $G=\mathbf{1}\{E_g>0\}$ indicate a nonmetal and $\widehat p(c)$ estimate its probability from composition. The H-soft predictor combines metal and nonmetal conditional regressions:
+\begin{samepage}
+\begin{equation}
+ \begin{aligned}
+ \widehat V(c)&=[1-\widehat p(c)]\widehat\mu_0(c)
+                  +\widehat p(c)\widehat\mu_1(c),\\
+ \widehat\mu_0(c)&=7.84+\max\{0,f_0(\boldsymbol\phi(c))\},\qquad
+ \widehat\mu_1(c)=\max\{0,f_1(\boldsymbol\phi(c))\}.
+ \end{aligned}
+ \label{eq:mixture}
+\end{equation}
+\noindent Here $f_0$ is fitted to $V-7.84$ among metals and $f_1$ to $V$ among nonmetals. Their predictions respect the appropriate lower bounds. The probability $\widehat p$ blends the two without requiring a hard class assignment for an unlabeled composition.
+\end{samepage}
+
+\begin{proposition}[Squared-error justification]\label{prop:mixture}
+If $V$ has a finite conditional second moment, $p(c)=P(G=1\mid c)$ and $\mu_g(c)=E[V\mid c,G=g]$, then $\mu(c)=[1-p(c)]\mu_0(c)+p(c)\mu_1(c)$ minimizes conditional expected squared error.
+\end{proposition}
+\begin{p1proof}
+Conditioning on $G$ gives $E[V\mid c]=(1-p)\mu_0+p\mu_1$. For any prediction $u(c)$,
+\begin{samepage}
+\begin{equation}
+ E[(V-u(c))^2\mid c]
+ =\operatorname{Var}(V\mid c)+[\mu(c)-u(c)]^2.
+ \label{eq:squared-risk}
+\end{equation}
+\noindent Here the variance is independent of $u$. The second term is nonnegative and is minimized at $u(c)=\mu(c)$.
+\end{samepage}
+\end{p1proof}
+
+This result justifies the mixture form when the conditional means and probabilities are known; the fitted model still requires validation.
+
+\subsubsection{A separate screening score}
+For screening, H-soft uses $-\widehat V$, which is not a probability. A separate comparator, S-eps, estimates the near-positive probability through
+\begin{samepage}
+\begin{equation}
+ S_{\varepsilon}(c)=\widehat p(c)\widehat q_{\varepsilon}(c),
+ \qquad q_{\varepsilon}(c)=P(V\le\varepsilon\mid G=1,c).
+ \label{eq:chain}
+\end{equation}
+\noindent Here $\widehat q_{\varepsilon}$ estimates the event probability among nonmetals. Proposition~\ref{prop:metal} makes the chain exact for true probabilities. The estimated product still requires its own calibration check.
+\end{samepage}
+
+\subsection{Model solution and validation protocol}
+Figure~\ref{fig:workflow} summarizes the solution procedure. LightGBM 3.3.5~\cite{ke2017} fits the component models, and SciPy's L-BFGS-B solver fits the logistic calibration map. Appendix Section~\ref{app:descriptors} gives the fitting settings and calibration objective.
+\paperfigure[0.94\linewidth]{F4/F4_model_workflow_v2.pdf}{Model fitting, calibration and assessment}{fig:workflow}
+\FloatBarrier
+
+Five outer A--B folds measure performance. Within each training portion, three folds select routes and two-fold out-of-fold scores calibrate probabilities; fixed-route comparisons omit inner route selection. File 03 selects among fixed candidates without fitting, calibration or early stopping. Table~\ref{tab:protocol} specifies each data role.
+
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Data roles and validation units}\label{tab:protocol}
+\begin{tabularx}{\linewidth}{@{}l r X@{}}
+\toprule
+Data or procedure & Size & Use\\
+\midrule
+Training file 02 & 11,256 & Fit within 1,608 ordered A--B groups.\\
+Outer grouped validation & 5 folds & Hold out complete A--B groups.\\
+Internal selection/calibration & 3 / 2 folds & Use only the current fitting portion.\\
+Development file 03 & 3,969 & Select models; no fitting or calibration.\\
+Unlabeled file 04 & 3,703 & Predict; organizers score hidden responses.\\
+\bottomrule
+\end{tabularx}
+\end{threeparttable}
+\end{table}
+\par
+
+The comparison includes original-scale, log-scale and weighted regressions; near-positive classifiers; two LambdaRank query arrangements; and additive Ridge, mean and random baselines. Appendix Table~\ref{tab:routes} specifies them. Numerical prediction and screening are assessed separately:
+\begin{samepage}
+\begin{equation}
+ \mathrm{RMSE}=\sqrt{C_0+C_1},\qquad
+ C_g=\frac{1}{N}\sum_{i:G_i=g}(\widehat V_i-V_i)^2.
+ \label{eq:error}
+\end{equation}
+\noindent Here $C_0,C_1$ are metal and nonmetal contributions to overall MSE; both use the full evaluation count $N$. RMSE pools all outer-fold residuals. These contributions differ from within-class mean errors.
+\end{samepage}
+\begin{samepage}
+\begin{equation}
+ \mathrm{EF}_{V\le2}@k=\frac{h_k/k}{M/N},\qquad M>0.
+ \label{eq:ef}
+\end{equation}
+\noindent Here $M$ is the pool's near-positive count and $h_k$ the hits among its first $k$ candidates. The primary budget is $k=20$ in each outer fold. EF averages the five folds equally; aggregate hits therefore have budget 100. EF is undefined when $M=0$.
+\end{samepage}
+
+We also check ranking quality, paired uncertainty and enrichment against random sampling:
+\begin{itemize}
+  \item \textbf{Ranking quality:} normalized discounted cumulative gain (NDCG) uses utility $\exp(-V/2)$ and logarithmic rank discounts. Regret compares the best selected true $V$ with the pool minimum.
+  \item \textbf{Paired uncertainty:} 5,000 A--B resamples within the fixed outer folds compare the same fitted predictions. The resulting intervals are conditional on those predictions and model selection.
+  \item \textbf{Enrichment reference:} a hypergeometric tail compares hits with uniform sampling, with Holm correction within each comparison family (Appendix Section~\ref{app:validation}). File 03 remains development evidence.
+\end{itemize}
+\FloatBarrier
+
+\subsection{Results and model checks}
+\subsubsection{Numerical error and near-positive enrichment}
+H-soft has the lowest RMSE among the regressors, while B-eps has the highest enrichment point estimate (Table~\ref{tab:mainresults}). Appendix Table~\ref{tab:nested} reports performance when model selection is repeated within each outer training partition.
+\input{tables/main_results}
+\FloatBarrier
+
+\textbf{Screening performance.} At $k=20$ per fold, H-soft recovers 68 near-positive cases across five folds, compared with 10 for Ridge. Figure~\ref{fig:enrichment}(a) sums hits across the folds; panel (b) averages their EF values. The lower strip expands the low-EF range. The EF=1 reference is the expected value under random sampling; the random curve shows one fixed realization.
+\paperfigure{F2/F2_enrichment_v3.pdf}{Near-positive enrichment under A--B grouped validation}{fig:enrichment}
+\FloatBarrier
+
+\textbf{Numerical error and trade-off.} Metals contribute 18.2920 to H-soft's overall MSE and nonmetals contribute 2.8781 (Figure~\ref{fig:tradeoff}). Nonmetals have larger errors per record but a smaller total contribution because they are rare. The RMSE--EF panel shows the trade-off between prediction accuracy and screening.
+\paperfigure{F3/F3_error_tradeoff_v2.pdf}{Class contributions to error and the regression--screening trade-off}{fig:tradeoff}
+\FloatBarrier
+
+\begin{samepage}
+The paired comparison with R-log supports two distinct conclusions (Appendix Table~\ref{tab:paired}):
+\begin{itemize}
+  \item \textbf{Lower numerical error:} RMSE difference $-0.3037$, with 95\% interval from $-0.4133$ to $-0.1943$.
+  \item \textbf{Uncertain screening gain:} EF difference $+1.6160$, with interval from $-5.9951$ to $11.2022$, which includes zero.
+\end{itemize}
+\end{samepage}
+
+\subsubsection{Development-set selection}
+H-soft and B-eps each recover 13 of 41 near-positive cases within 20 selections (Table~\ref{tab:development}). H-soft wins the EF tie on NDCG and has RMSE 4.5783. The adjusted uniform-sampling tail probability for either list is $2.73\times10^{-22}$. These results concern $V\le2$ in the development set; the hidden test labels do not permit an assessment of $V=0$ recovery.
+\input{tables/development_results}
+
+\subsubsection{Residual, calibration and robustness checks}
+The aggregate scores conceal several sources of error:
+\begin{itemize}
+  \item \textbf{Residual structure.} $\mathrm{N_3}$ has the largest RMSE (6.6515) and absolute-error 95th percentile (13.8694); signed bias and spread are separated in Figure~\ref{fig:residuals}.
+  \item \textbf{Probability scale.} The S-eps product has diagnostic slope 1.7617 despite component calibration. Reliability curves and coefficients appear in Figure~\ref{fig:calibration} and Table~\ref{tab:calibration}.
+  \item \textbf{Descriptor dependence.} Removing geometry raises H-soft RMSE by 0.1396, with interval $[0.0685,0.2113]$. Electronic and X-statistical removals have intervals crossing zero (Figure~\ref{fig:ablation}; Tables~\ref{tab:features}--\ref{tab:paired}).
+  \item \textbf{Transfer and stability.} Element, target-region and X-family exclusions test R-log/S-eps, not final H-soft (Figure~\ref{fig:stress}; Table~\ref{tab:stress}). Two further A--B partitions give H-soft RMSE 4.6088; query-assignment sensitivity is reported in Table~\ref{tab:query}.
+\end{itemize}
+\FloatBarrier
+
+\subsection{Prediction uncertainty and output}
+For each test composition, the prediction output includes:
+\begin{itemize}
+  \item \textbf{Prediction table:} one original-scale $\widehat V$ and screening score $-\widehat V$ for every unlabeled test composition, retaining its ordered sites and identifier.
+  \item \textbf{Model spread:} standard deviations and 5th/95th percentiles across 20 A--B bootstrap fits with fixed calibration. These describe fitted-model variation, not guaranteed coverage of true $V$.
+  \item \textbf{Selection interface:} complete composition tables and separate allowed-candidate masks. The objective values and member tables support later optimization and sensitivity checks; excluded cells are not assigned zero cost.
+\end{itemize}
+
+The nominal test-pool minimizer remains first in only 4 of 20 member tables; mean Top-20 overlap is 11.95. Figure~\ref{fig:stability} relates such rank changes to their costs in four official pools. Figure~\ref{fig:splithalf} and Table~\ref{tab:stability} show that averaging improves shortlist agreement, although minimum-identity agreement remains only 19.2\% and 17.4\% in pools 11 and 12.
+
+These checks measure variation among prediction tables. All reported P1 predictions are fitted on file 02; fitting on 02+03 is reserved for the later optimization problems.
+
+\subsection{Direct answer to Problem 1}
+\begin{itemize}
+  \item We select \textbf{H-soft, a LightGBM mixture regression model}, using 336 composition descriptors.
+  \item RMSE is \textbf{4.6011} in five-fold A--B validation and \textbf{4.5783} on development file 03.
+  \item The development Top-20 list contains \textbf{13 materials with $V\le2$}: EF@20 is 62.9232. Mean grouped-validation EF@20 is 62.1024.
+  \item We provide $\widehat V$ for \textbf{all 3,703 test compositions} in file 04. Zero-violation recovery and experimental feasibility remain unverified.
+\end{itemize}

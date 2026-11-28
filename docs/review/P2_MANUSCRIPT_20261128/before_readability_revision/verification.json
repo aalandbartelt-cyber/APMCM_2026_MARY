@@ -1,0 +1,131 @@
+{
+  "pdf_sha256": "c8260d4d33b5c5b5423d4fab000e0bdd862344606d7896fafd46b957ba18e6ac",
+  "pages": 37,
+  "body_pdf_page": 4,
+  "p2_main_pdf_pages": [
+    13,
+    19
+  ],
+  "bookmarks": 50,
+  "toc_links": 100,
+  "internal_links": 190,
+  "fonts_audit_baseline": "Native minimum from signed-off plates times XeTeX PDF placement scale",
+  "figures": [
+    {
+      "id": "P2-F1",
+      "figure": "5",
+      "pdf_page": 14,
+      "logical_page": 11,
+      "local_callout_pdf_page": 13,
+      "scaled_min_pt": 7.32
+    },
+    {
+      "id": "P2-A1",
+      "figure": "6",
+      "pdf_page": 14,
+      "logical_page": 11,
+      "local_callout_pdf_page": 14,
+      "scaled_min_pt": 7.32
+    },
+    {
+      "id": "P2-F2",
+      "figure": "7",
+      "pdf_page": 16,
+      "logical_page": 13,
+      "local_callout_pdf_page": 16,
+      "scaled_min_pt": 7.407
+    },
+    {
+      "id": "P2-F3",
+      "figure": "8",
+      "pdf_page": 18,
+      "logical_page": 15,
+      "local_callout_pdf_page": 17,
+      "scaled_min_pt": 7.32
+    },
+    {
+      "id": "P2-F5",
+      "figure": "9",
+      "pdf_page": 19,
+      "logical_page": 16,
+      "local_callout_pdf_page": 18,
+      "scaled_min_pt": 7.32
+    },
+    {
+      "id": "P2-A2",
+      "figure": "B.7",
+      "pdf_page": 31,
+      "logical_page": 28,
+      "local_callout_pdf_page": 31,
+      "scaled_min_pt": 8.187
+    },
+    {
+      "id": "P2-A3",
+      "figure": "B.9",
+      "pdf_page": 33,
+      "logical_page": 30,
+      "local_callout_pdf_page": 32,
+      "scaled_min_pt": 7.876
+    },
+    {
+      "id": "P2-A4",
+      "figure": "B.10",
+      "pdf_page": 33,
+      "logical_page": 30,
+      "local_callout_pdf_page": 33,
+      "scaled_min_pt": 7.635
+    },
+    {
+      "id": "P2-A5",
+      "figure": "B.11",
+      "pdf_page": 34,
+      "logical_page": 31,
+      "local_callout_pdf_page": 33,
+      "scaled_min_pt": 7.588
+    },
+    {
+      "id": "P2-A6",
+      "figure": "B.12",
+      "pdf_page": 34,
+      "logical_page": 31,
+      "local_callout_pdf_page": 34,
+      "scaled_min_pt": 7.496
+    },
+    {
+      "id": "P2-A7",
+      "figure": "B.8",
+      "pdf_page": 32,
+      "logical_page": 29,
+      "local_callout_pdf_page": 32,
+      "scaled_min_pt": 7.32
+    },
+    {
+      "id": "P2-A8",
+      "figure": "B.13",
+      "pdf_page": 35,
+      "logical_page": 32,
+      "local_callout_pdf_page": 35,
+      "scaled_min_pt": 7.588
+    },
+    {
+      "id": "P2-F4",
+      "figure": "B.14",
+      "pdf_page": 36,
+      "logical_page": 33,
+      "local_callout_pdf_page": 35,
+      "scaled_min_pt": 7.407
+    },
+    {
+      "id": "P2-A12",
+      "figure": "B.15",
+      "pdf_page": 36,
+      "logical_page": 33,
+      "local_callout_pdf_page": 36,
+      "scaled_min_pt": 7.407
+    }
+  ],
+  "offline_certificate": [
+    "PASS | 529 candidates | 40 chains | 490 spins | G1/G2 CERTIFIED | E0=-58722 | illegal +340 | strict failure +196",
+    "PASS | pilots 5/5 | formal 20/20 | 25 distinct IDs | 250 terminal vectors | energy-selected & best-set strict regret 0"
+  ]
+}

@@ -1,0 +1,97 @@
+% !TeX program = xelatex
+% Official class and configuration are unchanged.
+\documentclass{apmcmthesis}
+\usepackage{url}
+\usepackage{placeins}
+\usepackage{threeparttable}
+\usepackage{float}
+\usepackage[hidelinks,linktoc=all,bookmarksnumbered=true,pageanchor=false]{hyperref}
+\hypersetup{pdfauthor={},pdftitle={},pdfsubject={},pdfkeywords={}}
+\pdfstringdefDisableCommands{\def\thinspace{}}
+% Keep navigation targets on the heading line with the current LaTeX kernel.
+% The official titlesec font, spacing and numbering definitions are untouched.
+\makeatletter
+\renewcommand*{\ttl@Hy@refstepcounter}[1]{%
+  \LinkTargetOff\refstepcounter{#1}\LinkTargetOn
+  \hyper@makecurrent{#1}%
+  \edef\ttl@Hy@saveanchor{%
+    \noexpand\AddToHookNext{para/begin}{%
+      \noexpand\MakeLinkTarget*{\@currentHref}}}%
+}
+\makeatother
+\tihao{D}
+\baominghao{apmcm26301618}
+% User-confirmed header text; original positions and font sizes are retained.
+\renewcommand{\team}{Team Dapmcm26301618}
+\fancypagestyle{mainmatterstyle}{%
+  \fancyhf{}%
+  \lhead{\small \team}%
+  \rhead{\small Page \thepage\ of 25}%
+}
+\newtheorem{proposition}{Proposition}
+\newenvironment{p1proof}{\par\noindent\textbf{Proof.}\ }{\hfill\(\square\)\par}
+\newcommand{\figroot}{../../../../figures}
+\newcommand{\paperfigure}[4][\linewidth]{%
+  \par
+  \begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=#1]{\figroot/#2}
+    \caption{#3}\label{#4}
+  \end{figure}\par%
+}
+\begin{document}
+\pagestyle{frontmatterstyle}
+\begin{abstract}
+\mbox{}
+% Summary and keywords will be supplied at whole-paper integration.
+\end{abstract}
+\newpage
+\tableofcontents
+\newpage
+\pagestyle{mainmatterstyle}
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\input{sections/frontmatter}
+\input{sections/problem1}
+\FloatBarrier
+\section{Problem 2: Single-Point Selection}
+\input{sections/problem2}
+\FloatBarrier
+\section{Problem 3: Joint Selection of A, B and X}
+% Content intentionally deferred.
+\section{Model Evaluation}
+% Strengths, Weaknesses and Model promotion are deferred.
+\section{Conclusion}
+% Whole-paper conclusion is deferred.
+\input{sections/references}
+% AI disclosure and its bibliography entries are deferred, not waived.
+\clearpage
+\section*{\phantomsection Appendix A Supporting Materials}
+\addcontentsline{toc}{section}{Appendix A Supporting Materials}
+\setcounter{table}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\renewcommand{\theHtable}{A.\arabic{table}}
+\begin{table}[!ht]
+  \centering
+  \caption{Supporting-material file list}
+  \begin{tabularx}{\linewidth}{@{}l l X@{}}
+    \toprule
+    Directory or file & Format & Contents\\
+    \midrule
+    \multicolumn{3}{@{}l@{}}{\rule{0pt}{2.4ex}}\\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+\FloatBarrier
+\input{sections/appendix_b}
+\input{sections/appendix_b_p2}
+\FloatBarrier
+\section*{\phantomsection Appendix C Core Source Code}
+\addcontentsline{toc}{section}{Appendix C Core Source Code}
+\setcounter{subsection}{0}
+\renewcommand{\thesubsection}{C.\arabic{subsection}}
+\renewcommand{\theHsubsection}{C.\arabic{subsection}}
+\subsection{Problem 1}
+\subsection{Problem 2}
+\subsection{Problem 3}
+\end{document}

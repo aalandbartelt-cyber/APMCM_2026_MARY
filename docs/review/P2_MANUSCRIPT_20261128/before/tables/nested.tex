@@ -1,0 +1,19 @@
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Performance of nested model-selection procedures}\label{tab:nested}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Procedure & RMSE & Mean EF@20 & Hits/100\\
+\midrule
+Numerical selection & 4.6011 & 62.1024 & 68\\
+Screening selection & -- & 59.4536 & 67\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\item[] Model selection uses only the inner training folds. Numerical selection chooses H-soft in every outer fold.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\par

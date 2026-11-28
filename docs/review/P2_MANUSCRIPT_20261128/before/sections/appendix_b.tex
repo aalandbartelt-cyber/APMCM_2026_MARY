@@ -1,0 +1,160 @@
+\section*{\phantomsection Appendix B Supplementary Tables and Figures}
+\addcontentsline{toc}{section}{Appendix B Supplementary Tables and Figures}
+\setcounter{subsection}{0}
+\renewcommand{\thesubsection}{B.\arabic{subsection}}
+\renewcommand{\theHsubsection}{B.\arabic{subsection}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{B.\arabic{figure}}
+\renewcommand{\theHfigure}{B.\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{B.\arabic{table}}
+\renewcommand{\theHtable}{B.\arabic{table}}
+
+\subsection{Descriptor construction and comparison objectives}\label{app:descriptors}
+The descriptors in Table~\ref{tab:descriptors} use elemental properties from Mendeleev 1.3.0, Magpie 0.9.3 and tabulated Zunger radii, with each source's conventions retained. Material-level physical responses define the target and class labels and are excluded from the inputs. Genuine zeros are retained; unavailable entries have missing-value indicators.
+\par
+\begin{table}[H]
+\centering
+\caption{Composition-derived information used by the surrogate}\label{tab:descriptors}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+Block & Construction and interpretation\\
+\midrule
+A and B sites & Separate elemental descriptors; signed and absolute A--B property differences. Site order is retained.\\
+X composition & O/N/F/S counts, seven family indicators and formal group charge. X is a three-atom group.\\
+X statistics & Stoichiometric means, standard deviations, minima and maxima; A--X and B--X contrasts.\\
+Electronic information & Valence/unfilled $s,p,d,f$ counts, Pettifor number, Martynov--Batsanov electronegativity and Zunger $r_s+r_p$.\\
+Geometry & Charge-pair counts, radii, tolerance and octahedral factors, and $\tau$ statistics over admissible assignments. Strict and approximate quantities remain distinct.\\
+Missingness & Indicators accompany quantities throughout. Tree fitting handles unavailable entries; baseline median imputation uses fitting data only.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\par
+
+The geometric descriptors use the following radius and charge rules:
+\begin{itemize}
+  \item \textbf{Charge balance:} enumerate positive A/B charges balancing O$^{2-}$, N$^{3-}$, F$^{-}$ and S$^{2-}$ in X.
+  \item \textbf{Effective X radius:} take the stoichiometric mean of O/N/F/S radii 1.40/1.46/1.33/1.84~\AA.
+  \item \textbf{Coordination:} require A-XII and B-VI for strict values. The approximation permits A-VIII or A-VI when XII is unavailable. N-containing groups have approximate, flagged values only.
+\end{itemize}
+The geometric measures over admissible assignments are
+\begin{samepage}
+\begin{equation}
+ t=\frac{r_A+r_X}{\sqrt{2}(r_B+r_X)},\qquad
+ \mu=\frac{r_B}{r_X},\qquad
+ \tau=\frac{r_X}{r_B}-q_A\left(q_A-\frac{r_A/r_B}{\ln(r_A/r_B)}\right).
+ \label{eq:geometry}
+\end{equation}
+\noindent Here $t$ is the tolerance factor, $\mu$ the octahedral radius ratio and $\tau$ the alternative tolerance descriptor. The assigned radii are $r_A,r_B,r_X$, and $q_A$ is the positive formal A-site charge. The $\tau$ expression requires $r_A/r_B>1+10^{-6}$. Summaries over assignments do not establish a unique valence state or mixed-anion stability.
+\end{samepage}
+
+Table~\ref{tab:routes} lists the regression and screening objectives. All routes share the outer grouped folds, and each probability or ranking model is calibrated using its fitting data only. The single-query ranker uses LightGBM 3.3.5 with sufficient query capacity for the entire fitting pool.
+\par
+\begin{table}[H]
+\centering
+\caption{Compared objectives and prediction scales}\label{tab:routes}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+Method & Objective and output\\
+\midrule
+R-raw & Squared loss on $V$; negative predictions clipped to zero.\\
+R-log & Squared loss on $\log(1+V)$; exponentiate, subtract one and clip at zero. This transformation need not estimate the original-scale conditional mean.\\
+W-log & Weighted R-log. Log-target bins have width 0.2; density is smoothed over five bins with a Gaussian kernel. Inverse-square-root density weights are capped at 10 before mean normalization.\\
+H-soft & Binary nonmetal probability and two conditional squared-loss regressions; Eq.~\eqref{eq:mixture} returns original-scale $\widehat V$.\\
+S-eps & Product of nonmetal and conditional near-positive probabilities, Eq.~\eqref{eq:chain}.\\
+B-eps & Binary loss for $V\le2$ with inverse class-frequency weights, followed by probability calibration.\\
+L-single / L-hash4 & LambdaRank with binary relevance $\mathbf{1}\{V\le2\}$, gains 0/1 and truncation level 23; one query or four A--B hash queries.\\
+Additive Ridge & A/B/X one-hot descriptors and Ridge penalty 1; no interaction terms.\\
+Mean / random & Training-fold mean of $V$; or a fixed hash ordering independent of the response.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\par
+LightGBM uses 400 boosting rounds, learning rate 0.03, 15 leaves, minimum leaf size 40 and $L_2$ penalty 1. Nonmetal and conditional-event models use 7 leaves and minimum leaf size 10. Computation uses four CPU threads and fixed seeds. Two internal A--B folds provide out-of-fold calibration scores: an observation never trains the raw predictor that supplies its calibration score.
+
+Probability calibration uses a logistic map $\sigma(a+bz)$, where $z$ is the raw score normalized by the fitting model's score mean and standard deviation, and $\sigma(t)=(1+e^{-t})^{-1}$. L-BFGS-B minimizes binomial negative log-likelihood plus $b^2/2$, with $a\in[-35,35]$ and $b\in[0,50]$. A single-class sample uses $(n_++1)/(n+2)$, where $n_+$ of $n$ fitting records satisfy the event.
+\FloatBarrier
+
+\subsection{Validation counts and residual diagnostics}\label{app:validation}
+Each outer fold has its own pool size and near-positive count (Table~\ref{tab:folds}). For a uniform sample without replacement, the probability of observing at least $h_k$ near-positive cases is
+\begin{samepage}
+\begin{equation}
+ P(H\ge h_k\mid N,M,k)=
+ \sum_{j=h_k}^{\min(k,M)}
+ \frac{\binom{M}{j}\binom{N-M}{k-j}}{\binom{N}{k}}.
+ \label{eq:hypergeom}
+\end{equation}
+\noindent Here $H$ is the random hit count under uniform selection, and $N,M,k$ have the pool-specific meanings in Eq.~\eqref{eq:ef}. Impossible binomial terms are zero. Holm correction is applied within the specified family of comparisons; the two file-03 candidate lists form their own family. The test compares a list with uniform sampling, not with all possible learned selectors. Because model development precedes this comparison, its small tail probability is descriptive evidence of enrichment within the evaluated pool.
+\end{samepage}
+
+\input{tables/fold_counts}
+Numerical selection chooses H-soft in all five outer training partitions (Table~\ref{tab:nested}). Screening selection also chooses a route within each training partition, then evaluates it on the untouched outer fold.
+\input{tables/nested}
+\begin{samepage}
+For file 03, $N=3{,}969$, $M=41$, $k=20$ and $h_k=13$ give a tail probability of $1.37\times10^{-22}$ (two-comparison Holm: $2.73\times10^{-22}$). This tests $V\le2$; the hidden test responses provide no observed hit count.\par
+\end{samepage}
+
+Small average bias conceals large individual errors, particularly for $\mathrm{N_3}$ and $\mathrm{N_2O}$ (Figure~\ref{fig:residuals}). The heat strip shows mean residual $\widehat V-V$, with blue for negative values and amber for positive values. Solid bars in panel (b) show RMSE; hatched bars show the 95th percentile of absolute residuals. Each family has 1,608 outer-fold predictions.
+\paperfigure{A1/A1_residual_structure_v3.pdf}{Residual bias and error scale across X families}{fig:residuals}
+\FloatBarrier
+
+\subsection{Probability calibration and query assignment}
+The outer-fold predictions allow probability calibration to be checked against observed frequencies (Figure~\ref{fig:calibration}). All four panels concern $V\le2$. The diagonal marks agreement, and the slope labels give the corresponding calibration diagnostics. Better calibration can improve probability estimates without changing the within-fold ranking.
+\paperfigure{A2/A2_calibration_v2.pdf}{Probability reliability on held-out A--B groups}{fig:calibration}
+
+The mean nonmetal Brier score changes only slightly after calibration: 0.015913 to 0.015893. For the conditional event, the score falls from 0.156119 to 0.155870; for B-eps, it falls from 0.007372 to 0.005750. The S-eps product remains imperfectly calibrated, with diagnostic slope 1.7617 (Table~\ref{tab:calibration}). Its component calibrations therefore do not establish the accuracy of the product probability.
+\input{tables/calibration}
+
+For B-eps and both ranking arrangements, each outer-fold Top-20 list is unchanged by calibration. However, combining predictions across folds yields raw/calibrated overlaps of only 15 or 16 out of 20, because their scales differ. The primary endpoint therefore remains the mean of within-fold enrichments. Table~\ref{tab:query} also shows the effect of changing the four-query assignment: about 15 of 20 selections remain shared on average. These comparisons use the same outer A--B partitions and fixed model capacity.
+\input{tables/query}
+\FloatBarrier
+
+\subsection{Prediction-table stability}
+We assess decision stability in four supplied selection pools. Pools 07 and 11 fix X at $\mathrm{NO_2}$ and contain 2,704 and 529 candidates. Pools 08 and 12 allow $\mathrm{O_3}$, $\mathrm{NO_2}$ and $\mathrm{FO_2}$ and contain 8,112 and 1,587 candidates. The checks use the file-02 prediction tables; the later optimization problems remain separate.
+
+Let $v_0(c)$ denote the nominal table, $v_b(c)$ bootstrap-member $b$, and $c_0$ and $c_b$ their respective minimizers over the same allowed pool. The two directions of decision cost are
+\begin{samepage}
+\begin{equation}
+ R_b=v_b(c_0)-v_b(c_b),\qquad
+ \widetilde R_b=v_0(c_b)-v_0(c_0).
+ \label{eq:surrogate-regret}
+\end{equation}
+\noindent Here $R_b$ measures the nominal choice under member $b$, while $\widetilde R_b$ measures the member's choice under the nominal table. Both are nonnegative and use predicted violation degrees. They must not be interpreted as regret against measured material properties.
+\end{samepage}
+
+Figure~\ref{fig:stability} shows both the nominal candidate's rank and the cost of selecting it. These answer different questions: frequent changes in the minimum can involve either small or large predicted losses. Pool 12 has a reverse-regret 95th percentile of 6.6253 (Table~\ref{tab:nominal}). None of the four pools meets the specified criterion that both maximum regrets stay below 0.1.
+\paperfigure{A3/A3_decision_stability_v2.pdf}{Nominal-candidate ranks and bidirectional surrogate regret}{fig:stability}
+\input{tables/nominal_stability}
+\FloatBarrier
+
+To assess averaging, we divide the same 20 bootstrap models into two groups of ten using 1,000 fixed partitions. We compare the two mean tables with all cross-group pairs of individual tables (Figure~\ref{fig:splithalf}). The panels show agreement on the minimum and symmetric cross-table regret; Table~\ref{tab:stability} also reports Top-20 overlap. The 1,000 partitions reuse the same fitted models and do not constitute independent fitting experiments.
+\paperfigure{A4/A4_split_half_v2.pdf}{Split-half effects of averaging on decision stability}{fig:splithalf}
+\input{tables/stability}
+Averaging improves shortlist agreement and reduces mean cross-table cost in all four pools. The minimum candidate is less reproducible in pools 11 and 12 than in pools 07 and 08. We therefore report a shortlist and model variation alongside the nominal minimum. Agreement between prediction tables does not measure physical accuracy.
+\FloatBarrier
+
+\subsection{Extrapolation protocols}
+Table~\ref{tab:stress} reports three exclusion designs:
+\begin{itemize}
+  \item \textbf{Element:} remove selected elements from fitting and test their compositions. The five evaluations can contain overlapping materials.
+  \item \textbf{Target region:} withhold A--B groups containing records below 0.5, 1 or 2; add background groups to reach the specified 20\% test share.
+  \item \textbf{X family:} cross seven families with five A--B folds. Fitting excludes both the tested family and the tested A--B groups.
+\end{itemize}
+\input{tables/stress}
+
+In Figure~\ref{fig:stress}, large labels are the recorded metric values. Smaller labels and color express percentage changes from each route's own grouped-validation reference: R-log RMSE 4.9048, R-log EF 60.4863 and S-eps EF 62.2234. Blue and amber encode negative and positive changes, respectively. Lower RMSE and higher EF are desirable, so one color does not have a common good/bad meaning across columns.
+\paperfigure[0.92\linewidth]{A5/A5_stress_protocols_v4.pdf}{Exclusion-protocol outcomes: protocol-level evidence, not final-model validation}{fig:stress}
+
+The X-family protocol gives R-log RMSE 6.5035 and mean EF 12.9015 over 29 valid enrichment evaluations. The six zero-positive pools retain numerical-error results but have undefined enrichment. Target-region exclusion at $V<2$ removes the positive fitting examples required by the S-eps conditional event model; its fallback is the smoothed prior, leaving the nonmetal probability to determine ordering. This case is not a demonstration of learning an unseen zero-violation class.
+\FloatBarrier
+
+\subsection{Descriptor and ablation comparisons}
+The descriptor comparison holds the R-log objective fixed while adding composition information (Table~\ref{tab:features}). The reverse ablations instead remove each block from H-soft, including its derived statistics and missing-value indicators. Geometric and X-derived blocks overlap, so their effects are not additive.
+\input{tables/features}
+
+Figure~\ref{fig:ablation} displays reverse-ablation differences from full H-soft. A marker locates the paired point estimate, horizontal whiskers give the 95\% bootstrap interval, and the vertical reference denotes zero effect. An interval crossing zero is shown in neutral gray. The RMSE and EF panels have different desirable directions, as indicated by their signed changes.
+\paperfigure{A6/A6_ablation_v2.pdf}{Reverse-ablation effects with paired bootstrap intervals}{fig:ablation}
+
+The paired intervals in Table~\ref{tab:paired} use the same A--B resampling multiplicities for each compared method within each outer fold. All 5,000 resamples yield a defined five-fold enrichment mean. The intervals condition on the fitted predictions and are not adjusted for multiple comparisons; they cannot establish a universal ranking of models or descriptor families.
+\input{tables/paired}
+\FloatBarrier

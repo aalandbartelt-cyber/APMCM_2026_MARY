@@ -1,0 +1,153 @@
+% Use the official caption style; source and evidence notes are separate from the title.
+\newcommand{\pTwoNotedFigure}[4]{%
+  \par\begin{figure}[!htbp]
+  \centering\includegraphics[width=\linewidth]{\figroot/#1}
+  \caption{#2}\label{#3}
+  \begin{minipage}{\linewidth}\footnotesize\raggedright #4\end{minipage}
+  \end{figure}\par}
+\subsection{Candidate pools and exact enumeration}\label{sec:p2pools}
+La and Ti, in that site order, minimize predicted violation in both candidate pools. We fix $X=\mathrm{NO_2}$, the dataset label for two O atoms and one N atom. For each ordered cation pair $(a,b)$, its cost $W_{ab}$ is the mean prediction of the 20 H-soft members fitted using files 02 and 03. Known training compositions also receive predictions.
+
+Figure~\ref{fig:p2pipeline} shows which pairs remain eligible. File 07 contains all $52\times52$ pairs. File 11 contains the 529 pairs in this slice of the unlabeled test file 04; the other 2,175 pairs occur in files 02 or 03. Hatching marks forbidden pairs. Steps show the observed bin shares; the smooth curves interpolate their centres.
+\paperfigure{P2/plates/P2-F1_data_pipeline.pdf}{Predicted violation in the full and blind pools}{fig:p2pipeline}
+
+Table~\ref{tab:p2pools} gives the nearest competitor in each pool. Here and below, original regret is a candidate's predicted violation minus the least predicted violation among allowed candidates in the same pool.
+\begin{table}[!htb]
+\centering
+\caption{Minima and runners-up in the two pools}\label{tab:p2pools}
+\begin{tabular}{@{}lrlrlr@{}}
+\toprule
+Pool & Pairs & Minimum & $\widehat V_{\min}$ & Runner-up & Gap\\
+\midrule
+Full (07) & 2,704 & LaTiO$_2$N & 1.839047 & ScTiO$_2$N & 0.416697\\
+Blind (11) & 529 & LaTiO$_2$N & 1.839047 & SrTaO$_2$N & 0.465139\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+LaTiO$_2$N has an experimental counterpart. Kasahara et al. measured hydrogen and oxygen evolution in separate visible-light reactions with a sacrificial donor and acceptor, respectively~\cite{kasahara2002}. The blind pool contains no joint measurement of the five contest criteria for this candidate. Figure~\ref{fig:p2crystal} shows the Ti coordination in an external structure~\cite{mp1222738}.
+\pTwoNotedFigure{P2/plates/P2-A1_crystal_orientations.pdf}{Three views of the LaTiO$_2$N coordination network}{fig:p2crystal}{Materials Project mp-1222738~\cite{mp1222738}, accessed 28 November 2026. All views show one illustrative structure, not DFT-relaxed in this study. It served only for display and was excluded from prediction, encoding and selection.}
+\FloatBarrier
+
+\subsection{Model formulation and integer encoding}\label{sec:p2encoding}
+Let $m$ and $m+R$ be the least and greatest allowed entries of $W$ in the pool. Set $C_{ab}=W_{ab}-m$ on allowed pairs and $C_{ab}=R$ elsewhere. The two binary registers $x$ and $y$ select the A and B elements. The quadratic unconstrained binary optimization (QUBO) objective is
+\begin{equation}
+ H(x,y)=\sum_{a,b} C_{ab}x_a y_b+
+ \lambda\left[\left(\sum_a x_a-1\right)^2+
+                 \left(\sum_b y_b-1\right)^2\right],\qquad \lambda=1.1R .
+ \label{eq:p2qubo}
+\end{equation}\nopagebreak[4]
+\noindent Each squared term vanishes when its register selects exactly one element. All costs are nonnegative. An allowed minimum attains zero, a forbidden one-hot choice costs $R>0$, and a register with the wrong count incurs at least $\lambda$. Thus the floating objective selects precisely the allowed minimum.
+
+\textbf{Cost representation.} The direct lookup uses $C_{ab}$ as its cross-register coefficient. The alternative subtracts the row minimum $u_a$, then the residual column minimum $v_b$, and restores $\sum_a u_a x_a+\sum_b v_b y_b$ as linear terms. The two lookups agree on each one-hot pair.
+
+\textbf{Eight-bit conversion.} With shared reference spin $s_0$, a binary value is $(1+s s_0)/2$. We use energy $E(s)=-s^{\mathsf T}Js$, with symmetric zero-diagonal coupling matrix $J$. Both lookups have the same penalty; each is scaled to peak magnitude 127 and rounded.
+
+The reference couplings set the scale: their peaks are 964.56 (direct) and 902.37 (row--column). Cross-register magnitudes reach only 6.01. Their rounded weights take just two values, zero and $-1$.
+
+\begin{proposition}\label{prop:p2onehot}
+Neither audited 8-bit one-hot matrix guarantees that every integer ground state is an allowed blind-pool pair.
+\end{proposition}
+\begin{p1proof}
+Enumerating the 529 allowed pairs gives minimum energies $-10822$ and $-10994$ for the direct and row--column matrices, respectively. In the direct matrix, a forbidden one-hot pair attains $-10822$. In the row--column matrix, a vector with the wrong register counts attains $-10994$. In each case an illegal vector is at or below every legal vector. A still lower ground state would itself have to be illegal.
+\end{p1proof}
+Among the allowed integer minimizers in Proposition~\ref{prop:p2onehot}, the worst original regrets are 21.65085 and 13.55685, respectively. Rounding can therefore affect selection even when decoding is restricted to allowed pairs. Appendix Figures~\ref{fig:p2graph} and~\ref{fig:p2precision} give the register couplings and precision controls.
+
+\textbf{Encoding the allowed dictionary.} Index the 529 allowed cells by row, then column, starting at zero. Let $r_i=W_i-m$ be candidate $i$'s original regret. The integer cost $q_i$ gives the low-violation end of the table three quarters of the available scale:
+\begin{equation}
+ q_i=\operatorname{round}(63 f(r_i)),\qquad
+ f(r)=\begin{cases} 3r/8, &0\le r\le2,\\
+ 3/4+(r-2)/(4(R-2)), &2<r\le R .
+ \end{cases}\label{eq:p2shape}
+\end{equation}\nopagebreak[4]
+\noindent Here $R=48.07978$ for the blind pool. The continuous map increases strictly. Rounding can create ties, so we check all integer costs directly: only LaTiO$_2$N has $q_i=0$. Construction uses the full table, including its known minimum.
+
+Divide the row-ordered dictionary into 40 groups of 13 or 14 candidates. In a group of $n+1$ candidates, a string of $t$ leading ones followed by $n-t$ zeros selects entry $t$ (counting from zero). With binary entries $z_j$, the domain-wall representation~\cite{chancellor2019} has the following group QUBO:
+\begin{equation}
+ H_g=q_{g,0}+\sum_{j=1}^{n}(q_{g,j}-q_{g,j-1})z_j
+       +128\sum_{j=1}^{n-1}(1-z_j)z_{j+1}.
+ \label{eq:p2chain}
+\end{equation}\nopagebreak[4]
+\noindent The successive differences telescope to $q_{g,t}$ on a legal word. Each forbidden transition from zero to one adds a penalty of 128. Packing these 40 distinct subproblems uses $529-40=489$ chain spins and one shared reference. The largest absolute integer coupling is 73.
+
+Each group supplies one candidate. At most 39 classical comparisons select the smallest pair $(q_i,i)$. Figure~\ref{fig:p2coupling} compares the floating lookup matrix (left) with the submitted integer matrix (right).
+\pTwoNotedFigure{P2/plates/P2-F2_coupling_matrices.pdf}{Couplings in the lookup and short-chain models}{fig:p2coupling}{Both include the reference. Blue and amber mark negative and positive weights. All nonzero entries are shown (threshold zero). The layouts represent logical couplings, not physical connections.}
+\FloatBarrier
+
+\subsection{Model solution with Kaiwu SDK}\label{sec:p2solve}
+Figure~\ref{fig:p2workflow} traces the blind-pool solve. Enumeration gives the exact reference. We pass the integer matrix from Eq.~\eqref{eq:p2chain} to two Kaiwu SDK 1.4.4 solvers~\cite{kaiwu144}:
+\begin{itemize}
+\item \textbf{Local simulated annealing (SA):} \texttt{classical.\allowbreak Simulated\allowbreak Annealing\allowbreak Optimizer}, with one vector per seeded restart and five fixed blocks of 100 restarts (Appendix Section~\ref{app:p2sa}).
+\item \textbf{Cloud optimization:} \texttt{cim.CIMOptimizer}, in \texttt{optimization} mode on QBoson's default route. The service ranks and clusters solutions and returned ten per task.
+\end{itemize}
+\paperfigure[0.94\linewidth]{P2/solver_workflow/kaiwu_solver_workflow.pdf}{Enumeration, Kaiwu optimization and verification}{fig:p2workflow}
+\FloatBarrier
+
+P01--P05 label the five pilot tasks. F01--F20 label the twenty formal tasks, all using the matrix and selection rule frozen before F01. Each task has a distinct service ID. The service controls its internal effort and reports no physical draw count.
+
+\textbf{Decoding.} Recompute each returned energy and require all 40 chains to be legal. Count a task hit if any such vector has zero original regret. For the single-solution endpoint, choose the legal vector of lowest integer energy, breaking ties by return order. Appendix Figures~\ref{fig:p2attain} and~\ref{fig:p2time} give the task records.
+
+\subsection{Model validation and residual bounds}\label{sec:p2cert}
+\begin{proposition}\label{prop:p2ground}
+For the submitted 490-spin matrix, every integer ground state is legal and decodes to LaTiO$_2$N. The ground energy is $-58722$ and the worst ground-state original regret is zero.
+\end{proposition}
+\begin{p1proof}
+\emph{Legality.} Fix the common reference spin to $+1$ by sign symmetry. Each group can now be checked separately. A recursion retains the cheapest prefix for each last spin and for each status (legal or broken). Its update is given in Appendix Section~\ref{app:p2encoding}. The legal minima sum to $-58722$; replacing any one with an illegal state costs at least 340.
+
+\emph{Optimality.} On a legal word, group $g$ contributes a constant plus $4q_{g,t}$. The 40 groups partition the dictionary. At a ground state group 17 must select its unique zero-cost candidate, LaTiO$_2$N, which wins the comparison across groups.
+\end{p1proof}
+
+\begin{proposition}\label{prop:p2margin}
+Let $\Delta=E-E_0$ denote the integer energy above the certified ground energy $E_0$. Every vector with $\Delta<196$ is fully legal and selects the unique proxy optimum. Equality admits a wrong choice.
+\end{proposition}
+\begin{p1proof}
+Proposition~\ref{prop:p2ground} gives an illegal-state gap of 340, ruling out a broken chain below 196. For a legal vector with group choices $t_g$, the energy difference is
+\begin{equation}
+ \Delta=4\sum_{g=1}^{40}\big(q_{g,t_g}-\min_t q_{g,t}\big).
+ \label{eq:p2excess}
+\end{equation}\nopagebreak[4]
+\noindent Each summand is nonnegative. In group 17 the next lowest cost after zero is 49, so losing LaTiO$_2$N costs at least $4\times49=196$. 
+
+At equality, entry 217 in group 17 and minima in the other 39 groups make entry 448 (SrTaO$_2$N) win. Its original regret is 0.465139.
+\end{p1proof}
+
+Figure~\ref{fig:p2margin} gives two margins. The 20 task selections have residuals of 84--176; F03 comes closest to the bound, with 20 units to spare. The 200 formal returns span 84--188; one vector in F14 comes within eight units. Appendix Figure~\ref{fig:p2energy} shows the energy distributions.
+\paperfigure{P2/plates/P2-F3_residual_margins.pdf}{Residual margins for pilot and formal tasks}{fig:p2margin}
+
+Table~\ref{tab:p2service} counts each planned task once. All formal tasks yielded a strict solution, so the conditional regret column covers all twenty. Both endpoint definitions agree. Every formal energy lies above the certified ground level.
+\begin{table}[!htb]
+\centering
+\caption{Blind-pool hits by task or restart block}\label{tab:p2service}
+\begin{threeparttable}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Unit & Planned & Strict & Any hit & Selected hit & Regret$^{a}$\\
+\midrule
+Pilot task & 5 & 5 & 5 & 5 & 0\\
+Formal task & 20 & 20 & 20 & 20 & 0\\
+SA block & 5 & 5 & 5 & 5 & 0\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[$a$] Maximum original regret of the energy-selected strict solution over units with a strict return. Each SA block has 100 restarts; internal service effort is undisclosed.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\FloatBarrier
+
+\subsection{Sensitivity and solver controls}\label{sec:p2checks}
+\textbf{Chain check.} Figure~\ref{fig:p2cloud} counts local minima among each task's ten returns. Group 17 always attained its minimum. The energy-selected formal vectors attained only 19--28 of the 40 group minima. Proposition~\ref{prop:p2margin} explains why the winning candidate depends on group costs.
+
+Wei et al. describe the coherent Ising platform~\cite{wei2026}. The equipment image is from Kaiwu. The service diagram follows its optimization guide~\cite{kaiwu144}.
+\paperfigure{P2/plates/P2-F5_optimization_service.pdf}{Kaiwu optimization returns by chain and task}{fig:p2cloud}
+
+\textbf{Objective sensitivity.} In the blind pool both mean predicted cost and the mean of the two largest member regrets select LaTiO$_2$N. Minimizing the single worst member regret selects YTiO$_2$N. Appendix Figure~\ref{fig:p2tail} gives both pools; Figure~\ref{fig:p2cost} separates prediction error, representation regret and integer energy residual.
+
+\textbf{Solver controls.} At five restarts the cost-bearing matrix yielded strict hits in 20 of 20 paired SA blocks, versus six with the costs removed (Appendix Figure~\ref{fig:p2budget}). In 200 matched restarts a single chain gave zero strict hits and the 40-group encoding gave 135 (Appendix Figure~\ref{fig:p2ablation}). Only the grouped, cost-bearing matrix was submitted to the service.
+
+\subsection{Direct answer to Problem 2}\label{sec:p2answer}
+\begin{enumerate}
+\item \textbf{Model.} Equation~\eqref{eq:p2qubo} is the A--B selection QUBO. For the blind pool, its 40-group integer representation preserves the minimizing candidate and fits the signed 8-bit coupling range.
+\item \textbf{Selection.} Choose La at A and Ti at B with $X=\mathrm{NO_2}$. LaTiO$_2$N uniquely minimizes $\widehat V$ at 1.839047 in both pools (529 and 2,704 pairs).
+\item \textbf{Kaiwu solution.} Kaiwu SDK 1.4.4 simulated annealing recovered LaTiO$_2$N in all five fixed restart blocks. With QBoson's \texttt{CIMOptimizer}, the lowest-energy legal solution in each of the 20 formal tasks also decoded to LaTiO$_2$N. All had zero original regret and integer residuals of 84--176.
+\end{enumerate}

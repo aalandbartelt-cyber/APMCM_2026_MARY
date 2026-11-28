@@ -1,0 +1,155 @@
+{
+  "pdf_sha256": "7e56aa9c7190b70cdd367e07fc9333d65670b0bacfb218217975e304bb29b5e5",
+  "pages": 35,
+  "body_pdf_page": 3,
+  "p2_main_pdf_pages": [
+    12,
+    18
+  ],
+  "bookmarks": 50,
+  "printed_toc_entries": 31,
+  "toc_links": 62,
+  "internal_links": 154,
+  "fonts_audit_baseline": "Native minimum from signed-off plates times XeTeX PDF placement scale",
+  "figures": [
+    {
+      "id": "P2-F1",
+      "figure": "5",
+      "pdf_page": 13,
+      "logical_page": 11,
+      "local_callout_pdf_page": 12,
+      "scaled_min_pt": 7.32,
+      "caption": "Predicted violation in the full and blind pools"
+    },
+    {
+      "id": "P2-A1",
+      "figure": "6",
+      "pdf_page": 13,
+      "logical_page": 11,
+      "local_callout_pdf_page": 13,
+      "scaled_min_pt": 7.32,
+      "caption": "Three views of the LaTiO2N coordination network"
+    },
+    {
+      "id": "P2-F2",
+      "figure": "7",
+      "pdf_page": 15,
+      "logical_page": 13,
+      "local_callout_pdf_page": 15,
+      "scaled_min_pt": 7.407,
+      "caption": "Couplings in the lookup and short-chain models"
+    },
+    {
+      "id": "P2-F3",
+      "figure": "9",
+      "pdf_page": 17,
+      "logical_page": 15,
+      "local_callout_pdf_page": 16,
+      "scaled_min_pt": 7.32,
+      "caption": "Residual margins for pilot and formal tasks"
+    },
+    {
+      "id": "P2-F5",
+      "figure": "10",
+      "pdf_page": 18,
+      "logical_page": 16,
+      "local_callout_pdf_page": 17,
+      "scaled_min_pt": 7.32,
+      "caption": "Kaiwu optimization returns by chain and task"
+    },
+    {
+      "id": "P2-A2",
+      "figure": "B.7",
+      "pdf_page": 31,
+      "logical_page": 29,
+      "local_callout_pdf_page": 30,
+      "scaled_min_pt": 8.187,
+      "caption": "Couplings within and between the two registers"
+    },
+    {
+      "id": "P2-A3",
+      "figure": "B.9",
+      "pdf_page": 32,
+      "logical_page": 30,
+      "local_callout_pdf_page": 31,
+      "scaled_min_pt": 7.876,
+      "caption": "Integer energies of the returned solutions"
+    },
+    {
+      "id": "P2-A4",
+      "figure": "B.10",
+      "pdf_page": 32,
+      "logical_page": 30,
+      "local_callout_pdf_page": 32,
+      "scaled_min_pt": 7.635,
+      "caption": "Task-level hits under two selection rules"
+    },
+    {
+      "id": "P2-A5",
+      "figure": "B.11",
+      "pdf_page": 33,
+      "logical_page": 31,
+      "local_callout_pdf_page": 32,
+      "scaled_min_pt": 7.588,
+      "caption": "Observed task intervals on the Kaiwu service"
+    },
+    {
+      "id": "P2-A6",
+      "figure": "B.12",
+      "pdf_page": 33,
+      "logical_page": 31,
+      "local_callout_pdf_page": 32,
+      "scaled_min_pt": 7.496,
+      "caption": "Classical costs and three measures of error"
+    },
+    {
+      "id": "P2-A7",
+      "figure": "B.8",
+      "pdf_page": 31,
+      "logical_page": 29,
+      "local_callout_pdf_page": 30,
+      "scaled_min_pt": 7.32,
+      "caption": "Precision and legality of the lookup encoding"
+    },
+    {
+      "id": "P2-A8",
+      "figure": "B.13",
+      "pdf_page": 34,
+      "logical_page": 32,
+      "local_callout_pdf_page": 33,
+      "scaled_min_pt": 7.588,
+      "caption": "Candidate rankings under alternative risk criteria"
+    },
+    {
+      "id": "P2-F4",
+      "figure": "B.14",
+      "pdf_page": 34,
+      "logical_page": 32,
+      "local_callout_pdf_page": 34,
+      "scaled_min_pt": 7.407,
+      "caption": "Strict hits by local restart budget"
+    },
+    {
+      "id": "P2-A12",
+      "figure": "B.15",
+      "pdf_page": 35,
+      "logical_page": 33,
+      "local_callout_pdf_page": 35,
+      "scaled_min_pt": 7.407,
+      "caption": "Single-chain and grouped encodings under local annealing"
+    },
+    {
+      "id": "P2-workflow",
+      "figure": "8",
+      "pdf_page": 15,
+      "logical_page": 13,
+      "local_callout_pdf_page": 15,
+      "scaled_min_pt": 9.001,
+      "caption": "Enumeration, Kaiwu optimization and verification"
+    }
+  ],
+  "offline_certificate": [
+    "PASS | 529 candidates | 40 chains | 490 spins | G1/G2 CERTIFIED | E0=-58722 | illegal +340 | strict failure +196",
+    "PASS | pilots 5/5 | formal 20/20 | 25 distinct IDs | 250 terminal vectors | energy-selected & best-set strict regret 0"
+  ]
+}

@@ -1,0 +1,21 @@
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Probability calibration on pooled outer-fold predictions}\label{tab:calibration}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Method & Brier score & Mean probability & Intercept & Slope\\
+\midrule
+B-eps & 0.005751 & 0.0126 & 0.2785 & 1.2436\\
+L-hash4 & 0.007422 & 0.0128 & -0.2503 & 0.9817\\
+L-single & 0.010894 & 0.0119 & -0.5843 & 0.8406\\
+S-eps & 0.006125 & 0.0120 & 0.9794 & 1.7617\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\item[] Prevalence: 0.01137. Ideal diagnostic intercept/slope: 0/1. These are evaluation diagnostics.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\par

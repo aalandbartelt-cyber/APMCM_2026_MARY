@@ -1,0 +1,24 @@
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Descriptor comparisons and reverse ablations}\label{tab:features}
+\begin{tabularx}{\linewidth}{@{}l X r r@{}}
+\toprule
+Method & Descriptor set & RMSE & Mean EF@20\\
+\midrule
+R-log & Basic (40) & 5.1954 & 27.0472\\
+R-log & Chemistry/geometry (292) & 4.9547 & 57.3660\\
+R-log & Full (336) & 4.9048 & 60.4863\\
+H-soft & Full (336) & 4.6011 & 62.1024\\
+H-soft & Without electronic & 4.6426 & 56.5887\\
+H-soft & Without geometry & 4.7407 & 53.3975\\
+H-soft & Without X statistics & 4.6424 & 59.7091\\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\item[] Ablations also remove the block's derived quantities and missing indicators.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\par

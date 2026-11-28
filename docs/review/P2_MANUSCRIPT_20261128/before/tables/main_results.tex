@@ -1,0 +1,28 @@
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Grouped-validation prediction and screening}\label{tab:mainresults}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Method & RMSE & EF@20 & Hits/100 & NDCG@20\\
+\midrule
+H-soft & 4.6011 & 62.1024 & 68 & 0.6952\\
+R-raw & 4.7583 & 51.3372 & 57 & 0.6039\\
+R-log & 4.9048 & 60.4863 & 67 & 0.6671\\
+W-log & 5.5580 & 59.2209 & 66 & 0.6828\\
+B-eps & -- & 64.2723 & 72 & 0.7023\\
+S-eps & -- & 62.2234 & 70 & 0.6479\\
+L-single & -- & 28.6526 & 33 & 0.3554\\
+L-hash4 & -- & 46.8397 & 54 & 0.5718\\
+Additive Ridge & 6.3206 & 8.7049 & 10 & 0.1349\\
+Training mean & 11.0143 & 0.7271 & 1 & 0.0089\\
+Fixed random & -- & 0.0000 & 0 & 0.0003\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\item[] EF/NDCG average five fold-specific lists for $V\le2$; hits have budget 100. Dashes denote methods without original-scale predictions.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\par

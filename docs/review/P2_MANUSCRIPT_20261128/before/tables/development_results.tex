@@ -1,0 +1,19 @@
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Development-set results at $k=20$}\label{tab:development}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Method & RMSE & Hits/20 & EF@20 & NDCG@20\\
+\midrule
+H-soft & 4.5783 & 13 & 62.9232 & 0.5974\\
+B-eps & -- & 13 & 62.9232 & 0.4573\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\item[] Development pool: $N=3{,}969$, $M=41$. NDCG breaks the enrichment tie.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\par

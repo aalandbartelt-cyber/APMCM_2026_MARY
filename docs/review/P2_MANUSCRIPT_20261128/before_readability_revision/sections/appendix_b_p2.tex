@@ -1,0 +1,39 @@
+\subsection{Encoding and precision checks}\label{app:p2encoding}
+Figure~\ref{fig:p2graph} separates the within-register penalties from the A--B lookup in Eq.~\eqref{eq:p2qubo}. Each sector contains 13 adjacent spins in the register order. One zero lookup coupling accounts for the difference between the 2,704 grid cells and the 2,703 nonzero cross-register edges.
+\paperfigure{P2/plates/P2-A2_grouped_lookup.pdf}{Logical lookup graph with the shared reference. All 5,459 nonzero undirected edges are retained (threshold zero). Bundle width scales with the square root of the sum of absolute edge weights; loops represent within-sector edges. Sector positions carry no information about physical connectivity.}{fig:p2graph}
+
+Figure~\ref{fig:p2precision} separates legality from the ordering of the allowed candidates. A counterexample supplies an illegal state with energy at or below the allowed minimum; an unresolved certificate leaves legality open. The value in a cell is the largest original regret among allowed integer minimizers, a quantity that can be computed under either status. Removing the lookup costs in the direct 8-bit blind matrix changes 312 matrix entries. This control distinguishes partial loss of resolution from complete loss of cost dependence.
+\paperfigure{P2/plates/P2-A7_precision_audit.pdf}{Precision, penalty and mask-fill controls for the lookup matrix. The heatmap reports worst allowed-minimum regret. RC denotes row--column reparameterization. The eight combinations in panel (d) each had zero feasible returns in 1,000 local restarts.}{fig:p2precision}
+\FloatBarrier
+
+\subsection{Returned energies and task records}\label{app:p2returns}
+Figure~\ref{fig:p2energy} locates the platform-selected energy distributions against the certificate. Counts include 50 pilot and 200 formal vectors, in bins four energy units wide.
+\paperfigure{P2/plates/P2-A3_return_energies.pdf}{Returned integer energies relative to the ground energy of $-58722$ and the first energy admitting a wrong strict decision, $-58526$. Bins count vectors within the platform-selected return sets.}{fig:p2energy}
+\FloatBarrier
+
+Figure~\ref{fig:p2attain} compares finding any strict hit in a set with selecting one strict solution by integer energy. One hundred restarts form each of five historical SA blocks. The formal cloud task count includes every planned slot. An exact two-sided 95\% binomial interval for 20 successes in 20 tasks is $[0.832,1]$ under independent tasks with a common success probability. Shared service conditions may limit that interpretation.
+\paperfigure{P2/plates/P2-A4_task_attainment.pdf}{Task-level feasibility and original regret under two selection rules. Each point represents one task or one fixed SA block. All 20 formal tasks contributed a strict solution to the conditional regret calculation.}{fig:p2attain}
+
+Figure~\ref{fig:p2time} shows the client record available for each task. Acceptance and first observation of completion bracket queueing, service and polling. The task records give no physical start or finish time.
+\paperfigure{P2/plates/P2-A5_task_timeline.pdf}{Client observation intervals for five pilot and twenty formal tasks on 28 November 2026 (UTC+8). The panels have separate horizontal scales. Durations include any queue and polling delays.}{fig:p2time}
+
+\subsection{Cost and surrogate sensitivity}\label{app:p2risk}
+Figure~\ref{fig:p2cost} distinguishes the cost of making the proxy table, of encoding it and of searching the resulting landscape. Logged fitting time includes tree training. The service supplies no comparable physical timing. Only labeled-data prediction error measures disagreement with an observed violation; original regret compares two predicted scores, and integer residual compares two Ising energies.
+\paperfigure{P2/plates/P2-A6_cost_and_error.pdf}{Recorded classical costs and the three scales of error. The panels distinguish grouped-validation prediction error, worst allowed-minimum original regret and integer energy above the certified ground.}{fig:p2cost}
+
+For member $j$, candidate $i$ has regret $W_i^{(j)}-\min_k W_k^{(j)}$, where the minimum is taken over the same pool. Figure~\ref{fig:p2tail} compares the mean objective with the largest member regret and the mean of the two largest regrets (empirical upper-tail CVaR at 90\%). Two members make up the upper tenth of the 20 equally weighted scenarios. In the full pool both adverse-tail criteria select ScTiO$_2$N. In the blind pool the worst-case choice is YTiO$_2$N and the CVaR choice is LaTiO$_2$N.
+\paperfigure{P2/plates/P2-A8_tail_regret.pdf}{Sensitivity of the selected material to the risk criterion. Member ranks and upper-tail regrets are reported for both pools on common scales.}{fig:p2tail}
+\FloatBarrier
+
+\subsection{Local annealing controls}\label{app:p2sa}
+Figure~\ref{fig:p2budget} pairs the cost-bearing matrix with a control that retains the chain penalties and removes the candidate costs. At five restarts the numbers of paired blocks with any strict hit are 20 and six. All 14 discordant pairs favor the cost-bearing matrix (two-sided exact paired test, $p=0.000122$, for this instance and schedule). When a block contributes only its lowest-energy strict return, the counts are 20 and zero. The seven budgets reuse prefixes of the same blocks.
+\paperfigure{P2/plates/P2-F4_restart_budgets.pdf}{Strict hits by local restart budget. Bands are pointwise 95\% Wilson intervals under independent blocks within each arm. The paired test refers to the five-restart budget; the length comparison uses two block pairs.}{fig:p2budget}
+\FloatBarrier
+
+Figure~\ref{fig:p2ablation} gives the matched length comparison separately. Under the same annealing schedule the single long chain yielded zero legal vectors in 200 restarts. The 40-group matrix yielded 199 legal vectors and 135 strict hits. It also supplied 40 candidates per legal vector for the final classical comparison, whereas the single chain supplied one.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{\figroot/P2/plates/P2-A12_chain_ablation.pdf}
+\caption{Single-chain and grouped encodings under local annealing. Matched results pool two blocks of 100 restarts per arm. The historical arms shown separately differ in additional settings.}\label{fig:p2ablation}
+\end{figure}
+\FloatBarrier

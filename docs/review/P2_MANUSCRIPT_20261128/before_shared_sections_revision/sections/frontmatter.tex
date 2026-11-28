@@ -1,0 +1,49 @@
+\section{Introduction}
+\subsection{Problem background}
+Materials for solar water splitting need favorable formation energies, suitable band gaps and appropriate band-edge positions. Computational screening of cubic perovskites assesses these requirements across many compositions~\cite{castelli2012}. The supplied problem combines five departures from the target conditions into a violation degree. A predictor based on composition can estimate this degree for unlabeled candidates and supply objective values for subsequent discrete selection.
+
+\subsection{Problem restatement}
+\begin{itemize}
+  \item \textbf{Problem 1: Surrogate prediction.} Construct a composition-based predictor of the violation degree using the supplied training data. Assess numerical accuracy and the ability to prioritize low-violation materials, select the model using the validation data, and predict the unlabeled test compositions.
+  \item \textbf{Problem 2:}
+  \item \textbf{Problem 3:}
+\end{itemize}
+
+\section{Problem Analysis}
+\subsection{Analysis of Problem 1}
+Zero band gaps identify valid metals with an unavoidable penalty, so prediction must account for both metallic and nonmetallic compositions. Descriptors must preserve the distinct A/B sites and the three-atom X group. Numerical accuracy and low-violation screening need separate checks, with each ordered A--B pair kept together during validation.
+\subsection{Analysis of Problem 2}
+(i) With the anion fixed, the two cation sites define a finite table. Enumerating its allowed cells gives an exact reference for the predicted minimum. (ii) Rounding an Ising matrix can change which cells minimize its energy. The integer representation therefore needs a legality check and a comparison with the original table before a solver output can identify a material.
+\subsection{Analysis of Problem 3}
+
+\section{Model Assumptions and Notation}
+\subsection{Core assumptions}
+\begin{enumerate}
+  \item \textbf{A common material setting.} Composition and fixed elemental descriptors are sufficient for prediction within the supplied cubic setting. This assumption is limited to that structure and does not cover experimental synthesis conditions.
+  \item \textbf{Transfer within represented chemistry.} Relations learned from the training compositions apply to new A--B pairs in the supplied domain. Grouped validation and exclusion tests assess this assumption.
+  \item \textbf{Equal weight for surrogate scenarios.} For Problem 2, we give each of the 20 A--B group-bootstrap predictors equal weight. Their spread describes sensitivity to the training groups represented in the data.
+\end{enumerate}
+
+\subsection{Principal notation}
+Table~\ref{tab:notation} lists the principal symbols; each is defined again at its first use.
+\par
+\begin{table}[H]
+\centering
+\caption{Principal notation}\label{tab:notation}
+\begin{tabularx}{\linewidth}{@{}l X l@{}}
+\toprule
+Symbol & Meaning & Unit or range\\
+\midrule
+$c=(a,b,x)$ & Ordered composition at sites A, B and group X & Supplied grid\\
+$\boldsymbol\phi(c)$ & Composition-derived descriptor vector & 336 entries\\
+$V,\widehat V$ & Observed and predicted violation degree & Dimensionless\\
+$G$ & Nonmetal indicator, $\mathbf{1}\{E_g>0\}$ & $0$ or $1$\\
+$\widehat p$ & Estimated conditional probability of $G=1$ & $[0,1]$\\
+$\widehat\mu_0,\widehat\mu_1$ & Metal and nonmetal conditional predictions & Dimensionless\\
+$\varepsilon,k$ & Near-positive cutoff and selection budget & $2$, $20$\\
+$N,M,h_k$ & Pool size, near-positive count and selected hits & Counts\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\par
+\FloatBarrier

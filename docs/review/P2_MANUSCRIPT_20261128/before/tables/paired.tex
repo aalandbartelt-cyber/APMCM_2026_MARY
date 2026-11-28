@@ -1,0 +1,29 @@
+\par
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Paired differences with conditional 95\% bootstrap intervals}\label{tab:paired}
+\begin{tabularx}{\linewidth}{@{}X l r r@{}}
+\toprule
+Comparison & Measure & Difference & 95\% interval\\
+\midrule
+H-soft minus R-log & EF@20 & 1.6160 & $[-5.9951, 11.2022]$\\
+H-soft minus R-log & RMSE & -0.3037 & $[-0.4133, -0.1943]$\\
+S-eps minus B-eps & EF@20 & -2.0489 & $[-8.4949, 5.1343]$\\
+L-single minus L-hash4 & EF@20 & -18.1870 & $[-31.1018, -12.7409]$\\
+R-log: full minus 292 entries & EF@20 & 3.1204 & $[-4.4285, 8.0342]$\\
+R-log: full minus 292 entries & RMSE & -0.0499 & $[-0.0769, -0.0238]$\\
+H-soft: without electronic & EF@20 & -5.5136 & $[-12.3435, 3.5918]$\\
+H-soft: without electronic & RMSE & 0.0415 & $[-0.0132, 0.0973]$\\
+H-soft: without geometry & EF@20 & -8.7049 & $[-22.7734, -0.8136]$\\
+H-soft: without geometry & RMSE & 0.1396 & $[0.0685, 0.2113]$\\
+H-soft: without X statistics & EF@20 & -2.3933 & $[-12.8359, 4.8159]$\\
+H-soft: without X statistics & RMSE & 0.0413 & $[-0.0167, 0.1007]$\\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}[flushleft]
+\item[] All 5,000 resamples are valid. Intervals condition on fitted predictions and prior selection; no multiplicity adjustment. Ablation differences subtract full H-soft.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\par

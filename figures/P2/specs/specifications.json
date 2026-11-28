@@ -110,7 +110,7 @@
           "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json"
         ]
       },
-      "check": "25 × 40 counts in [0,10], group 17 equals 10 for every task. Six user-associated traces, no embedded task IDs, auxiliary only; arbitrary units do not measure physical time or evolution dynamics. Generated platform illustration; service routing remains unidentified. Use printed SDK v1.4.4 p.46 for the schematic of optimization and postprocessing.",
+      "check": "25 × 40 counts in [0,10], group 17 equals 10 for every task. Six user-associated traces, no embedded task IDs, auxiliary only; arbitrary units do not measure physical time or evolution dynamics. Equipment image from the official Kaiwu website. Use task records for service routing. Use printed SDK v1.4.4 p.46 for the schematic of optimization and postprocessing.",
       "readout": "Group 17 reaches its local minimum in all 25 return sets. Six archived displays provide context for those service records."
     },
     {
