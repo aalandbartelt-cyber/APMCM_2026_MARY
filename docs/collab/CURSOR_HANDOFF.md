@@ -1,5 +1,16 @@
 # CURSOR_HANDOFF
 
+## 最新：P2 有界救援结束，论文改动已撤回（2026-11-28）
+
+- 用户批准仅盲池 raw-N8/rc-N8 一次救援及账户只读核验；随后明确禁止未单独获准的论文写作，本轮稿件改动已撤回。P3 不在范围。
+- 先算 θ*/R=0.5863741816874565，λ′=31.012015773309233；声明在矩阵生成前冻结 commit `dfb2c89`。明确已看旧整数/SA 失败、无真机数据、代理表不变；属于事后登记迭代。
+- 两项救援均 COUNTEREXAMPLE：raw 允许最小 -15182、禁选 witness -15186、最坏 regret45.650041；rc 允许最小 -9194、A0/B3 witness -9202、最坏 regret26.530611。按全灭即停：无新拟合、无救援 SA、无 CIM 提交。不再扫 λ/split 或放宽并列/0.1 阈值。
+- 原拒绝回执不动；新独立拒绝回执 `codex/p2_rescue1/selection_receipt.json`，SHA256 `937b799a97ad3947af1577dae7fc7f995b1089253ffc9f7561ca76f92e498ea7`。报告 `codex/P2_RESCUE_RESULTS_20261128.md`、新旧并列表 `codex/P2_RESCUE_COMPARISON_20261128.csv`。
+- 账户查询：许可证初始化成功，严格只读 SDK GET HTTP200/code10320（探针不存在），任务创建0；实际余额/队列/计算失败计费/回包合同仍未知。完整证据与官方公开规则边界在 `docs/review/P2_RESCUE_20261128/ACCOUNT_CHANNEL_CHECK.md`。该只读成功不能解除证书失败。
+- 用户最新指令“未经允许不要写论文”：本轮 P2 论文改动已全部撤回，官方 main.tex/main.pdf、前置/参考文献恢复到本轮前，新增正文/附录/表格文件移除。不要续写；须单独明确授权。撤回记录 `docs/review/P2_RESCUE_20261128/MANUSCRIPT_ROLLBACK.json`。
+- 侦察兵同步落本次比赛 D 盘 codex 共享文件，未声称已读。后续新救援必须另获授权；本次许可已按停止条件结束。
+
+
 ## P2 v2 实施状态（2026-11-28，最新）
 
 - 用户已终审放行；当前已退出计划模式。正式方案 `codex/P2_PLAN.md` 已含终审 13 项补丁，预登记 commit `11be214add4a1d621161202323610585ee5dfbd4`。

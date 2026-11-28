@@ -1,0 +1,10 @@
+{
+  "protected_files": 4701,
+  "fit_ledger_unchanged": true,
+  "synthetic_exhaustive_cases": 32,
+  "rescue_direct_onehot_energies_checked": 5408,
+  "rejection_witnesses_checked": 2,
+  "new_fits": 0,
+  "new_SA": 0,
+  "new_CIM": 0
+}

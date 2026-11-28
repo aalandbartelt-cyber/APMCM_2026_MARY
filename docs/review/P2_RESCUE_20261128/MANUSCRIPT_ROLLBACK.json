@@ -1,0 +1,38 @@
+{
+  "time": "2026-11-28T02:52:02.545165+00:00",
+  "reason": "User revoked manuscript work; restore this-turn changes only",
+  "restored": {
+    "main.tex": {
+      "withdrawn_sha256": "fe91fb80508c4d4483df7eb4e1275916455111af636a2b71cd469d8452a4427c",
+      "before_sha256": "242ad92be436945cc1d51697a84ffb76cbfc7bda98bb027c4bbbd7b260067a1a"
+    },
+    "main.pdf": {
+      "withdrawn_sha256": "9c04f7d28d5660c9a12e5ad55c0a5adb4f67a530b9838dfff1de810fb125b9cf",
+      "before_sha256": "6f6856045709efca53aa6b990992ef14b833314b9f1b28a3c661937aa6ac874e"
+    },
+    "sections/frontmatter.tex": {
+      "withdrawn_sha256": "db2da976b4dafffee95330894a1652abaa435a753194104381c9002c86e6eaf7",
+      "before_sha256": "26bd07f95b48cc7b240ff204559d1ee25e169e53ea508928f55890bcd240b819"
+    },
+    "sections/references.tex": {
+      "withdrawn_sha256": "ffa3295961df0da8446d6bad3a186a31e8e4fc02cf7b33440f5a1648555f7548",
+      "before_sha256": "126e9ba533be23b7c9d35a12ed570b90d1e5a7ffc140eb9fca5d915f556bc7c5"
+    }
+  },
+  "removed": {
+    "sections/problem2.tex": "95be90881d481bc4f7b26052ea316f4efb7b386581d585ae15318f35325ac3ca",
+    "sections/appendix_b_p2.tex": "790868855c253f90d98cf68a76fbb98156132f2b0a6eaba441e0d141597deebd",
+    "tables/p2_sa.tex": "baa207b4bd9d306e6d381fc659026ab9810968fcd8887a5f4723c0362e187da9"
+  },
+  "before_snapshot_files_exactly_restored": {
+    "main.pdf": true,
+    "apmcmthesis.cfg": true,
+    "main.tex": true,
+    "apmcmthesis.cls": true,
+    "sections/references.tex": true,
+    "sections/problem1.tex": true,
+    "sections/appendix_b.tex": true,
+    "sections/frontmatter.tex": true
+  },
+  "auxiliary_files_rebuilt_from_restored_source": true
+}
