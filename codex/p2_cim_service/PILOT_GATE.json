@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-28T14:12:45.984178+08:00",
+  "contract": "OPTIMIZATION_RETURN_SET",
+  "five_pilots_valid": true,
+  "formal_slots": 20,
+  "formal_creates_before_gate": 0,
+  "pilot_in_formal_statistics": false,
+  "selection_by_quality": false,
+  "missing_fields_user_accepted": [
+    "physical timing timestamps",
+    "provider energies",
+    "actual machine label",
+    "internal evolution budget"
+  ],
+  "rows": [
+    {
+      "slot": "P01",
+      "result_id": "87c34366-f598-4d8c-9c3b-45482a0d94ca",
+      "result_sha256": "f823f79ea2e90a636005653a3f7ef60696961bcad460bb212b9967219e9db490",
+      "record_sha256": "6621bd0dcdc3f44465662969954cafbfa993f27d3f6aace85e67637652c4fa14",
+      "returned_set_size": 10,
+      "strict_solution_count": 10,
+      "task_hit_strict": true,
+      "task_best_regret": 0.0
+    },
+    {
+      "slot": "P02",
+      "result_id": "747a8036-7a31-4547-a912-c120159175eb",
+      "result_sha256": "39c4995d0f32efe1ea0ffba1729be096c9621ba57b929e1ad21dd97e54970c16",
+      "record_sha256": "a2471b9022510dd1c2f0d2ccabc0940b74540294180b6dafba14b8a776571f2f",
+      "returned_set_size": 10,
+      "strict_solution_count": 10,
+      "task_hit_strict": true,
+      "task_best_regret": 0.0
+    },
+    {
+      "slot": "P03",
+      "result_id": "c2a34844-ea41-4cb2-b87d-fbd9716f4106",
+      "result_sha256": "291c810aa879637c2790f73c54ee05594910e7a3c1c3a19566a6e867a86d4ef2",
+      "record_sha256": "91f3a407d2c66dfde85af7c66706e0e178778cfcd726affcf90360f80c22f066",
+      "returned_set_size": 10,
+      "strict_solution_count": 10,
+      "task_hit_strict": true,
+      "task_best_regret": 0.0
+    },
+    {
+      "slot": "P04",
+      "result_id": "192e7843-acf7-457c-906a-6ae703931ee3",
+      "result_sha256": "4d9f5e641ff5e9f83e44b276547a5314f64b18e888d4cdc7a382cf0f15d27ea1",
+      "record_sha256": "35dd32eaefc519140270dc0bfc3c4ad07cc576125114d46b3485728a7d0e59e9",
+      "returned_set_size": 10,
+      "strict_solution_count": 10,
+      "task_hit_strict": true,
+      "task_best_regret": 0.0
+    },
+    {
+      "slot": "P05",
+      "result_id": "dd489b34-4219-488f-a6cc-acd2f238619c",
+      "result_sha256": "135a7d1d435516b674d67de0563ca50364a4933a78efb29ff3ba58f18520defd",
+      "record_sha256": "defcdd8717cb9c254c209fb330a200b85bd57772d668e9e621fde744d023e25d",
+      "returned_set_size": 10,
+      "strict_solution_count": 10,
+      "task_hit_strict": true,
+      "task_best_regret": 0.0
+    }
+  ]
+}

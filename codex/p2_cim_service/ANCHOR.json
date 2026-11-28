@@ -1,0 +1,7 @@
+{
+  "anchor": "4d02a7c2f4eb43daa261d0f0f536a104afde01ee",
+  "base_anchor": "87a6c2559249983f43de9d3425e6c820178290aa",
+  "receipt_sha256": "2468b3a062c7750920ac80f11ef72c699c3600c1a019f0d511eba6e635330e89",
+  "formal_slots": 20,
+  "mode": "optimization service-level outcomes"
+}

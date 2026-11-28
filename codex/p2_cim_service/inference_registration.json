@@ -1,0 +1,16 @@
+{
+  "registered_at": "2026-11-28T14:09:57.362489+08:00",
+  "formal_tasks_started": 0,
+  "primary": "raw per-task events and regret; all 20 formal slots retained",
+  "binomial_interval": "two-sided 95% Clopper-Pearson, inherited P2_PLAN section 3.5",
+  "binomial_assumptions": "approximately independent task attempts with equal success probability and acceptable administrative cutoff; descriptive, not cross-instance or quantum superiority inference",
+  "no_binomial_interval_for": "planned-slot realization as if not-started slots were random hardware trials",
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20261128,
+  "bootstrap_unit": "complete task record including failure/pending/empty feasible set",
+  "bootstrap_statistic": "conditional median of task_best_strict_regret among feasible valid tasks, plus task hit proportion",
+  "empty_conditional_subsets": "count and report explicitly; no zero imputation",
+  "degenerate_all_zero_or_one": "state degeneracy; binomial interval remains nonzero width",
+  "solution_level_rates": false,
+  "TTS": false
+}
