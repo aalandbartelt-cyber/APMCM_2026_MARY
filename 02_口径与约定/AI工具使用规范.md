@@ -32,7 +32,7 @@ LLM、生成式 AI、代码辅助工具、智能数学软件、数据分析与�
 [1]DeepSeek,DeepSeek-R1-0528,深度求索（DeepSeek）,2026-6-12
 ```
 
-3. **提交 `AI工具使用详情.pdf`**，内容包括：
+3. **提交 `Dapmcm26301618ai.pdf`**，内容包括：
    - 所用 AI 工具名称和版本；
    - 具体使用目的和应用环节（模型构建、数据处理、可视化、文献检索等）；
    - 关键交互记录（重要提示词与回复）；
@@ -54,7 +54,7 @@ APMCM 这份通知没有给 30%/50% AIGC/相似比阈值；不要把另一赛事
 - 可编辑模板（English, 2 pages）：`02_口径与约定/AI_Tool_Usage_Details_Template.docx`
 - Markdown 源（English）：`02_口径与约定/AI_Tool_Usage_Details_Template.md`
 - 预览（English）：`02_口径与约定/AI_Tool_Usage_Details_Template_preview.pdf`
-- 填写完成后导出 PDF，最终文件名按官方要求 `AI工具使用详情.pdf`，放入 `06_交付/`。
+- 填写完成后导出 PDF，最终文件名按官方要求 `Dapmcm26301618ai.pdf`，放入 `06_交付/`。
 
 ## 6. 提交前检查
 
@@ -62,7 +62,7 @@ APMCM 这份通知没有给 30%/50% AIGC/相似比阈值；不要把另一赛事
 - [ ] 核心模型/算法/结果分析由队员独立完成；
 - [ ] 正文相应位置有 AI 标注；
 - [ ] References 有工具条目，格式/版本/日期正确；
-- [ ] 已生成 `AI工具使用详情.pdf`（四项内容齐全）；
+- [ ] 已生成 `Dapmcm26301618ai.pdf`（四项内容齐全）；
 - [ ] 未使用 AI：References 后有官方中文声明；
 - [ ] 所有 AI 输出已人工核验；
 - [ ] 引用/数据/模型来源可追溯，无剽窃；
