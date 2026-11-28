@@ -12,7 +12,7 @@
 | `AI_Tool_Usage_Details_Template.docx` | 2026 官方四项 AI 详情说明模板（English, 1 page, submission-ready，无提交前需删除项） |
 | `AI_Tool_Usage_Details_Template.md` | English Markdown source |
 | `AI_Tool_Usage_Details_Template_preview.pdf` | English template preview (1 page) |
-| `AI_Tool_Usage_Details_APMCM2026_D.docx` | 本队已填写的 AI 使用详情报告（D 题，English，2 pages）；提交件在 `06_交付/AI工具使用详情.pdf` |
+| `AI_Tool_Usage_Details_APMCM2026_D.docx` | 本队已填写的 AI 使用详情报告（D 题，English，3 pages）；提交件在 `06_交付/AI工具使用详情.pdf` |
 
 深度参考在 skill：
 
