@@ -1,0 +1,47 @@
+--- 03_求解/D/p2_research/validation_checker.py
++++ codex/p2_zero/validation_checker.py
+@@ -2,9 +2,10 @@
+ from pathlib import Path
+ import hashlib,json,sys
+ import numpy as np
++sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'03_求解/D/p2_research'))
+ from packed_checker import dp_chain,brute_check
+ from replay_audit import replay,read_rows
+-ROOT=Path(__file__).resolve().parents[3];BASE=ROOT/'artifacts/p2_research_20261128'
++ROOT=Path(__file__).resolve().parents[2];BASE=ROOT/'artifacts/p2_research_20261128'
+ 
+ def certify(p):
+     z=np.load(p/'matrix.npz');K=z['J'];q=z['q'];v=z['values'];blocks=json.loads((p/'blocks.json').read_text());n=len(K)-1
+@@ -18,6 +19,8 @@
+     edges=np.zeros_like(K,dtype=bool);covered=[];mapped=[];gaps=[];mins=[];ground_candidates=[]
+     iszero='zero' in p.name
+     for b in blocks:
++        assert b['reference'] == n, 'Reference index mismatch'
++        assert all(isinstance(i,int) and 0 <= i < len(v) for i in b['mapping']), 'Candidate index outside dictionary'
+         ids=list(range(b['start'],b['stop']));covered+=ids;mapped+=b['mapping'];assert len(b['mapping'])==len(ids)+1
+         for a,c in zip(ids[:-1],ids[1:]):edges[a,c]=edges[c,a]=True
+         edges[ids,n]=edges[n,ids]=True
+@@ -27,6 +30,7 @@
+         costs=np.zeros(len(es),dtype=int) if iszero else q[b['mapping']]
+         assert np.unique(np.array(es)-4*costs).size==1 and min(es)==good
+         gaps.append(bad-good);mins.append(good);ground_candidates += [b['mapping'][i] for i,e in enumerate(es) if e==good]
++    if len(v)==529: assert sorted(mapped)==list(range(529)), 'Incomplete blind dictionary'
+     assert covered==list(range(n)) and len(set(mapped))==len(mapped) and not K[~edges].any()
+     # Global decoder min(q,index) across block minimizers: only blocks attaining
+     # the minimum q in this batch can win. Enumerate all their tied candidates.
+@@ -55,10 +59,13 @@
+     results={p.name:certify(p) for p in sorted(root.iterdir()) if p.is_dir() and (p/'matrix.npz').exists()}
+     if mode!='h05':
+         covered=sum([results[f'full_batch{i}_real']['mapped_candidates'] for i in range(5)],[])
+-        assert covered==list(range(2704))
++        assert sorted(covered)==list(range(2704))
++        for i,expected in enumerate(np.array_split(np.arange(2704),5)):
++            for kind in ('real','zero'):
++                assert sorted(results[f'full_batch{i}_{kind}']['mapped_candidates'])==expected.tolist()
+     report=dict(independent_small_states=brute_check(),matrices=results)
+     for x in results.values():del x['mapped_candidates']
+-    path=root/('independent_full_audit.json' if mode in ['h05','final'] else 'independent_pre_SA_certificate.json')
++    path=ROOT/'codex/p2_zero'/('replay_'+mode+'.json')
+     with path.open('x') as f:json.dump(report,f,indent=2)
+     print(json.dumps({name:{k:v for k,v in d.items() if k in ['G1','G2','spins','max_J','illegal_gap','batch_ground_worst_regret','replay']} for name,d in results.items()},indent=2))
+ 

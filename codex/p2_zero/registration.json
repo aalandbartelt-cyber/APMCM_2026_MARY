@@ -1,0 +1,203 @@
+{
+  "tasks": [
+    [
+      "40_real",
+      0
+    ],
+    [
+      "40_zero",
+      0
+    ],
+    [
+      "single_real",
+      0
+    ],
+    [
+      "40_real",
+      1
+    ],
+    [
+      "40_zero",
+      1
+    ],
+    [
+      "single_real",
+      1
+    ],
+    [
+      "40_real",
+      2
+    ],
+    [
+      "40_zero",
+      2
+    ],
+    [
+      "40_real",
+      3
+    ],
+    [
+      "40_zero",
+      3
+    ],
+    [
+      "40_real",
+      4
+    ],
+    [
+      "40_zero",
+      4
+    ],
+    [
+      "40_real",
+      5
+    ],
+    [
+      "40_zero",
+      5
+    ],
+    [
+      "40_real",
+      6
+    ],
+    [
+      "40_zero",
+      6
+    ],
+    [
+      "40_real",
+      7
+    ],
+    [
+      "40_zero",
+      7
+    ],
+    [
+      "40_real",
+      8
+    ],
+    [
+      "40_zero",
+      8
+    ],
+    [
+      "40_real",
+      9
+    ],
+    [
+      "40_zero",
+      9
+    ],
+    [
+      "40_real",
+      10
+    ],
+    [
+      "40_zero",
+      10
+    ],
+    [
+      "40_real",
+      11
+    ],
+    [
+      "40_zero",
+      11
+    ],
+    [
+      "40_real",
+      12
+    ],
+    [
+      "40_zero",
+      12
+    ],
+    [
+      "40_real",
+      13
+    ],
+    [
+      "40_zero",
+      13
+    ],
+    [
+      "40_real",
+      14
+    ],
+    [
+      "40_zero",
+      14
+    ],
+    [
+      "40_real",
+      15
+    ],
+    [
+      "40_zero",
+      15
+    ],
+    [
+      "40_real",
+      16
+    ],
+    [
+      "40_zero",
+      16
+    ],
+    [
+      "40_real",
+      17
+    ],
+    [
+      "40_zero",
+      17
+    ],
+    [
+      "40_real",
+      18
+    ],
+    [
+      "40_zero",
+      18
+    ],
+    [
+      "40_real",
+      19
+    ],
+    [
+      "40_zero",
+      19
+    ]
+  ],
+  "cutoff": "2026-11-28T20:13:45+08:00",
+  "charged_plan_minutes": 30,
+  "init_temperature": 26284,
+  "alpha": 0.99,
+  "cutoff_ratio": 0.0001,
+  "iterations_per_t": 550,
+  "process_num": 1,
+  "size_limit": 1,
+  "prior_seed_fields_checked": 5600,
+  "budgets": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "main": "B=5 two-sided exact McNemar, alpha=.05, 20 fresh seed-block pairs; incomplete block suppresses test; failed attempts count as misses. Primary: any strict regret=0; secondary: strict min(E,index). No replacement.",
+  "hashes": {
+    "codex/p2_zero/run_local.py": "6791ca64c0473afce54c876cf93608a62814c47a4da2eb03d0a72049821b28f4",
+    "codex/p2_zero/slots.csv": "19e3b9a7cfeaa0c9b78627fd48058c740bc46c5303791bbe5940a48001e1d1da",
+    "codex/p2_zero/validation_checker.py": "a095fbbce9dec0fdcb0e2ae838b48ed0f59fba891e3b116fd991959a8d2bd08f",
+    "codex/p2_zero/single_certificate.json": "a02c35e3bb01934815d6a2016403615276594827a535854bef28f9c201744a73",
+    "artifacts/p2_research_20261128/short_H05/40_real/matrix.npz": "68f4fd29ea22dbbba9187d9f3eec1cb1d89e33c7fc1e5b6116bfd95cf39b9952",
+    "artifacts/p2_research_20261128/short_H05/40_real/blocks.json": "da4450e440c0cb8f31d4baab20f97bc584b78f331bb1b8cd0c8698f5b0e87a0e",
+    "artifacts/p2_research_20261128/short_H05/40_zero/matrix.npz": "dfd1401044cf9e38f0dc272e8233a8d1a5fdbd69818a8b2bccee3b871d1b08e1",
+    "artifacts/p2_research_20261128/short_H05/40_zero/blocks.json": "da4450e440c0cb8f31d4baab20f97bc584b78f331bb1b8cd0c8698f5b0e87a0e",
+    "artifacts/p2_zero/single_real/matrix.npz": "408ee930b2d1939cb403360aca6d27eefc01ced1c165f517c8ec83e14b26bf12",
+    "artifacts/p2_zero/single_real/blocks.json": "059d491e4448fcc62f7233c41678aa6a89c51516189d5c281e0f914f699c06bb"
+  }
+}
