@@ -1,0 +1,295 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "state_revision": 9,
+  "state_sha256": "77b3a6fc5e8735f6a76dcf17d73ea828bad79d86d49fc336fdb2048bcf1a83a7",
+  "as_of": "2026-11-28T22:02:14.836569+08:00",
+  "verified_slots": 1,
+  "verified_vectors": 10,
+  "slots": [
+    {
+      "slot": "F01",
+      "family": "O3",
+      "status": "VALID_COMPLETED",
+      "gate_revision": 2,
+      "vector_replay": "VERIFIED",
+      "billing": "OK",
+      "events": [
+        {
+          "path": "F01/submit_tfb_pkao/001_query.bin",
+          "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+          "kind": "query",
+          "started_at": "2026-11-28T21:59:29.098525+08:00",
+          "ended_at": "2026-11-28T21:59:29.536178+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/submit_tfb_pkao/002_query.bin",
+          "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+          "kind": "query",
+          "started_at": "2026-11-28T21:59:29.536807+08:00",
+          "ended_at": "2026-11-28T21:59:29.844455+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/submit_tfb_pkao/003_create.bin",
+          "sha256": "c70d88ffb7198db4aa5b067cfb966eb245692f083f0dd1267fc8401fc7e5dfb3",
+          "kind": "create",
+          "started_at": "2026-11-28T21:59:30.558612+08:00",
+          "ended_at": "2026-11-28T21:59:31.090298+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_w4t97n_d/001_query.bin",
+          "sha256": "c23224a7d4cbca92de8d6c55c0fc7ab0255222709b341f3838549c9845f8308b",
+          "kind": "query",
+          "started_at": "2026-11-28T21:59:44.550776+08:00",
+          "ended_at": "2026-11-28T21:59:44.880085+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_f55e_8v1/001_query.bin",
+          "sha256": "d8ff468c4b2acdabb7d78dd4d8d0d899ee0b0db83c1d0c5b275b497ebbb20610",
+          "kind": "query",
+          "started_at": "2026-11-28T22:00:23.204664+08:00",
+          "ended_at": "2026-11-28T22:00:23.565738+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_f8q7bj3w/001_query.bin",
+          "sha256": "9b944bbe0b5889043a83e6f1f703bcc133281e121da77ea9eb2fdffb9c3dcdb6",
+          "kind": "query",
+          "started_at": "2026-11-28T22:01:23.081757+08:00",
+          "ended_at": "2026-11-28T22:01:23.394575+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_ds2qz_8j/001_query.bin",
+          "sha256": "c5aaa442bda6504de26329c5e90bd5091d8a035589f105e88ca977aef304ee12",
+          "kind": "query",
+          "started_at": "2026-11-28T22:02:14.246578+08:00",
+          "ended_at": "2026-11-28T22:02:14.552673+08:00",
+          "http_status": 200
+        }
+      ],
+      "task_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+      "verified_vector_count": 10,
+      "rows": [
+        {
+          "return_index": 0,
+          "energy": -58400,
+          "residual": 96,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 1,
+          "energy": -58392,
+          "residual": 104,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 2,
+          "energy": -58392,
+          "residual": 104,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 3,
+          "energy": -58384,
+          "residual": 112,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 4,
+          "energy": -58376,
+          "residual": 120,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 5,
+          "energy": -58376,
+          "residual": 120,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 6,
+          "energy": -58372,
+          "residual": 124,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 7,
+          "energy": -58368,
+          "residual": 128,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 8,
+          "energy": -58360,
+          "residual": 136,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        {
+          "return_index": 9,
+          "energy": -58356,
+          "residual": 140,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        }
+      ],
+      "primary": {
+        "return_index": 0,
+        "energy": -58400,
+        "residual": 96,
+        "strict": true,
+        "invalid_groups": [],
+        "candidate_index": 273,
+        "id": 2812,
+        "vhat": 3.6243073264766985,
+        "regret": 0.0,
+        "exact": true,
+        "regret_le_0.1": true
+      },
+      "secondary": {
+        "exists_strict_hit": true,
+        "min_strict_regret": 0.0
+      },
+      "strict_count": 10,
+      "raw_sha256": "2552dfbf1e1e01d2816bffb38af33fc205d6d80ddfd5933e43879e91e2262364",
+      "vectors_sha256": "20e4b087856e2ea751dc0e3ee9224d23b022267a09319aeaa800ca50c20cce63",
+      "terminal_sha256": "c5aaa442bda6504de26329c5e90bd5091d8a035589f105e88ca977aef304ee12"
+    },
+    {
+      "slot": "F02",
+      "family": "FO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F03",
+      "family": "NO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F04",
+      "family": "FO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F05",
+      "family": "NO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F06",
+      "family": "O3",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F07",
+      "family": "NO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F08",
+      "family": "O3",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F09",
+      "family": "FO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    }
+  ]
+}

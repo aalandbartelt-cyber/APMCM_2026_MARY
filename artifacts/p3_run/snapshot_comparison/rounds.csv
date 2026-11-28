@@ -1,0 +1,4 @@
+round,complete,strict_coverage,joint_exact,observed_quality_failure,max_slice_regret,aggregate_id,aggregate_exact,aggregate_regret
+1,True,True,True,False,0.0,13153,True,0.0
+2,True,True,True,False,0.0,13153,True,0.0
+3,True,True,True,False,0.0,13153,True,0.0

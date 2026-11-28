@@ -1,0 +1,32 @@
+{
+  "status": "CLOSED",
+  "mode": "USER_AUTHORIZED_EARLY_TERMINAL",
+  "preregistered_last_creation_at": "2026-11-29T18:00:00+08:00",
+  "preregistered_snapshot_deadline": "2026-11-29T21:00:00+08:00",
+  "authorization": "用户明确授权全部计划任务终态后立即签发快照。",
+  "reason": "九个正式服务槽和900次正式SA均已终态完成，无在途数据。提前于预登记截止线冻结是更保守的选择，不改变任何判定规则。",
+  "adjudication_rules_changed": false,
+  "pending_tasks": 0,
+  "git_anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "sealed_receipt_sha256": "ea291e3e0acd4bda99992e6d44b335121e2875a2be77b0da9a6f84673a396157",
+  "state_revision": 59,
+  "state_sha256": "b3d50d885abd379d9d91cab435801c5b5d0f6e991cf7d2c7f64cb831df3f5664",
+  "last_cloud_observation": "2026-11-28T22:09:27.332764+08:00",
+  "verified_slots": 9,
+  "verified_vectors": 90,
+  "audit_sha256": "cbadfb021e535b40bd0e5bd44793ac90705d664164bd9a42f92262ac00c5937b",
+  "sa_verified_vectors": 900,
+  "sa_verification_sha256": "c7e7dc7e1d9da35999ae0a824f98c699910ac479725daa0f7691fc1e4594ee65",
+  "main_sha256": "047cf466901e6a7534f9978a7bc2c03cd80a3b77d6d9f6655e528c5170880912",
+  "achieved_rounds": 3,
+  "planned_rounds": 3,
+  "completed_rounds": 3,
+  "files": {
+    "main.csv": "047cf466901e6a7534f9978a7bc2c03cd80a3b77d6d9f6655e528c5170880912",
+    "rounds.csv": "5ae28d7da825d28b5ba6b7dc30f4d2f62440a8b2bab1b286a952fe1c1d4c3c12",
+    "slots.csv": "211fa2ce6eeda2ecf235411cc7423f3e55d1fc694f5602dd2d9158febcee7a98",
+    "summary.json": "721ea2f1ea7df2cb05a7765367ea5e30eda186d4eb2f848ec8ad6dcca7da5e88",
+    "vectors.csv": "557d49db413c495a952fa6678b7e8172078c1bd01d41027c2f2d335c11c84f73"
+  },
+  "issued_at": "2026-11-28T22:43:18.826986+08:00"
+}

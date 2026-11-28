@@ -1,0 +1,18 @@
+[
+  {
+    "spins": 5,
+    "states": 32,
+    "moves": 1920,
+    "energy_errors": 0,
+    "increment_errors": 0,
+    "transition_errors": 0
+  },
+  {
+    "spins": 8,
+    "states": 256,
+    "moves": 24576,
+    "energy_errors": 0,
+    "increment_errors": 0,
+    "transition_errors": 0
+  }
+]

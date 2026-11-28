@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-11-28T14:00:39.205+00:00",
+  "registration_sha256": "199bff7c1c0948c86b6e697d920de82fdf9f4f7f83daf9dcfc1b3fdde915d076",
+  "gate_sha256": "41254016dc41ad1b6fe716fda700ccc7ccdb30acad65621966aa2a72fbd9c1b2",
+  "cutoff_contract": "absolute",
+  "registration_addendum_sha256": "021b8742e6078dfa112da07bbf898809fcb5340d51f28f267c0850761eeaa1e1",
+  "backend": "kaiwu_cpu4",
+  "sdk": "kaiwu 1.4.4",
+  "numpy": "2.2.6",
+  "python": "3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]",
+  "max_workers": 4,
+  "source_sha256": "4203e277b3f8f8df231b754aa35ec62bfc85fcb56648191afd7e7a161e6293fa"
+}

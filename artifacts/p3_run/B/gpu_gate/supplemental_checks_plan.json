@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-28T13:59:57.353227+00:00",
+  "purpose": "Mechanistic diagnostics only; original validation thresholds & primary sample unchanged. No numerical retuning or substitute formal data.",
+  "trace": "Run unmodified production CUDA kernel from every 5-spin state and every 8-spin state, 3 temperature levels [32,8,2], one sweep each, independent pure Python dense recomputation, compare full spin/field/integer-energy/RNG/best-vector after each level.",
+  "cpu_blackbox": "Inspect public single_process_solve + history on a two-spin signed matrix with fixed initial spin, one nominal temperature and one nominal proposal, seeds reserved 7901000..7901999. Only calculate transition probabilities if API exposes terminal signed configuration unambiguously, no inference from best-only or queue output. Also compare integer energy reported by public getter to exact scoring, with scope limited to reported Hamiltonians. Underlying closed-source transition rules never claimed independently attested."
+}

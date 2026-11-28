@@ -1,0 +1,19 @@
+{
+  "family": "FO2",
+  "block": 1,
+  "restart": 91,
+  "seed": 7302090,
+  "started_utc": "2026-11-28T14:14:09.639+00:00",
+  "T0": 23908.0,
+  "cutoff": 0.0001,
+  "backend": "kaiwu_cpu4",
+  "vector_path": "vectors/FO2_B01_R091.npy",
+  "sha256": "bea2fad56b9b691921582086b4b3039249caa68b81c645d059dc5efa4ea2acdf",
+  "dtype": "int64",
+  "shape": [
+    1,
+    490
+  ],
+  "status": "RETURNED",
+  "finished_utc": "2026-11-28T14:14:13.234+00:00"
+}

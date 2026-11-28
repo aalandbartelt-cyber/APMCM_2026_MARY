@@ -1,0 +1,23 @@
+{
+  "planned_restarts": 900,
+  "return_status": {
+    "SCORED": 900
+  },
+  "verified_raw_files": 900,
+  "individual_sha256_verified": true,
+  "separate_upper_triangle_energy_and_wall_decode_verified": true,
+  "protocol_sha256": "ac89bb8933d827e0c5efcdf58870987bd8323f4c5a33b9c6aa3f72c5835d966d",
+  "scoring_script_sha256": "d0cf6a283ca83082fde629356d8df0ff3eb2ce46a45a4f5c13ba283a1a0f0051",
+  "formal_intersection_with_observed_gate_seeds": 0,
+  "validation_vectors_sha256": {
+    "cpu_vectors.jsonl": "179543f07c119dd7932b494e206bf79e6c9ef3f7372ce61c9c646b9cc98c5523",
+    "gpu_vectors.jsonl": "a2e3f599b64c474535a3b91db722893f88f0e95bbf4f36d68e52c7055c026672"
+  },
+  "outputs": {
+    "raw_index.csv": "1e20f36390e241b3a929801e2fc46b6d621f9c12e7cc0ba1fc5d4b11d8993ecd",
+    "vectors.sha256": "de8207dcc2be494911e07d74fa2433447dc4b80c90c6c898ef9f5e5c914b87fa",
+    "formal_results.csv": "861d52d4d7d77f9e0ad14ce7331f259fb0eed346ddb0b4591c5ac291a5c74112",
+    "budget_prefixes.csv": "2aa11c042d04767aac1174770e4bfc2171ddee0badd058d946f4ff3a5f458f9e",
+    "budget_summary.csv": "01664746011f1a4d4a37090061a846bb624546181c0a0e36b3e8644bfd4d9def"
+  }
+}

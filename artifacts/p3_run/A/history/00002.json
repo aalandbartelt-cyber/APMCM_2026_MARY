@@ -1,0 +1,173 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "receipt_sha256": "ea291e3e0acd4bda99992e6d44b335121e2875a2be77b0da9a6f84673a396157",
+  "timezone": "Asia/Shanghai",
+  "stop": "2026-11-29T18:00:00+08:00",
+  "snapshot": "2026-11-29T21:00:00+08:00",
+  "opened_at": "2026-11-28T21:59:07.688130+08:00",
+  "revision": 2,
+  "records": {},
+  "attempts": {
+    "F01": {
+      "intent_at": "2026-11-28T21:59:28.109473+08:00",
+      "before": {
+        "550": 11,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    }
+  },
+  "first_return_seen_at": null,
+  "baseline_balance": {
+    "550": 11,
+    "1000": 2
+  },
+  "baseline_evidence": {
+    "source": "user_console_readback",
+    "verbatim": "11/2",
+    "recorded_at": "2026-11-28T21:59:07.688137+08:00",
+    "read_time_exact": false
+  },
+  "startup_preflight": "READY_OFFLINE",
+  "event": "F01_RESERVED",
+  "updated_at": "2026-11-28T21:59:28.109490+08:00",
+  "summary": {
+    "slots": [
+      {
+        "slot": "F01",
+        "family": "O3",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F02",
+        "family": "FO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F03",
+        "family": "NO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F04",
+        "family": "FO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F05",
+        "family": "NO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F06",
+        "family": "O3",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F07",
+        "family": "NO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F08",
+        "family": "O3",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F09",
+        "family": "FO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      },
+      {
+        "round": 2,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      },
+      {
+        "round": 3,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      }
+    ],
+    "achieved": 0,
+    "planned_rounds": 3,
+    "completed_rounds": 0,
+    "achieved_per_planned": 0.0,
+    "achieved_per_completed": null,
+    "max_observed_regret_by_family": {
+      "O3": null,
+      "NO2": null,
+      "FO2": null
+    }
+  }
+}

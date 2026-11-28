@@ -1,0 +1,133 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "state_revision": 8,
+  "state_sha256": "b42f4c5a30b97d84082397ebde3b57f3d18facd70199b04d1cb5de80a907e198",
+  "as_of": "2026-11-28T22:01:23.426079+08:00",
+  "verified_slots": 0,
+  "verified_vectors": 0,
+  "slots": [
+    {
+      "slot": "F01",
+      "family": "O3",
+      "status": "PENDING",
+      "gate_revision": 2,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "OK",
+      "events": [
+        {
+          "path": "F01/submit_tfb_pkao/001_query.bin",
+          "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+          "kind": "query",
+          "started_at": "2026-11-28T21:59:29.098525+08:00",
+          "ended_at": "2026-11-28T21:59:29.536178+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/submit_tfb_pkao/002_query.bin",
+          "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+          "kind": "query",
+          "started_at": "2026-11-28T21:59:29.536807+08:00",
+          "ended_at": "2026-11-28T21:59:29.844455+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/submit_tfb_pkao/003_create.bin",
+          "sha256": "c70d88ffb7198db4aa5b067cfb966eb245692f083f0dd1267fc8401fc7e5dfb3",
+          "kind": "create",
+          "started_at": "2026-11-28T21:59:30.558612+08:00",
+          "ended_at": "2026-11-28T21:59:31.090298+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_w4t97n_d/001_query.bin",
+          "sha256": "c23224a7d4cbca92de8d6c55c0fc7ab0255222709b341f3838549c9845f8308b",
+          "kind": "query",
+          "started_at": "2026-11-28T21:59:44.550776+08:00",
+          "ended_at": "2026-11-28T21:59:44.880085+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_f55e_8v1/001_query.bin",
+          "sha256": "d8ff468c4b2acdabb7d78dd4d8d0d899ee0b0db83c1d0c5b275b497ebbb20610",
+          "kind": "query",
+          "started_at": "2026-11-28T22:00:23.204664+08:00",
+          "ended_at": "2026-11-28T22:00:23.565738+08:00",
+          "http_status": 200
+        },
+        {
+          "path": "F01/poll_f8q7bj3w/001_query.bin",
+          "sha256": "9b944bbe0b5889043a83e6f1f703bcc133281e121da77ea9eb2fdffb9c3dcdb6",
+          "kind": "query",
+          "started_at": "2026-11-28T22:01:23.081757+08:00",
+          "ended_at": "2026-11-28T22:01:23.394575+08:00",
+          "http_status": 200
+        }
+      ],
+      "task_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521"
+    },
+    {
+      "slot": "F02",
+      "family": "FO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F03",
+      "family": "NO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F04",
+      "family": "FO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F05",
+      "family": "NO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F06",
+      "family": "O3",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F07",
+      "family": "NO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F08",
+      "family": "O3",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    },
+    {
+      "slot": "F09",
+      "family": "FO2",
+      "status": "NOT_STARTED",
+      "gate_revision": null,
+      "vector_replay": "NOT_AVAILABLE",
+      "billing": "NO_CONFIRMED_CREATE"
+    }
+  ]
+}

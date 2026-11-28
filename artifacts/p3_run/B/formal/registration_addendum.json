@@ -1,0 +1,12 @@
+{
+  "stage": "PROSPECTIVE_CLARIFICATION_BEFORE_FIRST_FORMAL_RESTART",
+  "created_utc": "2026-11-28T13:58:49.084758+00:00",
+  "registration_sha256": "199bff7c1c0948c86b6e697d920de82fdf9f4f7f83daf9dcfc1b3fdde915d076",
+  "formal_cutoff_contract": "absolute",
+  "formal_cutoff": 0.0001,
+  "formal_validation_and_primary_baseline_use_same_schedule": true,
+  "reason": "The current user instruction explicitly sets final temperature to 1e-4. Parent resolved the distinction before formal execution. The unmodified historical pilot and its frozen forecasts used T0*1e-4; do not recompute their prespecified thresholds or describe the two schedules as identical.",
+  "formal_gpu_validation_reserved": "660001+1000*j+i, i=0..159, j=0..2",
+  "formal_intersection_with_gpu_validation_reserved": 0,
+  "original_seed_ledger_still_binding": true
+}

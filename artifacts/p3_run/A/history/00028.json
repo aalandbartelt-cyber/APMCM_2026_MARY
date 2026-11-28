@@ -1,0 +1,806 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "receipt_sha256": "ea291e3e0acd4bda99992e6d44b335121e2875a2be77b0da9a6f84673a396157",
+  "timezone": "Asia/Shanghai",
+  "stop": "2026-11-29T18:00:00+08:00",
+  "snapshot": "2026-11-29T21:00:00+08:00",
+  "opened_at": "2026-11-28T21:59:07.688130+08:00",
+  "revision": 28,
+  "records": {
+    "F01": {
+      "family": "O3",
+      "task_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F01",
+        "family": "O3",
+        "task_name": "AP26_P3_2e1dab8d3312_F01_O3",
+        "matrix_sha256": "beb1d7e6715c5420782008b4f36982b9b6a5b5ccd793b469bf69cc7c0a3ee6a2",
+        "sdk_md5": "077ea9f4cd37b22b26d5797074f86b8c",
+        "mode": "optimization",
+        "state": "RETURN_AVAILABLE",
+        "started_at": "2026-11-28T22:02:13.897521+08:00",
+        "result_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+        "create_count": 0,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/poll_ds2qz_8j",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:02:14.246578+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:02:14.552673+08:00",
+            "sha256": "c5aaa442bda6504de26329c5e90bd5091d8a035589f105e88ca977aef304ee12",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/poll_ds2qz_8j/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:02:14 GMT",
+            "response_code": "0"
+          }
+        ],
+        "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/poll_ds2qz_8j/001_query.bin",
+        "remote_status": "1000",
+        "finished_at": "2026-11-28T22:02:14.562919+08:00"
+      },
+      "observed_at": "2026-11-28T22:02:14.586052+08:00",
+      "status": "VALID_COMPLETED",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 11,
+            "1000": 2
+          },
+          "after": {
+            "550": 10,
+            "1000": 2
+          },
+          "attributable": false,
+          "recorded_at": "2026-11-28T22:00:09.743509+08:00",
+          "source": "user_console_readback",
+          "verbatim": "10/2"
+        },
+        {
+          "before": {
+            "550": 11,
+            "1000": 2
+          },
+          "after": {
+            "550": 10,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:00:22.630128+08:00",
+          "source": "user_console_readback",
+          "verbatim": "10/2；是，本轮仅 P3 使用"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 11,
+          "1000": 2
+        },
+        "after": {
+          "550": 10,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:00:22.630128+08:00",
+        "source": "user_console_readback",
+        "verbatim": "10/2；是，本轮仅 P3 使用"
+      },
+      "return_archive": {
+        "state": "ORDERED_RETURN",
+        "result_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+        "count": 10,
+        "vectors_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/vectors.npy",
+        "raw_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/result.pkl",
+        "sha256": "2552dfbf1e1e01d2816bffb38af33fc205d6d80ddfd5933e43879e91e2262364",
+        "vectors_sha256": "20e4b087856e2ea751dc0e3ee9224d23b022267a09319aeaa800ca50c20cce63",
+        "terminal_query_sha256": "c5aaa442bda6504de26329c5e90bd5091d8a035589f105e88ca977aef304ee12",
+        "server_time_consume_uninterpreted": "2175.6",
+        "ingested_at": "2026-11-28T22:02:14.827159+08:00"
+      },
+      "outcome": {
+        "family": "O3",
+        "status": "VALID_COMPLETED",
+        "rows": [
+          {
+            "return_index": 0,
+            "energy": -58400,
+            "residual": 96,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 1,
+            "energy": -58392,
+            "residual": 104,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 2,
+            "energy": -58392,
+            "residual": 104,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 3,
+            "energy": -58384,
+            "residual": 112,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 4,
+            "energy": -58376,
+            "residual": 120,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 5,
+            "energy": -58376,
+            "residual": 120,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 6,
+            "energy": -58372,
+            "residual": 124,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 7,
+            "energy": -58368,
+            "residual": 128,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 8,
+            "energy": -58360,
+            "residual": 136,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 9,
+            "energy": -58356,
+            "residual": 140,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          }
+        ],
+        "primary": {
+          "return_index": 0,
+          "energy": -58400,
+          "residual": 96,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        "secondary": {
+          "exists_strict_hit": true,
+          "min_strict_regret": 0.0
+        },
+        "strict_count": 10,
+        "forecast": "BETTER_THAN_SINGLE_SA"
+      }
+    },
+    "F02": {
+      "family": "FO2",
+      "task_id": "d208372d-d23f-42b2-9122-3869f5b218bf",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F02",
+        "family": "FO2",
+        "task_name": "AP26_P3_2e1dab8d3312_F02_FO2",
+        "matrix_sha256": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9",
+        "sdk_md5": "68da57722ecc4eefa32003770a819798",
+        "mode": "optimization",
+        "state": "PENDING",
+        "started_at": "2026-11-28T22:04:51.937621+08:00",
+        "result_id": "d208372d-d23f-42b2-9122-3869f5b218bf",
+        "create_count": 0,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F02/poll_tyrodwpn",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:04:52.313961+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:52.647689+08:00",
+            "sha256": "2aada0dca82791d12e33a358a15b658561ae926d1da442b2efa659fa82271bdb",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F02/poll_tyrodwpn/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:52 GMT",
+            "response_code": "0"
+          }
+        ],
+        "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F02/poll_tyrodwpn/001_query.bin",
+        "remote_status": "2002",
+        "finished_at": "2026-11-28T22:04:52.648206+08:00"
+      },
+      "observed_at": "2026-11-28T22:04:52.673452+08:00",
+      "status": "PENDING",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 10,
+            "1000": 2
+          },
+          "after": {
+            "550": 9,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:03:24.062238+08:00",
+          "source": "user_console_readback",
+          "verbatim": "9/2"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 10,
+          "1000": 2
+        },
+        "after": {
+          "550": 9,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:03:24.062238+08:00",
+        "source": "user_console_readback",
+        "verbatim": "9/2"
+      }
+    },
+    "F03": {
+      "family": "NO2",
+      "task_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F03",
+        "family": "NO2",
+        "task_name": "AP26_P3_2e1dab8d3312_F03_NO2",
+        "matrix_sha256": "f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f",
+        "sdk_md5": "c53bcb268e7cffc0b2912799006da167",
+        "mode": "optimization",
+        "state": "PENDING",
+        "started_at": "2026-11-28T22:03:57.847264+08:00",
+        "result_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+        "create_count": 0,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/poll_upos622r",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:03:58.195331+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:03:58.516137+08:00",
+            "sha256": "25031f9a57dbac201a36464414476f0632e419aceb1ce2079028e7c2d09afaa5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/poll_upos622r/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:03:58 GMT",
+            "response_code": "0"
+          }
+        ],
+        "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/poll_upos622r/001_query.bin",
+        "remote_status": "2002",
+        "finished_at": "2026-11-28T22:03:58.516690+08:00"
+      },
+      "observed_at": "2026-11-28T22:03:58.527285+08:00",
+      "status": "PENDING",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 9,
+            "1000": 2
+          },
+          "after": {
+            "550": 8,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:03:51.208618+08:00",
+          "source": "user_console_readback",
+          "verbatim": "8/2"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 9,
+          "1000": 2
+        },
+        "after": {
+          "550": 8,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:03:51.208618+08:00",
+        "source": "user_console_readback",
+        "verbatim": "8/2"
+      }
+    },
+    "F04": {
+      "family": "FO2",
+      "task_id": "c708bf88-2763-4558-a514-e58981c7ed91",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F04",
+        "family": "FO2",
+        "task_name": "AP26_P3_2e1dab8d3312_F04_FO2",
+        "matrix_sha256": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9",
+        "sdk_md5": "68da57722ecc4eefa32003770a819798",
+        "mode": "optimization",
+        "state": "PENDING",
+        "started_at": "2026-11-28T22:03:58.794246+08:00",
+        "result_id": "c708bf88-2763-4558-a514-e58981c7ed91",
+        "create_count": 0,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/poll_l6lv8gtr",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:03:59.170063+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:03:59.498262+08:00",
+            "sha256": "9112bb1180471ff3db13bffb81c6ab786b60cba0e470cac915262e1fbb9fed06",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/poll_l6lv8gtr/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:03:59 GMT",
+            "response_code": "0"
+          }
+        ],
+        "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/poll_l6lv8gtr/001_query.bin",
+        "remote_status": "2002",
+        "finished_at": "2026-11-28T22:03:59.498751+08:00"
+      },
+      "observed_at": "2026-11-28T22:03:59.531686+08:00",
+      "status": "PENDING",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 8,
+            "1000": 2
+          },
+          "after": {
+            "550": 7,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:04:14.736984+08:00",
+          "source": "user_console_readback",
+          "verbatim": "7/2"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 8,
+          "1000": 2
+        },
+        "after": {
+          "550": 7,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:04:14.736984+08:00",
+        "source": "user_console_readback",
+        "verbatim": "7/2"
+      }
+    },
+    "F05": {
+      "family": "NO2",
+      "task_id": "683fd4d0-e160-4ca0-a167-e57081c2e274",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F05",
+        "family": "NO2",
+        "task_name": "AP26_P3_2e1dab8d3312_F05_NO2",
+        "matrix_sha256": "f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f",
+        "sdk_md5": "c53bcb268e7cffc0b2912799006da167",
+        "mode": "optimization",
+        "state": "CREATED",
+        "started_at": "2026-11-28T22:04:16.208978+08:00",
+        "result_id": "683fd4d0-e160-4ca0-a167-e57081c2e274",
+        "create_count": 1,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F05/submit_m19d3ltg",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:04:16.585874+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:16.888577+08:00",
+            "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F05/submit_m19d3ltg/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:17 GMT",
+            "response_code": "10320"
+          },
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:04:16.889360+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:17.222558+08:00",
+            "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F05/submit_m19d3ltg/002_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:17 GMT",
+            "response_code": "10320"
+          },
+          {
+            "kind": "create",
+            "started_at": "2026-11-28T22:04:17.764717+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:18.360134+08:00",
+            "sha256": "0d744abdb88ca3e23b4e1fed4f3538055b7dae959666259cb9c18cf8c7517a90",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F05/submit_m19d3ltg/003_create.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:18 GMT",
+            "response_code": "0"
+          }
+        ],
+        "finished_at": "2026-11-28T22:04:18.387785+08:00"
+      },
+      "observed_at": "2026-11-28T22:04:18.425705+08:00",
+      "status": "CREATED",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 7,
+            "1000": 2
+          },
+          "after": {
+            "550": 6,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:04:48.015117+08:00",
+          "source": "user_console_readback",
+          "verbatim": "6/2"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 7,
+          "1000": 2
+        },
+        "after": {
+          "550": 6,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:04:48.015117+08:00",
+        "source": "user_console_readback",
+        "verbatim": "6/2"
+      }
+    },
+    "F06": {
+      "family": "O3",
+      "task_id": "6455ca58-b5a6-4165-af52-fced966f28db",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F06",
+        "family": "O3",
+        "task_name": "AP26_P3_2e1dab8d3312_F06_O3",
+        "matrix_sha256": "beb1d7e6715c5420782008b4f36982b9b6a5b5ccd793b469bf69cc7c0a3ee6a2",
+        "sdk_md5": "077ea9f4cd37b22b26d5797074f86b8c",
+        "mode": "optimization",
+        "state": "CREATED",
+        "started_at": "2026-11-28T22:04:49.532918+08:00",
+        "result_id": "6455ca58-b5a6-4165-af52-fced966f28db",
+        "create_count": 1,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F06/submit_c0g7o6u_",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:04:49.866913+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:50.210245+08:00",
+            "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F06/submit_c0g7o6u_/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:50 GMT",
+            "response_code": "10320"
+          },
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:04:50.211120+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:50.549715+08:00",
+            "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F06/submit_c0g7o6u_/002_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:50 GMT",
+            "response_code": "10320"
+          },
+          {
+            "kind": "create",
+            "started_at": "2026-11-28T22:04:51.092649+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:04:51.782414+08:00",
+            "sha256": "7bf02a2eb87aa552c2aa21774224049557da044cacde53525f978a50fc8fc4a5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F06/submit_c0g7o6u_/003_create.bin",
+            "server_date": "Sat, 28 Nov 2026 14:04:51 GMT",
+            "response_code": "0"
+          }
+        ],
+        "finished_at": "2026-11-28T22:04:51.794721+08:00"
+      },
+      "observed_at": "2026-11-28T22:04:51.804433+08:00",
+      "status": "CREATED"
+    }
+  },
+  "attempts": {
+    "F01": {
+      "intent_at": "2026-11-28T21:59:28.109473+08:00",
+      "before": {
+        "550": 11,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F02": {
+      "intent_at": "2026-11-28T22:02:25.532436+08:00",
+      "before": {
+        "550": 10,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F03": {
+      "intent_at": "2026-11-28T22:03:24.937922+08:00",
+      "before": {
+        "550": 9,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F04": {
+      "intent_at": "2026-11-28T22:03:52.019431+08:00",
+      "before": {
+        "550": 8,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F05": {
+      "intent_at": "2026-11-28T22:04:15.522382+08:00",
+      "before": {
+        "550": 7,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F06": {
+      "intent_at": "2026-11-28T22:04:48.835776+08:00",
+      "before": {
+        "550": 6,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    }
+  },
+  "first_return_seen_at": "2026-11-28T22:02:14.586091+08:00",
+  "baseline_balance": {
+    "550": 11,
+    "1000": 2
+  },
+  "baseline_evidence": {
+    "source": "user_console_readback",
+    "verbatim": "11/2",
+    "recorded_at": "2026-11-28T21:59:07.688137+08:00",
+    "read_time_exact": false
+  },
+  "startup_preflight": "READY_OFFLINE",
+  "event": "F02_PENDING",
+  "updated_at": "2026-11-28T22:04:52.673811+08:00",
+  "summary": {
+    "slots": [
+      {
+        "slot": "F01",
+        "family": "O3",
+        "status": "VALID_COMPLETED",
+        "task_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+        "primary": {
+          "return_index": 0,
+          "energy": -58400,
+          "residual": 96,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        "secondary": {
+          "exists_strict_hit": true,
+          "min_strict_regret": 0.0
+        },
+        "forecast": "BETTER_THAN_SINGLE_SA",
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F02",
+        "family": "FO2",
+        "status": "PENDING",
+        "task_id": "d208372d-d23f-42b2-9122-3869f5b218bf",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F03",
+        "family": "NO2",
+        "status": "PENDING",
+        "task_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F04",
+        "family": "FO2",
+        "status": "PENDING",
+        "task_id": "c708bf88-2763-4558-a514-e58981c7ed91",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F05",
+        "family": "NO2",
+        "status": "CREATED",
+        "task_id": "683fd4d0-e160-4ca0-a167-e57081c2e274",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F06",
+        "family": "O3",
+        "status": "CREATED",
+        "task_id": "6455ca58-b5a6-4165-af52-fced966f28db",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F07",
+        "family": "NO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F08",
+        "family": "O3",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F09",
+        "family": "FO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      },
+      {
+        "round": 2,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      },
+      {
+        "round": 3,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      }
+    ],
+    "achieved": 0,
+    "planned_rounds": 3,
+    "completed_rounds": 0,
+    "achieved_per_planned": 0.0,
+    "achieved_per_completed": null,
+    "max_observed_regret_by_family": {
+      "O3": 0.0,
+      "NO2": null,
+      "FO2": null
+    }
+  }
+}

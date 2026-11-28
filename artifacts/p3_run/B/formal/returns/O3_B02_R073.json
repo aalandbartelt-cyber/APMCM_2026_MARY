@@ -1,0 +1,19 @@
+{
+  "family": "O3",
+  "block": 2,
+  "restart": 73,
+  "seed": 7300172,
+  "started_utc": "2026-11-28T14:11:39.158+00:00",
+  "T0": 25048.0,
+  "cutoff": 0.0001,
+  "backend": "kaiwu_cpu4",
+  "vector_path": "vectors/O3_B02_R073.npy",
+  "sha256": "3aed1692d6ccd2bef013a5874f043519fa48bf62d5110f42ee68923970ab61dd",
+  "dtype": "int64",
+  "shape": [
+    1,
+    490
+  ],
+  "status": "RETURNED",
+  "finished_utc": "2026-11-28T14:11:42.942+00:00"
+}

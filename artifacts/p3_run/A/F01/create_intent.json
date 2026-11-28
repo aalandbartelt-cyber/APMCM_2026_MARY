@@ -1,0 +1,15 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "slot": "F01",
+  "family": "O3",
+  "task_name": "AP26_P3_2e1dab8d3312_F01_O3",
+  "matrix_sha256": "beb1d7e6715c5420782008b4f36982b9b6a5b5ccd793b469bf69cc7c0a3ee6a2",
+  "sdk_md5": "077ea9f4cd37b22b26d5797074f86b8c",
+  "mode": "optimization",
+  "bit_num": 490,
+  "sample_number": 100,
+  "task_mode": "optimization",
+  "sample_sort_mode": 2,
+  "file_hash": "077ea9f4cd37b22b26d5797074f86b8c",
+  "at": "2026-11-28T21:59:30.543391+08:00"
+}

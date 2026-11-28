@@ -1,0 +1,25 @@
+{
+  "T": 4,
+  "attempts": 1000,
+  "J12": 1,
+  "start": [
+    1,
+    1
+  ],
+  "theoretical_uphill": 0.36787944117144233,
+  "public_history_ending_at_uphill": 0.366,
+  "ci95": [
+    0.3360757487847989,
+    0.3967158587963668
+  ],
+  "returned_solution_collections": {
+    "[]": 634,
+    "[[-1, 1]]": 180,
+    "[[1, -1]]": 186
+  },
+  "ordered_history_energy_patterns": {
+    "(-2.0,)": 634,
+    "(-2.0, 2.0)": 366
+  },
+  "caveat": "These are tiny one-proposal SDK energy histories & solution collections. Site selection and unobserved queue policy remain unknown."
+}

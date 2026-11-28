@@ -1,0 +1,47 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "slot": "F04",
+  "family": "FO2",
+  "task_name": "AP26_P3_2e1dab8d3312_F04_FO2",
+  "matrix_sha256": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9",
+  "sdk_md5": "68da57722ecc4eefa32003770a819798",
+  "mode": "optimization",
+  "state": "CREATED",
+  "started_at": "2026-11-28T22:03:52.715129+08:00",
+  "result_id": "c708bf88-2763-4558-a514-e58981c7ed91",
+  "create_count": 1,
+  "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/submit_2p28ed0n",
+  "events": [
+    {
+      "kind": "query",
+      "started_at": "2026-11-28T22:03:53.096589+08:00",
+      "http_status": 200,
+      "ended_at": "2026-11-28T22:03:53.441429+08:00",
+      "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+      "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/submit_2p28ed0n/001_query.bin",
+      "server_date": "Sat, 28 Nov 2026 14:03:53 GMT",
+      "response_code": "10320"
+    },
+    {
+      "kind": "query",
+      "started_at": "2026-11-28T22:03:53.442394+08:00",
+      "http_status": 200,
+      "ended_at": "2026-11-28T22:03:53.776721+08:00",
+      "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+      "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/submit_2p28ed0n/002_query.bin",
+      "server_date": "Sat, 28 Nov 2026 14:03:53 GMT",
+      "response_code": "10320"
+    },
+    {
+      "kind": "create",
+      "started_at": "2026-11-28T22:03:54.406286+08:00",
+      "http_status": 200,
+      "ended_at": "2026-11-28T22:03:54.958413+08:00",
+      "sha256": "7700c5fdb2f571c9ecc622c71088a9dcf58395507996d7693eb20319a936ea22",
+      "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F04/submit_2p28ed0n/003_create.bin",
+      "server_date": "Sat, 28 Nov 2026 14:03:55 GMT",
+      "response_code": "0"
+    }
+  ],
+  "finished_at": "2026-11-28T22:03:54.976917+08:00"
+}

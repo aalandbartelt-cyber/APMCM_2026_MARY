@@ -1,0 +1,102 @@
+[
+  {
+    "seed": 7903000,
+    "cpu_output": [
+      [
+        1,
+        -1
+      ]
+    ],
+    "history_energy": [
+      -2.0,
+      2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903001,
+    "cpu_output": [],
+    "history_energy": [
+      -2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903002,
+    "cpu_output": [
+      [
+        -1,
+        1
+      ]
+    ],
+    "history_energy": [
+      -2.0,
+      2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903003,
+    "cpu_output": [],
+    "history_energy": [
+      -2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903004,
+    "cpu_output": [],
+    "history_energy": [
+      -2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903005,
+    "cpu_output": [],
+    "history_energy": [
+      -2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903006,
+    "cpu_output": [],
+    "history_energy": [
+      -2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 7903007,
+    "cpu_output": [],
+    "history_energy": [
+      -2.0
+    ],
+    "candidate_gpu_best": [
+      1,
+      1
+    ]
+  }
+]

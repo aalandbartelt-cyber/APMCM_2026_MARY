@@ -1,0 +1,19 @@
+{
+  "gate_passed": false,
+  "formal_backend": "kaiwu_cpu4",
+  "time": "2026-11-28T14:00:31.244028+00:00",
+  "reason": "Conclusive retention-policy counterexample via the public one-process Kaiwu SA path with size_limit=1. For input [[0,1],[1,0]], fixed initial (+1,+1), seed 7903000, one single-site trial at T=4, CPU returns only (+1,-1) (energy +2). The preregistered GPU retains the starting minimum (energy -2). With seed 7903001, CPU returns an empty queue, while GPU retains the starting vector. This observable mismatch disqualifies formal use regardless of distributional similarity. GPU experiments remain qualification only.",
+  "details": "480 paired three-family observations per backend are being archived; their final equivalence table is an independent diagnostic in validation_report.json.",
+  "code_sha": {
+    "blackbox.py": "b6b7d5ca61ba5a1fee28c4b3cefec7f51ce7b4f722afc5e7a32642282ead1e29",
+    "cpu_validation.py": "8842bdb5361916e413498ef3ac71866b2d6a2802fe031698103a07facc54ca98",
+    "gpu_runner.py": "54f7b58c3bb61c6a7c9bc9d794eb0ec5a7f993f621ac604cff64b424c03cfd14",
+    "serial_sa.cu": "2c75a2d4ed54397f22e30b25eddb7dcdfbddefd34828533d4b38ac1336f38069"
+  },
+  "data_sha": {
+    "preregistration.json": "c467af05576835dcc19f57e6e905d967fc918bbeb525fc9e9815f5a41210fc49",
+    "exact_steps.json": "68d93629b92dc3cc2b9961fc1e680274e6cfd45d8595bf68756f544e7bfe980e",
+    "size1_probe_followup.json": "030ca2686dea630ce83b79f2f46a3fa359887c77ccecdc4f265d7d468ee58f6f",
+    "cpu_one_proposal.json": "2db8d424bcb1145be62493043887e0afa017e2c88707b8cc29f5febfd361227f"
+  }
+}

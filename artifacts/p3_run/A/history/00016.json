@@ -1,0 +1,599 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "receipt_sha256": "ea291e3e0acd4bda99992e6d44b335121e2875a2be77b0da9a6f84673a396157",
+  "timezone": "Asia/Shanghai",
+  "stop": "2026-11-29T18:00:00+08:00",
+  "snapshot": "2026-11-29T21:00:00+08:00",
+  "opened_at": "2026-11-28T21:59:07.688130+08:00",
+  "revision": 16,
+  "records": {
+    "F01": {
+      "family": "O3",
+      "task_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F01",
+        "family": "O3",
+        "task_name": "AP26_P3_2e1dab8d3312_F01_O3",
+        "matrix_sha256": "beb1d7e6715c5420782008b4f36982b9b6a5b5ccd793b469bf69cc7c0a3ee6a2",
+        "sdk_md5": "077ea9f4cd37b22b26d5797074f86b8c",
+        "mode": "optimization",
+        "state": "RETURN_AVAILABLE",
+        "started_at": "2026-11-28T22:02:13.897521+08:00",
+        "result_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+        "create_count": 0,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/poll_ds2qz_8j",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:02:14.246578+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:02:14.552673+08:00",
+            "sha256": "c5aaa442bda6504de26329c5e90bd5091d8a035589f105e88ca977aef304ee12",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/poll_ds2qz_8j/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:02:14 GMT",
+            "response_code": "0"
+          }
+        ],
+        "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/poll_ds2qz_8j/001_query.bin",
+        "remote_status": "1000",
+        "finished_at": "2026-11-28T22:02:14.562919+08:00"
+      },
+      "observed_at": "2026-11-28T22:02:14.586052+08:00",
+      "status": "VALID_COMPLETED",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 11,
+            "1000": 2
+          },
+          "after": {
+            "550": 10,
+            "1000": 2
+          },
+          "attributable": false,
+          "recorded_at": "2026-11-28T22:00:09.743509+08:00",
+          "source": "user_console_readback",
+          "verbatim": "10/2"
+        },
+        {
+          "before": {
+            "550": 11,
+            "1000": 2
+          },
+          "after": {
+            "550": 10,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:00:22.630128+08:00",
+          "source": "user_console_readback",
+          "verbatim": "10/2；是，本轮仅 P3 使用"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 11,
+          "1000": 2
+        },
+        "after": {
+          "550": 10,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:00:22.630128+08:00",
+        "source": "user_console_readback",
+        "verbatim": "10/2；是，本轮仅 P3 使用"
+      },
+      "return_archive": {
+        "state": "ORDERED_RETURN",
+        "result_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+        "count": 10,
+        "vectors_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/vectors.npy",
+        "raw_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F01/result.pkl",
+        "sha256": "2552dfbf1e1e01d2816bffb38af33fc205d6d80ddfd5933e43879e91e2262364",
+        "vectors_sha256": "20e4b087856e2ea751dc0e3ee9224d23b022267a09319aeaa800ca50c20cce63",
+        "terminal_query_sha256": "c5aaa442bda6504de26329c5e90bd5091d8a035589f105e88ca977aef304ee12",
+        "server_time_consume_uninterpreted": "2175.6",
+        "ingested_at": "2026-11-28T22:02:14.827159+08:00"
+      },
+      "outcome": {
+        "family": "O3",
+        "status": "VALID_COMPLETED",
+        "rows": [
+          {
+            "return_index": 0,
+            "energy": -58400,
+            "residual": 96,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 1,
+            "energy": -58392,
+            "residual": 104,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 2,
+            "energy": -58392,
+            "residual": 104,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 3,
+            "energy": -58384,
+            "residual": 112,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 4,
+            "energy": -58376,
+            "residual": 120,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 5,
+            "energy": -58376,
+            "residual": 120,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 6,
+            "energy": -58372,
+            "residual": 124,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 7,
+            "energy": -58368,
+            "residual": 128,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 8,
+            "energy": -58360,
+            "residual": 136,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          },
+          {
+            "return_index": 9,
+            "energy": -58356,
+            "residual": 140,
+            "strict": true,
+            "invalid_groups": [],
+            "candidate_index": 273,
+            "id": 2812,
+            "vhat": 3.6243073264766985,
+            "regret": 0.0,
+            "exact": true,
+            "regret_le_0.1": true
+          }
+        ],
+        "primary": {
+          "return_index": 0,
+          "energy": -58400,
+          "residual": 96,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        "secondary": {
+          "exists_strict_hit": true,
+          "min_strict_regret": 0.0
+        },
+        "strict_count": 10,
+        "forecast": "BETTER_THAN_SINGLE_SA"
+      }
+    },
+    "F02": {
+      "family": "FO2",
+      "task_id": "d208372d-d23f-42b2-9122-3869f5b218bf",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F02",
+        "family": "FO2",
+        "task_name": "AP26_P3_2e1dab8d3312_F02_FO2",
+        "matrix_sha256": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9",
+        "sdk_md5": "68da57722ecc4eefa32003770a819798",
+        "mode": "optimization",
+        "state": "PENDING",
+        "started_at": "2026-11-28T22:03:05.344611+08:00",
+        "result_id": "d208372d-d23f-42b2-9122-3869f5b218bf",
+        "create_count": 0,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F02/poll_mlrmdwzr",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:03:05.747967+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:03:06.053284+08:00",
+            "sha256": "56144ab49fc5d55b33bea9930bade64666cc6bdd06d238649d8aea8a91fcfa41",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F02/poll_mlrmdwzr/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:03:06 GMT",
+            "response_code": "0"
+          }
+        ],
+        "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F02/poll_mlrmdwzr/001_query.bin",
+        "remote_status": "2002",
+        "finished_at": "2026-11-28T22:03:06.053718+08:00"
+      },
+      "observed_at": "2026-11-28T22:03:06.063652+08:00",
+      "status": "PENDING",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 10,
+            "1000": 2
+          },
+          "after": {
+            "550": 9,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:03:24.062238+08:00",
+          "source": "user_console_readback",
+          "verbatim": "9/2"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 10,
+          "1000": 2
+        },
+        "after": {
+          "550": 9,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:03:24.062238+08:00",
+        "source": "user_console_readback",
+        "verbatim": "9/2"
+      }
+    },
+    "F03": {
+      "family": "NO2",
+      "task_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+      "last_transport": {
+        "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+        "slot": "F03",
+        "family": "NO2",
+        "task_name": "AP26_P3_2e1dab8d3312_F03_NO2",
+        "matrix_sha256": "f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f",
+        "sdk_md5": "c53bcb268e7cffc0b2912799006da167",
+        "mode": "optimization",
+        "state": "CREATED",
+        "started_at": "2026-11-28T22:03:25.568286+08:00",
+        "result_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+        "create_count": 1,
+        "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/submit_7gmhzos1",
+        "events": [
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:03:25.934165+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:03:26.241839+08:00",
+            "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/submit_7gmhzos1/001_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:03:26 GMT",
+            "response_code": "10320"
+          },
+          {
+            "kind": "query",
+            "started_at": "2026-11-28T22:03:26.242841+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:03:26.566499+08:00",
+            "sha256": "123f6396005a43b96ee6a997b170d5a716b67c0ec3da2348eaf33e28010ef7b5",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/submit_7gmhzos1/002_query.bin",
+            "server_date": "Sat, 28 Nov 2026 14:03:26 GMT",
+            "response_code": "10320"
+          },
+          {
+            "kind": "create",
+            "started_at": "2026-11-28T22:03:27.118012+08:00",
+            "http_status": 200,
+            "ended_at": "2026-11-28T22:03:27.606703+08:00",
+            "sha256": "1bdbb75ebfe4a2bde59ccc0410971370548169f6fe3e12b9c7922be61e815906",
+            "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/submit_7gmhzos1/003_create.bin",
+            "server_date": "Sat, 28 Nov 2026 14:03:27 GMT",
+            "response_code": "0"
+          }
+        ],
+        "finished_at": "2026-11-28T22:03:27.616102+08:00"
+      },
+      "observed_at": "2026-11-28T22:03:27.626814+08:00",
+      "status": "CREATED",
+      "balance_observations": [
+        {
+          "before": {
+            "550": 9,
+            "1000": 2
+          },
+          "after": {
+            "550": 8,
+            "1000": 2
+          },
+          "attributable": true,
+          "recorded_at": "2026-11-28T22:03:51.208618+08:00",
+          "source": "user_console_readback",
+          "verbatim": "8/2"
+        }
+      ],
+      "billing": {
+        "before": {
+          "550": 9,
+          "1000": 2
+        },
+        "after": {
+          "550": 8,
+          "1000": 2
+        },
+        "attributable": true,
+        "recorded_at": "2026-11-28T22:03:51.208618+08:00",
+        "source": "user_console_readback",
+        "verbatim": "8/2"
+      }
+    }
+  },
+  "attempts": {
+    "F01": {
+      "intent_at": "2026-11-28T21:59:28.109473+08:00",
+      "before": {
+        "550": 11,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F02": {
+      "intent_at": "2026-11-28T22:02:25.532436+08:00",
+      "before": {
+        "550": 10,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    },
+    "F03": {
+      "intent_at": "2026-11-28T22:03:24.937922+08:00",
+      "before": {
+        "550": 9,
+        "1000": 2
+      },
+      "gate": "READY_OFFLINE"
+    }
+  },
+  "first_return_seen_at": "2026-11-28T22:02:14.586091+08:00",
+  "baseline_balance": {
+    "550": 11,
+    "1000": 2
+  },
+  "baseline_evidence": {
+    "source": "user_console_readback",
+    "verbatim": "11/2",
+    "recorded_at": "2026-11-28T21:59:07.688137+08:00",
+    "read_time_exact": false
+  },
+  "startup_preflight": "READY_OFFLINE",
+  "event": "F03_OK",
+  "updated_at": "2026-11-28T22:03:51.208637+08:00",
+  "summary": {
+    "slots": [
+      {
+        "slot": "F01",
+        "family": "O3",
+        "status": "VALID_COMPLETED",
+        "task_id": "0acfbb62-b5c6-4296-b27b-a6e8bbba0521",
+        "primary": {
+          "return_index": 0,
+          "energy": -58400,
+          "residual": 96,
+          "strict": true,
+          "invalid_groups": [],
+          "candidate_index": 273,
+          "id": 2812,
+          "vhat": 3.6243073264766985,
+          "regret": 0.0,
+          "exact": true,
+          "regret_le_0.1": true
+        },
+        "secondary": {
+          "exists_strict_hit": true,
+          "min_strict_regret": 0.0
+        },
+        "forecast": "BETTER_THAN_SINGLE_SA",
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F02",
+        "family": "FO2",
+        "status": "PENDING",
+        "task_id": "d208372d-d23f-42b2-9122-3869f5b218bf",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F03",
+        "family": "NO2",
+        "status": "CREATED",
+        "task_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F04",
+        "family": "FO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F05",
+        "family": "NO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F06",
+        "family": "O3",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F07",
+        "family": "NO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F08",
+        "family": "O3",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      },
+      {
+        "slot": "F09",
+        "family": "FO2",
+        "status": "NOT_STARTED",
+        "task_id": null,
+        "primary": null,
+        "secondary": null,
+        "forecast": null,
+        "prediction_mismatch": false
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      },
+      {
+        "round": 2,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      },
+      {
+        "round": 3,
+        "complete": false,
+        "strict_coverage": false,
+        "joint_exact": false,
+        "observed_quality_failure": false,
+        "max_slice_regret": null,
+        "aggregate_id": null,
+        "aggregate_exact": null,
+        "aggregate_regret": null
+      }
+    ],
+    "achieved": 0,
+    "planned_rounds": 3,
+    "completed_rounds": 0,
+    "achieved_per_planned": 0.0,
+    "achieved_per_completed": null,
+    "max_observed_regret_by_family": {
+      "O3": 0.0,
+      "NO2": null,
+      "FO2": null
+    }
+  }
+}

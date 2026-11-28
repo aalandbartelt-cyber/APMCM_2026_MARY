@@ -1,0 +1,10 @@
+{
+  "family": "FO2",
+  "block": 3,
+  "restart": 63,
+  "seed": 7302262,
+  "started_utc": "2026-11-28T14:10:18.088+00:00",
+  "T0": 23908.0,
+  "cutoff": 0.0001,
+  "backend": "kaiwu_cpu4"
+}

@@ -1,0 +1,228 @@
+{
+  "formal_backend": "kaiwu_cpu4",
+  "gpu_gate_passed": false,
+  "retention_counterexample": "Conclusive retention-policy counterexample via the public one-process Kaiwu SA path with size_limit=1. For input [[0,1],[1,0]], fixed initial (+1,+1), seed 7903000, one single-site trial at T=4, CPU returns only (+1,-1) (energy +2). The preregistered GPU retains the starting minimum (energy -2). With seed 7903001, CPU returns an empty queue, while GPU retains the starting vector. This observable mismatch disqualifies formal use regardless of distributional similarity. GPU experiments remain qualification only.",
+  "exact_enumeration": [
+    {
+      "spins": 5,
+      "states": 32,
+      "moves": 1920,
+      "energy_errors": 0,
+      "increment_errors": 0,
+      "transition_errors": 0
+    },
+    {
+      "spins": 8,
+      "states": 256,
+      "moves": 24576,
+      "energy_errors": 0,
+      "increment_errors": 0,
+      "transition_errors": 0
+    }
+  ],
+  "production_trace": [
+    {
+      "n": 5,
+      "starting_states": 32,
+      "temperature_levels": [
+        32.0,
+        8.0,
+        2.0
+      ],
+      "matched_fields": [
+        "rng",
+        "local_field",
+        "current_vector",
+        "best_vector",
+        "current_energy",
+        "best_energy"
+      ],
+      "checked_sweeps": 96,
+      "checked_proposals": 480
+    },
+    {
+      "n": 8,
+      "starting_states": 256,
+      "temperature_levels": [
+        32.0,
+        8.0,
+        2.0
+      ],
+      "matched_fields": [
+        "rng",
+        "local_field",
+        "current_vector",
+        "best_vector",
+        "current_energy",
+        "best_energy"
+      ],
+      "checked_sweeps": 768,
+      "checked_proposals": 6144
+    }
+  ],
+  "stats": {
+    "O3": {
+      "strict": {
+        "cpu": 159,
+        "gpu": 160,
+        "n": 160,
+        "estimate": 0.00625,
+        "ci": [
+          -0.05393578921334044,
+          0.05408602818050852
+        ],
+        "discordant_up": 1,
+        "discordant_down": 0,
+        "equivalence_margin": 0.12,
+        "passed": true
+      },
+      "hit": {
+        "cpu": 121,
+        "gpu": 160,
+        "n": 160,
+        "estimate": 0.24375,
+        "ci": [
+          0.10398398541687463,
+          0.35730590649254884
+        ],
+        "discordant_up": 39,
+        "discordant_down": 0,
+        "equivalence_margin": 0.12,
+        "passed": false
+      },
+      "energy": {
+        "estimate": 0.8125,
+        "ci_upper": 0.95,
+        "equivalence_margin": 0.25,
+        "passed": false,
+        "cpu_q05_q50_q95": [
+          -58404.2,
+          -58286.0,
+          -58056.0
+        ],
+        "gpu_q05_q50_q95": [
+          -58460.0,
+          -58424.0,
+          -58356.0
+        ]
+      }
+    },
+    "NO2": {
+      "strict": {
+        "cpu": 158,
+        "gpu": 160,
+        "n": 160,
+        "estimate": 0.0125,
+        "ci": [
+          -0.06096976009521071,
+          0.06588017869277543
+        ],
+        "discordant_up": 2,
+        "discordant_down": 0,
+        "equivalence_margin": 0.12,
+        "passed": true
+      },
+      "hit": {
+        "cpu": 101,
+        "gpu": 157,
+        "n": 160,
+        "estimate": 0.35,
+        "ci": [
+          0.17552980570941873,
+          0.494906489248077
+        ],
+        "discordant_up": 58,
+        "discordant_down": 2,
+        "equivalence_margin": 0.12,
+        "passed": false
+      },
+      "energy": {
+        "estimate": 0.85625,
+        "ci_upper": 0.9937499999999999,
+        "equivalence_margin": 0.25,
+        "passed": false,
+        "cpu_q05_q50_q95": [
+          -58602.2,
+          -58410.0,
+          -58201.6
+        ],
+        "gpu_q05_q50_q95": [
+          -58674.2,
+          -58640.0,
+          -58561.6
+        ]
+      }
+    },
+    "FO2": {
+      "strict": {
+        "cpu": 155,
+        "gpu": 160,
+        "n": 160,
+        "estimate": 0.03125,
+        "ci": [
+          -0.04476821384796567,
+          0.09658569692433845
+        ],
+        "discordant_up": 5,
+        "discordant_down": 0,
+        "equivalence_margin": 0.12,
+        "passed": true
+      },
+      "hit": {
+        "cpu": 88,
+        "gpu": 160,
+        "n": 160,
+        "estimate": 0.45,
+        "ci": [
+          0.2749583487287536,
+          0.5708591711493701
+        ],
+        "discordant_up": 72,
+        "discordant_down": 0,
+        "equivalence_margin": 0.12,
+        "passed": false
+      },
+      "energy": {
+        "estimate": 0.8375,
+        "ci_upper": 0.975,
+        "equivalence_margin": 0.25,
+        "passed": false,
+        "cpu_q05_q50_q95": [
+          -58050.2,
+          -57914.0,
+          -57717.8
+        ],
+        "gpu_q05_q50_q95": [
+          -58110.0,
+          -58078.0,
+          -58034.0
+        ]
+      }
+    }
+  },
+  "passed_distribution_checks": 3,
+  "total_distribution_checks": 9,
+  "notes": "The interval criteria establish or fail to establish the prespecified practical equivalence bounds at 160 pairs per matrix. A gate failing to establish equivalence alone does not identify a true distribution difference. Energy bounds use a paired empirical bootstrap; binary bounds use two exact binomial intervals; alpha allocation over nine endpoints. The SDK black-box public one-process return differs on a concrete state. Historical P3 quantiles had a relative cutoff; this head-to-head validation and formal B baseline use the current absolute T=0.0001 endpoint.",
+  "artifact_sha256": {
+    "preregistration.json": "c467af05576835dcc19f57e6e905d967fc918bbeb525fc9e9815f5a41210fc49",
+    "decision.json": "41254016dc41ad1b6fe716fda700ccc7ccdb30acad65621966aa2a72fbd9c1b2",
+    "exact_steps.json": "68d93629b92dc3cc2b9961fc1e680274e6cfd45d8595bf68756f544e7bfe980e",
+    "production_trace_checks.json": "bcbb46359004c4bcfd39b21c474d6f05728d31ed19270fa79088d87281423196",
+    "cpu_one_proposal.json": "2db8d424bcb1145be62493043887e0afa017e2c88707b8cc29f5febfd361227f",
+    "size1_probe_followup.json": "030ca2686dea630ce83b79f2f46a3fa359887c77ccecdc4f265d7d468ee58f6f",
+    "cpu_vectors.jsonl": "179543f07c119dd7932b494e206bf79e6c9ef3f7372ce61c9c646b9cc98c5523",
+    "gpu_vectors.jsonl": "a2e3f599b64c474535a3b91db722893f88f0e95bbf4f36d68e52c7055c026672",
+    "paired_outcomes.csv": "8adc0cdd39f491560b38c5efb4f041edf1342e14ea5b6b6a57303fb68bf556b2",
+    "schedules.json": "0d6de9aa56354bd8e9bfff8f6c21469b254760b1f47c911d916da55a01ac1397",
+    "supplemental_checks_plan.json": "966efbd8bf6f88cd53d328e2d73638f33f82a78affa9d15f0d5d23ba7c036dc5",
+    "size1_probe_followup_plan.json": "a7c9bc28e0669f6310108c9783c0f9c4d8c65f724db6ea63627f2cd6adcd4dd9"
+  },
+  "source_sha256": {
+    "compare.py": "adb79897260047bf10b5c300393692d841eec1ab06bacadbe65b16608849186d",
+    "serial_sa.cu": "2c75a2d4ed54397f22e30b25eddb7dcdfbddefd34828533d4b38ac1336f38069",
+    "check_trajectories.py": "f2174b9b9d34d89981a2f53047f4c27fc8704bb0120c3363f3660dec3bf7803d",
+    "blackbox.py": "b6b7d5ca61ba5a1fee28c4b3cefec7f51ce7b4f722afc5e7a32642282ead1e29",
+    "gpu_runner.py": "54f7b58c3bb61c6a7c9bc9d794eb0ec5a7f993f621ac604cff64b424c03cfd14",
+    "cpu_validation.py": "8842bdb5361916e413498ef3ac71866b2d6a2802fe031698103a07facc54ca98"
+  }
+}

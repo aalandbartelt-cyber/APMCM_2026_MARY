@@ -1,0 +1,17 @@
+{
+  "sources_sha256": {
+    "artifacts/p3_run/A/current/summary.json": "721ea2f1ea7df2cb05a7765367ea5e30eda186d4eb2f848ec8ad6dcca7da5e88",
+    "artifacts/p3_run/A/current/slots.csv": "211fa2ce6eeda2ecf235411cc7423f3e55d1fc694f5602dd2d9158febcee7a98",
+    "artifacts/p3_run/A/current/rounds.csv": "5ae28d7da825d28b5ba6b7dc30f4d2f62440a8b2bab1b286a952fe1c1d4c3c12",
+    "artifacts/p3_run/B/formal/budget_prefixes.csv": "2aa11c042d04767aac1174770e4bfc2171ddee0badd058d946f4ff3a5f458f9e",
+    "artifacts/p3_run/B/formal/vectors.sha256": "de8207dcc2be494911e07d74fa2433447dc4b80c90c6c898ef9f5e5c914b87fa"
+  },
+  "state_revision": 59,
+  "cutoff": null,
+  "service_unit": "one optimization-service task; platform-filtered return set",
+  "sa_unit": "one independently registered block of 100 local restarts",
+  "selection": "minimum strict integer energy; preserve original order on ties",
+  "joint_primary": "exact primary in each of the three slices within the same service round",
+  "sample_rate_comparison": false,
+  "hash_main": "047cf466901e6a7534f9978a7bc2c03cd80a3b77d6d9f6655e528c5170880912"
+}

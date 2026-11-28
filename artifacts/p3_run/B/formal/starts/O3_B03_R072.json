@@ -1,0 +1,10 @@
+{
+  "family": "O3",
+  "block": 3,
+  "restart": 72,
+  "seed": 7300271,
+  "started_utc": "2026-11-28T14:11:33.159+00:00",
+  "T0": 25048.0,
+  "cutoff": 0.0001,
+  "backend": "kaiwu_cpu4"
+}

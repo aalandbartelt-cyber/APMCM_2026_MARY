@@ -1,0 +1,15 @@
+{
+  "achieved": 3,
+  "planned_rounds": 3,
+  "completed_rounds": 3,
+  "achieved_per_planned": 1.0,
+  "achieved_per_completed": 1.0,
+  "max_observed_regret_by_family": {
+    "O3": 0.0,
+    "NO2": 0.0,
+    "FO2": 0.0
+  },
+  "as_of": "2026-11-28T22:09:27.332764+08:00",
+  "state_revision": 59,
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37"
+}

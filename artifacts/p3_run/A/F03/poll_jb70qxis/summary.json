@@ -1,0 +1,29 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "slot": "F03",
+  "family": "NO2",
+  "task_name": "AP26_P3_2e1dab8d3312_F03_NO2",
+  "matrix_sha256": "f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f",
+  "sdk_md5": "c53bcb268e7cffc0b2912799006da167",
+  "mode": "optimization",
+  "state": "PENDING",
+  "started_at": "2026-11-28T22:04:52.965626+08:00",
+  "result_id": "94fdadf5-19fc-4e73-ad1e-341481b5d391",
+  "create_count": 0,
+  "request_dir": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/poll_jb70qxis",
+  "events": [
+    {
+      "kind": "query",
+      "started_at": "2026-11-28T22:04:53.337183+08:00",
+      "http_status": 200,
+      "ended_at": "2026-11-28T22:04:53.642082+08:00",
+      "sha256": "f7b48d20596ed53b43a50f7c41d9b087b8dcf417e055fe922d53641a19f4b0e6",
+      "path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/poll_jb70qxis/001_query.bin",
+      "server_date": "Sat, 28 Nov 2026 14:04:53 GMT",
+      "response_code": "0"
+    }
+  ],
+  "query_path": "/home/mary/apmcm2026/artifacts/p3_run/A/F03/poll_jb70qxis/001_query.bin",
+  "remote_status": "2002",
+  "finished_at": "2026-11-28T22:04:53.642548+08:00"
+}

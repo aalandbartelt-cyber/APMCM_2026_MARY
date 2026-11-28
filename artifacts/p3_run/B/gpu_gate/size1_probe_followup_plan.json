@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-28T14:00:22.664147+00:00",
+  "basis": "The one-move registered diagnostic at size_limit=10 showed omission of the starting vector. Check whether the production size_limit=1 has the same observable behavior via public single_process_solve. This is a mechanism check after size 10, independent of full three-family statistical comparisons.",
+  "seeds": [
+    7903000,
+    7903001,
+    7903002,
+    7903003,
+    7903004,
+    7903005,
+    7903006,
+    7903007
+  ],
+  "earliest_best_including_start_expected": [
+    1,
+    1
+  ]
+}

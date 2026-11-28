@@ -1,0 +1,10 @@
+{
+  "family": "NO2",
+  "block": 3,
+  "restart": 95,
+  "seed": 7301294,
+  "started_utc": "2026-11-28T14:14:45.695+00:00",
+  "T0": 26284.0,
+  "cutoff": 0.0001,
+  "backend": "kaiwu_cpu4"
+}

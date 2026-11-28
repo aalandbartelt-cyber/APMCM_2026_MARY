@@ -1,0 +1,13 @@
+{
+  "anchor": "2e1dab8d3312ad01bac1d71c7edd6ac5fddb7d37",
+  "slot": "F09",
+  "family": "FO2",
+  "task_name": "AP26_P3_2e1dab8d3312_F09_FO2",
+  "matrix_sha256": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9",
+  "sdk_md5": "68da57722ecc4eefa32003770a819798",
+  "mode": "optimization",
+  "result_id": "70b411c2-309b-48e2-bcfb-0e4490796134",
+  "at": "2026-11-28T22:06:34.536502+08:00",
+  "source": "/home/mary/apmcm2026/artifacts/p3_run/A/F09/submit_2qogzigc/003_create.bin",
+  "sha256": "23abda1b5b1687f4adee4c1706c1ba6712fb85abb3d40bcf05b4d4df7b3f5cf8"
+}

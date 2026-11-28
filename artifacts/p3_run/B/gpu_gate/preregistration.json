@@ -1,0 +1,33 @@
+{
+  "registered": "2026-11-28T21:58:10.132091+08:00",
+  "families": [
+    "O3",
+    "NO2",
+    "FO2"
+  ],
+  "matrix_sha_i64": {
+    "O3": "beb1d7e6715c5420782008b4f36982b9b6a5b5ccd793b469bf69cc7c0a3ee6a2",
+    "NO2": "f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f",
+    "FO2": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9"
+  },
+  "bundle_sha": {
+    "O3": "3cd042afcbc3f072eb599ac8d884c6ae887868d96677c2324d3034d60e2f9525",
+    "NO2": "fe682b5b07840507a553c7882c6fba30c6c6452562d5571f7dd3be69bf1f0d1a",
+    "FO2": "113809f7da79391396ea2994a176229eb6863f2708851406b847952828e2e6f3"
+  },
+  "sdk_sha256": "c52591f74840c1a19aab508d0272bc2b1b3391f225dbd1df71c39ebe0b6516e6",
+  "sdk_version": "1.4.4",
+  "validation_seeds": "660001+1000*j+i, i=0..159, j indexes families",
+  "n_per_family": 160,
+  "seed_bootstrap": 924801,
+  "alpha": 0.99,
+  "initial": "4*max(rowwise sum absolute off-diagonal J)",
+  "cutoff_absolute": 0.0001,
+  "iterations_per_t": 490,
+  "cpu": "Kaiwu SimulatedAnnealingOptimizer, size_limit=1, process_num=1; solve on original full J",
+  "gpu": "One restart per CUDA thread; uniformly random initial signs, uniformly random proposed physical site among all 490, including reference, with replacement; E=-s.T@J@s, delta=4*s[k]*h[k], accept delta<=0 else U<exp(-delta/T). Return earliest best energy vector, final reference sign positive by global negation. All updates serial per restart. xorshift64star streams mixed by SplitMix64.",
+  "validation": "Two signed, symmetric 5- and 8-spin chains with a shared reference field; enumerate all states, energies, site flips and accept decisions at three temperatures and four uniforms. Exact arithmetic, exact inequalities; zero errors required. Validate stored energies against raw vectors independently. Public SDK documentation and untuned distributional tests both audited; implementation-private properties must be described as unknown.",
+  "stats": "Family-wise 95% over nine comparisons, per metric alpha=.05/9; paired by seed. Legality & strict-hit GPU-CPU risk difference: paired discordance confidence interval using binomial exact bounds on discordance mass and sign conditional on discordance (Bonferroni within component); CI entirely within [-0.12,0.12]. Integer energy distribution: paired bootstrap supremum of centered CDF difference, 9999 paired draws, enlarge observed KS by (1-alpha) bootstrap quantile; upper bound <=0.25 required. All nine gates must pass. Technical contradictions of claimed transition contract also disqualify. No threshold, seed, schedule or kernel retuning after observations. Failure selects CPU four-worker formal 900.",
+  "scope": "Validation only. No fitting, cloud, sealed writes or paper.",
+  "hardware": "RTX 5070 Ti Laptop GPU, 12227 MiB, WSL driver 617.42; torch 2.12.0.dev20260310+cu128"
+}

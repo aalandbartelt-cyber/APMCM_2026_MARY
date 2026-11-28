@@ -1,0 +1,19 @@
+{
+  "family": "NO2",
+  "block": 2,
+  "restart": 7,
+  "seed": 7301106,
+  "started_utc": "2026-11-28T14:01:38.924+00:00",
+  "T0": 26284.0,
+  "cutoff": 0.0001,
+  "backend": "kaiwu_cpu4",
+  "vector_path": "vectors/NO2_B02_R007.npy",
+  "sha256": "ee0fb077c24f58aa010596785a376cbbf030600339db6a516898c4d2a88b6373",
+  "dtype": "int64",
+  "shape": [
+    1,
+    490
+  ],
+  "status": "RETURNED",
+  "finished_utc": "2026-11-28T14:01:43.161+00:00"
+}

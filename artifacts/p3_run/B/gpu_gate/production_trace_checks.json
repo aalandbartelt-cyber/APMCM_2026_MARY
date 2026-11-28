@@ -1,0 +1,40 @@
+[
+  {
+    "n": 5,
+    "starting_states": 32,
+    "temperature_levels": [
+      32.0,
+      8.0,
+      2.0
+    ],
+    "matched_fields": [
+      "rng",
+      "local_field",
+      "current_vector",
+      "best_vector",
+      "current_energy",
+      "best_energy"
+    ],
+    "checked_sweeps": 96,
+    "checked_proposals": 480
+  },
+  {
+    "n": 8,
+    "starting_states": 256,
+    "temperature_levels": [
+      32.0,
+      8.0,
+      2.0
+    ],
+    "matched_fields": [
+      "rng",
+      "local_field",
+      "current_vector",
+      "best_vector",
+      "current_energy",
+      "best_energy"
+    ],
+    "checked_sweeps": 768,
+    "checked_proposals": 6144
+  }
+]
