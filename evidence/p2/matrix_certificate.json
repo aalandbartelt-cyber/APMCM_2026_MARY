@@ -1,0 +1,13 @@
+{
+  "G1": "CERTIFIED",
+  "G2": "CERTIFIED",
+  "spins": 490,
+  "max_J": 73,
+  "illegal_gap": 340,
+  "ground_energy": -58722,
+  "batch_candidates": 529,
+  "batch_min_value": 1.839047051618571,
+  "batch_ground_worst_regret": 0.0,
+  "global_min_value": 1.839047051618571,
+  "matrix_sha256": "68f4fd29ea22dbbba9187d9f3eec1cb1d89e33c7fc1e5b6116bfd95cf39b9952"
+}

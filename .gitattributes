@@ -9,3 +9,7 @@
 *.rar binary
 # Preserve the sealed research CSV bytes across checkout (receipt SHA256).
 /codex/P2_RESEARCH_*20261128.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# The registered input and offline receipts hash exact bytes.
+/codex/p2_zero/slots.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/evidence/p2/returns/*.pkl binary
+/evidence/p2/*.npz binary
