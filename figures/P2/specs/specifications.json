@@ -1,0 +1,292 @@
+{
+  "created": "2026-11-28T17:41:19.919386+08:00",
+  "scope": "Rendering only; no new solver observations",
+  "figures": [
+    {
+      "id": "F1",
+      "title": "From candidate pools to an integer model",
+      "level": "Main",
+      "panels": "Five-stage pipeline. Two aligned 52-by-52 A/B maps with a shared colour scale and distinct excluded cells. Overlay the two enumerated proxy-value distributions on a common scale and mark their common minimum.",
+      "files": [
+        "artifacts/p23_v2/pool_07.npz",
+        "artifacts/p23_v2/pool_11.npz",
+        "artifacts/p2_v2/enumeration_07.csv",
+        "artifacts/p2_v2/enumeration_11.csv",
+        "evidence/p2/matrix_certificate.json",
+        "evidence/p2/blocks.json",
+        "evidence/p2/verify.py"
+      ],
+      "check": "07=2704, 11=529; NO2 slice, LaTiO2N = 1.839047; y counts normalized within each pool. Only 11 proceeds to the service.",
+      "readout": "Both pools have the same proxy minimum; only the 529 allowed blind candidates enter the hardware representation."
+    },
+    {
+      "id": "A1",
+      "title": "Three orientations of the same oxynitride structure",
+      "level": "Main",
+      "panels": "VESTA exports along c, along a and oblique. Curved rotation arrows in each row; same centre and angstrom width. Coordination polyhedra versus ball-and-stick view of the same structure as a matched display control.",
+      "files": [
+        "figures/shared/crystal_structure/source/mp-1222738.json",
+        "figures/shared/crystal_structure/source/LaTiNO2.cif",
+        "figures/shared/crystal_structure/source/LaTiNO2.vasp",
+        "figures/shared/crystal_structure/source/LaTiNO2_2x2x1.cif",
+        "figures/shared/crystal_structure/LaTiO2N_structure_mp1222738_frozen_v1.png",
+        "codex/p2_zero/structure_source.json"
+      ],
+      "check": "2 × 2 × 1 supercell; remove La–O/La–N, retain Ti–O/N. Caption verbatim “illustrative rendering, not DFT-relaxed” scoped to this study. MP ID, DOI, access date 2026-11-28. No modelling input.",
+      "readout": "Same coordinates and scale reveal the Ti coordination network from three directions."
+    },
+    {
+      "id": "F2",
+      "title": "Lookup and submitted short-chain couplings",
+      "level": "Main",
+      "panels": "Compare logical floating double one-hot matrix and actual submitted integer matrix, identify registers, constraints, reference and short-chain structure. Use a block matrix in the main text and deliver the grouped layout as A2. Show G1/G2 outcome directly.",
+      "files": [
+        "artifacts/p2_v2/representations/11-raw-float.npz",
+        "artifacts/p2_v2/representations/11-raw-N8.certificate.json",
+        "artifacts/p2_v2/results/representation_summary.csv",
+        "evidence/p2/matrix.npz",
+        "evidence/p2/blocks.json",
+        "evidence/p2/matrix_certificate.json"
+      ],
+      "check": "105 vs 490 including reference. Sign and magnitude keys; show all nonzero logical edges, only exact zero hidden. Distinguish the floating map from the associated 8-bit audit.",
+      "readout": "The failed two-register representation differs structurally from the certified matrix used by the service."
+    },
+    {
+      "id": "F3",
+      "title": "Returned energies and the decision boundary",
+      "level": "Main",
+      "panels": "Paired task minima/maxima in residual units, pilot/formal divider, observed 84–188 band, 196 line. Separate magnified or explicit margin panel shows nearest selected and set-wide cases.",
+      "files": [
+        "figures/P2/data/task_margin.csv",
+        "figures/P2/data/return_energy.csv",
+        "evidence/p2/matrix.npz",
+        "evidence/p2/blocks.json",
+        "codex/P2_CIM_FINAL_EXPERIMENT_TABLE_20261128.csv"
+      ],
+      "check": "Endpoints use original returned sets; F03 20 selected, F14 8 set-wide; strict inequality; data are service-level.",
+      "readout": "The weakest entire return set lies eight integer units below the first possible wrong decision."
+    },
+    {
+      "id": "F4",
+      "title": "Strict hits across restart budgets",
+      "level": "Main (fifth slot)",
+      "panels": "Panel a: business/zero, 20 paired blocks. Panel b: 40-short/one-long, same first two blocks. Seven budgets, Wilson 95% marginal pointwise intervals; mark B=5. Report energy-selected rule separately in caption.",
+      "files": [
+        "figures/P2/data/sa_budget_curve.csv",
+        "figures/P2/data/sa_budget_blocks.csv",
+        "figures/P2/data/sa_paired_test.json",
+        "figures/P2/data/chain_ablation.csv"
+      ],
+      "check": "B=5 p=0.000122, this instance and schedule. Wilson bands assume independent blocks within arm, marginal not paired-difference bands; n=2 descriptive; no energy ratio.",
+      "readout": "At five restarts the cost-bearing matrix hits the proxy optimum in 20 blocks versus six controls."
+    },
+    {
+      "id": "A2",
+      "title": "Grouping the lookup couplings",
+      "level": "Appendix",
+      "panels": "Reference-aware grouped circular logical graph; sign and line-width legend, annotate A/B registers and the lookup crossing them. Deterministic within-class display selection if needed; report threshold and retained/total numerically.",
+      "files": [
+        "artifacts/p2_v2/representations/11-raw-float.npz"
+      ],
+      "check": "Separate within-register, cross-register, reference edges. If grouping into bundles, use actual groups and sign separately. Caption logical not physical, state exact filter.",
+      "readout": "The lookup joins two registers; the shared reference has a distinct role."
+    },
+    {
+      "id": "A3",
+      "title": "Energy distribution of returned vectors",
+      "level": "Appendix",
+      "panels": "Pilot 50 and formal 200 histograms of returned integer energies; same bins of width four, zero-count regions preserved, ground and decision-boundary reference lines.",
+      "files": [
+        "figures/P2/data/return_energy.csv",
+        "evidence/p2/matrix_certificate.json"
+      ],
+      "check": "Show E0=-58722 and -58526, absolute integer axis. Counts reflect curated solutions clustered within tasks.",
+      "readout": "Both returned sets occupy an energy band above the certified ground and below the decision boundary."
+    },
+    {
+      "id": "A4",
+      "title": "Attainment by task and selection rule",
+      "level": "Appendix",
+      "panels": "Count display of all formal slots and strict feasibility/zero/0.1 regret thresholds. Separate service-level comparison for best strict versus one minimum-energy strict selection; fixed SA blocks, plus labelled pilots.",
+      "files": [
+        "codex/P2_CIM_FINAL_EXPERIMENT_TABLE_20261128.csv",
+        "codex/p2_cim_service/SA_service_baseline.json",
+        "figures/P2/data/sa_budget_blocks.csv"
+      ],
+      "check": "Show all planned slots, conditional and unconditional denominators. Service budget inaccessible; no paired hardware comparison.",
+      "readout": "Selecting one minimum-energy strict solution preserves all twenty formal hits."
+    },
+    {
+      "id": "A5",
+      "title": "Service observation windows",
+      "level": "Appendix",
+      "panels": "Task intervals grouped into pilot/formal panels, local clocks labelled separately if scales differ; open/closed markers for accepted and first observed complete.",
+      "files": [
+        "figures/P2/data/task_timeline.csv",
+        "figures/P2/data/timing_sources.json",
+        "evidence/p2/tasks.csv"
+      ],
+      "check": "25 complete local intervals; UTC+8 on 28 Nov 2026; physical onset/end unavailable; no TTS inference.",
+      "readout": "All tasks have two local observation times; the formal requests were accepted in a short batch."
+    },
+    {
+      "id": "A6",
+      "title": "Classical costs and three audit quantities",
+      "level": "Appendix",
+      "panels": "Classical v2 logged phase seconds and three small labelled measures for surrogate group-CV RMSE, one-hot integer regret and selected hardware residual (separate scales).",
+      "files": [
+        "artifacts/p2_v2/results/cost_ledger.csv",
+        "artifacts/p2_v2/results/representation_summary.csv",
+        "artifacts/p1_v21/results/regression_pareto.csv",
+        "figures/P2/data/task_margin.csv"
+      ],
+      "check": "Only nonoverlapping phase times; nested tree timer excluded. No sum of unlike errors or hardware timing.",
+      "readout": "Simulation dominates the timed v2 phases; each error layer has a different measurement unit."
+    },
+    {
+      "id": "A7",
+      "title": "Precision, constraints and negative controls",
+      "level": "Appendix",
+      "panels": "Width × pool/encoding grid, use symbol for certificate and colour for worst allowed regret, show all six nominal widths. Add 8-bit penalty variants and zero-business or rescue diagnostics separately.",
+      "files": [
+        "artifacts/p2_v2/results/representation_summary.csv",
+        "artifacts/p2_v2/negative_control_07_raw.json",
+        "artifacts/p2_v2/negative_control_07_rc.json",
+        "artifacts/p2_v2/negative_control_11_raw.json",
+        "artifacts/p2_v2/negative_control_11_rc.json",
+        "codex/P2_DUAL_RESCUE_B_FULL_GRID_20261128.csv",
+        "codex/P2_RESCUE_COMPARISON_20261128.csv",
+        "codex/p2_zero/replay_h05.json"
+      ],
+      "check": "Four statuses explicitly keyed (implementation errors may be absent); separate G1, allowed-minimum regret, and historical local search. Preserve counterexamples/unknowns.",
+      "readout": "Increasing width changes representation quality, and a legality certificate alone does not guarantee zero original regret."
+    },
+    {
+      "id": "A8",
+      "title": "Member ranks and upper-tail proxy regret",
+      "level": "Appendix",
+      "panels": "Matched panels for 07 and 11. Per-scenario ranks across 20 members, summary markers; paired CVaR90 and worst original regret, candidate identity in labels.",
+      "files": [
+        "artifacts/p2_v2/results/scenario_decisions.csv",
+        "artifacts/p2_v2/results/member_ranks_07.csv",
+        "artifacts/p2_v2/results/member_ranks_11.csv"
+      ],
+      "check": "Same scales across pools; minimize upper tail; repeated candidate decisions identified.",
+      "readout": "The minimax decision changes candidate in both pools; the blind-pool CVaR decision retains LaTiO2N."
+    },
+    {
+      "id": "A9",
+      "title": "Local optima across forty candidate groups",
+      "level": "Appendix",
+      "panels": "25 task rows × 40 fixed-order chain columns, integer counts from 0 to 10; visible pilot boundary and critical group 17; integer colour key.",
+      "files": [
+        "figures/P2/data/chain_task_25x40.csv",
+        "figures/P2/data/chain_optimal_250x40.csv",
+        "figures/P2/data/chain_detail.csv",
+        "figures/P2/data/chain_association.csv",
+        "evidence/p2/blocks.json"
+      ],
+      "check": "Count ties as group minima; no sorting or vote; group 17 contains the unique proxy winner.",
+      "readout": "Group 17 attains its local minimum throughout, although many other groups do not."
+    },
+    {
+      "id": "A10",
+      "title": "SPQC-550 platform illustration",
+      "level": "Appendix",
+      "panels": "Use archived generated device image, appropriately sized, with a short English illustration tag. Archive raw source bytes by hash.",
+      "files": [
+        "figures/shared/hardware/SPQC-550.png",
+        "codex/p2_cim_service/QUOTA_FINAL_AND_CREATE_LEDGER.json"
+      ],
+      "check": "Generated illustration, non-photographic; no evidence identifying hardware routing or physical connectivity.",
+      "readout": "This is an illustration of the platform; the quantitative record comes from service receipts."
+    },
+    {
+      "id": "A11",
+      "title": "Six archived evolution displays",
+      "level": "Appendix",
+      "panels": "Six original trace regions in a 2 × 3 grid, F03/F04/F06/F07/F08/F09, with original units and legible shared axis typography. Preserve original calibrated ranges and source PNGs; no fit, smoothing or extrapolation.",
+      "files": [
+        "figures/shared/hardware/F03_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F04_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F06_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F07_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F08_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F09_Hamiltonian_evolution.png",
+        "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json"
+      ],
+      "check": "No task ID on screenshots, user association only; auxiliary displays; a.u. cannot be interpreted as physical time or evidence of evolution dynamics. 14 missing images retain formal outcomes.",
+      "readout": "Six available screenshots document displayed traces and their differing vertical scales."
+    },
+    {
+      "id": "A12",
+      "title": "Chain length, strict feasibility and aggregation",
+      "level": "Appendix",
+      "panels": "Historical H02/H05 cohorts visibly grouped; matched single versus 40-short counts in fresh blocks. Show strict feasible, strict hits, denominator and classical comparison count.",
+      "files": [
+        "figures/P2/data/chain_ablation.csv",
+        "figures/P2/data/sa_budget_curve.csv",
+        "codex/p2_zero/single_certificate.json",
+        "codex/p2_zero/replay_h05.json"
+      ],
+      "check": "Fresh result uses only two paired blocks/200 restarts. Compare 0 versus at most 39 classical comparisons. Historical cohorts differ in multiple settings.",
+      "readout": "Under the matched local schedule, only the packed encoding returns strict hits."
+    }
+  ],
+  "input_sha256": {
+    "artifacts/p23_v2/pool_07.npz": "88ff99112f778472069c3740cd0f8800784211a1db373c231f0557d394093f80",
+    "artifacts/p23_v2/pool_11.npz": "ff53eac15f1f2aa8471ad7d0bb6da7c24188a8f772a0c8966b93f2390c20393f",
+    "artifacts/p2_v2/enumeration_07.csv": "a81b0de844bc908dec314549ce8d38d462310a4c42c1a00ce2b83a73c2111e0e",
+    "artifacts/p2_v2/enumeration_11.csv": "9a1f7705bb0e4aff7cf30ac9e2bb0d2e2490fbbbc428b22843ab54c1e96155d2",
+    "evidence/p2/matrix_certificate.json": "03c63399c7ca0878eb94cee09cd3c55a1afdd78e8da135f1fd031f209409d1d7",
+    "evidence/p2/blocks.json": "da4450e440c0cb8f31d4baab20f97bc584b78f331bb1b8cd0c8698f5b0e87a0e",
+    "evidence/p2/verify.py": "519d0fceecd7df133cf67a1d1ba2dbbef9e0ca9d413083a0bcfca918ffe9376d",
+    "figures/shared/crystal_structure/source/mp-1222738.json": "08b213ad32f8a3e22b93aa5f5a1c6a99c43a4ca19ffa98d999e22fead95643fc",
+    "figures/shared/crystal_structure/source/LaTiNO2.cif": "3bcaf39d16702a5cf61c5fe75d315d7e1bb306b3f60648ee9024a08bee1b3017",
+    "figures/shared/crystal_structure/source/LaTiNO2.vasp": "c1255a79e3827238f706513f1d679635bc2f9ea544b5858c5e56930fe10f59f1",
+    "figures/shared/crystal_structure/source/LaTiNO2_2x2x1.cif": "e55a04326b9ffa154e679b54d365eda81fe2d6495786aa963b2301cb7b0c4b63",
+    "figures/shared/crystal_structure/LaTiO2N_structure_mp1222738_frozen_v1.png": "8c1c53a98d6debc01bbac8cd5c07906e359c7c7a35c17d831a804255846af2a2",
+    "codex/p2_zero/structure_source.json": "99751e223b59a8edf0a31e21bb8a6d1ca04c6e1937400a34f6c2f6e881fd6f3e",
+    "artifacts/p2_v2/representations/11-raw-float.npz": "39cb43b9b6f455bbab401c0e9bd526c941f4e72eb827cb4b0bf2badb7be8917c",
+    "artifacts/p2_v2/representations/11-raw-N8.certificate.json": "749f026e06e689b76bc8ebdd03052133744b2e2bb7f886685ffd062407caf724",
+    "artifacts/p2_v2/results/representation_summary.csv": "163cce9b528ae0ad647993716bf90ebc9d0697a4ab99711fd832b42f2eb49fe5",
+    "evidence/p2/matrix.npz": "68f4fd29ea22dbbba9187d9f3eec1cb1d89e33c7fc1e5b6116bfd95cf39b9952",
+    "figures/P2/data/task_margin.csv": "df12a1729b1ddf9e015a34c72e3b887b9ff9744d8f3468810f8902b122c8ea6c",
+    "figures/P2/data/return_energy.csv": "1c1091c4bf8165ce7ff5daba8efd6ce76068399e53c309d74e89d8e39a7e8cd9",
+    "codex/P2_CIM_FINAL_EXPERIMENT_TABLE_20261128.csv": "29c8b3b1a4e0a00a6946787e5b616cb80438229c58ff50d79b0c4554ba7ba803",
+    "figures/P2/data/sa_budget_curve.csv": "25b42ae3cb9176e7aa48d5e411326fae95c6f0533e57f0c42226ed6ed317a8b5",
+    "figures/P2/data/sa_budget_blocks.csv": "1036f713a37625a9013cf32703aad608255fc48e40aaff90d0ed4ceb286b7576",
+    "figures/P2/data/sa_paired_test.json": "7e993b649fe5ae553c34658e86036457e78095af10c449772d38dcd707309bcc",
+    "figures/P2/data/chain_ablation.csv": "c6e0f9eb2b77b077e4b714330c497d82bf540d0aae5fdcfeb9d3038825297481",
+    "codex/p2_cim_service/SA_service_baseline.json": "5d0a56d2d7175ed11def221bf08b8ed79365cbedc7a33d5d65cc1837956a7670",
+    "figures/P2/data/task_timeline.csv": "e135d62473a9e2e0f29805aa999f3df27449a6d7a64b2d5002f589049e32ba24",
+    "figures/P2/data/timing_sources.json": "509d3719167debfc1a2cb476eb1e8e6ff3d0fe9389543f4d72d4eaeacf90585e",
+    "evidence/p2/tasks.csv": "29c8b3b1a4e0a00a6946787e5b616cb80438229c58ff50d79b0c4554ba7ba803",
+    "artifacts/p2_v2/results/cost_ledger.csv": "ad070e7c9bedcd3fe507d18f164fbcdab5fbaf95425a0efa3e4d5c5b05cbb145",
+    "artifacts/p1_v21/results/regression_pareto.csv": "d2904f9b0a4b1dec22400b50def87b9f2b89c5231016b2f9f10d953cf4fdfb0d",
+    "artifacts/p2_v2/negative_control_07_raw.json": "d76607e865bf3a62ff35f023b34986a9292a2f41bdb0a7fcd942e8669c043ace",
+    "artifacts/p2_v2/negative_control_07_rc.json": "2d8ee8eed697c037d666be60b57eed9254556228ac89f82ca1e4f5f105052e83",
+    "artifacts/p2_v2/negative_control_11_raw.json": "28e3cdd879d8c40284b42a648a8dd05b95903b11b96e18a0c8f836eb9948e1dc",
+    "artifacts/p2_v2/negative_control_11_rc.json": "e0cf6623af4604064f8662246cf5d6360bae8117f567fe49687ef5b8c472c2f7",
+    "codex/P2_DUAL_RESCUE_B_FULL_GRID_20261128.csv": "362ae02054bae1e91a5a541d56351529b3e9ff615c3d496a204e0a4d51985fb9",
+    "codex/P2_RESCUE_COMPARISON_20261128.csv": "429907e30c8a9b75272b88b6308d295b2ffa1030d26eced1849b49f205c1fe55",
+    "codex/p2_zero/replay_h05.json": "6f855b8464da4645275cc3e286232b3f84f0a6a87f4916297e1b1a1bdf112508",
+    "artifacts/p2_v2/results/scenario_decisions.csv": "76c04b611c0704e7aac79efb2848e1538ee9c6b4ae1ed57ee3cbac5de5cc8fa4",
+    "artifacts/p2_v2/results/member_ranks_07.csv": "7202e453e4d1183e62eb0c982faebe3b52b0e0cc05dc812f6f321ab29c763a89",
+    "artifacts/p2_v2/results/member_ranks_11.csv": "c0a86cc70bb68ac85924881d5239df75c8f2ea5784e445db0a4f32cdf25790c4",
+    "figures/P2/data/chain_task_25x40.csv": "db0cdc81cf382fc930a3fdcee8cf23109b8e02f5bf733f697aa66cc2a7048f51",
+    "figures/P2/data/chain_optimal_250x40.csv": "960527b01475f9e59739e2d4520d696b1092afeaa6af3b1e8237f395f9ef87e2",
+    "figures/P2/data/chain_detail.csv": "f0946bf64b193664a8f4d4df6f80775a28939a98160d160ca68e63e5860218e0",
+    "figures/P2/data/chain_association.csv": "4310b0bf30b08e42876f97a7675bfab8d0b37c64034aa1bd15bbcb95355a4ff2",
+    "figures/shared/hardware/SPQC-550.png": "e62c9ee90c4c6461bc4a4b16ddec15ed14736e48cfc7a0c66eb0599fc33aac8a",
+    "codex/p2_cim_service/QUOTA_FINAL_AND_CREATE_LEDGER.json": "8afad4adfef2feee26e58acfe70cd95b46d3448c8e9e296d09a0a64c0148d0b9",
+    "figures/shared/hardware/F03_Hamiltonian_evolution.png": "d6e2aa4eebbb84e03ce6bed873df9a9b577d5b761943765ea43d5271cf519158",
+    "figures/shared/hardware/F04_Hamiltonian_evolution.png": "8b8f281ed60736b259f0291b85761106680ddc6c79cde8a3ceb3c52f7666f1bb",
+    "figures/shared/hardware/F06_Hamiltonian_evolution.png": "19cc414b24f20b102cf54e047e557d10ef326ba281c7ad62712a96aeb3ef2824",
+    "figures/shared/hardware/F07_Hamiltonian_evolution.png": "a3ff46817861620dcef3a93548264ec8e580f4bf6f3e545155ec65f811542011",
+    "figures/shared/hardware/F08_Hamiltonian_evolution.png": "e3add9ad585180010c27f1c9415b48b4659424a97bd723b24c22cbed15bf3660",
+    "figures/shared/hardware/F09_Hamiltonian_evolution.png": "746be2af283264c96ac1acb25d28550c0dbe9d5296572315388163bfb9bb11a5",
+    "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json": "39fbee06761e5e80fac84b7376a0d3932d33f44594f267a682f2146fd3787148",
+    "codex/p2_zero/single_certificate.json": "a02c35e3bb01934815d6a2016403615276594827a535854bef28f9c201744a73"
+  }
+}
