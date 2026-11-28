@@ -14,3 +14,4 @@
 /evidence/p2/returns/*.pkl binary
 /evidence/p2/*.npz binary
 /codex/p2_zero/sa_replay_inputs/*.npz binary
+/evidence/p3/*.npz binary

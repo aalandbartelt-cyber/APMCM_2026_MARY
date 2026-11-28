@@ -1,0 +1,14 @@
+slot,quota,round,family,purpose,initial_state
+F01,550,1,O3,formal_first_integrity_gate,NOT_STARTED
+F02,550,1,FO2,formal,NOT_STARTED
+F03,550,1,NO2,formal,NOT_STARTED
+F04,550,2,FO2,formal,NOT_STARTED
+F05,550,2,NO2,formal,NOT_STARTED
+F06,550,2,O3,formal,NOT_STARTED
+F07,550,3,NO2,formal,NOT_STARTED
+F08,550,3,O3,formal,NOT_STARTED
+F09,550,3,FO2,formal,NOT_STARTED
+D01,550,,,technical_diagnostic_only,RESERVED
+D02,550,,,technical_diagnostic_only,RESERVED
+X01,1000,,,separate_approval_architecture_extension,RESERVED
+X02,1000,,,separate_approval_architecture_extension,RESERVED

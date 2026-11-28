@@ -1,0 +1,178 @@
+{
+  "schema": "apmcm.p3.final.v1",
+  "stage": "OFFLINE_SEAL_BEFORE_FIRST_CREATION",
+  "created_at": "2026-11-28T21:38:03+08:00",
+  "baseline_git_commit": "d770fa06011db1d72ec7791aeb58cbfa9a1db565",
+  "anchor_contract": "First Git commit containing evidence/p3/receipt.json. Supply its independently recorded full SHA. The working receipt must match Git bytes.",
+  "activity_at_seal": {
+    "p3_cloud_creations": 0,
+    "new_fits_this_revision": 0,
+    "fit_ledger_used": 979,
+    "fit_ledger_limit": 1000,
+    "new_sa_restarts_this_revision": 0,
+    "paper_changes": 0
+  },
+  "rounds": [
+    [
+      "O3",
+      "FO2",
+      "NO2"
+    ],
+    [
+      "FO2",
+      "NO2",
+      "O3"
+    ],
+    [
+      "NO2",
+      "O3",
+      "FO2"
+    ]
+  ],
+  "slots": "evidence/p3/slots.csv",
+  "quota": {
+    "550_formal": 9,
+    "550_reserved_diagnostic_only": 2,
+    "1000_separate_approval_only": 2,
+    "prior_reported_optimization_balance": {
+      "550": 11,
+      "1000": 2
+    },
+    "before_each_next_creation": "verify unique prior ID and attributable actual debit (550=1,1000=0); pause on 1000 debit or unclear billing",
+    "first_slot_release": "valid return integrity only, regardless of strict/quality; subsequent slots sequential after debit without awaiting prior quality"
+  },
+  "deadlines": {
+    "stop_new": "2026-11-29T18:00:00+08:00",
+    "main_snapshot": "2026-11-29T21:00:00+08:00"
+  },
+  "selection": {
+    "strict": "all 40 chains in ONE unmodified vector legal",
+    "primary": "min (local integer energy, original zero-based return index) over strict vectors; NA if none",
+    "within_vector": "min (q, frozen row-major candidate index)",
+    "secondary": [
+      "any strict vector hits",
+      "minimum raw regret over strict vectors"
+    ],
+    "across_slices": "only the three primary IDs, min (original float64 vhat, official id)",
+    "joint_primary": "all three primary official IDs equal their own unique slice winner",
+    "regret_le_0.1": "compatibility assertion only; forbidden to relax exact endpoint",
+    "accounting": "k/3 and k/C separately; C = 3 independent valid complete returns in a round; pending is operational, not an observed quality failure; k/C NA at C=0"
+  },
+  "forecast": {
+    "slices": {
+      "O3": {
+        "p05_lower_descriptive": 100,
+        "p50_historical": 200,
+        "p95_upper_trigger": 444,
+        "E0": -58496,
+        "first_illegal_residual": 340,
+        "integer_matrix_sha256": "beb1d7e6715c5420782008b4f36982b9b6a5b5ccd793b469bf69cc7c0a3ee6a2",
+        "local_nonminimum_risk_groups_one_based": [
+          35
+        ],
+        "frequent_wrong_AB": "K|Nb"
+      },
+      "NO2": {
+        "p05_lower_descriptive": 112,
+        "p50_historical": 308,
+        "p95_upper_trigger": 584,
+        "E0": -58722,
+        "first_illegal_residual": 340,
+        "integer_matrix_sha256": "f72fbc9e425ebc1ff890d5f439878560f59d8fc62e62065b79062f30a922506f",
+        "local_nonminimum_risk_groups_one_based": [
+          5,
+          20
+        ],
+        "frequent_wrong_AB": "Sr|Nb"
+      },
+      "FO2": {
+        "p05_lower_descriptive": 88,
+        "p50_historical": 280,
+        "p95_upper_trigger": 408,
+        "E0": -58150,
+        "first_illegal_residual": 472,
+        "integer_matrix_sha256": "3502da271cd352e795c1d27a0fa5df0a12f24dcf4c1c32a24b49cfe23389dcc9",
+        "local_nonminimum_risk_groups_one_based": [
+          9,
+          18
+        ],
+        "frequent_wrong_AB": "Sn|In"
+      }
+    },
+    "primary_flag": "residual > P95 only",
+    "secondary_label": "residual < P05 is better than single SA, never a mismatch",
+    "equality": "normal at either endpoint",
+    "alert": "same family, two adjacent planned observations both strictly above P95",
+    "history": {
+      "provenance": "codex/P3-2.md at baseline commit, section 3 enhancement 1; published historical summaries only",
+      "quantile_method": "inverse empirical CDF of the strict returns per family",
+      "reference_restarts_per_family": 48,
+      "seed_formula": "910001+1000*j+i; j=0,1,2 in O3,NO2,FO2; i=0..47",
+      "raw_restart_vectors": "NOT_LOCATED",
+      "raw_restart_replay_claim": false,
+      "new_300_per_slice_baseline": "separate later stage, not run during this seal"
+    }
+  },
+  "figures": {
+    "frozen_at": "before F01; first return permits only appending observations and status",
+    "envelope": "three same-scale panels; exact staircase, wrong/illegal thresholds, P95 one-sided reference line, distinct symbols for SA and services; no two-sided forecast band",
+    "tasks": "nine rows and three round summaries; strict/partial and primary/secondary separate",
+    "members": "paired ranks from the frozen 20 models; counterfactual NO2 removal is post-hoc, conditional, appendix only"
+  },
+  "certificates": "evidence/p3/certificates.json",
+  "files": {
+    "codex/P3-1.md": "948a53c5fa0ffb0dc5676f649e23aca780c7ad4396a309404d523c359cb877d0",
+    "codex/P3-2.md": "6fcdc41e95341905ebc2dc4b045635da61218917ca69ddb6924b376fabbf9a94",
+    "codex/P3_FINAL.md": "b17be7fa47aff6b9b23b75a785eb65040decedf6eef055fcf99ab225c717a1d8",
+    "evidence/p2/blocks.json": "da4450e440c0cb8f31d4baab20f97bc584b78f331bb1b8cd0c8698f5b0e87a0e",
+    "evidence/p2/candidates.csv": "2c3e2019892079ca5df85e741df816be2b03d44c26f38756bd438790b7fb2fae",
+    "evidence/p2/matrix.npz": "68f4fd29ea22dbbba9187d9f3eec1cb1d89e33c7fc1e5b6116bfd95cf39b9952",
+    "evidence/p2/tasks.csv": "29c8b3b1a4e0a00a6946787e5b616cb80438229c58ff50d79b0c4554ba7ba803",
+    "evidence/p3/FO2.npz": "113809f7da79391396ea2994a176229eb6863f2708851406b847952828e2e6f3",
+    "evidence/p3/NO2.npz": "fe682b5b07840507a553c7882c6fba30c6c6452562d5571f7dd3be69bf1f0d1a",
+    "evidence/p3/O3.npz": "3cd042afcbc3f072eb599ac8d884c6ae887868d96677c2324d3034d60e2f9525",
+    "evidence/p3/README.md": "81d392015f6b676ea26eeaf0797e48346d7f0a99b5ee7df27b702f130e299461",
+    "evidence/p3/build_inputs.py": "72bd7ded07babe26e4315b7d27c9da3c333206080d4124b5b7959353d2d431ca",
+    "evidence/p3/candidates.csv": "1c1672872b9f6d4dfa5e9b9272890888994aaa3d27ba8f84c248bd2731f1784d",
+    "evidence/p3/certificates.json": "d977325f4c09567e1a883ae456f0fd53898d20bad5f58e446c400954e385d47b",
+    "evidence/p3/envelopes.csv": "e413faaa4975c5b1a4214fdaad8fc3f1d88f476b9fac8135060e6935dcba6845",
+    "evidence/p3/member_scenarios.csv": "0cda8945ce16de935f8ce2dbb7cb87e1fb3cabfb37ed6f358b403c4314bdeaae",
+    "evidence/p3/protocol.py": "ac89bb8933d827e0c5efcdf58870987bd8323f4c5a33b9c6aa3f72c5835d966d",
+    "evidence/p3/slots.csv": "9306245c55dfdf459129357a25cf669a85746fdc3844cb2fc008e3026fb3615c",
+    "evidence/p3/source_members.json": "d00f3fcd0b50891afa8b03acd2b21859ec84f71610cd0ba0ec2f85eb52d56b50",
+    "evidence/p3/test_evidence.py": "1cdbfc9ff49e7d1762f4c18ce299ed30a0ed3d9e167bd83ee1e21f7c30a7a425",
+    "evidence/p3/test_protocol.py": "e9b484f90d57cbefb52753e5ed0033d6abe601e4ac9b0ec8fda129c227753811",
+    "evidence/p3/tie08.npz": "ff1b37a5eae1188799113fe201b5d05d112ea7a07ec611829b2143ad24044df4",
+    "evidence/p3/verify.py": "8bb71d1f95730c00d69f03d5db9bfded6880a24736e34c9065fefbdd1f364a5e"
+  },
+  "sources": {
+    "00_赛题与规则/官方发布/2026赛题/2026 APMCM Problem D/date/08_castelli_q3_pool.csv": "d09da16984ab90b110c934bdd51e129818d5d527d75854f74acf8c98d73b941b",
+    "00_赛题与规则/官方发布/2026赛题/2026 APMCM Problem D/date/12_castelli_q3_pool_blind.csv": "321cef2c4fafcf66b7141360e7dc247b9f6f71ac60c6206c0f910303a3f67868",
+    "artifacts/p1_v21/fit_ledger.jsonl": "612ef4c932a35135582c9c74be5cf12810033b057630f5646b5b15e96189275b",
+    "artifacts/p23_v2/fit_attempts.jsonl": "91ddc3b7b61be7d0cc0478d730e7bce5827489183e6ce3cbe875f4c124c85bfb",
+    "artifacts/p23_v2/interface_manifest.json": "d249e4374ac2cba00d33ddb76f1a8cadf7bd613676ea521b62439a44ee20151c",
+    "artifacts/p23_v2/manifest.json": "325a3aa526fd435aaf29fc132dba266aa1e50219fc98d4f86a66d54576308553",
+    "artifacts/p23_v2/members/member_00.json": "247d14762ccb099c4a61b462cfb2fae236fcf25fdad96d884488a143515917a0",
+    "artifacts/p23_v2/members/member_01.json": "e5f61fc12d3b9b361522b7328cf7225a475105b2eb1177e881812a78f0d979b8",
+    "artifacts/p23_v2/members/member_02.json": "4ddd3a5b37403c9ccc0f7b021eb5808d5e8a4747f9a80b756f507abc3d57e089",
+    "artifacts/p23_v2/members/member_03.json": "af0da021d977ff9312439ad6594623d32c0b10bfc0aaadc8f2faa77b129e808c",
+    "artifacts/p23_v2/members/member_04.json": "35b195543a76b6d0c4a9826cd89ec937779f317d889c7a4a5f9ce77d45d59373",
+    "artifacts/p23_v2/members/member_05.json": "5070d03adf59b195fcdd2407c8680dfb772af30e55f556d4f776679e7a98e9cb",
+    "artifacts/p23_v2/members/member_06.json": "9d3f1dd01798bc59e5b079ca4689359b9414c0f78004c60401a5a347add0bdb1",
+    "artifacts/p23_v2/members/member_07.json": "9fdb314af1e989d69f2cccbb1cced422eb116b6da66453dad3e8ec5bc6b70905",
+    "artifacts/p23_v2/members/member_08.json": "6d24b1c29047c3ef69ad13dea39b29094dfa3bf08b62ff7084cded9f9b02cecb",
+    "artifacts/p23_v2/members/member_09.json": "61c20d4bddc45ac76d11490d2eb71a7719a007cdfbdb8a9d3b31f92a8eab6e6a",
+    "artifacts/p23_v2/members/member_10.json": "2b4508d87e27abc2f2c441ab70b3573b01c74c52301a8c9715c9af259f952a6c",
+    "artifacts/p23_v2/members/member_11.json": "120c8f949b8b37c3160c6fcb8c19fe087733f8dc069c124064eaaa67d7f0a97d",
+    "artifacts/p23_v2/members/member_12.json": "e9186fc9fdba733307a7c1d01364eb6444912dcee4f4adeb62c99220c9120c74",
+    "artifacts/p23_v2/members/member_13.json": "4bcc41d9d1c0395afb64761211a78cdd3f80a9b8039affaec2fb7f1196ab3131",
+    "artifacts/p23_v2/members/member_14.json": "5c1976c489171683face44f4c1ee71224df554205ecdbe615b5867afb0b7c5f1",
+    "artifacts/p23_v2/members/member_15.json": "2bfb2eb60062370336f47c40873e5d56b444fd4a49d680cd8841f8b8fd58e952",
+    "artifacts/p23_v2/members/member_16.json": "ba6d2bab3aeda969eee3c022f59e289d530338571e5edd8d2339b35f12614ed3",
+    "artifacts/p23_v2/members/member_17.json": "d246d37a319e348c060616d5ce54079215204b0cc0997ad3d44ddf0e13233554",
+    "artifacts/p23_v2/members/member_18.json": "e537571956a77e6dd1df4f288336fdb8d91c0c6c15511c96957a94074083cc24",
+    "artifacts/p23_v2/members/member_19.json": "13302410bd6f013dfe91012c6d8322baa7490c7984519c06c18be68163c453af",
+    "artifacts/p23_v2/pool_08.npz": "4872e5ddaf8e9e5aaf83d7be9e8d514ebc389849ad5832fc576ec3c78537dbeb",
+    "artifacts/p23_v2/pool_12.npz": "218f09d79a062a7b9e2b35097d35a41343e646158a2dfb140039fc2090f01402"
+  }
+}
