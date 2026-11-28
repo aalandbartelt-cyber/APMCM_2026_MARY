@@ -1,0 +1,53 @@
+{
+  "comparison_units": "five fixed SA blocks, each 100 previous restarts, versus twenty CIM adaptive-service tasks; not matched computational budget",
+  "rows": [
+    {
+      "unit": "SA_block_00",
+      "existing_restarts": 100,
+      "feasible_strict": true,
+      "hit_strict": true,
+      "best_regret_strict": 0.0,
+      "energy_selected_regret_strict": 0.0
+    },
+    {
+      "unit": "SA_block_01",
+      "existing_restarts": 100,
+      "feasible_strict": true,
+      "hit_strict": true,
+      "best_regret_strict": 0.0,
+      "energy_selected_regret_strict": 0.0
+    },
+    {
+      "unit": "SA_block_02",
+      "existing_restarts": 100,
+      "feasible_strict": true,
+      "hit_strict": true,
+      "best_regret_strict": 0.0,
+      "energy_selected_regret_strict": 0.0
+    },
+    {
+      "unit": "SA_block_03",
+      "existing_restarts": 100,
+      "feasible_strict": true,
+      "hit_strict": true,
+      "best_regret_strict": 0.0,
+      "energy_selected_regret_strict": 0.0
+    },
+    {
+      "unit": "SA_block_04",
+      "existing_restarts": 100,
+      "feasible_strict": true,
+      "hit_strict": true,
+      "best_regret_strict": 0.0,
+      "energy_selected_regret_strict": 0.0
+    }
+  ],
+  "source_hashes": {
+    "artifacts/p2_research_20261128/validation_H07_H08/blind_real_00/raw.jsonl": "39c7378b1b601db65a821ba67ca12fb252e3b0680a74b30017d06462471e8168",
+    "artifacts/p2_research_20261128/validation_H07_H08/blind_real_01/raw.jsonl": "447b936b912fd93f3ded49874e095fc9d80ace11ddb7033fd34762f7484328b4",
+    "artifacts/p2_research_20261128/validation_H07_H08/blind_real_02/raw.jsonl": "fa0de2b5e3bfc4a8b8dd7c462343c5fa9a3b7559434906ad9e6ad06868e60bdf",
+    "artifacts/p2_research_20261128/validation_H07_H08/blind_real_03/raw.jsonl": "6b14e49b87e2c42a2925f12dba08feaa34e4e8b9a9e3fd2fa8f2f35fc9e2ef11",
+    "artifacts/p2_research_20261128/validation_H07_H08/blind_real_04/raw.jsonl": "6543f5fee7bd4ca2b49078d363f86ae3a2b902d8f0d66671065fcb8e8c4b2aab"
+  },
+  "new_SA_calls": 0
+}

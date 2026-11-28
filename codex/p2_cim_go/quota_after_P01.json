@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-11-28T13:52:09.501806+08:00",
+  "user_time_description": "35/2 currently queued",
+  "source": "User active conversation report after P01",
+  "optimization_quotas": {
+    "SPQC550": 35,
+    "SPQC1000": 2
+  },
+  "sampling_credits": 0,
+  "observed_delta": {
+    "SPQC550": 1,
+    "SPQC1000": 0
+  },
+  "attribution": "consistent with P01 one-credit charge; concurrent use not explicitly ruled out",
+  "budget_arithmetic": {
+    "B0": 36,
+    "D_observed": 1,
+    "25D": 25,
+    "0.8B0": 28.8,
+    "passes_25_slot_arithmetic": true
+  },
+  "expansion_authorized_now": false,
+  "blocking_gates": [
+    "P01 pending; return contract not checked",
+    "raw100 semantics unverified",
+    "no explicit exclusion of concurrent billing"
+  ]
+}

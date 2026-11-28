@@ -1,0 +1,23 @@
+{
+  "B0": 36,
+  "B1": 35,
+  "D": 1,
+  "account_bucket": "SPQC550 optimization credits",
+  "only_P01_charged_user_confirmed": true,
+  "other_bucket_before_after": [
+    2,
+    2
+  ],
+  "current_confirmed_quotas": {
+    "SPQC550": 35,
+    "SPQC1000": 2
+  },
+  "rule": "25*D <= 0.8*B0",
+  "lhs": 25,
+  "rhs": 28.8,
+  "total_slots": 25,
+  "pilot_slots": 5,
+  "formal_slots": 20,
+  "already_created": 1,
+  "remaining_creates": 24
+}

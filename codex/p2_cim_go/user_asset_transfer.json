@@ -1,0 +1,9 @@
+{
+  "source": "/mnt/d/上海大学__/26亚太杯英文赛/真机/1-Hamiltonian演化.png",
+  "destination": "figures/shared/hardware/P01_Hamiltonian_evolution.png",
+  "sha256": "869b4bd5bae2aa65e410ec359c893c79521a4b1f1338066113beb3b4d26822c7",
+  "action": "move explicitly authorized by user",
+  "unmodified": true,
+  "use": "P01 platform evolution receipt; not manuscript insertion",
+  "interpretation": "x and y are labelled a.u.; no physical time conversion; no TTS claim"
+}

@@ -1,5 +1,22 @@
 # CURSOR_HANDOFF
 
+## 最新：P01真实成功，用户已批准服务级扩展（2026-11-28，14:05附近）
+
+本节覆盖下方所有“等待硬件授权/采样合同待裁决/零CIM”等历史状态。主Codex独立执行，无子智能体；模型、代理表、矩阵、旧回执与论文不变。
+
+- **真实P01。** optimization，task_name=`P2_H40_P01_O3_1128_f72fbc9e`，result_id=`87c34366-f598-4d8c-9c3b-45482a0d94ca`；13:49:39一次create成功，13:54:12查询code1000。请求参数100，终态**返回解集仅10解**，10个不同向量、全部40链合法、解码均La/Ti/NO2，原表regret全0。整数能量−58594..−58582，比认证基态−58722高128..140，未命中整数全局基态；不可偷换两种“最优”。
+- **原始与终态都留。** 运行中2002即有URL，初版2014字节；终态1899字节且内容不同。按终态取证，不按性能择版本。文件SHA分别6a85b8a3479de565d840340dbcd821cefb9a669e2f1bd1039edbacb49caf92af和f823f79ea2e90a636005653a3f7ef60696961bcad460bb212b9967219e9db490。raw100合同NOT_MET永久保留；服务级VALID是新合同，不回填旧口径。
+- **配额已实核。** 用户确认只有P01扣费，550:36→35、1000:2→2，D=1；25D=25≤0.8B0=28.8，选先导5+正式20，总25槽，余24。Sampling Credits=0不参与优化配额计算；未主动查路由，1000已解锁。现只有1次真实创建，没有重复提交。
+- **用户最新四补丁已落盘。** `codex/P2_CIM_SERVICE_PROTOCOL_v3_1.md`：输出永称“返回解集”；禁逐解率/原始采样率，禁与SA逐重启命中率并置；任务级strict命中、best-of-returned-set regret（正常10解）、G20及partial独立冻结；P01只先导；物理计时缺失披露，所有TTS分析取消。
+- **SA服务对照零新增。** 只读H07既有五个100重启块，各块最优strict regret0，能量选解regret也0；5个SA服务单元与20个CIM自适应服务任务不等预算，明文披露。源文件哈希和5行表在`codex/p2_cim_service/SA_service_baseline.json`，没有新SA或拟合。
+- **新入口与回执。** 旧P01锚87a6c2559249983f43de9d3425e6c820178290aa不改；新增`service_contract.py/service_entry.py/service_results.py`及4项测试全部通过。扩展回执`codex/p2_cim_service/receipt.json`将在下一commit首次锚定；入口同时验证旧基线与扩展首锚。P02–P05可继续，F01须五先导服务完整性均通过；每槽排他intent/create，最多25次，截止18:00。
+- **只读回包检查。** `inspect_return.py`用禁止global对象的pickle解压读取已观测ndarray-zlib-v1，逐解独立能量复算；一次手写错误查询路径在下载前失败，已记录；没有硬件重提。实际开始/完成时间戳、逐解服务端能量、后端机型未知；time_consume19632.2不猜单位。estimated_time12/5在11/28已成功，不能当真实完成计划。
+- **用户图资产。** 已按明确“移动”指令将D盘真机/1-Hamiltonian演化.png原样迁入`figures/shared/hardware/P01_Hamiltonian_evolution.png`，SHA869b4bd5bae2aa65e410ec359c893c79521a4b1f1338066113beb3b4d26822c7。无改图/论文嵌入。原目录文件不再存在是用户授权移动，不是丢失。
+- **下一步无需再问。** 新锚落盘后P02–P05；五先导合同无异常则按原GO进入F01–F20。新指标已在F01前冻结，不能再看结果改规则。原始响应可能含签名URL，仅存本地；D共享只发脱敏结果/证书/协议。当前详细报告`codex/P2_CIM_P01_STATUS_20261128.md`，原件`artifacts/p2_cim_go_20261128/live/P01/`，服务审计`service_audit/`。本轮不写论文，不开P3。
+
+---
+
+
 ## 最新：CIM GO v3接口更正，P01单发提交前（2026-11-28）
 
 本节覆盖下方“未获真机授权/锁死SPQC1000”等历史边界。用户已明确GO，后解除SPQC1000锁定；仅盲池40-real单矩阵，07/zero不上真机。主Codex独立执行，无子智能体。仍禁止新拟合、论文和P3。
