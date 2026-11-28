@@ -1,0 +1,17 @@
+phase,id,G1,worst_allowed_regret,matrix_file,matrix_sha256,SA_restarts,SA_feasible,G2,SA_valid,block_successes,eligible
+v2,11-raw-N8,COUNTEREXAMPLE,21.650848209475953,artifacts/p2_v2/representations/11-raw-N8.npz,18edef4be759dbaa768a0c75ca8b85b34731b39c8bd9aceb3323c04846701f78,2000,0,,,,
+v2,11-raw-M8,UNKNOWN,,,,0,,,,,
+v2,11-rc-N8,COUNTEREXAMPLE,13.556854620253302,artifacts/p2_v2/representations/11-rc-N8.npz,50a070ad048edf5f1cd16d90677d12825730f898b2772a0cee626065d1a46438,2000,0,,,,
+v2,11-rc-M8,UNKNOWN,,,,0,,,,,
+rescue1,11-raw-N8-rescue1,COUNTEREXAMPLE,45.650041072698436,artifacts/p2_rescue1/representations/11-raw-N8-rescue1.npz,02ebb3c8f3afa9883d8877bdb0be113f92dbfe76e7887506df554ffce63a648f,0,,,,,
+rescue1,11-rc-N8-rescue1,COUNTEREXAMPLE,26.53061067773163,artifacts/p2_rescue1/representations/11-rc-N8-rescue1.npz,a46caf0663a60a1235a39da18669766ae9648e882d5e0f063e16607ecbeb5d2d,0,,,,,
+dual_A,A-raw-M8,COUNTEREXAMPLE,45.650041072698436,artifacts/p2_dual_rescue/matrices/A-raw-M8.npz,02ebb3c8f3afa9883d8877bdb0be113f92dbfe76e7887506df554ffce63a648f,0,,FAIL,,,
+dual_A,A-rc-M8,COUNTEREXAMPLE,26.53061067773163,artifacts/p2_dual_rescue/matrices/A-rc-M8.npz,a46caf0663a60a1235a39da18669766ae9648e882d5e0f063e16607ecbeb5d2d,0,,FAIL,,,
+dual_B,B-theta-raw-fill1,COUNTEREXAMPLE,45.650041072698436,artifacts/p2_rescue1/representations/11-raw-N8-rescue1.npz,02ebb3c8f3afa9883d8877bdb0be113f92dbfe76e7887506df554ffce63a648f,1000,0,FAIL,1000,0,False
+dual_B,B-theta-raw-fill2,COUNTEREXAMPLE,36.921993081927297,artifacts/p2_dual_rescue/matrices/B-theta-raw-fill2.npz,c4fd1d361f6b8905b4e386e586301240681902434cc58fbbf7149aca77d8c269,1000,0,FAIL,1000,0,False
+dual_B,B-theta-rc-fill1,COUNTEREXAMPLE,26.53061067773163,artifacts/p2_rescue1/representations/11-rc-N8-rescue1.npz,a46caf0663a60a1235a39da18669766ae9648e882d5e0f063e16607ecbeb5d2d,1000,0,FAIL,1000,0,False
+dual_B,B-theta-rc-fill2,COUNTEREXAMPLE,9.9980820850159908,artifacts/p2_dual_rescue/matrices/B-theta-rc-fill2.npz,90ee3b984deec512ffbd1f36972117ba325bf68d0fe049f75ff6ca7b62195be7,1000,0,FAIL,1000,0,False
+dual_B,B-R-raw-fill1,COUNTEREXAMPLE,21.650848209475953,artifacts/p2_v2/representations/11-raw-N8.npz,18edef4be759dbaa768a0c75ca8b85b34731b39c8bd9aceb3323c04846701f78,1000,0,FAIL,1000,0,False
+dual_B,B-R-raw-fill2,COUNTEREXAMPLE,23.479392041098844,artifacts/p2_dual_rescue/matrices/B-R-raw-fill2.npz,d263d0c3859ef96c29af7bc2ba342044467b11bc8b031e8b293ef5223adaa246,1000,0,FAIL,1000,0,False
+dual_B,B-R-rc-fill1,COUNTEREXAMPLE,13.556854620253302,artifacts/p2_v2/representations/11-rc-N8.npz,50a070ad048edf5f1cd16d90677d12825730f898b2772a0cee626065d1a46438,1000,0,FAIL,1000,0,False
+dual_B,B-R-rc-fill2,COUNTEREXAMPLE,48.079779929884985,artifacts/p2_dual_rescue/matrices/B-R-rc-fill2.npz,36ef462194d68b221efdea49cdc51cd532ab24cfe9e0f1a3daa2a55683f60dea,1000,0,FAIL,1000,0,False

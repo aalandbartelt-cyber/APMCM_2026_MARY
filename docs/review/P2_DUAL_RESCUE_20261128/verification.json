@@ -1,0 +1,15 @@
+{
+  "protected_files": 4727,
+  "mutate_top_level_calls": 2,
+  "mutate_quantized_equal_rescue1": {
+    "A-raw-M8": true,
+    "A-rc-M8": true
+  },
+  "all_onehot_energies_checked": 27040,
+  "integer_witnesses_checked": 10,
+  "raw_SA_restarts_checked": 8000,
+  "blocks_checked": 80,
+  "independent_selection": null,
+  "new_model_fits": 0,
+  "manuscript_hashes_unchanged": true
+}
