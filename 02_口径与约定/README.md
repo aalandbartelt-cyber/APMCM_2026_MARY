@@ -9,9 +9,10 @@
 | `图表规范.md` | 最终尺寸、图例、多面板、图文连续、PDF 验收 |
 | `Git规范.md` | 分支、commit、路径所有权、交接 |
 | `AI工具使用规范.md` | 2026 官方 AI 规定、正文标注、References、AI工具使用详情.pdf、未使用声明 |
-| `AI_Tool_Usage_Details_Template.docx` | 2026 官方四项 AI 详情说明模板（English, 2 pages, editable） |
+| `AI_Tool_Usage_Details_Template.docx` | 2026 官方四项 AI 详情说明模板（English, 1 page, submission-ready，无提交前需删除项） |
 | `AI_Tool_Usage_Details_Template.md` | English Markdown source |
-| `AI_Tool_Usage_Details_Template_preview.pdf` | English template preview (2 pages) |
+| `AI_Tool_Usage_Details_Template_preview.pdf` | English template preview (1 page) |
+| `AI_Tool_Usage_Details_APMCM2026_D.docx` | 本队已填写的 AI 使用详情报告（D 题，English，2 pages）；提交件在 `06_交付/AI工具使用详情.pdf` |
 
 深度参考在 skill：
 
