@@ -27,7 +27,7 @@ def crop_compare():
     # Full native screenshots with original axes; this is a source-comparison sheet.
     doc=pdf.open();pg=doc.new_page(width=1100,height=520);tnr(pg)
     for k in range(6):
-        x=12+363*(k%3);y=13+253*(k//3);f=src('A11',k)
+        x=12+363*(k%3);y=13+253*(k//3);f=ROOT/specs['F5']['component_files']['A11'][k]
         pg.insert_text((x+3,y+12),f.stem[:3],fontname='TNR',fontsize=12)
         pg.insert_image(pdf.Rect(x,y+16,x+350,y+222),filename=str(f),keep_proportion=True)
     doc.save(P2/'audit/A11_original_screenshots.pdf',garbage=4,deflate=True);doc.close()
@@ -53,7 +53,7 @@ def main():
         width=535.;left=24.;fig_y=48.;lines=wrap(captions[i],font,width-2*left,10)
         h=fig_y+page.rect.height+19+len(lines)*13+18
         out=review.new_page(width=width,height=h);tnr(out)
-        kind='Main figure' if number<6 else 'Appendix figure'
+        kind=spec['level']+' figure'
         out.insert_text((left,19),f'{kind}   /   P2-{i}',fontname='TNR',fontsize=9,color=(.32,.37,.42))
         out.insert_text((left,37),spec['title'],fontname='TNR',fontsize=13)
         near=(width-page.rect.width)/2
@@ -63,7 +63,7 @@ def main():
             out.insert_text((left,y),line,fontname='TNR',fontsize=10,color=(.12,.14,.16));y+=13
         if i=='A1':
             for rect in out.search_for('10.17188/1745405'):out.insert_link({'kind':pdf.LINK_URI,'from':rect,'uri':'https://doi.org/10.17188/1745405'})
-        if number in [1,6]:toc.append([1,kind+'s',number])
+        if not index or index[-1]['placement']!=kind:toc.append([1,kind+'s',number])
         toc.append([2,f'P2-{i}   {spec["title"]}',number])
         row=dict(id='P2-'+i,page=number,placement=kind,width_mm=round(page.rect.width*25.4/72,1),
               height_mm=round(page.rect.height*25.4/72,1),dpi=dpi,minimum_print_pt=round(smallest,2),
@@ -71,15 +71,14 @@ def main():
               palette='Reviewed',no_suptitle='Reviewed',no_table='Reviewed',labels_and_legends='Reviewed',
               units_and_denominators='Reviewed',three_second_internal_readout=spec['readout'],
               vector_marks='Native scene rasters + vector labels/arrows' if i=='A1' else
-              'Original illustration + vector label' if i=='A10' else
-              'Vector paths from original screenshot ink and calibrated axes' if i=='A11' else 'Vector chart',
+              'Original platform illustration + vector heatmap and six calibrated trace silhouettes' if i=='F5' else 'Vector chart',
               pdf_sha256=sha(vector),png_sha256=sha(img))
         auditrows.append(row)
         index.append(dict(id='P2-'+i,review_page=number,placement=kind,title=spec['title'],purpose=spec['readout'],
                   pdf=str(vector.relative_to(P2)),png=str(img.relative_to(P2)),spec=f'specs/{i}.md',
                   caption=f'captions/{i}.md',sources=' | '.join(spec['files'])))
         d.close()
-    review.set_toc(toc);review.set_metadata({'title':'P2 figure review','subject':'Sixteen plates and working captions','creator':'P2 figure archive'})
+    review.set_toc(toc);review.set_metadata({'title':'P2 figure review','subject':'Revised plates and working captions','creator':'P2 figure archive'})
     review.save(P2/'P2_figures_review.pdf',garbage=4,deflate=True);review.close()
     crop_compare()
     write_csv(audit/'spec_out.csv',auditrows);write_csv(P2/'delivery_inventory.csv',index)

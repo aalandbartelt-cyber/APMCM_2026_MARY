@@ -6,7 +6,7 @@
       "id": "F1",
       "title": "From candidate pools to an integer model",
       "level": "Main",
-      "panels": "Five-stage pipeline. Two aligned 52-by-52 A/B maps with a shared colour scale and distinct excluded cells. Overlay the two enumerated proxy-value distributions on a common scale and mark their common minimum.",
+      "panels": "Five-stage pipeline. Two aligned 52-by-52 A/B maps with a shared colour scale and distinct excluded cells. Overlay the two enumerated proxy-value distributions on a common scale and mark their common minimum. Use a common title baseline for all three panels. Retain both original three-unit-bin staircase traces (horizontal segments and vertical steps), then overlay two heavier shape-preserving curves through the bin centres without extrapolation. Key the binned and smooth geometries separately from pool identity.",
       "files": [
         "artifacts/p23_v2/pool_07.npz",
         "artifacts/p23_v2/pool_11.npz",
@@ -23,7 +23,7 @@
       "id": "A1",
       "title": "Three orientations of the same oxynitride structure",
       "level": "Main",
-      "panels": "VESTA exports along c, along a and oblique. Curved rotation arrows in each row; same centre and angstrom width. Coordination polyhedra versus ball-and-stick view of the same structure as a matched display control.",
+      "panels": "VESTA exports along c, along a and oblique. Curved rotation arrows in each row; same centre and angstrom width. Coordination polyhedra versus ball-and-stick view of the same structure as a matched display control. Give each of six panels one horizontal single-line heading. Apply the identical in-plane quarter-turn, crop and enlargement to every native view while retaining complete structures and both sets of rotation arrows.",
       "files": [
         "figures/shared/crystal_structure/source/mp-1222738.json",
         "figures/shared/crystal_structure/source/LaTiNO2.cif",
@@ -55,7 +55,7 @@
       "id": "F3",
       "title": "Returned energies and the decision boundary",
       "level": "Main",
-      "panels": "Paired task minima/maxima in residual units, pilot/formal divider, observed 84–188 band, 196 line. Separate magnified or explicit margin panel shows nearest selected and set-wide cases.",
+      "panels": "Paired task minima/maxima in residual units, pilot/formal divider, observed 84–188 band, 196 line. Separate magnified or explicit margin panel shows nearest selected and set-wide cases. Both panel titles share one figure-coordinate baseline.",
       "files": [
         "figures/P2/data/task_margin.csv",
         "figures/P2/data/return_energy.csv",
@@ -67,24 +67,57 @@
       "readout": "The weakest entire return set lies eight integer units below the first possible wrong decision."
     },
     {
-      "id": "F4",
-      "title": "Strict hits across restart budgets",
-      "level": "Main (fifth slot)",
-      "panels": "Panel a: business/zero, 20 paired blocks. Panel b: 40-short/one-long, same first two blocks. Seven budgets, Wilson 95% marginal pointwise intervals; mark B=5. Report energy-selected rule separately in caption.",
+      "id": "F5",
+      "title": "Optimization-service returns and platform displays",
+      "level": "Main",
+      "panels": "(a) SPQC-550 illustration and documented optimization/selection sequence. (b) All 25 task sets by 40 chain groups, with critical group 17 identified. (c) Six original evolution displays in a 2-by-3 block with independent original y-scales.",
       "files": [
-        "figures/P2/data/sa_budget_curve.csv",
-        "figures/P2/data/sa_budget_blocks.csv",
-        "figures/P2/data/sa_paired_test.json",
-        "figures/P2/data/chain_ablation.csv"
+        "figures/P2/data/chain_task_25x40.csv",
+        "figures/P2/data/chain_optimal_250x40.csv",
+        "figures/P2/data/chain_detail.csv",
+        "figures/P2/data/chain_association.csv",
+        "evidence/p2/blocks.json",
+        "figures/shared/hardware/SPQC-550.png",
+        "codex/p2_cim_service/QUOTA_FINAL_AND_CREATE_LEDGER.json",
+        "figures/shared/hardware/F03_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F04_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F06_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F07_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F08_Hamiltonian_evolution.png",
+        "figures/shared/hardware/F09_Hamiltonian_evolution.png",
+        "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json",
+        "01_参考学习/量子知识补充（forD题）/01_Kaiwu官方/kaiwu_SDK_1.4.4_官方文档汇编_164页.pdf"
       ],
-      "check": "B=5 p=0.000122, this instance and schedule. Wilson bands assume independent blocks within arm, marginal not paired-difference bands; n=2 descriptive; no energy ratio.",
-      "readout": "At five restarts the cost-bearing matrix hits the proxy optimum in 20 blocks versus six controls."
+      "component_files": {
+        "A9": [
+          "figures/P2/data/chain_task_25x40.csv",
+          "figures/P2/data/chain_optimal_250x40.csv",
+          "figures/P2/data/chain_detail.csv",
+          "figures/P2/data/chain_association.csv",
+          "evidence/p2/blocks.json"
+        ],
+        "A10": [
+          "figures/shared/hardware/SPQC-550.png",
+          "codex/p2_cim_service/QUOTA_FINAL_AND_CREATE_LEDGER.json"
+        ],
+        "A11": [
+          "figures/shared/hardware/F03_Hamiltonian_evolution.png",
+          "figures/shared/hardware/F04_Hamiltonian_evolution.png",
+          "figures/shared/hardware/F06_Hamiltonian_evolution.png",
+          "figures/shared/hardware/F07_Hamiltonian_evolution.png",
+          "figures/shared/hardware/F08_Hamiltonian_evolution.png",
+          "figures/shared/hardware/F09_Hamiltonian_evolution.png",
+          "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json"
+        ]
+      },
+      "check": "25 × 40 counts in [0,10], group 17 equals 10 for every task. Six user-associated traces, no embedded task IDs, auxiliary only; arbitrary units do not measure physical time or evolution dynamics. Generated platform illustration; service routing remains unidentified. Use printed SDK v1.4.4 p.46 for the schematic of optimization and postprocessing.",
+      "readout": "Group 17 reaches its local minimum in all 25 return sets. Six archived displays provide context for those service records."
     },
     {
       "id": "A2",
       "title": "Grouping the lookup couplings",
       "level": "Appendix",
-      "panels": "Reference-aware grouped circular logical graph; sign and line-width legend, annotate A/B registers and the lookup crossing them. Deterministic within-class display selection if needed; report threshold and retained/total numerically.",
+      "panels": "Reference-aware grouped circular logical graph; sign and line-width legend, annotate A/B registers and the lookup crossing them. Deterministic within-class display selection if needed; report threshold and retained/total numerically. Both panel titles share one figure-coordinate baseline.",
       "files": [
         "artifacts/p2_v2/representations/11-raw-float.npz"
       ],
@@ -175,48 +208,18 @@
       "readout": "The minimax decision changes candidate in both pools; the blind-pool CVaR decision retains LaTiO2N."
     },
     {
-      "id": "A9",
-      "title": "Local optima across forty candidate groups",
+      "id": "F4",
+      "title": "Strict hits across restart budgets",
       "level": "Appendix",
-      "panels": "25 task rows × 40 fixed-order chain columns, integer counts from 0 to 10; visible pilot boundary and critical group 17; integer colour key.",
+      "panels": "Panel a: business/zero, 20 paired blocks. Panel b: 40-short/one-long, same first two blocks. Seven budgets, Wilson 95% marginal pointwise intervals; mark B=5. Report energy-selected rule separately in caption.",
       "files": [
-        "figures/P2/data/chain_task_25x40.csv",
-        "figures/P2/data/chain_optimal_250x40.csv",
-        "figures/P2/data/chain_detail.csv",
-        "figures/P2/data/chain_association.csv",
-        "evidence/p2/blocks.json"
+        "figures/P2/data/sa_budget_curve.csv",
+        "figures/P2/data/sa_budget_blocks.csv",
+        "figures/P2/data/sa_paired_test.json",
+        "figures/P2/data/chain_ablation.csv"
       ],
-      "check": "Count ties as group minima; no sorting or vote; group 17 contains the unique proxy winner.",
-      "readout": "Group 17 attains its local minimum throughout, although many other groups do not."
-    },
-    {
-      "id": "A10",
-      "title": "SPQC-550 platform illustration",
-      "level": "Appendix",
-      "panels": "Use archived generated device image, appropriately sized, with a short English illustration tag. Archive raw source bytes by hash.",
-      "files": [
-        "figures/shared/hardware/SPQC-550.png",
-        "codex/p2_cim_service/QUOTA_FINAL_AND_CREATE_LEDGER.json"
-      ],
-      "check": "Generated illustration, non-photographic; no evidence identifying hardware routing or physical connectivity.",
-      "readout": "This is an illustration of the platform; the quantitative record comes from service receipts."
-    },
-    {
-      "id": "A11",
-      "title": "Six archived evolution displays",
-      "level": "Appendix",
-      "panels": "Six original trace regions in a 2 × 3 grid, F03/F04/F06/F07/F08/F09, with original units and legible shared axis typography. Preserve original calibrated ranges and source PNGs; no fit, smoothing or extrapolation.",
-      "files": [
-        "figures/shared/hardware/F03_Hamiltonian_evolution.png",
-        "figures/shared/hardware/F04_Hamiltonian_evolution.png",
-        "figures/shared/hardware/F06_Hamiltonian_evolution.png",
-        "figures/shared/hardware/F07_Hamiltonian_evolution.png",
-        "figures/shared/hardware/F08_Hamiltonian_evolution.png",
-        "figures/shared/hardware/F09_Hamiltonian_evolution.png",
-        "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json"
-      ],
-      "check": "No task ID on screenshots, user association only; auxiliary displays; a.u. cannot be interpreted as physical time or evidence of evolution dynamics. 14 missing images retain formal outcomes.",
-      "readout": "Six available screenshots document displayed traces and their differing vertical scales."
+      "check": "B=5 p=0.000122, this instance and schedule. Wilson bands assume independent blocks within arm, marginal not paired-difference bands; n=2 descriptive; no energy ratio.",
+      "readout": "At five restarts the cost-bearing matrix hits the proxy optimum in 20 blocks versus six controls."
     },
     {
       "id": "A12",
@@ -287,6 +290,8 @@
     "figures/shared/hardware/F08_Hamiltonian_evolution.png": "e3add9ad585180010c27f1c9415b48b4659424a97bd723b24c22cbed15bf3660",
     "figures/shared/hardware/F09_Hamiltonian_evolution.png": "746be2af283264c96ac1acb25d28550c0dbe9d5296572315388163bfb9bb11a5",
     "codex/p2_cim_service/FORMAL_EVOLUTION_PLOT_INVENTORY.json": "39fbee06761e5e80fac84b7376a0d3932d33f44594f267a682f2146fd3787148",
-    "codex/p2_zero/single_certificate.json": "a02c35e3bb01934815d6a2016403615276594827a535854bef28f9c201744a73"
-  }
+    "codex/p2_zero/single_certificate.json": "a02c35e3bb01934815d6a2016403615276594827a535854bef28f9c201744a73",
+    "01_参考学习/量子知识补充（forD题）/01_Kaiwu官方/kaiwu_SDK_1.4.4_官方文档汇编_164页.pdf": "b852aa0450942668b0edc37634d8022a1a1a7f4581f4c852028c7290e6dd25c2"
+  },
+  "revision": "Concentrated figure review, revision 2. The 16-plate baseline is preserved in Git 907d427."
 }

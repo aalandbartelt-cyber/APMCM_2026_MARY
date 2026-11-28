@@ -48,14 +48,42 @@ def main():
         sb=ss.read_text().split('SBOND\n')[1].split('SITET\n')[0];assert len(re.findall(r'\bTi\b',sb))==2 and not re.search(r'\bLa\b',sb)
     checks.append('Six native VESTA scenes and native PNG hashes verified; two Ti-only bond rules in every scene')
     inv=pd.read_csv(p2/'delivery_inventory.csv',encoding='utf-8-sig');d=pdf.open(p2/'P2_figures_review.pdf')
-    assert len(d)==16 and inv.iloc[0].id=='P2-F1' and sum(inv.placement=='Main figure')==5
+    assert len(d)==len(inv)==14 and sum(inv.placement=='Main figure')==5
+    assert list(inv.id[:6])==['P2-F1','P2-A1','P2-F2','P2-F3','P2-F5','P2-A2']
+    assert inv.set_index('id').loc['P2-F4','placement']=='Appendix figure'
+    for figid,count in [('F1',3),('F3',2),('A2',2)]:
+        row=inv[inv.id=='P2-'+figid].iloc[0]
+        with pdf.open(p2/row.pdf) as plate:
+            headings=[span for b in plate[0].get_text('dict')['blocks'] if 'lines' in b
+                      for line in b['lines'] for span in line['spans'] if re.match(r'^\([abc]\)',span['text'])]
+        assert len(headings)==count
+        baselines=[span['origin'][1] for span in headings]
+        assert max(baselines)-min(baselines)<.1
+    checks.append('Title baselines on pages 1, 4 and 6 agree within 0.1 PDF point.')
+    with pdf.open(p2/inv.iloc[0].pdf) as plate:
+        paths=[v for v in plate[0].get_drawings() if v['type']=='s' and v['rect'].width>100]
+        steps=[v for v in paths if abs(v['width']-.85)<.001]
+        curves=[v for v in paths if abs(v['width']-1.65)<.001]
+        assert len(steps)==len(curves)==2
+        assert {v['color'] for v in steps}=={v['color'] for v in curves}
+        for v in steps:
+            assert all(t[0]=='l' and (abs(t[1].x-t[2].x)<.01 or abs(t[1].y-t[2].y)<.01) for t in v['items'])
+    checks.append('F1(c) PDF retains two measured staircases and two overlaid smooth curves, keyed by pool.')
+    with pdf.open(p2/inv.iloc[4].pdf) as plate:
+        text=plate[0].get_text()
+        assert all(label in text for label in ['Group 17','F03','F04','F06','F07','F08','F09','SPQC-550'])
+    with pdf.open(p2/inv.iloc[1].pdf) as plate:
+        labels=plate[0].get_text().splitlines()
+        for mode in ['Ti polyhedra','Ball-and-stick']:
+            assert all(any(mode+', '+view in line for line in labels) for view in ['along c','along a','oblique'])
+    checks.append('Six single-line crystal headings and six formal trace slot labels verified.')
     for pg,(_,r) in zip(d,inv.iterrows()):
         txt=pg.get_text().replace(chr(173),'-');assert r.id in txt and len(txt)>150 and not re.search(r'[\u3400-\u9fff]',txt)
         # Caption block must be present and fully visible at the registered print size.
         spans=[s for b in pg.get_text('dict',flags=pdf.TEXT_PRESERVE_WHITESPACE)['blocks'] if 'lines' in b for l in b['lines'] for s in l['spans'] if s['text'].strip()]
         assert all(pg.rect.contains(pdf.Rect(s['bbox'])) for s in spans)
         assert all('TimesNewRoman' in s['font'] for s in spans) and min(s['size'] for s in spans)>=8.45
-    checks.append('Review PDF: 16 native-size plates with bookmarks and captions, correct order, English labels inside page bounds')
+    checks.append('Review PDF: 14 native-size plates with bookmarks and captions, correct order, English labels inside page bounds')
     out=p2/'audit/content_verification.json'
     out.write_text(json.dumps({'checks':checks,'review_sha256':sha(p2/'P2_figures_review.pdf')},indent=2)+'\n')
     print('\n'.join(checks))

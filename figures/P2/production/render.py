@@ -14,6 +14,7 @@ from PIL import Image
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
+from scipy.interpolate import PchipInterpolator
 
 HERE=Path(__file__).resolve().parent
 P2=HERE.parent
@@ -40,6 +41,8 @@ def src(i,k=0): return ROOT/specs[i]['files'][k]
 def fig(w,h): return plt.figure(figsize=(w/25.4,h/25.4))
 def ax(f,xy): return f.add_axes(xy)
 def title(a,label): a.set_title(label,loc='left',pad=5)
+def row_heading(f, a, y, label):
+    f.text(a.get_position().x0, y, label, ha='left', va='baseline', fontsize=10)
 def key(color,marker='o',line='-',label='',open_=False):
     return Line2D([],[],color=color,marker=marker,linestyle=line,markerfacecolor='white' if open_ else color,markersize=4,label=label)
 def note(a,x,y,t,**kw): return a.text(x,y,t,transform=a.transAxes,fontsize=8.5,**kw)
@@ -65,24 +68,43 @@ def f1():
         enum=pd.read_csv(src('F1',2+i));np.testing.assert_allclose(np.sort(v[mask]),enum.vhat)
         assert enum.iloc[0]['key']=='La|Ti|NO2' and mask.sum()==[2704,529][i]
         vals.append(enum.vhat.to_numpy())
-        a=ax(f,[[.073,.26,.22,.40],[.335,.26,.22,.40]][i])
+        a=ax(f,[[.073,.256,.22,.445],[.335,.256,.22,.445]][i])
         im=a.pcolormesh(np.arange(53)-.5,np.arange(53)-.5,np.ma.array(v,mask=~mask),cmap=cm,vmin=0,vmax=62,shading='flat',ec='none')
-        a.set(xlim=(-.5,51.5),ylim=(51.5,-.5),aspect='equal')
+        a.set(xlim=(-.5,51.5),ylim=(51.5,-.5),aspect='equal',anchor='N')
         if i==1:
             yy,xx=np.nonzero(~mask)
             a.add_collection(LineCollection(np.stack([np.c_[xx-.20,yy+.20],np.c_[xx+.20,yy-.20]],axis=1),color='#B0B6B9',lw=.19))
         jj=np.where(z['B']=='Ti')[0][0]; ii=np.where(z['A']=='La')[0][0]
         a.plot(jj,ii,'*',ms=8,mec=INK,mew=.65,mfc='#FFF19B')
-        title(a,['(a) Full pool · 2,704','(b) Blind pool · 529'][i]);a.set_xlabel('B-site index',labelpad=.2);a.set_ylabel('A-site index' if i==0 else '')
+        row_heading(f,a,.736,['(a) Full pool · 2,704','(b) Blind pool · 529'][i]);a.set_xlabel('B-site index',labelpad=.2);a.set_ylabel('A-site index' if i==0 else '')
         a.set_xticks([0,25,51],[1,26,52]);a.set_yticks([0,25,51],[1,26,52])
     cb=f.colorbar(im,cax=ax(f,[.085,.11,.20,.033]),orientation='horizontal',ticks=[0,30,60]);cb.set_label('Proxy violation',labelpad=0)
     f.legend(handles=[patches.Patch(fc='#E4E4E3',ec='#A4A4A4',hatch='///',label='Excluded'),Line2D([],[],ls='',marker='*',mec=INK,mfc='#FFF19B',markersize=7,label='LaTiO₂N')],loc='center',bbox_to_anchor=(.443,.10),frameon=False)
-    a=ax(f,[.665,.235,.31,.49]); bins=np.arange(0,66,3)
+    a=ax(f,[.665,.256,.31,.445]); bins=np.arange(0,66,3)
+    centres=(bins[1:]+bins[:-1])/2
+    fine=np.linspace(centres[0],centres[-1],501)
     for i,(v,c) in enumerate(zip(vals,[B,S])):
         h,_=np.histogram(v,bins);assert h.sum()==len(v)
-        a.stairs(h*100/len(v),bins,color=c,linestyle=['--','-'][i],lw=1.5,label=['Full','Blind'][i])
-    m=vals[0][0];a.axvline(m,color=W,ls=':',lw=1.1);a.annotate('LaTiO₂N\n1.839',(m,1),xytext=(16,6),arrowprops=dict(arrowstyle='->',lw=.65,color=W),fontsize=8.5,bbox=dict(fc='white',ec='none',alpha=.9,pad=1))
-    title(a,'(c) Enumerated values');a.set_xlabel('Frozen proxy violation');a.set_ylabel('Pool share per bin (%)');a.legend(loc='upper right',handlelength=1.2)
+        share=h*100/len(v)
+        curve=PchipInterpolator(centres,share,extrapolate=False)
+        np.testing.assert_allclose(curve(centres),share,atol=1.e-10)
+        line_style=['--','-'][i]
+        a.stairs(share,bins,baseline=None,color=c,ls=line_style,lw=.85,alpha=.75,zorder=2)
+        a.plot(fine,curve(fine),color=c,ls=line_style,lw=1.65,zorder=3)
+    a.set_ylim(bottom=-.4)
+    a.legend(handles=[key(B,'','--','Full'),key(S,'','-','Blind')],loc='upper right',handlelength=1.55)
+    # Show the two plotting geometries at print size underneath the original axes.
+    guide=ax(f,[.649,.067,.33,.071]);guide.set(xlim=(0,1),ylim=(0,1));guide.axis('off')
+    guide.plot([.01,.07,.07,.16],[.34,.34,.69,.69],c=INK,lw=.85)
+    guide.text(.19,.48,'Binned',va='center',fontsize=8.5)
+    u=np.linspace(0,1,40)
+    guide.plot(.51+.15*u,.33+.38*(3*u**2-2*u**3),c=INK,lw=1.65)
+    guide.text(.69,.48,'Smooth',va='center',fontsize=8.5)
+    m=vals[0][0]
+    a.axvline(m,color=W,ls=':',lw=1.1)
+    a.annotate('LaTiO₂N · 1.839',(m,9.4),xytext=(3,0),textcoords='offset points',
+               rotation=90,ha='left',va='center',color='#894B3E',fontsize=8.5)
+    row_heading(f,a,.736,'(c) Enumerated values');a.set_xlabel('Frozen proxy violation');a.set_ylabel('Pool share per bin (%)')
     return f
 def f2():
     f=fig(168,89)
@@ -123,11 +145,11 @@ def f3():
     a.scatter(x,d.min_residual,s=12,color=S,zorder=4)
     a.set(ylim=(75,215),xlim=(-.8,24.8),ylabel='Integer energy above ground',xlabel='Optimization task')
     a.set_xticks([0,4,9,14,19,24],['P01','P05','F05','F10','F15','F20'],rotation=35,ha='right')
-    title(a,'(a) Returned sets');a.set_yticks([84,120,160,188])
-    b=ax(f,[.795,.285,.18,.54]); rr=d.set_index('slot');v=[rr.loc['F03','selected_margin'],rr.loc['F14','set_min_margin']]
+    row_heading(f,a,.93,'(a) Returned sets');a.set_yticks([84,120,160,188])
+    b=ax(f,[.795,.245,.18,.64]); rr=d.set_index('slot');v=[rr.loc['F03','selected_margin'],rr.loc['F14','set_min_margin']]
     bars=b.bar([0,1],v,color=[S,'white'],edgecolor=[S,W],lw=1.25,width=.62,hatch=None);bars[1].set_hatch('///')
     b.bar_label(bars,labels=['20','8'],padding=2);b.set(ylim=(0,26),ylabel='Margin to 196');b.set_xticks([0,1],['F03\nselected','F14\nset-wide'])
-    title(b,'(b) Closest calls')
+    row_heading(f,b,.93,'(b) Closest calls')
     legend(f,[key(S,'o','None','Selected minimum'),key(B,'s','None','Set maximum',True),patches.Patch(color=PALE,label='Formal span 84–188')],.008,3)
     return f
 def f4():
@@ -167,11 +189,11 @@ def a2():
     for h,p in enumerate(pos):
         a.scatter(*p,s=46,marker=['o','s','D'][min(h//4,2)],fc=['#E5EAF0','#F8EAD6','#D6E4D9'][min(h//4,2)],ec=INK,lw=.8,zorder=4)
     a.text(-.96,.69,'A',weight='bold');a.text(.85,.69,'B',weight='bold');a.text(0,1.10,'Ref.',ha='center')
-    title(a,'(a) Bundled registers')
-    b=ax(f,[.64,.24,.32,.54]); counts=[sum((u<52)&(v<52)),sum((u>=52)&(v<104)),sum((u<52)&(v>=52)&(v<104)),sum(v==104)]
+    row_heading(f,a,.94,'(a) Bundled registers')
+    b=ax(f,[.64,.22,.32,.65]); counts=[sum((u<52)&(v<52)),sum((u>=52)&(v<104)),sum((u<52)&(v>=52)&(v<104)),sum(v==104)]
     y=np.arange(4);b.barh(y,counts,color=[S,Q,G,B],height=.50);b.set_yticks(y,['A–A','B–B','A–B','Ref.']);b.invert_yaxis();b.set_xlim(0,max(counts)*1.28);b.set_xlabel('Nonzero logical edges')
     for z,num in enumerate(counts):barlabel(b,num,z,f'{num:,}')
-    title(b,'(b) Edge counts');legend(f,[key(S,'','-','Negative coupling (all edges)'),Line2D([],[],c=S,lw=3,label='Width: bundled magnitude')],.01,2)
+    row_heading(f,b,.94,'(b) Edge counts');legend(f,[key(S,'','-','Negative coupling (all edges)'),Line2D([],[],c=S,lw=3,label='Width: bundled magnitude')],.01,2)
     return f
 def a3():
     f=fig(158,73); d=data('return_energy.csv');bins=np.arange(-58724,-58517,4)
@@ -270,46 +292,68 @@ def a8():
         if i==1:a.set_xlabel('Rank in one member table');b.set_xlabel('Original proxy regret')
     legend(f,[key(S,'D','None','Median rank'),key(G,'o','None','CVaR (worst 10%)'),key(Q,'s','None','Worst member')],.005,3)
     return f
-def a9():
-    f=fig(161,91);d=data('chain_task_25x40.csv');v=d.filter(regex='^chain_').to_numpy()
-    a=ax(f,[.09,.21,.77,.67]);im=a.pcolormesh(np.arange(41)-.5,np.arange(26)-.5,v,cmap=SEQ,vmin=0,vmax=10);a.set(xlim=(-.5,39.5),ylim=(24.5,-.5))
-    a.add_patch(patches.Rectangle((15.5,-.5),1,25,fill=False,lw=1.15,edgecolor='#B66E35'));a.axhline(4.5,c='white',lw=2)
-    a.set_xticks([0,4,9,16,24,29,34,39],[1,5,10,17,25,30,35,40]);a.set_yticks([0,3,5,9,14,19,24],d.slot.iloc[[0,3,5,9,14,19,24]])
-    a.set(xlabel='Chain index',ylabel='Optimization task')
-    a.annotate('Optimum-containing group',xy=(16,1),xytext=(19,-2.35),arrowprops=dict(arrowstyle='->',color=W,lw=.8),color=W,fontsize=8.5,annotation_clip=False)
-    cb=f.colorbar(im,cax=ax(f,[.89,.29,.025,.47]),ticks=[0,2,5,8,10]);cb.set_label('Local optima per 10 returns')
-    return f
 def a1():
-    f=fig(169,91);root=HERE/'crystal';xs=[.31,.575,.84];ys=[.67,.30]
-    for j,view in enumerate(['c','a','oblique']):
-        f.text(xs[j],.947,['Along c','Along a','Oblique'][j],ha='center',fontsize=10)
-        for i,mode in enumerate(['poly','stick']):
-            from scipy import ndimage
-            im=Image.open(root/f'{mode}_{view}.png').convert('RGB');canvas_w,canvas_h=im.size
-            pixels=np.asarray(im);white=np.all(pixels==255,axis=2);seed=np.zeros_like(white)
-            seed[[0,-1],:]=white[[0,-1],:];seed[:,[0,-1]]=white[:,[0,-1]]
-            bg=ndimage.binary_propagation(seed,mask=white);im.putalpha(Image.fromarray((~bg).astype('uint8')*255))
-            # Identical orthographic scale and common scene-centred crop in all six images.
-            half=round(canvas_w*440/1410);cx=canvas_w//2;cy=round(canvas_h/2+canvas_w*19/1410)
-            im=im.crop((cx-half,cy-half,cx+half,cy+half))
-            a=ax(f,[xs[j]-.114,ys[i]-.18,.228,.36]);a.imshow(im,interpolation='lanczos');a.axis('off')
-            if j<2:arrow(f,(xs[j]+.103,ys[i]+.028),(xs[j+1]-.104,ys[i]+.028),-.34)
-    for y,txt in zip(ys,['(a) Ti-centred\npolyhedra','(b) Ball and\nstick']):
-        f.text(.018,y,txt,ha='left',va='center',fontsize=9.5)
-    cols=['#B2BE7E','#46779F','#D59275','#544178'];legend(f,[key(c,'o','None',label) for c,label in zip(cols,['La','Ti','O','N'])],.012,4)
+    f=fig(170,98)
+    # Shared crop contains the union of all projected unit cells. A common roll
+    # fills landscape panels and preserves magnification across rows and views.
+    crop=(347,125,1063,981)
+    width=49.0
+    height=width*(crop[2]-crop[0])/(crop[3]-crop[1])
+    centres=[27.4,85,142.6]
+    for i,(mode,label,top) in enumerate([('poly','Ti polyhedra',90.7),('stick','Ball-and-stick',45.2)]):
+        for j,(view,angle) in enumerate([('c','along c'),('a','along a'),('oblique','oblique')]):
+            im=Image.open(HERE/'crystal'/f'{mode}_{view}.png')
+            assert im.size==(1410,1068)
+            tile=im.crop(crop).transpose(Image.Transpose.ROTATE_90)
+            x=centres[j]
+            art=ax(f,[(x-width/2)/170,(top-height)/98,width/170,height/98])
+            art.imshow(tile,interpolation='lanczos');art.axis('off')
+            tag='abcdef'[3*i+j]
+            f.text(x/170,(top+2.3)/98,f'({tag}) {label}, {angle}',ha='center',va='baseline',fontsize=9.5)
+            if j<2:
+                y=(top-height*.50)/98
+                arrow(f,((x+width*.48)/170,y),((centres[j+1]-width*.48)/170,y),-.33)
+    cols=['#B2BE7E','#46779F','#D59275','#544178']
+    f.legend(handles=[key(c,'o','None',label) for c,label in zip(cols,['La','Ti','O','N'])],
+             loc='center',bbox_to_anchor=(.5,.026),ncol=4,handlelength=1,columnspacing=1.3,borderpad=0)
     return f
-def a10():
-    f=fig(91,90);a=ax(f,[.08,.10,.84,.86]);a.imshow(Image.open(src('A10')),interpolation='lanczos');a.axis('off')
-    f.text(.5,.045,'SPQC-550  ·  Generated illustration',ha='center',fontsize=10);return f
-def a11():
+
+def f5():
+    f=fig(170,150)
+    files=specs['F5']['component_files']
+    f.text(.038,.955,'(a) Kaiwu optimization service',fontsize=10)
+    f.text(.372,.955,'(b) Local optima across 40 chains',fontsize=10)
+    machine=ax(f,[.052,.672,.237,.253])
+    machine.imshow(Image.open(ROOT/files['A10'][0]),interpolation='lanczos');machine.axis('off')
+    f.text(.17,.65,'SPQC-550 illustration',ha='center')
+    f.text(.17,.615,'Energy ranking and clustering',ha='center',fontsize=8.5)
+    arrow(f,(.17,.608),(.17,.575))
+    f.text(.17,.552,'10 returned solutions per task',ha='center',fontsize=8.5)
+    d=data('chain_task_25x40.csv');v=d.filter(regex='^chain_').to_numpy()
+    a=ax(f,[.378,.62,.49,.28])
+    im=a.pcolormesh(np.arange(41)-.5,np.arange(26)-.5,v,cmap=SEQ,vmin=0,vmax=10)
+    a.set(xlim=(-.5,39.5),ylim=(24.5,-.5),xlabel='Chain index',ylabel='Task')
+    a.add_patch(patches.Rectangle((15.5,-.5),1,25,fill=False,lw=1,ec='#AD652F'))
+    a.axhline(4.5,color='white',lw=1.5)
+    a.set_xticks([0,9,16,24,31,39],[1,10,17,25,32,40])
+    a.set_yticks([0,5,14,24],d.slot.iloc[[0,5,14,24]])
+    a.annotate('Group 17',xy=(16,0),xytext=(16,-1.6),ha='center',va='bottom',
+               fontsize=8.5,color='#925423',annotation_clip=False)
+    cb=f.colorbar(im,cax=ax(f,[.896,.632,.018,.255]),ticks=[0,5,10])
+    cb.set_label('Count per 10 returns',labelpad=3)
+    f.add_artist(Line2D([.038,.972],[.525,.525],transform=f.transFigure,color=LIGHT,lw=.65))
+    f.text(.038,.49,'(c) Archived platform displays',fontsize=10)
+    evolution_panels(f,files['A11'])
+    return f
+
+def evolution_panels(f,files):
     from scipy.ndimage import label,find_objects
-    f=fig(170,96)
     labels=['F03','F04','F06','F07','F08','F09']
     ticks=[(-35000,5000),(-30000,5000),(-57000,200),(-55500,500),(-30000,5000),(-54000,1000)]
     def centres(line):
         return np.array([(s[0].start+s[0].stop-1)/2 for s in find_objects(label(line)[0])])
     for k,(slot,(top,step)) in enumerate(zip(labels,ticks)):
-        a=ax(f,[.09+(k%3)*.324,.59-(k//3)*.40,.238,.28]);img=np.array(Image.open(src('A11',k)).convert('RGB')); dark=img.max(2)<100
+        a=ax(f,[.104+(k%3)*.322,.298-(k//3)*.216,.235,.142]);img=np.array(Image.open(ROOT/files[k]).convert('RGB')); dark=img.max(2)<100
         sx=np.where(dark.sum(0)>700)[0];sy=np.where(dark.sum(1)>1500)[0];x0,x1=sx[:3].max()+1,sx[-3:].min();y0,y1=sy[:3].max()+1,sy[-3:].min()
         xc=centres(dark[sy[-1]+3,:]);xc=xc[(xc>x0)&(xc<x1)];yc=centres(dark[:,sx[0]-3]);yc=yc[(yc>y0)&(yc<y1)]
         px=np.polyfit(np.arange(9)*250,xc,1);py=np.polyfit(top-step*np.arange(len(yc)),yc,1)
@@ -321,9 +365,8 @@ def a11():
         a.contour(xx,yy,blue,levels=[.5],colors=['#31739D'],linewidths=.29)
         a.set(xlim=(xx.min(),xx.max()),ylim=(yy.min(),yy.max()));a.set_xticks([0,1000,2000]);a.yaxis.set_major_locator(ticker.MaxNLocator(nbins=3))
         a.tick_params(pad=2,length=2.5)
-        title(a,'('+'abcdef'[k]+') '+slot)
-    f.text(.5,.049,'Displayed T (a.u.)',ha='center');f.text(.012,.525,'Displayed Hamiltonian (10³ a.u.)',va='center',rotation=90)
-    return f
+        a.set_title(slot,loc='left',fontsize=8.5,pad=2.5)
+    f.text(.5,.022,'Displayed T (a.u.)',ha='center');f.text(.011,.261,'Displayed Hamiltonian (10³ a.u.)',va='center',rotation=90)
 def a12():
     f=fig(168,101);d=data('chain_ablation.csv');a=ax(f,[.255,.25,.475,.615]);labels=['Single · linear','Packed · linear','Packed · shaped','20 · business','20 · zero','40 · business','40 · zero','Single · business','40 · business']
     y=np.array([9,8,7,5.8,4.8,3.8,2.8,1.55,.55]);a.text(104,9.60,'Hits / slots',fontsize=8.5)
@@ -339,8 +382,8 @@ def a12():
     legend(f,[patches.Patch(fc=PALE,ec=S,label='Strict feasible'),patches.Patch(fc=S,label='Strict hit')],.045,2)
     return f
 
-build={'F1':f1,'A1':a1,'F2':f2,'F3':f3,'F4':f4,'A2':a2,'A3':a3,'A4':a4,'A5':a5,'A6':a6,'A7':a7,'A8':a8,'A9':a9,'A10':a10,'A11':a11,'A12':a12}
-names={'F1':'data_pipeline','A1':'crystal_orientations','F2':'coupling_matrices','F3':'residual_margins','F4':'restart_budgets','A2':'grouped_lookup','A3':'return_energies','A4':'task_attainment','A5':'task_timeline','A6':'cost_and_error','A7':'precision_audit','A8':'tail_regret','A9':'chain_heatmap','A10':'platform_illustration','A11':'archived_evolution','A12':'chain_ablation'}
+build={'F1':f1,'A1':a1,'F2':f2,'F3':f3,'F4':f4,'A2':a2,'A3':a3,'A4':a4,'A5':a5,'A6':a6,'A7':a7,'A8':a8,'F5':f5,'A12':a12}
+names={'F1':'data_pipeline','A1':'crystal_orientations','F2':'coupling_matrices','F3':'residual_margins','F4':'restart_budgets','A2':'grouped_lookup','A3':'return_energies','A4':'task_attainment','A5':'task_timeline','A6':'cost_and_error','A7':'precision_audit','A8':'tail_regret','F5':'optimization_service','A12':'chain_ablation'}
 def basename(i):return 'P2-'+i+'_'+names[i]
 def render(i):
     f=build[i]();d=P2/'plates';d.mkdir(exist_ok=True);dpi=600 if i=='A1' else 450

@@ -9,7 +9,10 @@
     "25 usable observation intervals; no provider physical start times",
     "Matched ablation: 199/200 feasible and 135/200 strict hits vs 0/200",
     "Six native VESTA scenes and native PNG hashes verified; two Ti-only bond rules in every scene",
-    "Review PDF: 16 native-size plates with bookmarks and captions, correct order, English labels inside page bounds"
+    "Title baselines on pages 1, 4 and 6 agree within 0.1 PDF point.",
+    "F1(c) PDF retains two measured staircases and two overlaid smooth curves, keyed by pool.",
+    "Six single-line crystal headings and six formal trace slot labels verified.",
+    "Review PDF: 14 native-size plates with bookmarks and captions, correct order, English labels inside page bounds"
   ],
-  "review_sha256": "da068bfad74ae39efd5e1a2eca312f957218f6af36347c156fa8cb0e83a0ba9e"
+  "review_sha256": "30c28c824d432dc0ed6f9d7ef3049e4432974cdac997c55b68d2b8bfe0f6d852"
 }
